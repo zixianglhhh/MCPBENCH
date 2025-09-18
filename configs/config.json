@@ -1,0 +1,19 @@
+[
+    {
+        "model": "gpt-5-chat-latest",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "gpt-5",
+            "structured_output": true
+        },
+        "base_url": "https://jacob.api-store.store/v1/",
+        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65"
+    },
+    {
+        "model": "gpt-4o",
+        "base_url": "https://jacob.api-store.store/v1/",
+        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65"
+    }
+]

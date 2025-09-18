@@ -1,0 +1,122 @@
+[
+    {
+        "id": "task_2_sequential_tools_1",
+        "content": "The user is looking for a good Ethiopian restaurant in Berkeley, preferably one with live music. They want to reserve a table at the found restaurant for the 2nd of this month at 17:30.",
+        "tools": [["search_restaurant"], ["make_reservation"]],
+        "inputs": [[{"location": "Berkeley", "cuisineTypes": "Ethiopian"}], [{"restaurant_name": "Ethiopian Delight"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_2",
+        "content": "The user is looking for a restaurant in Palo Alto that serves freshwater fish dishes. They want a reservation for one at 6:30 PM.",
+        "tools": [["search_restaurant"], ["make_reservation"]],
+        "inputs": [[{"location": "Palo Alto", "cuisineTypes": "Freshwater Fish"}], [{"restaurant_name": "Freshwater Fishery"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_3",
+        "content": "The user wants to listen to music, specifically enjoys El Alfa.",
+        "tools": [["itunes_search"], ["itunes_play_song"]],
+        "inputs": [[{"artist": "El Alfa"}], [{"song": "La Romana"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_4",
+        "content": "The user is looking for Frank Ocean songs, inquiring about the genre, and then requesting to play them.",
+        "tools": [["itunes_search"], ["itunes_play_song"]],
+        "inputs": [[{"artist": "Frank Ocean"}], [{"song": "Nikes"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_5",
+        "content": "The user is looking for song suggestions, particularly by Karolina Protsenko, and is a fan of pop songs, especially those on the album \"Fly.\" They also requested to play a selected song in the album using iTunes.",
+        "tools": [["itunes_search"], ["itunes_play_song"]],
+        "inputs": [[{"artist": "Karolina Protsenko"}], [{"song": "Closer"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_6",
+        "content": "Find a house in New York with laundry service for 2 people, check in on Monday the 4th and check out on Saturday the 9th, and provide the total price and a contact number.",
+        "tools": [["search_rental_properties"], ["get_rental_property_details"]],
+        "inputs": [[{"location": "New York", "property_type": "house"}], [{"property_id": "NY123"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_7",
+        "content": "The user is interested in renting a house in Paris for themselves, arriving on the 1st and checking out on the 11th. They want to reserve the property and would like to know the total price.",
+        "tools": [["search_rental_properties"], ["get_rental_property_details"]],
+        "inputs": [[{"location": "Paris", "property_type": "house"}], [{"property_id": "PAR456"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_8",
+        "content": "The user is looking for a house in San Francisco for 5 people with a rating of 4.3 or higher, available on March 2nd. They also want to know if there is laundry service included.",
+        "tools": [["search_rental_properties"], ["get_rental_property_details"]],
+        "inputs": [[{"location": "San Francisco", "property_type": "house", "rating": 4.3}], [{"property_id": "SF789"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_9",
+        "content": "The user asks for the current balances in their savings accounts, then requesting assistance in transferring $590 from their savings account to Amir's savings account.",
+        "tools": [["get_balance"], ["send_transaction"]],
+        "inputs": [[{"account_type": "savings"}], [{"target": "Amir", "amount": 590}]]
+    },
+    {
+        "id": "task_2_sequential_tools_10",
+        "content": "The user inquires about the balances of their checking account, and then wants to transfer $270 to Pranav from their checking account.",
+        "tools": [["get_balance"], ["send_transaction"]],
+        "inputs": [[{"account_type": "checking"}], [{"target": "Pranav", "amount": 270}]]
+    },
+    {
+        "id": "task_2_sequential_tools_11",
+        "content": "The user requests to check their balance, specifying the savings account. After that, they also want to transfer $170 from their savings account to Mr. Raghav's checking account and confirm the details are correct.",
+        "tools": [["get_balance"], ["send_transaction"]],
+        "inputs": [[{"account_type": "savings"}], [{"target": "Mr. Raghav", "amount": 170}]]
+    },
+    {
+        "id": "task_2_sequential_tools_12",
+        "content": "The user requests their checking account balance and then wants to transfer $440 to Maria using their checking account.",
+        "tools": [["get_balance"], ["send_transaction"]],
+        "inputs": [[{"account_type": "checking"}], [{"target": "Maria", "amount": 440}]]
+    },
+    {
+        "id": "task_2_sequential_tools_13",
+        "content": "The user is looking for match events in Portland, OR, interested in exploring options on different dates, and added the match on the 6th of March to their calendar using title \"Match\".",
+        "tools": [["search_ticketmaster"], ["create_event"]],
+        "inputs": [[{"type": "Match Event", "city": "Portland"}], [{"subject": "Match", "startDate": "03/06", "endDate": "03/06", "location": "Portland"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_14",
+        "content": "The user expresses interest in attending a baseball event in New York, asks for available dates, and decides on a specific date that works for them. They finally add the match on the 13th of March to their calendar using title \"Baseball\".",
+        "tools": [["search_ticketmaster"], ["create_event"]],
+        "inputs": [[{"type": "Baseball Event", "city": "New York"}], [{"subject": "Baseball", "startDate": "03/13", "endDate": "03/13", "location": "New York"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_15",
+        "content": "The user is looking for a concert event in Washington, requesting information about the venue and start dates, and plan to attend on a specific date that is available. They also want to add the trip to their calendar under the name \"Concert.\"",
+        "tools": [["search_ticketmaster"], ["create_event"]],
+        "inputs": [[{"type": "Concert Event", "city": "Washington"}], [{"subject": "Concert", "startDate": "03/07", "endDate": "03/07", "location": "Washington"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_16",
+        "content": "The user is looking for an apartment to rent in Oakley with 3 bedrooms and 3 bathrooms. They want to check how to get to the found apartment from Oakland International Airport by car.",
+        "tools": [["search_rental_properties"], ["maps_direction_driving_by_address"]],
+        "inputs": [[{"location": "Oakley", "property_type": "apartment"}], [{"origin_address": "Oakland International Airport", "destination_address": "Oakley"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_17",
+        "content": "The user wants to rent a two-bedroom, one-bathroom apartment in Santa Rosa. They want to know how to drive to the found apartment by car from 888 Fourth Street.",
+        "tools": [["search_rental_properties"], ["maps_direction_driving_by_address"]],
+        "inputs": [[{"location": "Santa Rosa", "property_type": "apartment"}], [{"origin_address": "888 Fourth Street", "destination_address": "Santa Rosa"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_18",
+        "content": "The user is looking for attractions to visit in Philadelphia, specifically a museum, and inquires about the best way to drive there from Wilmington.",
+        "tools": [["geocalc_mcp_get_points_of_interest"], ["maps_direction_driving_by_address"]],
+        "inputs": [[{"city": "Philadelphia", "category": "museum"}], [{"origin_address": "Wilmington", "destination_address": "Philadelphia Museum of Art"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_19",
+        "content": "The user is looking for music attractions in New York, and needs help planning a driving route from Avalon Clinton to the selected attraction.",
+        "tools": [["geocalc_mcp_get_points_of_interest"], ["maps_direction_driving_by_address"]],
+        "inputs": [[{"city": "New York", "category": "music"}], [{"origin_address": "Avalon Clinton", "destination_address": "Metropolitan Museum of Art"}]]
+    },
+    {
+        "id": "task_2_sequential_tools_20",
+        "content": "The user is looking for a music attraction in New York on March 4th, including details about the start time and venue location, and inquires about the best way to drive there from Ridgewood.",
+        "tools": [["geocalc_mcp_get_points_of_interest"], ["maps_direction_driving_by_address"]],
+        "inputs": [[{"city":"New York", "category": "music"}], [{"origin_address": "Ridgewood", "destination_address": "Metropolitan Museum of Art"}]]
+    }
+]
