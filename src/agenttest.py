@@ -24,21 +24,6 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 from .utilities import *
 
 
-def decode_unicode_escapes(text):
-    """Decode Unicode escape sequences to actual characters only if they are present"""
-    if isinstance(text, str):
-        # Check if the text contains Unicode escape sequences
-        if '\\u' in text:
-            try:
-                # Only decode if Unicode escapes are present
-                return text.encode('utf-8').decode('unicode_escape')
-            except (UnicodeDecodeError, UnicodeEncodeError):
-                # If decoding fails, return original text
-                return text
-        else:
-            # If no Unicode escapes, return as is
-            return text
-    return text
 
 
 def serialize_response(response):
@@ -87,13 +72,13 @@ def extract_response_data(response):
                 "id": getattr(chat_msg, 'id', None),
                 "source": getattr(chat_msg, 'source', None),
                 "type": getattr(chat_msg, 'type', None),
-                "content": decode_unicode_escapes(getattr(chat_msg, 'content', None)),
+                "content": getattr(chat_msg, 'content', None),
                 "created_at": getattr(chat_msg, 'created_at', None)
             }
             
             # Extract content
             if hasattr(chat_msg, 'content'):
-                data["content"] = decode_unicode_escapes(chat_msg.content)
+                data["content"] = chat_msg.content
             
             # Extract tool calls
             if hasattr(chat_msg, 'tool_calls') and chat_msg.tool_calls:
@@ -101,7 +86,7 @@ def extract_response_data(response):
                     tool_call_data = {
                         "id": getattr(tool_call, 'id', None),
                         "name": getattr(tool_call, 'name', None),
-                        "arguments": decode_unicode_escapes(getattr(tool_call, 'arguments', None))
+                        "arguments": getattr(tool_call, 'arguments', None)
                     }
                     data["tool_calls"].append(tool_call_data)
             
@@ -111,35 +96,24 @@ def extract_response_data(response):
                     result_data = {
                         "name": getattr(result, 'name', None),
                         "call_id": getattr(result, 'call_id', None),
-                        "content": decode_unicode_escapes(getattr(result, 'content', None)),
+                        "content": getattr(result, 'content', None),
                         "is_error": getattr(result, 'is_error', None)
                     }
                     data["tool_results"].append(result_data)
         
         # Store the full serialized response with selective Unicode decoding
         raw_response = serialize_response(response)
-        data["raw_response"] = decode_unicode_in_dict(raw_response)
+        data["raw_response"] = raw_response
         
         return data["raw_response"]
         
     except Exception as e:
         return {
             "error": f"Failed to extract response data: {str(e)}",
-            "raw_response": decode_unicode_escapes(str(response)),
+            "raw_response": str(response),
             "timestamp": datetime.now().isoformat()
         }
 
-
-def decode_unicode_in_dict(obj):
-    """Recursively decode Unicode escape sequences in dictionaries and lists only when present"""
-    if isinstance(obj, dict):
-        return {key: decode_unicode_in_dict(value) for key, value in obj.items()}
-    elif isinstance(obj, list):
-        return [decode_unicode_in_dict(item) for item in obj]
-    elif isinstance(obj, str):
-        return decode_unicode_escapes(obj)
-    else:
-        return obj
 
 def get_all_functions_from_tools():
     """
@@ -178,6 +152,7 @@ def get_all_functions_from_tools():
 async def generate_response(model, tasks_path, output_path):
     llm = ModelRegistry("configs/config.json").get(model)
     client = llm["client"]
+    print(llm["name"])
 
     file_path_list = get_all_functions_from_tools()
     tools = []
@@ -250,8 +225,7 @@ Now, please begin working based on the user’s request. Be sure to include the 
         tools=tools,
         system_message=system_message,
         reflect_on_tool_use=True,
-        model_client_stream=True,
-        max_tool_iterations=2,
+        max_tool_iterations=2, #the number of tools involved in your tasks
     
     )
 

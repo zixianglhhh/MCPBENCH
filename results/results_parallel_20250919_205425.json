@@ -1,0 +1,881 @@
+{
+  "evaluation_summary": {
+    "total_tasks": 20,
+    "tasks_passed": 17,
+    "tasks_failed": 3,
+    "average_score": 0.85,
+    "success_rate_percentage": 85.0
+  },
+  "detailed_results": [
+    {
+      "task_id": "task_2_parallel_tools_1",
+      "task_content": "The user is in a good mood and wants to watch the suspense movie \"Hotel Mumbai\" directed by Anthony ...",
+      "expected_tools": [
+        [
+          "search_imdb",
+          "make_reservation"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "primary_title": "Hotel Mumbai"
+          },
+          {
+            "restaurant_name": "Marche Aux Fleurs"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_imdb"
+        ],
+        [
+          "itunes_play_song",
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "primary_title": "Hotel Mumbai"
+          }
+        ],
+        [
+          {
+            "song": "Hotel Mumbai"
+          },
+          {
+            "restaurant_name": "Marche Aux Fleurs"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_2_parallel_tools_2",
+      "task_content": "The user is looking for round-trip economy flights for three people from San Francisco to Toronto, l...",
+      "expected_tools": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SFO",
+            "destination": "YYZ",
+            "departure_date": "10/01",
+            "return_date": "10/05",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "Toronto",
+            "category": "general"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SFO",
+            "destination": "YYZ",
+            "departure_date": "10/01",
+            "return_date": "10/05",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "Toronto",
+            "category": "general"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_3",
+      "task_content": "The user is looking for a round trip flight from Seattle to Phoenix, departing on March 5th and retu...",
+      "expected_tools": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SEA",
+            "destination": "PHX",
+            "departure_date": "03/05",
+            "return_date": "03/07",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "Phoenix",
+            "category": "child-friendly"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SEA",
+            "destination": "PHX",
+            "departure_date": "03/05",
+            "return_date": "03/07",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "Phoenix",
+            "category": "child-friendly"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_4",
+      "task_content": "The user wants to book a round-trip Economy flight from Phoenix, AZ, to New York City, departing on ...",
+      "expected_tools": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "PHX",
+            "destination": "NYC",
+            "departure_date": "03/07",
+            "return_date": "03/14",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "New York",
+            "category": "general"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "PHX",
+            "destination": "JFK",
+            "departure_date": "10/07",
+            "return_date": "10/14",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "New York",
+            "category": "general"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_2_parallel_tools_5",
+      "task_content": "The user inquires about the weather, humidity, and wind levels there on March 1st in Chicago. They w...",
+      "expected_tools": [
+        [
+          "weather_tool",
+          "booking_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "Chicago",
+            "date": "03/01"
+          },
+          {
+            "city": "Chicago",
+            "checkinDate": "03/01",
+            "checkoutDate": "03/04"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "weather_tool",
+          "booking_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Chicago",
+            "date": "03/01"
+          },
+          {
+            "city": "Chicago",
+            "checkinDate": "03/01",
+            "checkoutDate": "03/04"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_6",
+      "task_content": "The user wants to book a hotel in London from March 6th to March 11th, and inquires about the weathe...",
+      "expected_tools": [
+        [
+          "booking_tool",
+          "weather_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "London",
+            "checkinDate": "03/06",
+            "checkoutDate": "03/11"
+          },
+          {
+            "city": "London",
+            "date": "03/11"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "booking_tool",
+          "weather_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "London",
+            "checkinDate": "03/06",
+            "checkoutDate": "03/11"
+          },
+          {
+            "city": "London",
+            "date": "03/11"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_7",
+      "task_content": "The user wants to book a hotel room in or near New York City for a family stay, checking in on March...",
+      "expected_tools": [
+        [
+          "booking_tool",
+          "weather_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "New York",
+            "checkinDate": "03/11",
+            "checkoutDate": "03/14"
+          },
+          {
+            "city": "New York",
+            "date": "03/12"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "booking_tool",
+          "weather_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "New York",
+            "checkinDate": "03/11",
+            "checkoutDate": "03/14"
+          },
+          {
+            "city": "New York",
+            "date": "03/12"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_8",
+      "task_content": "The user is looking for a round-trip economy flight for three people traveling from Seattle to San D...",
+      "expected_tools": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SEA",
+            "destination": "SAN",
+            "departure_date": "03/04",
+            "return_date": "03/06",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "San Diego",
+            "category": "general"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SEA",
+            "destination": "SAN",
+            "departure_date": "03/04",
+            "return_date": "03/06",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "San Diego",
+            "category": "general"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_9",
+      "task_content": "The user requested help booking a round-trip flight from LA to SF, departing on March 3rd and return...",
+      "expected_tools": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "LAX",
+            "destination": "SFO",
+            "departure_date": "03/03",
+            "return_date": "03/12",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "San Francisco",
+            "category": "general"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_flights",
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "LAX",
+            "destination": "SFO",
+            "departure_date": "03/03",
+            "return_date": "03/12",
+            "cabin_class": "economy"
+          },
+          {
+            "city": "San Francisco",
+            "category": "general"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_10",
+      "task_content": "The user is looking for interesting activities to do, particularly concert events in San Francisco, ...",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Concert Event",
+            "city": "San Francisco"
+          },
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Francisco",
+            "type": "Concert Event"
+          },
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_11",
+      "task_content": "The user is looking for interesting activities in Boston, particularly sports events like American f...",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "American Football Event",
+            "city": "Boston"
+          },
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Boston",
+            "type": "Sports Event"
+          },
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_2_parallel_tools_12",
+      "task_content": "The user is looking for a concert in Rohnert Park and wants to know their savings account balances.",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Concert Event",
+            "city": "Rohnert Park"
+          },
+          {
+            "account_type": "savings"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Rohnert Park",
+            "type": "Concert Event"
+          },
+          {
+            "account_type": "savings"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_13",
+      "task_content": "The user is looking for fun activities in Seattle, specifically a country show on April 10th, which ...",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "booking_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Country Show Event",
+            "city": "Seattle"
+          },
+          {
+            "city": "Seattle",
+            "checkinDate": "04/08",
+            "checkoutDate": "04/12"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "booking_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Seattle",
+            "type": "Country Show Event"
+          },
+          {
+            "city": "Seattle",
+            "checkinDate": "04/08",
+            "checkoutDate": "04/12"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_14",
+      "task_content": "The user wants to find pop music events in London on May 9th. They also want to reserve a hotel room...",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "booking_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Pop Music Event",
+            "city": "London"
+          },
+          {
+            "city": "London",
+            "checkinDate": "05/07",
+            "checkoutDate": "05/09"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "booking_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "London",
+            "type": "Pop Music Event"
+          },
+          {
+            "city": "London",
+            "checkinDate": "05/07",
+            "checkoutDate": "05/09"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_15",
+      "task_content": "The user wants to check their calendar for events on the 6th of May. They also want to know their av...",
+      "expected_tools": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "date": "05/06"
+          },
+          {
+            "date": "05/06"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "05/06"
+          },
+          {
+            "date": "05/06"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_16",
+      "task_content": "The user is inquiring about their calendar schedule for March 13th, and when their schedule is clear...",
+      "expected_tools": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "date": "03/13"
+          },
+          {
+            "date": "03/13"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "03/13"
+          },
+          {
+            "date": "03/13"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_17",
+      "task_content": "The user wants to check their calendar for upcoming events, specifically for 04/01, and also wants t...",
+      "expected_tools": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "date": "04/01"
+          },
+          {
+            "date": "04/01"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "04/01"
+          },
+          {
+            "date": "04/01"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_18",
+      "task_content": "The user wants to check their calendar for events on Thursday next week, which is 04/06/2023, and kn...",
+      "expected_tools": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "date": "04/06"
+          },
+          {
+            "date": "04/06"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "list_events",
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "04/06"
+          },
+          {
+            "date": "04/06"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_19",
+      "task_content": "The user is looking for events in Atlanta, including basketball events on March 5th, and football ev...",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "search_ticketmaster"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Basketball Event",
+            "city": "Atlanta"
+          },
+          {
+            "type": "Football Event",
+            "city": "Atlanta"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Atlanta",
+            "type": "Basketball Event"
+          },
+          {
+            "city": "Atlanta",
+            "type": "Football Event"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_2_parallel_tools_20",
+      "task_content": "The user wants to know about rock concerts in New York, and also wants to check the balances in thei...",
+      "expected_tools": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Rock Concert Event",
+            "city": "New York"
+          },
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_ticketmaster",
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "New York",
+            "type": "Rock Concert Event"
+          },
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    }
+  ]
+}

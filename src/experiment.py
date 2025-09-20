@@ -5,18 +5,25 @@ from .agenttest import *
 import asyncio
 import os
 import json
+import datetime
 
 
 def get_experiment_config(tasks_type):
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     if tasks_type == "sequential":
-        log_path = "logs/response_sequential.json"
+        log_path = f"logs/response_sequential_{timestamp}.json"
         task_path = "data/tasks_with_2_sequential_tools.json"
-        output_path = "results/results_sequential.json"
+        output_path = f"results/results_sequential_{timestamp}.json"
 
     elif tasks_type == "parallel":
-        log_path = "logs/response_parallel.json"
+        log_path = f"logs/response_parallel_{timestamp}.json"
         task_path = "data/tasks_with_2_parallel_tools.json"
-        output_path = "results/results_parallel.json"
+        output_path = f"results/results_parallel_{timestamp}.json"
+
+    elif tasks_type == "3_tools":
+        log_path = f"logs/response_3_tools_{timestamp}.json"
+        task_path = "data/tasks_with_3_tools.json"
+        output_path = f"results/results_3_tools_{timestamp}.json"
 
     return log_path, task_path, output_path
 
