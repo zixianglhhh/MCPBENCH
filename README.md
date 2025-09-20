@@ -18,3 +18,5 @@ Plan to do:
 Further polish the codes.
 Fix potential bugs (I do not know why my gpt-4o test result this time is far worse than previous test results (yet still reasonable). This result is current stored in the logs and results folder. I will look into it later.)
 If you encounter any difficulties in setup, please do not hesitate to contact me. And please share with me any ideas on how to improve the coding, I am more than grateful.
+
+**Remember to change the max_tool_iterations para in the "assistant agent" in agenttest.py to the exact number of tools involved in your test tasks**
