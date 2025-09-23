@@ -219,6 +219,8 @@ Now, please begin working based on the user’s request. Be sure to include the 
 """
 
 
+    agent_construction_start = time.time()
+    
     assistant = AssistantAgent(
         name="assistant",
         model_client=client,
@@ -229,7 +231,12 @@ Now, please begin working based on the user’s request. Be sure to include the 
     
     )
 
+    agent_construction_end = time.time()
+    agent_construction_time = agent_construction_end - agent_construction_start
+
     all_responses = []
+
+    task_processing_start = time.time()
     
     for i in range(len(task_content)):
         print(f"\n--- Processing Task {i+1}/{len(task_content)} ---")
@@ -261,7 +268,19 @@ Now, please begin working based on the user’s request. Be sure to include the 
                 "timestamp": datetime.now().isoformat()
             }
             all_responses.append(error_response)
+
+    task_processing_end = time.time()
+    task_processing_time = task_processing_end - task_processing_start
+
+    total_execution_time = task_processing_end - agent_construction_start
     
+    timing_info = {"timing_info": {
+        "agent_construction_time_seconds": agent_construction_time,
+        "task_processing_time_seconds": task_processing_time,
+        "total_execution_time_seconds": total_execution_time,
+        "average_time_per_task_seconds": task_processing_time / len(task_content) if task_content else 0
+    }}
+
     # Save all responses to JSON file with proper Unicode handling
     save_data(output_path, all_responses)
     

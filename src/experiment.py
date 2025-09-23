@@ -38,13 +38,20 @@ async def run_experiment(model, tasks_type):
     os.makedirs("logs", exist_ok=True)
     await generate_response(model, task_path, log_path)
 
-
     task_data = load_data(task_path)
     response_data = load_data(log_path)
     num_tasks = len(task_data)
+
+    timing_info = None
+    for response in response_data:
+        if 'timing_info' in response:
+            timing_info = response['timing_info']
+            break
+
+    filtered_response_data = [response for response in response_data if 'timing_info' not in response]
     for i in range(num_tasks):
         try:
-            response = response_data[i]
+            response = filtered_response_data[i]
             task = task_data[i]
             
             # Extract expected tools and inputs
@@ -86,6 +93,9 @@ async def run_experiment(model, tasks_type):
     total_score = sum(scores)
     average_score = total_score / len(scores) if scores else 0
     percentage = average_score * 100
+
+    total_prompt_tokens, total_completion_tokens = calculate_total_tokens(response_data)
+    total_tokens = total_prompt_tokens + total_completion_tokens
     
     # Print summary
     print("\n" + "=" * 50)
@@ -120,14 +130,22 @@ async def run_experiment(model, tasks_type):
             print(f"Task ID: {task['task_id']} - Tools: {task['expected_tools']}")
     
     # Save detailed results to file
+    evaluation_summary = {
+        'total_tasks': len(scores),
+        'tasks_passed': total_score,
+        'tasks_failed': len(scores) - total_score,
+        'average_score': average_score,
+        'success_rate_percentage': percentage,
+        'total_prompt_tokens': total_prompt_tokens,
+        'total_completion_tokens': total_completion_tokens,
+        'total_tokens': total_tokens
+    }
+
+    if timing_info:
+        evaluation_summary.update(timing_info)
+
     results_summary = {
-        'evaluation_summary': {
-            'total_tasks': len(scores),
-            'tasks_passed': total_score,
-            'tasks_failed': len(scores) - total_score,
-            'average_score': average_score,
-            'success_rate_percentage': percentage
-        },
+        'evaluation_summary': evaluation_summary,
         'detailed_results': detailed_results
     }
     
