@@ -53,6 +53,7 @@ class ModelRegistry:
             base_url = cfg.get("api_base") or cfg.get("base_url")
             name_raw = cfg.get("name") or f"client_{idx}_{model}"
             model_info = cfg.get("model_info")
+            temperature = cfg.get("temperature")
             # 确保可作为 Python identifier 的名称
             name = name_raw.replace("-", "_").replace(" ", "_")
             if not (name[0].isalpha() or name[0] == "_"):
@@ -61,24 +62,33 @@ class ModelRegistry:
             client_kwargs = {"model": model, "api_key": api_key}
             if base_url:
                 client_kwargs["base_url"] = base_url
+            if temperature is not None:
+                client_kwargs["temperature"] = temperature
+            
+            # Always provide model_info for non-standard models
             if model_info:
                 client_kwargs["model_info"] = model_info
-
-            entry = {
-                "name": name,
-                "model": model,
-                "client": OpenAIChatCompletionClient(**client_kwargs),
-            }
-            self._entries.append(entry)
-            self._name_to_entry[name] = entry
-            self._model_to_entries.setdefault(model, []).append(entry)
+            
+            try:
+                entry = {
+                    "name": name,
+                    "model": model,
+                    "client": OpenAIChatCompletionClient(**client_kwargs),
+                }
+                self._entries.append(entry)
+                self._name_to_entry[name] = entry
+                self._model_to_entries.setdefault(model, []).append(entry)
+            except Exception as e:
+                print(f"Warning: Failed to create client for model {model}: {e}")
+                # Skip this model and continue with others
+                continue
 
         if not self._entries:
             entry = {
                 "name": "openai_default",
                 "model": "gpt-4o-mini",
                 "client": OpenAIChatCompletionClient(
-                    model="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY")
+                    model="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY"), temperature=0
                 ),
             }
             self._entries = [entry]

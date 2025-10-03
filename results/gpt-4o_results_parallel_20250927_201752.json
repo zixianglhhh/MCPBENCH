@@ -1,10 +1,17 @@
 {
   "evaluation_summary": {
     "total_tasks": 20,
-    "tasks_passed": 12,
-    "tasks_failed": 8,
-    "average_score": 0.6,
-    "success_rate_percentage": 60.0
+    "tasks_passed": 18,
+    "tasks_failed": 2,
+    "average_score": 0.9,
+    "success_rate_percentage": 90.0,
+    "total_prompt_tokens": 296851,
+    "total_completion_tokens": 4000,
+    "total_tokens": 300851,
+    "agent_construction_time_seconds": 0.0,
+    "task_processing_time_seconds": 181.8682508468628,
+    "total_execution_time_seconds": 181.8682508468628,
+    "average_time_per_task_seconds": 9.09341254234314
   },
   "detailed_results": [
     {
@@ -28,8 +35,7 @@
       ],
       "tools_used": [
         [
-          "search_imdb",
-          "search_restaurant"
+          "search_imdb"
         ],
         [
           "make_reservation"
@@ -39,10 +45,6 @@
         [
           {
             "primary_title": "Hotel Mumbai"
-          },
-          {
-            "location": "Mumbai",
-            "cuisineTypes": "Indian"
           }
         ],
         [
@@ -141,8 +143,8 @@
             "type": "round_trip",
             "origin": "SEA",
             "destination": "PHX",
-            "departure_date": "10/05",
-            "return_date": "10/07",
+            "departure_date": "03/05",
+            "return_date": "03/07",
             "cabin_class": "economy"
           },
           {
@@ -151,8 +153,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_4",
@@ -168,7 +170,7 @@
           {
             "type": "round_trip",
             "origin": "PHX",
-            "destination": "NYC",
+            "destination": "JFK",
             "departure_date": "03/07",
             "return_date": "03/14",
             "cabin_class": "economy"
@@ -191,8 +193,8 @@
             "type": "round_trip",
             "origin": "PHX",
             "destination": "JFK",
-            "departure_date": "10/07",
-            "return_date": "10/14",
+            "departure_date": "03/07",
+            "return_date": "03/14",
             "cabin_class": "economy"
           },
           {
@@ -201,8 +203,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_5",
@@ -316,9 +318,7 @@
       ],
       "tools_used": [
         [
-          "booking_tool"
-        ],
-        [
+          "booking_tool",
           "weather_tool"
         ]
       ],
@@ -328,17 +328,15 @@
             "city": "New York",
             "checkinDate": "03/11",
             "checkoutDate": "03/14"
-          }
-        ],
-        [
+          },
           {
             "city": "New York",
-            "date": "03/11"
+            "date": "03/12"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_8",
@@ -462,9 +460,7 @@
       ],
       "tools_used": [
         [
-          "search_ticketmaster"
-        ],
-        [
+          "search_ticketmaster",
           "get_balance"
         ]
       ],
@@ -473,20 +469,18 @@
           {
             "type": "Concert Event",
             "city": "San Francisco"
-          }
-        ],
-        [
+          },
           {
             "account_type": "checking"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_11",
-      "task_content": "The user is looking for interesting activities in Boston, particularly sports events like American f...",
+      "task_content": "The user is looking for interesting activities in Boston, particularly sports events like football e...",
       "expected_tools": [
         [
           "search_ticketmaster",
@@ -496,7 +490,7 @@
       "expected_inputs": [
         [
           {
-            "type": "American Football Event",
+            "type": "Football Event",
             "city": "Boston"
           },
           {
@@ -521,8 +515,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_12",
@@ -546,9 +540,7 @@
       ],
       "tools_used": [
         [
-          "search_ticketmaster"
-        ],
-        [
+          "search_ticketmaster",
           "get_balance"
         ]
       ],
@@ -556,17 +548,15 @@
         [
           {
             "type": "Concert Event",
-            "city": "Raleigh"
-          }
-        ],
-        [
+            "city": "Rohnert Park"
+          },
           {
             "account_type": "savings"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_13",
@@ -580,7 +570,7 @@
       "expected_inputs": [
         [
           {
-            "type": "Country Show Event",
+            "type": "Country Event",
             "city": "Seattle"
           },
           {
@@ -599,8 +589,8 @@
       "inputs_used": [
         [
           {
-            "type": "Country Show Event",
-            "city": "Seattle"
+            "city": "Seattle",
+            "type": "Country Event"
           },
           {
             "city": "Seattle",
@@ -624,7 +614,7 @@
       "expected_inputs": [
         [
           {
-            "type": "Pop Music Event",
+            "type": "Pop Event",
             "city": "London"
           },
           {
@@ -643,7 +633,7 @@
       "inputs_used": [
         [
           {
-            "type": "Pop Music Event",
+            "type": "Pop Event",
             "city": "London"
           },
           {
@@ -791,7 +781,9 @@
       ],
       "tools_used": [
         [
-          "list_events",
+          "list_events"
+        ],
+        [
           "find_free_slots"
         ]
       ],
@@ -799,14 +791,16 @@
         [
           {
             "date": "04/06"
-          },
+          }
+        ],
+        [
           {
             "date": "04/06"
           }
         ]
       ],
-      "score": 1,
-      "match": true
+      "score": 0,
+      "match": false
     },
     {
       "task_id": "task_2_parallel_tools_19",
@@ -862,7 +856,7 @@
       "expected_inputs": [
         [
           {
-            "type": "Rock Concert Event",
+            "type": "Rock Event",
             "city": "New York"
           },
           {
@@ -887,8 +881,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     }
   ]
 }

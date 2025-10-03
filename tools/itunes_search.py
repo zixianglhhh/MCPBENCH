@@ -15,7 +15,7 @@ Returns:
         or an error message if the input is invalid, 
         or a message indicating no matches were found.
 """'''
-    mock_itunes_library = [{'artist': 'El Alfa', 'title': 'La Romana', 'album': 'El Hombre', 'genre': 'Latin'}, {'artist': 'Frank Ocean', 'title': 'Nikes', 'album': 'Blonde', 'genre': 'R&B'}, {'artist': 'Karolina Protsenko', 'title': 'Fly', 'album': 'Fly', 'genre': 'Pop'}, {'artist': 'Brunettes Shoot Blondes', 'title': 'Every Monday', 'album': 'Bittersweet', 'genre': 'Rock'}]
+    mock_itunes_library = [{'artist': 'El Alfa', 'title': 'La Romana', 'album': 'El Hombre', 'genre': 'Latin'}, {'artist': 'Frank Ocean', 'title': 'Nikes', 'album': 'Blonde', 'genre': 'R&B'}, {'artist': 'Karolina Protsenko', 'title': 'Closer', 'album': 'Fly', 'genre': 'Pop'}, {'artist': 'Brunettes Shoot Blondes', 'title': 'Every Monday', 'album': 'Bittersweet', 'genre': 'Rock'}]
     if not isinstance(artist, str) or not artist.strip():
         return 'Error: Invalid input. Please provide a valid search term.'
     artist = artist.strip().lower()

@@ -7,15 +7,15 @@
     },
     {
         "id": "task_3_tools_2",
-        "content": "The user is looking for a place to eat in San Mateo, specifically for lobster, and inquires about phone numbers, live music, and liquor availability. They ask for additional suggestions and decide to make a reservation at 5:30 PM on March 14th.",
+        "content": "The user is looking for a place to eat in San Mateo, specifically for seafood, and inquires about phone numbers, live music, and liquor availability. They ask for additional suggestions and decide to make a reservation at 5:30 PM on March 14th.",
         "tools": [["search_restaurant"], ["get_restaurant_details"], ["make_reservation"]],
-        "inputs": [[{"location": "San Mateo", "cuisineTypes": "Lobster"}], [{"restaurant_name": "Lobster Shack"}], [{"restaurant_name": "Lobster Shack"}]]
+        "inputs": [[{"location": "San Mateo", "cuisineTypes": "Seafood"}], [{"restaurant_name": "Lobster Shack"}], [{"restaurant_name": "Lobster Shack"}]]
     },
     {
         "id": "task_3_tools_3",
         "content": "The user requested the weather for San Jose on March 7th and asked for rock songs similar to Brunettes Shoot Blondes in the Bittersweet album, with a preference to play them on iTunes.",
         "tools": [["weather_tool", "itunes_search"], ["itunes_play_song"]],
-        "inputs": [[{"city": "San Jose", "date": "03/07"}, {"artist": "Brunettes Shoot Blondes"}], [{"song": "Let Me Love You"}]]
+        "inputs": [[{"city": "San Jose", "date": "03/07"}, {"artist": "Brunettes Shoot Blondes"}], [{"song": "Every Monday"}]]
     },
     {
         "id": "task_3_tools_4",
@@ -93,30 +93,30 @@
         "id": "task_3_tools_16",
         "content": "The user wants to find an Izakaya restaurant in San Francisco and make a reservation for two people at 5:45 PM on the 5th of May at 2g Japanese Brasserie. They also request to add this reservation to their calendar with the event title \"Restaurant reservation for 2 at 2g Japanese Brasserie.\"",
         "tools": [["search_restaurant"], ["make_reservation"], ["create_event"]],
-        "inputs": [[{"location": "San Francisco", "cuisineTypes": "Izakaya"}], [{"restaurant_name": "2g Japanese Brasserie"}], [{"subject": "Restaurant reservation for 2 at 2g Japanese Brasserie", "startDate": "05/05", "location": "2g Japanese Brasserie"}]]
+        "inputs": [[{"location": "San Francisco", "cuisineTypes": "Izakaya"}], [{"restaurant_name": "2g Japanese Brasserie"}], [{"subject": "Restaurant reservation for 2 at 2g Japanese Brasserie", "startDate": "05/05", "startTime": "17:45", "endDate": "05/05", "location": "2g Japanese Brasserie"}]]
     },
     {
         "id": "task_3_tools_17",
-        "content": "The user requested help finding a seafood restaurant in San Francisco with live music, asked for its location, and inquired about making a reservation for 11:30 AM. They confirmed the restaurant Akiko's Sushi Bar. They also requested adding the reservation to their calendar with the event title \"Restaurant reservation at Akiko's Sushi Bar.\"",
+        "content": "The user requested help finding a seafood restaurant in San Francisco, and inquired about making a reservation for 11:30 AM on the 3rd of September. They confirmed the restaurant Akiko's Sushi Bar. They also requested adding the reservation to their calendar with the event title \"Restaurant reservation at Akiko's Sushi Bar.\"",
         "tools": [["search_restaurant"], ["make_reservation"], ["create_event"]],
-        "inputs": [[{"location": "San Francisco", "cuisineTypes": "Seafood"}], [{"restaurant_name": "Akiko's Sushi Bar"}], [{"subject": "Restaurant reservation at Akiko's Sushi Bar", "startTime": "11:30", "location": "Akiko's Sushi Bar"}]]
+        "inputs": [[{"location": "San Francisco", "cuisineTypes": "Seafood"}], [{"restaurant_name": "Akiko's Sushi Bar"}], [{"subject": "Restaurant reservation at Akiko's Sushi Bar", "startDate": "09/03", "startTime": "11:30", "endDate": "09/03", "location": "Akiko's Sushi Bar"}]]
     },
     {
         "id": "task_3_tools_18",
-        "content": "The user is looking for a Parisian restaurant in Ross with live music. They requested to book a table for two at 11:30 AM and asked to add the reservation to their calendar at 11:15 AM, naming the event \"Restaurant reservation for 5 at Marche Aux Fleurs.\"",
+        "content": "The user is looking for a Parisian restaurant in Ross. They requested to book a table for two at 11:30 AM and asked to add the reservation to their calendar on the 6th of March at 11:15 AM, naming the event \"Restaurant reservation for 5 at Marche Aux Fleurs.\"",
         "tools": [["search_restaurant"], ["make_reservation"], ["create_event"]],
-        "inputs": [[{"location": "Ross", "cuisineTypes": "Parisian"}], [{"restaurant_name": "Marche Aux Fleurs"}], [{"subject": "Restaurant reservation for 5 at Marche Aux Fleurs", "startTime": "11:15", "location": "Marche Aux Fleurs"}]]
+        "inputs": [[{"location": "Ross", "cuisineTypes": "Parisian"}], [{"restaurant_name": "Marche Aux Fleurs"}], [{"subject": "Restaurant reservation for 5 at Marche Aux Fleurs", "startDate": "03/06", "startTime": "11:15", "endDate": "03/06", "location": "Marche Aux Fleurs"}]]
     },
     {
         "id": "task_3_tools_19",
         "content": "The user is looking for an Indian restaurant in Livermore to dine with friends. They want to book a table for four people on March 3rd at 6:45 PM. They also want to add the reservation to their calendar under the name \"Food.\"",
         "tools": [["search_restaurant"], ["make_reservation"], ["create_event"]],
-        "inputs": [[{"location": "Livermore", "cuisineTypes": "Indian"}], [{"restaurant_name": "Spice of India"}], [{"subject": "Food", "startTime": "18:45", "location": "Spice of India"}]]
+        "inputs": [[{"location": "Livermore", "cuisineTypes": "Indian"}], [{"restaurant_name": "Spice of India"}], [{"subject": "Food", "startDate": "03/03", "startTime": "18:45", "endDate": "03/03", "location": "Spice of India"}]]
     },
     {
         "id": "task_3_tools_20",
-        "content": "The user is looking for a good, bargain-priced Chinese restaurant in San Francisco. They want to book a table for six people at Mei-Don Chinese Cuisine at 7 PM, and add the reservation to their calendar with the event title \"Restaurant Reservation.\"",
+        "content": "The user is looking for a good, bargain-priced Chinese restaurant in San Francisco. They want to book a table for six people at Mei-Don Chinese Cuisine at 7 PM on the 18th of June, and add the reservation to their calendar with the event title \"Restaurant Reservation.\"",
         "tools": [["search_restaurant"], ["make_reservation"], ["create_event"]],
-        "inputs": [[{"location": "San Francisco", "cuisineTypes": "Chinese"}], [{"restaurant_name": "Mei-Don Chinese Cuisine"}], [{"subject": "Restaurant Reservation", "startTime": "19:00", "location": "Mei-Don Chinese Cuisine"}]]
+        "inputs": [[{"location": "San Francisco", "cuisineTypes": "Chinese"}], [{"restaurant_name": "Mei-Don Chinese Cuisine"}], [{"subject": "Restaurant Reservation", "startDate": "06/18", "startTime": "19:00", "endDate": "06/18", "location": "Mei-Don Chinese Cuisine"}]]
     }
 ]

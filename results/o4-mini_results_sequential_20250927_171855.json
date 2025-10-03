@@ -1,15 +1,22 @@
 {
   "evaluation_summary": {
     "total_tasks": 20,
-    "tasks_passed": 12,
-    "tasks_failed": 8,
-    "average_score": 0.6,
-    "success_rate_percentage": 60.0
+    "tasks_passed": 16,
+    "tasks_failed": 4,
+    "average_score": 0.8,
+    "success_rate_percentage": 80.0,
+    "total_prompt_tokens": 353450,
+    "total_completion_tokens": 23099,
+    "total_tokens": 376549,
+    "agent_construction_time_seconds": 0.0010821819305419922,
+    "task_processing_time_seconds": 420.2585735321045,
+    "total_execution_time_seconds": 420.25965571403503,
+    "average_time_per_task_seconds": 21.012928676605224
   },
   "detailed_results": [
     {
       "task_id": "task_2_sequential_tools_1",
-      "task_content": "The user is looking for a good Ethiopian restaurant in Berkeley, preferably one with live music. The...",
+      "task_content": "The user is looking for a good Ethiopian restaurant in Berkeley. They want to reserve a table at the...",
       "expected_tools": [
         [
           "search_restaurant"
@@ -36,7 +43,7 @@
           "search_restaurant"
         ],
         [
-          "get_restaurant_details"
+          "make_reservation"
         ]
       ],
       "inputs_used": [
@@ -52,8 +59,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_sequential_tools_2",
@@ -221,20 +228,12 @@
       "tools_used": [
         [
           "itunes_search"
-        ],
-        [
-          "itunes_play_song"
         ]
       ],
       "inputs_used": [
         [
           {
             "artist": "Karolina Protsenko"
-          }
-        ],
-        [
-          {
-            "song": "Fly"
           }
         ]
       ],
@@ -502,7 +501,7 @@
         ],
         [
           {
-            "target": "Mr. Raghav",
+            "target": "Raghav",
             "amount": 170
           }
         ]
@@ -523,7 +522,7 @@
         ],
         [
           {
-            "target": "Mr. Raghav",
+            "target": "Raghav",
             "amount": "170"
           }
         ]
@@ -617,19 +616,21 @@
       "inputs_used": [
         [
           {
-            "city": "Portland",
-            "type": "Match Event"
+            "type": "Match Event",
+            "city": "Portland"
           }
         ],
         [
           {
             "subject": "Match",
-            "startDate": "03/06"
+            "startDate": "03/06",
+            "endDate": "03/06",
+            "location": "Portland"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_sequential_tools_14",
@@ -660,23 +661,16 @@
       ],
       "tools_used": [
         [
-          "search_ticketmaster"
-        ],
-        [
           "create_event"
         ]
       ],
       "inputs_used": [
         [
           {
-            "city": "New York",
-            "type": "Baseball Event"
-          }
-        ],
-        [
-          {
             "subject": "Baseball",
-            "startDate": "03/13"
+            "startDate": "03/13",
+            "endDate": "03/13",
+            "location": "New York"
           }
         ]
       ],
@@ -721,19 +715,21 @@
       "inputs_used": [
         [
           {
-            "city": "Washington",
-            "type": "Concert Event"
+            "type": "Concert Event",
+            "city": "Washington"
           }
         ],
         [
           {
             "subject": "Concert",
-            "startDate": "03/07"
+            "startDate": "03/07",
+            "endDate": "03/07",
+            "location": "Washington"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_sequential_tools_16",
@@ -756,7 +752,7 @@
         [
           {
             "origin_address": "Oakland International Airport",
-            "destination_address": "Oakley"
+            "destination_address": "123 Oakley Ave"
           }
         ]
       ],
@@ -805,13 +801,16 @@
         [
           {
             "origin_address": "888 Fourth Street",
-            "destination_address": "Santa Rosa"
+            "destination_address": "123 Santa Rosa Ave"
           }
         ]
       ],
       "tools_used": [
         [
           "search_rental_properties"
+        ],
+        [
+          "get_rental_property_details"
         ]
       ],
       "inputs_used": [
@@ -819,6 +818,11 @@
           {
             "location": "Santa Rosa",
             "property_type": "apartment"
+          }
+        ],
+        [
+          {
+            "property_id": "SRO123"
           }
         ]
       ],
@@ -927,7 +931,7 @@
     },
     {
       "task_id": "task_2_sequential_tools_20",
-      "task_content": "The user is looking for a music attraction in New York on March 4th, including details about the sta...",
+      "task_content": "The user is looking for a music attraction in New York and inquires about the best way to drive ther...",
       "expected_tools": [
         [
           "geocalc_mcp_get_points_of_interest"
@@ -952,19 +956,28 @@
       ],
       "tools_used": [
         [
-          "search_ticketmaster"
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "maps_direction_driving_by_address"
         ]
       ],
       "inputs_used": [
         [
           {
             "city": "New York",
-            "type": "Music Event"
+            "category": "music"
+          }
+        ],
+        [
+          {
+            "origin_address": "Ridgewood",
+            "destination_address": "Metropolitan Museum of Art"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     }
   ]
 }

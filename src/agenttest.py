@@ -1,3 +1,4 @@
+from cgitb import reset
 import json
 import time
 import pandas as pd
@@ -149,7 +150,7 @@ def get_all_functions_from_tools():
     return file_path_list
 
 
-async def generate_response(model, tasks_path, output_path):
+async def generate_response(model, tasks_path, output_path, num):
     llm = ModelRegistry("configs/config.json").get(model)
     client = llm["client"]
     print(llm["name"])
@@ -227,9 +228,11 @@ Now, please begin working based on the user’s request. Be sure to include the 
         tools=tools,
         system_message=system_message,
         reflect_on_tool_use=True,
-        max_tool_iterations=2, #the number of tools involved in your tasks
+        max_tool_iterations=num, #the number of tools involved in your tasks
     
     )
+
+
 
     agent_construction_end = time.time()
     agent_construction_time = agent_construction_end - agent_construction_start
@@ -257,6 +260,8 @@ Now, please begin working based on the user’s request. Be sure to include the 
             all_responses.append(response_data)
             
             print(f"Task {i+1} completed and added to responses")
+
+            await assistant.on_reset(CancellationToken())
             
         except Exception as e:
             print(f"Error processing task {i+1}: {str(e)}")
@@ -281,9 +286,12 @@ Now, please begin working based on the user’s request. Be sure to include the 
         "average_time_per_task_seconds": task_processing_time / len(task_content) if task_content else 0
     }}
 
+    all_responses.append(timing_info)
+
     # Save all responses to JSON file with proper Unicode handling
     save_data(output_path, all_responses)
+
     
     print(f"\nAll response data saved to {output_path}")
-    print(f"Total tasks processed: {len(all_responses)}")
+    print(f"Total tasks processed: {len(all_responses) - 1}")
     print(f"File size: {os.path.getsize(output_path)} bytes")

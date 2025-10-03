@@ -1,10 +1,17 @@
 {
   "evaluation_summary": {
     "total_tasks": 20,
-    "tasks_passed": 1,
-    "tasks_failed": 19,
-    "average_score": 0.05,
-    "success_rate_percentage": 5.0
+    "tasks_passed": 5,
+    "tasks_failed": 15,
+    "average_score": 0.25,
+    "success_rate_percentage": 25.0,
+    "total_prompt_tokens": 463448,
+    "total_completion_tokens": 23967,
+    "total_tokens": 487415,
+    "agent_construction_time_seconds": 0.0,
+    "task_processing_time_seconds": 414.8837661743164,
+    "total_execution_time_seconds": 414.8837661743164,
+    "average_time_per_task_seconds": 20.74418830871582
   },
   "detailed_results": [
     {
@@ -53,8 +60,8 @@
       "inputs_used": [
         [
           {
-            "location": "San Jose",
-            "cuisineTypes": "American"
+            "cuisineTypes": "American",
+            "location": "San Jose"
           }
         ],
         [
@@ -73,7 +80,7 @@
     },
     {
       "task_id": "task_3_tools_2",
-      "task_content": "The user is looking for a place to eat in San Mateo, specifically for lobster, and inquires about ph...",
+      "task_content": "The user is looking for a place to eat in San Mateo, specifically for seafood, and inquires about ph...",
       "expected_tools": [
         [
           "search_restaurant"
@@ -89,7 +96,7 @@
         [
           {
             "location": "San Mateo",
-            "cuisineTypes": "Lobster"
+            "cuisineTypes": "Seafood"
           }
         ],
         [
@@ -111,14 +118,14 @@
           "get_restaurant_details"
         ],
         [
-          "make_reservation"
+          "create_event"
         ]
       ],
       "inputs_used": [
         [
           {
-            "location": "San Mateo",
-            "cuisineTypes": "Seafood"
+            "cuisineTypes": "Seafood",
+            "location": "San Mateo"
           }
         ],
         [
@@ -128,7 +135,12 @@
         ],
         [
           {
-            "restaurant_name": "Lobster Shack"
+            "endDate": "03/14",
+            "endTime": "18:30",
+            "location": "Lobster Shack",
+            "startDate": "03/14",
+            "startTime": "17:30",
+            "subject": "Dinner at Lobster Shack"
           }
         ]
       ],
@@ -140,7 +152,7 @@
       "task_content": "The user requested the weather for San Jose on March 7th and asked for rock songs similar to Brunett...",
       "expected_tools": [
         [
-          "Weather Tool",
+          "weather_tool",
           "itunes_search"
         ],
         [
@@ -159,7 +171,7 @@
         ],
         [
           {
-            "song": "Let Me Love You"
+            "song": "Every Monday"
           }
         ]
       ],
@@ -200,7 +212,7 @@
       "task_content": "The user inquired about the weather in London on May 1st, including humidity and wind conditions. Th...",
       "expected_tools": [
         [
-          "Weather Tool",
+          "weather_tool",
           "search_rental_properties"
         ],
         [
@@ -226,9 +238,7 @@
       ],
       "tools_used": [
         [
-          "weather_tool"
-        ],
-        [
+          "weather_tool",
           "search_rental_properties"
         ],
         [
@@ -240,9 +250,7 @@
           {
             "city": "London",
             "date": "05/01"
-          }
-        ],
-        [
+          },
           {
             "location": "London",
             "property_type": "house"
@@ -254,8 +262,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_3_tools_5",
@@ -283,26 +291,30 @@
       ],
       "tools_used": [
         [
-          "itunes_play_song"
-        ],
-        [
+          "itunes_play_song",
           "send_transaction",
           "search_imdb"
+        ],
+        [
+          "get_directors"
         ]
       ],
       "inputs_used": [
         [
           {
             "song": "Let Me Love You"
-          }
-        ],
-        [
+          },
           {
             "amount": "970",
             "target": "Tom"
           },
           {
             "primary_title": "JT Leroy"
+          }
+        ],
+        [
+          {
+            "imdb_id": "tt5460522"
           }
         ]
       ],
@@ -335,26 +347,38 @@
       ],
       "tools_used": [
         [
-          "itunes_play_song"
+          "itunes_search",
+          "get_balance",
+          "search_imdb"
         ],
         [
+          "itunes_play_song",
           "send_transaction",
-          "search_imdb"
+          "get_directors"
         ]
       ],
       "inputs_used": [
         [
           {
-            "song": "No Diggity"
+            "artist": "Nick Murphy"
+          },
+          {
+            "account_type": "savings"
+          },
+          {
+            "primary_title": "Captain Marvel"
           }
         ],
         [
+          {
+            "song": "No Diggity"
+          },
           {
             "amount": "1030",
             "target": "Jerry"
           },
           {
-            "primary_title": "Captain Marvel"
+            "imdb_id": "tt4154664"
           }
         ]
       ],
@@ -385,31 +409,8 @@
           }
         ]
       ],
-      "tools_used": [
-        [
-          "itunes_play_song"
-        ],
-        [
-          "send_transaction",
-          "search_imdb"
-        ]
-      ],
-      "inputs_used": [
-        [
-          {
-            "song": "Music Never Sleeps"
-          }
-        ],
-        [
-          {
-            "amount": "1150",
-            "target": "Pranav"
-          },
-          {
-            "primary_title": "Mad Max"
-          }
-        ]
-      ],
+      "tools_used": [],
+      "inputs_used": [],
       "score": 0,
       "match": false
     },
@@ -439,26 +440,30 @@
       ],
       "tools_used": [
         [
-          "itunes_play_song"
+          "itunes_play_song",
+          "get_balance",
+          "search_imdb"
         ],
         [
-          "send_transaction",
-          "search_imdb"
+          "send_transaction"
         ]
       ],
       "inputs_used": [
         [
           {
             "song": "Stitches"
+          },
+          {
+            "account_type": "savings"
+          },
+          {
+            "primary_title": "Dogman"
           }
         ],
         [
           {
             "amount": "980",
             "target": "Abhinav"
-          },
-          {
-            "primary_title": "Dogman"
           }
         ]
       ],
@@ -495,9 +500,7 @@
       ],
       "tools_used": [
         [
-          "geocalc_mcp_get_points_of_interest"
-        ],
-        [
+          "geocalc_mcp_get_points_of_interest",
           "search_imdb"
         ],
         [
@@ -507,11 +510,9 @@
       "inputs_used": [
         [
           {
-            "city": "San Francisco",
-            "category": "museum"
-          }
-        ],
-        [
+            "category": "museum",
+            "city": "San Francisco"
+          },
           {
             "primary_title": "Say Anything"
           }
@@ -522,8 +523,8 @@
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_3_tools_10",
@@ -551,9 +552,8 @@
       ],
       "tools_used": [
         [
-          "geocalc_mcp_get_points_of_interest"
-        ],
-        [
+          "geocalc_mcp_get_points_of_interest",
+          "itunes_play_song",
           "search_imdb"
         ],
         [
@@ -563,11 +563,12 @@
       "inputs_used": [
         [
           {
-            "city": "San Francisco",
-            "category": "garden"
-          }
-        ],
-        [
+            "category": "garden",
+            "city": "San Francisco"
+          },
+          {
+            "song": "Dumbo"
+          },
           {
             "primary_title": "Alice in Wonderland"
           }
@@ -611,28 +612,29 @@
       ],
       "tools_used": [
         [
-          "geocalc_mcp_get_points_of_interest"
-        ],
-        [
+          "geocalc_mcp_get_points_of_interest",
           "search_imdb"
         ],
         [
+          "geocalc_mcp_get_points_of_interest",
           "get_directors"
         ]
       ],
       "inputs_used": [
         [
           {
-            "city": "San Francisco",
-            "category": "museum"
-          }
-        ],
-        [
+            "category": "museum",
+            "city": "San Francisco"
+          },
           {
             "primary_title": "Hackers"
           }
         ],
         [
+          {
+            "category": "free museum",
+            "city": "San Francisco"
+          },
           {
             "imdb_id": "tt0113243"
           }
@@ -670,34 +672,30 @@
       ],
       "tools_used": [
         [
-          "search_imdb"
+          "search_imdb",
+          "make_reservation"
         ],
         [
           "get_directors"
-        ],
-        [
-          "make_reservation"
         ]
       ],
       "inputs_used": [
         [
           {
             "primary_title": "Dr. Strangelove"
+          },
+          {
+            "restaurant_name": "Taste of India"
           }
         ],
         [
           {
             "imdb_id": "tt0057012"
           }
-        ],
-        [
-          {
-            "restaurant_name": "Taste of India"
-          }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_3_tools_13",
@@ -728,27 +726,15 @@
       ],
       "tools_used": [
         [
-          "search_imdb"
-        ],
-        [
+          "search_imdb",
           "get_restaurant_details"
-        ],
-        [
-          "make_reservation"
         ]
       ],
       "inputs_used": [
         [
           {
             "primary_title": "The Dogman"
-          }
-        ],
-        [
-          {
-            "restaurant_name": "Aato"
-          }
-        ],
-        [
+          },
           {
             "restaurant_name": "Aato"
           }
@@ -786,34 +772,30 @@
       ],
       "tools_used": [
         [
-          "search_imdb"
+          "search_imdb",
+          "make_reservation"
         ],
         [
           "get_directors"
-        ],
-        [
-          "make_reservation"
         ]
       ],
       "inputs_used": [
         [
           {
             "primary_title": "Hellboy"
+          },
+          {
+            "restaurant_name": "The Cantina"
           }
         ],
         [
           {
             "imdb_id": "tt2274648"
           }
-        ],
-        [
-          {
-            "restaurant_name": "The Cantina"
-          }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_3_tools_15",
@@ -847,10 +829,12 @@
           "search_imdb"
         ],
         [
-          "get_directors"
+          "get_directors",
+          "search_restaurant"
         ],
         [
-          "get_restaurant_details"
+          "search_imdb",
+          "search_restaurant"
         ]
       ],
       "inputs_used": [
@@ -862,11 +846,19 @@
         [
           {
             "imdb_id": "tt0069113"
+          },
+          {
+            "cuisineTypes": "Italian",
+            "location": "Santa Rosa"
           }
         ],
         [
           {
-            "restaurant_name": "Union"
+            "primary_title": "The Odessa File"
+          },
+          {
+            "cuisineTypes": "American",
+            "location": "Santa Rosa"
           }
         ]
       ],
@@ -903,6 +895,8 @@
           {
             "subject": "Restaurant reservation for 2 at 2g Japanese Brasserie",
             "startDate": "05/05",
+            "startTime": "17:45",
+            "endDate": "05/05",
             "location": "2g Japanese Brasserie"
           }
         ]
@@ -919,8 +913,8 @@
       "inputs_used": [
         [
           {
-            "location": "San Francisco",
-            "cuisineTypes": "Izakaya"
+            "cuisineTypes": "Izakaya",
+            "location": "San Francisco"
           }
         ],
         [
@@ -928,10 +922,12 @@
             "restaurant_name": "2g Japanese Brasserie"
           },
           {
-            "subject": "Restaurant reservation for 2 at 2g Japanese Brasserie",
+            "endDate": "05/05",
+            "endTime": "19:45",
+            "location": "2g Japanese Brasserie",
             "startDate": "05/05",
-            "startTime": "5:45 PM",
-            "location": "2g Japanese Brasserie"
+            "startTime": "17:45",
+            "subject": "Restaurant reservation for 2 at 2g Japanese Brasserie"
           }
         ]
       ],
@@ -940,7 +936,7 @@
     },
     {
       "task_id": "task_3_tools_17",
-      "task_content": "The user requested help finding a seafood restaurant in San Francisco with live music, asked for its...",
+      "task_content": "The user requested help finding a seafood restaurant in San Francisco, and inquired about making a r...",
       "expected_tools": [
         [
           "search_restaurant"
@@ -967,20 +963,31 @@
         [
           {
             "subject": "Restaurant reservation at Akiko's Sushi Bar",
+            "startDate": "09/03",
             "startTime": "11:30",
+            "endDate": "09/03",
             "location": "Akiko's Sushi Bar"
           }
         ]
       ],
       "tools_used": [
         [
-          "get_restaurant_details"
+          "make_reservation",
+          "create_event"
         ]
       ],
       "inputs_used": [
         [
           {
             "restaurant_name": "Akiko's Sushi Bar"
+          },
+          {
+            "endDate": "09/03",
+            "endTime": "12:30",
+            "location": "Akiko's Sushi Bar",
+            "startDate": "09/03",
+            "startTime": "11:30",
+            "subject": "Restaurant reservation at Akiko's Sushi Bar"
           }
         ]
       ],
@@ -989,7 +996,7 @@
     },
     {
       "task_id": "task_3_tools_18",
-      "task_content": "The user is looking for a Parisian restaurant in Ross with live music. They requested to book a tabl...",
+      "task_content": "The user is looking for a Parisian restaurant in Ross. They requested to book a table for two at 11:...",
       "expected_tools": [
         [
           "search_restaurant"
@@ -1016,16 +1023,16 @@
         [
           {
             "subject": "Restaurant reservation for 5 at Marche Aux Fleurs",
+            "startDate": "03/06",
             "startTime": "11:15",
+            "endDate": "03/06",
             "location": "Marche Aux Fleurs"
           }
         ]
       ],
       "tools_used": [
         [
-          "search_restaurant"
-        ],
-        [
+          "search_restaurant",
           "make_reservation",
           "create_event"
         ]
@@ -1033,19 +1040,18 @@
       "inputs_used": [
         [
           {
-            "location": "Ross",
-            "cuisineTypes": "French"
-          }
-        ],
-        [
+            "cuisineTypes": "Parisian",
+            "location": "Ross"
+          },
           {
             "restaurant_name": "Marche Aux Fleurs"
           },
           {
-            "subject": "Restaurant reservation for 5 at Marche Aux Fleurs",
-            "startDate": "05/05",
-            "startTime": "11:15 AM",
-            "location": "Marche Aux Fleurs"
+            "endDate": "03/06",
+            "location": "Marche Aux Fleurs",
+            "startDate": "03/06",
+            "startTime": "11:15",
+            "subject": "Restaurant reservation for 5 at Marche Aux Fleurs"
           }
         ]
       ],
@@ -1081,7 +1087,9 @@
         [
           {
             "subject": "Food",
+            "startDate": "03/03",
             "startTime": "18:45",
+            "endDate": "03/03",
             "location": "Spice of India"
           }
         ]
@@ -1089,28 +1097,13 @@
       "tools_used": [
         [
           "search_restaurant"
-        ],
-        [
-          "make_reservation",
-          "create_event"
         ]
       ],
       "inputs_used": [
         [
           {
-            "location": "Livermore",
-            "cuisineTypes": "Indian"
-          }
-        ],
-        [
-          {
-            "restaurant_name": "Spice of India"
-          },
-          {
-            "subject": "Food",
-            "startDate": "03/03",
-            "startTime": "6:45 PM",
-            "location": "Spice of India"
+            "cuisineTypes": "Indian",
+            "location": "Livermore"
           }
         ]
       ],
@@ -1146,20 +1139,40 @@
         [
           {
             "subject": "Restaurant Reservation",
+            "startDate": "06/18",
             "startTime": "19:00",
+            "endDate": "06/18",
             "location": "Mei-Don Chinese Cuisine"
           }
         ]
       ],
       "tools_used": [
         [
-          "get_restaurant_details"
+          "search_restaurant"
+        ],
+        [
+          "make_reservation",
+          "create_event"
         ]
       ],
       "inputs_used": [
         [
           {
+            "cuisineTypes": "Chinese",
+            "location": "San Francisco"
+          }
+        ],
+        [
+          {
             "restaurant_name": "Mei-Don Chinese Cuisine"
+          },
+          {
+            "endDate": "06/18",
+            "endTime": "21:00",
+            "location": "Mei-Don Chinese Cuisine",
+            "startDate": "06/18",
+            "startTime": "19:00",
+            "subject": "Restaurant Reservation"
           }
         ]
       ],

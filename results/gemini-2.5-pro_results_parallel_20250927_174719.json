@@ -4,7 +4,14 @@
     "tasks_passed": 17,
     "tasks_failed": 3,
     "average_score": 0.85,
-    "success_rate_percentage": 85.0
+    "success_rate_percentage": 85.0,
+    "total_prompt_tokens": 325769,
+    "total_completion_tokens": 7954,
+    "total_tokens": 333723,
+    "agent_construction_time_seconds": 0.0,
+    "task_processing_time_seconds": 154.80340933799744,
+    "total_execution_time_seconds": 154.80340933799744,
+    "average_time_per_task_seconds": 7.740170466899872
   },
   "detailed_results": [
     {
@@ -28,10 +35,7 @@
       ],
       "tools_used": [
         [
-          "search_imdb"
-        ],
-        [
-          "itunes_play_song",
+          "search_imdb",
           "make_reservation"
         ]
       ],
@@ -39,19 +43,14 @@
         [
           {
             "primary_title": "Hotel Mumbai"
-          }
-        ],
-        [
-          {
-            "song": "Hotel Mumbai"
           },
           {
             "restaurant_name": "Marche Aux Fleurs"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_2",
@@ -87,16 +86,16 @@
       "inputs_used": [
         [
           {
-            "type": "round_trip",
-            "origin": "SFO",
-            "destination": "YYZ",
+            "cabin_class": "economy",
             "departure_date": "10/01",
+            "destination": "YYZ",
+            "origin": "SFO",
             "return_date": "10/05",
-            "cabin_class": "economy"
+            "type": "round_trip"
           },
           {
-            "city": "Toronto",
-            "category": "general"
+            "category": "general",
+            "city": "Toronto"
           }
         ]
       ],
@@ -137,16 +136,16 @@
       "inputs_used": [
         [
           {
-            "type": "round_trip",
-            "origin": "SEA",
-            "destination": "PHX",
+            "cabin_class": "economy",
             "departure_date": "03/05",
+            "destination": "PHX",
+            "origin": "SEA",
             "return_date": "03/07",
-            "cabin_class": "economy"
+            "type": "round_trip"
           },
           {
-            "city": "Phoenix",
-            "category": "child-friendly"
+            "category": "child-friendly",
+            "city": "Phoenix"
           }
         ]
       ],
@@ -167,7 +166,7 @@
           {
             "type": "round_trip",
             "origin": "PHX",
-            "destination": "NYC",
+            "destination": "JFK",
             "departure_date": "03/07",
             "return_date": "03/14",
             "cabin_class": "economy"
@@ -178,28 +177,8 @@
           }
         ]
       ],
-      "tools_used": [
-        [
-          "search_flights",
-          "geocalc_mcp_get_points_of_interest"
-        ]
-      ],
-      "inputs_used": [
-        [
-          {
-            "type": "round_trip",
-            "origin": "PHX",
-            "destination": "JFK",
-            "departure_date": "10/07",
-            "return_date": "10/14",
-            "cabin_class": "economy"
-          },
-          {
-            "city": "New York",
-            "category": "general"
-          }
-        ]
-      ],
+      "tools_used": [],
+      "inputs_used": [],
       "score": 0,
       "match": false
     },
@@ -227,20 +206,20 @@
       ],
       "tools_used": [
         [
-          "weather_tool",
-          "booking_tool"
+          "booking_tool",
+          "weather_tool"
         ]
       ],
       "inputs_used": [
         [
           {
-            "city": "Chicago",
-            "date": "03/01"
+            "checkinDate": "03/01",
+            "checkoutDate": "03/04",
+            "city": "Chicago"
           },
           {
             "city": "Chicago",
-            "checkinDate": "03/01",
-            "checkoutDate": "03/04"
+            "date": "03/01"
           }
         ]
       ],
@@ -278,9 +257,9 @@
       "inputs_used": [
         [
           {
-            "city": "London",
             "checkinDate": "03/06",
-            "checkoutDate": "03/11"
+            "checkoutDate": "03/11",
+            "city": "London"
           },
           {
             "city": "London",
@@ -322,9 +301,9 @@
       "inputs_used": [
         [
           {
-            "city": "New York",
             "checkinDate": "03/11",
-            "checkoutDate": "03/14"
+            "checkoutDate": "03/14",
+            "city": "New York"
           },
           {
             "city": "New York",
@@ -369,21 +348,20 @@
       "inputs_used": [
         [
           {
-            "type": "round_trip",
-            "origin": "SEA",
-            "destination": "SAN",
+            "cabin_class": "economy",
             "departure_date": "03/04",
+            "destination": "SAN",
+            "origin": "SEA",
             "return_date": "03/06",
-            "cabin_class": "economy"
+            "type": "round_trip"
           },
           {
-            "city": "San Diego",
-            "category": "general"
+            "city": "San Diego"
           }
         ]
       ],
-      "score": 1,
-      "match": true
+      "score": 0,
+      "match": false
     },
     {
       "task_id": "task_2_parallel_tools_9",
@@ -419,21 +397,21 @@
       "inputs_used": [
         [
           {
-            "type": "round_trip",
-            "origin": "LAX",
-            "destination": "SFO",
+            "cabin_class": "economy",
             "departure_date": "03/03",
+            "destination": "SFO",
+            "origin": "LAX",
             "return_date": "03/12",
-            "cabin_class": "economy"
+            "type": "round_trip"
           },
           {
-            "city": "San Francisco",
-            "category": "general"
+            "category": "tourist_attractions",
+            "city": "San Francisco"
           }
         ]
       ],
-      "score": 1,
-      "match": true
+      "score": 0,
+      "match": false
     },
     {
       "task_id": "task_2_parallel_tools_10",
@@ -477,7 +455,7 @@
     },
     {
       "task_id": "task_2_parallel_tools_11",
-      "task_content": "The user is looking for interesting activities in Boston, particularly sports events like American f...",
+      "task_content": "The user is looking for interesting activities in Boston, particularly sports events like football e...",
       "expected_tools": [
         [
           "search_ticketmaster",
@@ -487,7 +465,7 @@
       "expected_inputs": [
         [
           {
-            "type": "American Football Event",
+            "type": "Football Event",
             "city": "Boston"
           },
           {
@@ -497,23 +475,23 @@
       ],
       "tools_used": [
         [
-          "search_ticketmaster",
-          "get_balance"
+          "get_balance",
+          "search_ticketmaster"
         ]
       ],
       "inputs_used": [
         [
           {
-            "city": "Boston",
-            "type": "Sports Event"
+            "account_type": "checking"
           },
           {
-            "account_type": "checking"
+            "city": "Boston",
+            "type": "Football Event"
           }
         ]
       ],
-      "score": 0,
-      "match": false
+      "score": 1,
+      "match": true
     },
     {
       "task_id": "task_2_parallel_tools_12",
@@ -567,7 +545,7 @@
       "expected_inputs": [
         [
           {
-            "type": "Country Show Event",
+            "type": "Country Event",
             "city": "Seattle"
           },
           {
@@ -587,12 +565,12 @@
         [
           {
             "city": "Seattle",
-            "type": "Country Show Event"
+            "type": "Country Event"
           },
           {
-            "city": "Seattle",
             "checkinDate": "04/08",
-            "checkoutDate": "04/12"
+            "checkoutDate": "04/12",
+            "city": "Seattle"
           }
         ]
       ],
@@ -611,7 +589,7 @@
       "expected_inputs": [
         [
           {
-            "type": "Pop Music Event",
+            "type": "Pop Event",
             "city": "London"
           },
           {
@@ -623,20 +601,20 @@
       ],
       "tools_used": [
         [
-          "search_ticketmaster",
-          "booking_tool"
+          "booking_tool",
+          "search_ticketmaster"
         ]
       ],
       "inputs_used": [
         [
           {
-            "city": "London",
-            "type": "Pop Music Event"
+            "checkinDate": "05/07",
+            "checkoutDate": "05/09",
+            "city": "London"
           },
           {
             "city": "London",
-            "checkinDate": "05/07",
-            "checkoutDate": "05/09"
+            "type": "Pop Event"
           }
         ]
       ],
@@ -849,7 +827,7 @@
       "expected_inputs": [
         [
           {
-            "type": "Rock Concert Event",
+            "type": "Rock Event",
             "city": "New York"
           },
           {
@@ -867,7 +845,7 @@
         [
           {
             "city": "New York",
-            "type": "Rock Concert Event"
+            "type": "Rock Event"
           },
           {
             "account_type": "checking"

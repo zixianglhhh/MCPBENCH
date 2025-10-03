@@ -8,35 +8,36 @@ import json
 import datetime
 
 
-def get_experiment_config(tasks_type):
+def get_experiment_config(model, tasks_type):
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    model = model.replace("/", "_")
     if tasks_type == "sequential":
-        log_path = f"logs/response_sequential_{timestamp}.json"
+        log_path = f"logs/{model}_response_sequential_{timestamp}.json"
         task_path = "data/tasks_with_2_sequential_tools.json"
-        output_path = f"results/results_sequential_{timestamp}.json"
+        output_path = f"results/{model}_results_sequential_{timestamp}.json"
 
     elif tasks_type == "parallel":
-        log_path = f"logs/response_parallel_{timestamp}.json"
+        log_path = f"logs/{model}_response_parallel_{timestamp}.json"
         task_path = "data/tasks_with_2_parallel_tools.json"
-        output_path = f"results/results_parallel_{timestamp}.json"
+        output_path = f"results/{model}_results_parallel_{timestamp}.json"
 
     elif tasks_type == "3_tools":
-        log_path = f"logs/response_3_tools_{timestamp}.json"
+        log_path = f"logs/{model}_response_3_tools_{timestamp}.json"
         task_path = "data/tasks_with_3_tools.json"
-        output_path = f"results/results_3_tools_{timestamp}.json"
+        output_path = f"results/{model}_results_3_tools_{timestamp}.json"
 
     return log_path, task_path, output_path
 
 
-async def run_experiment(model, tasks_type):
+async def run_experiment(model, tasks_type, num):
 
     scores = []
     detailed_results = []
 
-    log_path, task_path, output_path = get_experiment_config(tasks_type)
+    log_path, task_path, output_path = get_experiment_config(model, tasks_type)
         # Create logs directory if it doesn't exist
     os.makedirs("logs", exist_ok=True)
-    await generate_response(model, task_path, log_path)
+    await generate_response(model, task_path, log_path, num)
 
     task_data = load_data(task_path)
     response_data = load_data(log_path)

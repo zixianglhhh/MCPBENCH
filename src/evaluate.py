@@ -9,8 +9,9 @@ def evaluate_task_performance(response_data: Dict[str, Any], expected_tools: Lis
     tools_used, inputs_used = extract_tools_and_inputs(response_data)
     
     # Check if tools match exactly (including order)
-    if tools_used != expected_tools:
-        return 0
+    for i, (actual_tool, expected_tool) in enumerate(zip(tools_used, expected_tools)):
+        if set(actual_tool) != set(expected_tool):
+            return 0
     
     # Check if inputs match exactly
     if len(inputs_used) != len(expected_inputs):

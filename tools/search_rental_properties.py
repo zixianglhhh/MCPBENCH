@@ -16,7 +16,7 @@ Args:
 Returns:
     str: A formatted string listing matching properties, or a message indicating no matches were found.
 """'''
-    rental_properties_db = [{'location': 'New York', 'property_type': 'house', 'rating': 4.0, 'property_id': 'NY123'}, {'location': 'Paris', 'property_type': 'house', 'rating': 4.5, 'property_id': 'PAR456'}, {'location': 'San Francisco', 'property_type': 'house', 'rating': 4.3, 'property_id': 'SF789'}, {'location': 'Oakley', 'property_type': 'apartment', 'rating': 4.2, 'property_id': 'OAK123'}, {'location': 'Santa Rosa', 'property_type': 'apartment', 'rating': 4.1, 'property_id': 'SRO123'}, {'location': 'London', 'property_type': 'house', 'rating': 4.4, 'property_id': 'LN987'}]
+    rental_properties_db = [{'location': 'New York', 'property_type': 'house', 'rating': 4.0, 'property_id': 'NY123', 'address': '123 New York Ave'}, {'location': 'Paris', 'property_type': 'house', 'rating': 4.5, 'property_id': 'PAR456', 'address': '123 Paris Ave'}, {'location': 'San Francisco', 'property_type': 'house', 'rating': 4.3, 'property_id': 'SF789', 'address': '123 San Francisco Ave'}, {'location': 'Oakley', 'property_type': 'apartment', 'rating': 4.2, 'property_id': 'OAK123', 'address': '123 Oakley Ave'}, {'location': 'Santa Rosa', 'property_type': 'apartment', 'rating': 4.1, 'property_id': 'SRO123', 'address': '123 Santa Rosa Ave'}, {'location': 'London', 'property_type': 'house', 'rating': 4.4, 'property_id': 'LN987', 'address': '123 London Ave'}]
     filtered_properties = []
     if not rating:
         for property in rental_properties_db:
@@ -29,7 +29,7 @@ Returns:
     response = ''
     if filtered_properties:
         for prop in filtered_properties:
-            response += f"Location: {prop['location']}, Type: {prop['property_type']}, Rating: {prop['rating']}, Property ID: {prop['property_id']}\n"
+            response += f"Type: {prop['property_type']}, Rating: {prop['rating']}, Property ID: {prop['property_id']}, Address: {prop['address']}\n"
     else:
         response = 'No properties found matching the criteria.'
     return response
