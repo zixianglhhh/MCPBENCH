@@ -9,11 +9,11 @@
             "structured_output": true
         },
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65"
+        "api_key":
     },
     {
         "model": "gpt-4o",
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65"
+        "api_key":
     }
 ]
