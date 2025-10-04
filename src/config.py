@@ -8,6 +8,7 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 # 加载环境变量
 load_dotenv()
 
+api_key = os.getenv("API_KEY")
 
 class ModelRegistry:
     """
@@ -30,14 +31,8 @@ class ModelRegistry:
                 "model": "gpt-4o-mini",
                 "client": OpenAIChatCompletionClient(
                     model="gpt-4o-mini",
-                    model_info = {
-                        "vision": False,
-                        "function_calling": True,
-                        "json_output": False,
-                        "family": "unknown",
-                    },
-                    api_key=os.getenv("OPENAI_API_KEY")
-                ),
+                    api_key=api_key
+                    ),
             }
             self._entries = [entry]
             self._name_to_entry[entry["name"]] = entry
@@ -49,7 +44,6 @@ class ModelRegistry:
 
         for idx, cfg in enumerate(cfg_list):
             model = cfg.get("model") or "gpt-4o-mini"
-            api_key = cfg.get("api_key") or os.getenv("OPENAI_API_KEY")
             base_url = cfg.get("api_base") or cfg.get("base_url")
             name_raw = cfg.get("name") or f"client_{idx}_{model}"
             model_info = cfg.get("model_info")
@@ -88,7 +82,7 @@ class ModelRegistry:
                 "name": "openai_default",
                 "model": "gpt-4o-mini",
                 "client": OpenAIChatCompletionClient(
-                    model="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY"), temperature=0
+                    model="gpt-4o-mini", api_key=api_key, temperature=0
                 ),
             }
             self._entries = [entry]
@@ -103,29 +97,3 @@ class ModelRegistry:
         if name_or_model in self._model_to_entries:
             return self._model_to_entries[name_or_model][0]
         return self._entries[0]
-
-
-class CostTracker:
-    def __init__(self):
-        self.total_cost = 0.0
-        self.total_tokens = {
-            "total_tokens": 0,
-            "prompt_tokens": 0,
-            "completion_tokens": 0,
-        }
-
-    def add(self, result):
-        if getattr(result, "cost", None) is not None:
-            self.total_cost += result.cost
-
-        usage = getattr(result, "usage", None)
-        if usage is not None:
-            for k, v in usage.items():
-                if k in self.total_tokens:
-                    self.total_tokens[k] += v
-
-    def get_cost(self):
-        return self.total_cost
-
-    def get_tokens(self):
-        return self.total_tokens
