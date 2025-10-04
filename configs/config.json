@@ -9,13 +9,13 @@
             "structured_output": true
         },
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65",
+        "api_key": ,
         "temperature": 0
     },
     {
         "model": "gpt-4o",
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65",
+        "api_key": ,
         "temperature": 0
     },
     {
@@ -28,13 +28,13 @@
             "structured_output": true
         },
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-Vkp8lEzN7wqG8fzCp2gd9m7QpAQFfDEPJRmP3VCvj5Mub2FG",
+        "api_key": ,
         "temperature": 0
     },
     {
         "model": "o4-mini",
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65",
+        "api_key": ,
         "temperature": 0
     },
     {
@@ -47,7 +47,7 @@
             "structured_output": true
         },
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-Vkp8lEzN7wqG8fzCp2gd9m7QpAQFfDEPJRmP3VCvj5Mub2FG",
+        "api_key": ,
         "temperature": 0
     },
     {
@@ -60,7 +60,7 @@
             "structured_output": true
         },
         "base_url": "https://jacob.api-store.store/v1/",
-        "api_key": "sk-6zHksxHHvhtbR02cz5HSuNFxmPrZyjVuiPYwvWjWK5FlsI65",
+        "api_key": ,
         "temperature": 0
     },
     {
@@ -73,7 +73,7 @@
             "structured_output": true
         },
         "base_url": "https://openrouter.ai/api/v1",
-        "api_key": "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",
+        "api_key": ,
         "temperature": 0
     }
 ]
