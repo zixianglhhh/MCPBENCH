@@ -27,24 +27,24 @@ def get_experiment_config(model, tasks_type):
         output_path = f"results/{model}_results_3_tools_{timestamp}.json"
     
     elif tasks_type == "pro_single":
-        log_path = f"logs/response_protasks_single_{timestamp}.json"
+        log_path = f"logs/{model}_response_protasks_single_{timestamp}.json"
         task_path = "data/protasks_single.json"
-        output_path = f"results/results_protasks_single_{timestamp}.json"
+        output_path = f"results/{model}_results_protasks_single_{timestamp}.json"
 
     elif tasks_type == "pro_sequential":
-        log_path = f"logs/response_protasks_2_sequential_tools_{timestamp}.json"
+        log_path = f"logs/{model}_response_protasks_2_sequential_tools_{timestamp}.json"
         task_path = "data/protasks_with_2_sequential_tools.json"
-        output_path = f"results/results_protasks_2_sequential_tools_{timestamp}.json"
+        output_path = f"results/{model}_results_protasks_2_sequential_tools_{timestamp}.json"
 
     elif tasks_type == "pro_parallel":
-        log_path = f"logs/response_protasks_2_parallel_tools_{timestamp}.json"
+        log_path = f"logs/{model}_response_protasks_2_parallel_tools_{timestamp}.json"
         task_path = "data/protasks_with_lots_parallel_tools.json"
-        output_path = f"results/results_protasks_2_parallel_tools_{timestamp}.json"
+        output_path = f"results/{model}_results_protasks_2_parallel_tools_{timestamp}.json"
 
     elif tasks_type == "pro_more_tools":
-        log_path = f"logs/response_protasks_more_tools_{timestamp}.json"
+        log_path = f"logs/{model}_response_protasks_more_tools_{timestamp}.json"
         task_path = "data/protasks_with_lots_sequential_tools.json"
-        output_path = f"results/results_protasks_3_tools_{timestamp}.json"
+        output_path = f"results/{model}_results_protasks_3_tools_{timestamp}.json"
 
     return log_path, task_path, output_path
 
