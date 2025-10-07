@@ -1,0 +1,92 @@
+[
+    {
+        "id": "protask_single_tool_1",
+        "content": "I'm working on a computer vision project and need to detect objects in an image. Can you choose from a given list the API (Image Object Detection API, OCR Text Extract API, Vision Detect 3D API)that takes an image URL as input and returns an updated image with bounding boxes around the detected objects? Look for the details of these api before deciding ",
+        "tools": [["request_api_schema"]],
+        "inputs": [[{"ApiName": ["Image Object Detection API", "OCR Text Extract API", "Vision Detect 3D API"]}]]
+    },
+    {
+        "id": "protask_single_tool_2",
+        "content": "I want to create a DJ version of a song to go along with my dance, please help me add various tempo changes to this audio. Audio file url is url/to/audio.mp3, and I want to increase the speed by 1.25 times.",
+        "tools": [["AudioEditor_apply_speed_adjustment"]],
+        "inputs": [[{"audio_file": "url/to/audio.mp3", "speed_factor": 1.25}]]
+    },
+    {
+        "id": "protask_single_tool_3",
+        "content": "I am writing an academic report and required a list of books of the given id numbers. Please find the corresponding information based on the given id (from id 1 to 5).",
+        "tools": [["get_book_details_by_id"]],
+        "inputs": [[{"id": [1, 2, 3, 4, 5]}]]
+    },
+    {
+        "id": "protask_single_tool_4",
+        "content": "I'm planning to purchase a car from toyota, and I need information about the available models. Can you provide me with a list of the car models? ",
+        "tools": [["spu_list"]],
+        "inputs": [[{"brand": "toyota"}]]
+    },
+    {
+        "id": "protask_single_tool_5",
+        "content": "Design a program that can automatically identify scam text messages and mark them as junk. Use python as the programming language, set the temperature to 0.5, and limit the response to 1500 tokens. The model to be used is gemini-pro.",
+        "tools": [["generate_code"]],
+        "inputs": [[{"prompt": "Design a program that can automatically identify scam text messages and mark them as junk", "language": "python", "temperature": 0.5, "max_tokens": 1500, "model": "gemini-pro"}]]
+    },
+    {
+        "id": "protask_single_tool_6",
+        "content": "How can a company protect its data from cyberattacks?",
+        "tools": [["security_guidance"]],
+        "inputs": [[{"query": "How can a company protect its data from cyberattacks?"}]]
+    },
+    {
+        "id": "protask_single_tool_7",
+        "content": "Can you provide an optimized solution for the python file named 'heavy_numeric_computations.py' using techniques like vectorization and parallel programming, use model gpt-4o-mini for code optimization, and save it to the path 'code/new_heavy_numeric_computations.py'",
+        "tools": [["generate_code"]],
+        "inputs": [[{"prompt": "Given an existing Python script that performs heavy numeric computations in loops, produce an optimized version using NumPy vectorization and, where beneficial, multiprocessing (or concurrent.futures) for CPU-bound work. Include clear function docstrings, type hints, and brief inline comments explaining the vectorized transformations. Also provide a small benchmark snippet comparing the original loop implementation vs. the optimized version on synthetic data. Avoid unnecessary dependencies beyond numpy.", "language": "python", "model": "gpt-4o-mini", "output_name": "new_heavy_numeric_computations", "existing_file_path": "heavy_numeric_computations.py"}]]
+    },
+    {
+        "id": "protask_single_tool_8",
+        "content": "Patient No.101 has presented with soreness in the lower back and knees, fear of cold, frequent urination at night, and mental fatigue. I would like to retrieve the diagnostic report from 2024-09-18 in order to decide what herbal prescription to give this patient.",
+        "tools": [["Traditional_Chinese_medicine_consultation"]],
+        "inputs": [[{"date": "2024-09-18","patient_id": "101"}]]
+    },
+    {
+        "id": "protask_single_tool_9",
+        "content": "In MongoDB, there is storage for customer information and their corresponding postal codes in the database named 'customers_db' The username is Admin and the password is Admin123. Can you help me retrieve the customer information for the customer named Ocean and his corresponding postal code?",
+        "tools": [["mongo_mcp"]],
+        "inputs": [[{"mongoUri": "mongodb://Admin:Admin123@localhost:27017/customers_db","collection_name":"customers_db"}]]
+    },
+    {
+        "id": "protask_single_tool_10",
+        "content": "I am doing a reseach in the field of Sociology, and I need to collect relevant papers on the phenomenon of university students reserving seats. Please find me the most relevant papers.",
+        "tools": [["search_academic_papers"]],
+        "inputs": [[{"query": "phenomenon of university students reserving seats", "subject": "sociology", "max_results": 5}]]
+    },
+    {
+        "id": "protask_single_tool_11",
+        "content": "Given a complex dataset saved in the file complex.csv, there is a problem that needs to be solved, generate a program algorithm that can automatically respond or solve the problem. The output file should be saved in the folder code/complex_dataset_analysis.",
+        "tools": [["generate_code"]],
+        "inputs": [[{"prompt": "complex dataset analysis to automatically respond to detected issues", "language": "Python", "model": "gemini-pro", "output_name": "code/complex_dataset_analysis", "existing_file_path": "complex.csv"}]]
+    },
+    {
+        "id": "protask_single_tool_12",
+        "content": "Design a new interaction interface for the chating robot.",
+        "tools": [["UIUX_Expert"]],
+        "inputs": [[{"target_users": "Young adults (18-35) who frequently use messaging apps, prefer quick and intuitive UI, comfortable with emojis and GIFs.", "interaction_methods": "Voice commands, text chat, gesture recognition.", "design_requirements": "Minimalist design, high contrast for readability, responsive layout, accessibility compliance (WCAG 2.1).", "tools": "Figma, Adobe XD, InVision.", "testing_approach": "A/B testing with 50 users, heuristic evaluation, think-aloud protocol.", "deliverables": "Interactive prototype, persona documentation, usability test report."}]]
+    },
+    {
+        "id": "protask_single_tool_13",
+        "content": "Based on the product and sales data in the default e-commerce database, analyze the current marketing strategies of the e-commerce store and provide five optimization suggestions.",
+        "tools": [["E_commerce_analyst_MCP_get_schemas"]],
+        "inputs": [[{"database_name": "default_ecommerce_db", "tables": ["products", "sales"]}]]
+    },
+    {
+        "id": "protask_single_tool_14",
+        "content": "Please provide a website development proposal, including website architecture, database design, and user experience optimization.",
+        "tools": [["system_architecture_designer"]],
+        "inputs": [[{"architecture_description": "A three-tier website architecture with a presentation layer (React.js frontend), an application layer (Node.js/Express backend), and a data layer (PostgreSQL). Incorporates CDN and load balancer for scalability and performance, along with secure API endpoints and modular components for maintainability.", "technology_stack": "Frontend: React.js, Backend: Node.js with Express, Database: PostgreSQL, Hosting: AWS EC2 & S3, CDN: CloudFront, Version Control: GitHub", "infrastructure_requirements": "Cloud-based hosting with minimum 2 vCPUs, 8GB RAM for app servers, AWS RDS for database, and 50GB SSD storage; scalable load balancer configuration for peak loads.", "user_experience_goals": "Responsive web interface with mobile-first design, intuitive navigation, accessibility compliance (WCAG 2.1), and optimized load times; includes interactive UI elements and seamless database-driven content updates.", "testing_strategy": "Automated unit and integration testing using Jest and Cypress, load testing with Apache JMeter, continuous performance monitoring via New Relic, and iterative A/B testing for UI/UX refinement."}]]
+    },
+    {
+        "id": "protask_single_tool_15",
+        "content": "Research on the application of virtual reality technology in architecture, statistics on technology adoption in the global construction industry, and its impact on efficiency, costs, and customer experience. Output the result in the format of json.",
+        "tools": [["wolfram_query"]],
+        "inputs": [[{"query": "Statistics on adoption of virtual reality technology in architecture and global construction industry, including impact on efficiency, costs, and customer experience","format": "json","location": "global"}]]
+    }
+]    

@@ -1,0 +1,122 @@
+[
+  {
+    "task_index": 0,
+    "task_content": "I'm developing a mobile app that requires object detection functionality. Is there an API available that can take an image URL as input and return a modified image with bounding boxes around the detected objects? It would be great if the API can also provide the JSON data of the detected objects.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 202510071544113532094335T7Qd6su)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:09.126476"
+  },
+  {
+    "task_index": 1,
+    "task_content": "I'm a project manager and I need to coordinate tasks with my team across different time zones. Can you give me the current time for a specific IP address 203.0.113.25 and the current time based on my public IP 198.51.100.42?",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 202510071544124717873588UyL3elX)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:10.239414"
+  },
+  {
+    "task_index": 2,
+    "task_content": "I already have a vocabulary memorization app design named UI123VOCABAPP. The design includes NODE_HEADER, NODE_CARD, and NODE_TIMER, which implement the title, the word card, and the countdown functions respectively. Now I would like to take a look at the specific code for the countdown, and based on the given design parameters, insert a real working countdown.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154412879008478R1D3COMC)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:10.647346"
+  },
+  {
+    "task_index": 3,
+    "task_content": "Please interpret the recent trends of major indices in the Chinese stock market (Shanghai Composite Index , Shenzhen Component Index, STAR Market 50, CSI 300, CSI 500), and then analyze the reasons behind these trends in conjunction with the latest two financial news articles about the one with the highest percentage change",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 202510071544131297664518va1FzEB)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:10.897052"
+  },
+  {
+    "task_index": 4,
+    "task_content": "Today is 03/15/2024, Find a set of data (the weather of London from 03/01 to 03/15 in the past 5 years) to train a neural network in weather_prediction.py to predict the weather for the same date next year. I want you to give me the prediction result.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154413379155080HooVAfS6)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:11.583436"
+  },
+  {
+    "task_index": 5,
+    "task_content": "You are given a quantum computing problem to calculate the probability of a certain amplitude for a given set of qubits. Write a program using the large language model Grok-3 to define the amplitude, probability, and then find the maximum probability using simulated annealing method for a specific set of constraints. Output the code as quantum_computing.py. Finally, I want you to give me the result.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 202510071544147977663377rzF9c6Y)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:12.566600"
+  },
+  {
+    "task_index": 6,
+    "task_content": "Retrieve the trending topics and hashtags from social media platforms about charity race last month. Based on these trends, design promotional posts for the upcoming charity race and publish them on Facebook, Twitter, and Instagram to maximize visibility and attract potential participants immediately. The requirements of the post are all saved in the folder of content/posts/charity_race",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154415224079590hkJedjxO)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:12.993388"
+  },
+  {
+    "task_index": 7,
+    "task_content": "I have uploaded an image named street_scene_people.jpg extracted from a video which is about a street scene containing multiple people , first detect all the person targets in the scene, and then perform human pose estimation on these person areas to analyze the actions of each individual.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154415475137452uncxbAQw)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:13.243227"
+  },
+  {
+    "task_index": 8,
+    "task_content": "I'm working on a project about product categories and their performance in the market. I want to analyze sales trends for specific categories such as Liquor and Bank in the Shanghai market. I’d like to check the real-time data from Xueqiu to see the most up-to-date numbers, and then use that information to run an analysis of sales trends across categories to better understand popularity.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154415725902279gW9XBp8B)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:13.565761"
+  },
+  {
+    "task_index": 9,
+    "task_content": "My company is organizing a charity basketball tournament and we need to invite some NBA players. The tournament organizer wants to plan a surprise activity, so I need to choose two players whose last names start with 'D' from two different teams. Please provide me with their position, contact information, career achievements and a fun fact about each player's career.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 2025100715441648191420SOGfahvo)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:13.815390"
+  },
+  {
+    "task_index": 10,
+    "task_content": "It's 2024, I'm a music producer looking for inspiration for my next project. Can you provide me with the top Billboard 200 albums from last year? Additionally, suggest 4 tracks on Deezer that has a similar style to the top album.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154416302597635NLBoOUwY)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:14.070146"
+  },
+  {
+    "task_index": 11,
+    "task_content": "Based on the survey results from 'survey_china_drones_2024.csv', the survey is in Chinese, analyze the attitudes and needs of Chinese consumers regarding the use of drones, summarize the results, and publish a report.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154416554589627yIoDVom1)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:14.323077"
+  },
+  {
+    "task_index": 12,
+    "task_content": "I am organizing a conference and would like to invite companies similar to 'IBM'. Can you retrieve the list of 5 similar companies along with their names, revenue growth, description, logo image URL, HQ location, country, and Linkedin URL? Including the logo of each company would be highly appreciated. I also need the exact contact information for each company.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154416804287582EkO1bHPk)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:14.994191"
+  },
+  {
+    "task_index": 13,
+    "task_content": "You are a game development expert and I want to know how to build a video game with a battle royal style using Unreal Engine 5. In this process, I need to first generate 10 3D environment assets suitable for battle scenes and use them for scene construction, and then combine these environments to conduct strategic analysis and design of battle mechanisms and gameplay.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154418166791269jV25WKai)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:15.933643"
+  },
+  {
+    "task_index": 14,
+    "task_content": "You are required to implement and validate a model training and testing configuration for a 3D object detection system using the provided code snippet under the folder of C:/Users/user/Desktop/MyProject/configs/kitti_config.py as a reference. The task involves updating the necessary configuration files (covering optimizer, learning policy, checkpoint, evaluation, log, runtime settings, and workflow) all save in the same folder in changes.txt and running the training and testing in a Python environment based on these configurations, ensuring that the system works properly with the KittiDataset and the specified class names and input modality to produce the expected results.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154418576895640UnNojPw0)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:16.344201"
+  },
+  {
+    "task_index": 15,
+    "task_content": "Based on PubMed literature and GWAS Catalog trait associations, identify potential biomarkers that may predict the risk of GVHD in recipients after bone marrow transplantation.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154418983682256Jj2lbXvi)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:16.751803"
+  },
+  {
+    "task_index": 16,
+    "task_content": "I am working on a CUDA project where a struct containing pointers needs to be computed on a device. The problem is when I allocate memory for the struct and then copy it to the device, it only copies the struct and not the content of the pointer. I am currently working around this by allocating the pointer first, and then setting the host struct to use that new pointer which resides on the GPU. Is this the correct approach to take? Considering more complex scenarios with multiple pointers or structs with pointers, the code for allocation and copying will become quite extensive and confusing.The code is already given under the folder of C:/Users/user/Desktop/MyProject/src/device_struct.cu, please give me the modification suggestions and fix the code.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 202510071544193894325695Pp3WZNt)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:17.157969"
+  },
+  {
+    "task_index": 17,
+    "task_content": "You are tasked with creating a quantum circuit design for a given set of qubits and calculating the corresponding probability distribution of the quantum state, the request is give in the uploaded file outputs/quantum_design_request.txt. The program should first use circuit initialization to model the system and then apply a professional visualization tool to generate 3D and contour-style plots that illustrate the probability distribution.Output the result in jpg format under the folder of outputs/quantum_plots.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154419642516620fyyVazE4)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:17.411149"
+  },
+  {
+    "task_index": 18,
+    "task_content": "I'm thinking about starting a halal food business in Canada and want to check recipes to make sure the ingredients and preparation methods fit halal guidelines while also looking at the nutritional information of the ingredients.",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 20251007154419894311268MSitOptS)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:18.077580"
+  },
+  {
+    "task_index": 19,
+    "task_content": "I need you to design an automated data pipeline that collects business data from Zoho Invoice and Pipedrive, cleans and integrates it through a workflow, and finally stores it in Google BigQuery for centralized financial and sales analysis. Before designing the pipeline, I have to fetch the business_data_summary from BigQuery, my project_id is my-company-analytics. ",
+    "error": "Error code: 401 - {'error': {'message': '该令牌状态不可用 (request id: 202510071544205611618108wkh9gQa)', 'type': 'new_api_error'}}",
+    "timestamp": "2025-10-07T15:44:18.327256"
+  }
+]

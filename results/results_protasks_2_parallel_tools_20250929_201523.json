@@ -1,0 +1,1062 @@
+{
+  "evaluation_summary": {
+    "total_tasks": 20,
+    "tasks_passed": 0,
+    "tasks_failed": 20,
+    "average_score": 0.0,
+    "success_rate_percentage": 0.0
+  },
+  "detailed_results": [
+    {
+      "task_id": "protask_parallel_tools_1",
+      "task_content": "How can I establish a secure connection to a BigQuery database for a large-scale movie review websit...",
+      "expected_tools": [
+        [
+          "execute_bigquery"
+        ],
+        [
+          "security_guidance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "SELECT * FROM movie_reviews",
+            "project_id": "movie-reviews-db"
+          }
+        ],
+        [
+          {
+            "query": "secure mysql connection for large-scale movie review website"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "connect_database",
+          "security_guidance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "database_name": "movie-reviews-db"
+          },
+          {
+            "query": "Provide best practices for secure data storage and access in a movie review website."
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_2",
+      "task_content": "How can we, for a particular medical condition which the id is 'EFO_0000305', retrieve prioritized d...",
+      "expected_tools": [
+        [
+          "get_disease_targets_summary"
+        ],
+        [
+          "get_target_details"
+        ],
+        [
+          "CafChem_ADME_calc_adme"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "diseaseId": "EFO_0000305"
+          }
+        ],
+        [
+          {
+            "target_ids": [
+              "ENSG00000012048",
+              "ENSG00000139618",
+              "ENSG00000141510",
+              "ENSG00000121879"
+            ]
+          }
+        ],
+        [
+          {
+            "smiles": "O=C(NC1=CC=CC=C1)C2=NC=NC=N2"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "get_disease_targets_summary",
+          "get_target_details",
+          "CafChem_ADME_calc_adme"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "diseaseId": "EFO_0000305"
+          },
+          {
+            "target_ids": [
+              "BRCA1"
+            ]
+          },
+          {
+            "smile": "BRCA1"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_3",
+      "task_content": "Hello! I am a food merchant, and I need to prepare a presentation for the guests tonight, which requ...",
+      "expected_tools": [
+        [
+          "get_product_by_barcode"
+        ],
+        [
+          "search_products"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "barcode": [
+              "4902102079290",
+              "0737628064502",
+              "8410076471305"
+            ]
+          }
+        ],
+        [
+          {
+            "product_name": "Salalad",
+            "max_results": "4"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "get_product_by_barcode",
+          "search_products"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "barcode": [
+              "4902102079290",
+              "0737628064502",
+              "8410076471305"
+            ]
+          },
+          {
+            "brand": "Salalad",
+            "max_results": "4"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_4",
+      "task_content": "Please retrieve and organize the available schema and table information from our website's default e...",
+      "expected_tools": [
+        [
+          "E_commerce_analyst_MCP_get_schemas"
+        ],
+        [
+          "visualize_data"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "database_name": "default_ecommerce_db",
+            "schema_filter": [
+              "products",
+              "sales"
+            ]
+          }
+        ],
+        [
+          {
+            "data_dir": "./business/analytics/ecommerce_sales.csv",
+            "visualize_type": "bar_chart",
+            "output_path": "./business/analytics/visualizations/ecommerce_sales.png"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "E_commerce_analyst_MCP_get_schemas"
+        ],
+        [
+          "visualize_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "database_name": "default",
+            "schema_filter": []
+          }
+        ],
+        [
+          {
+            "data_dir": "/business/analytics/ecommerce_sales.csv",
+            "visualize_type": "bar_chart",
+            "output_dir": "visualizations",
+            "output_format": "png"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_5",
+      "task_content": "I'm working on a research project and I require soil data for a specific region. Today is Sep 27, 20...",
+      "expected_tools": [
+        [
+          "get_data_products"
+        ],
+        [
+          "get_data_products"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "coordinates": [
+              51.5074,
+              -0.1278
+            ],
+            "data_type": "soil",
+            "start_date": "2025-09-27",
+            "end_date": "2025-09-27"
+          }
+        ],
+        [
+          {
+            "coordinates": [
+              60.5074,
+              -1.1278
+            ],
+            "data_type": "soil",
+            "start_date": "2015-01-01",
+            "end_date": "2020-01-01"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "get_data_products",
+          "get_data_products"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "coordinates": [
+              51.5074,
+              0.1278
+            ],
+            "data_type": "soil",
+            "start_date": "2025-09-27",
+            "end_date": "2025-09-27"
+          },
+          {
+            "coordinates": [
+              60.5074,
+              1.1278
+            ],
+            "data_type": "soil",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-27"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_6",
+      "task_content": "My company is conducting market research on popular cryptocurrencies. Can you provide me with a list...",
+      "expected_tools": [
+        [
+          "get_markets"
+        ],
+        [
+          "get_market_summary"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "exchange": "Upbit"
+          }
+        ],
+        [
+          {
+            "filter_type": [
+              "popular",
+              "most_visited",
+              "new_listing"
+            ],
+            "filter_count": "10",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-27"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "get_markets",
+          "get_market_summary"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "exchange": "Upbit"
+          },
+          {
+            "filter_type": [
+              "popular",
+              "most_visited",
+              "new_listing"
+            ],
+            "filter_count": "10",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-27"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_7",
+      "task_content": "Hello, I'm working on a language learning app and I need to integrate translation and language corre...",
+      "expected_tools": [
+        [
+          "searchApis"
+        ],
+        [
+          "request_api_schema"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "keyword": "translation"
+          }
+        ],
+        [
+          {
+            "ApiName": "Microsoft Translator Text API"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "searchApis",
+          "searchApis",
+          "searchApis"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "keyword": "Microsoft Translator Text API"
+          },
+          {
+            "keyword": "Simple & Elegant Translation Service API"
+          },
+          {
+            "keyword": "LanguageTool API"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_8",
+      "task_content": "This is the summary of my department meeting, and I need help completing the assigned tasks. There a...",
+      "expected_tools": [
+        [
+          "create_task"
+        ],
+        [
+          "update_task"
+        ],
+        [
+          "create_task"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "title": "Design Process Workflow",
+            "description": "Create a platform to improve work efficiency with process division, task assignment, and progress management.",
+            "due_date": "2025-10-08",
+            "priority": 1
+          }
+        ],
+        [
+          {
+            "task_id": "task_001",
+            "task_name": "Assign development team",
+            "description": "Assign developers to different modules of the platform.",
+            "due_date": "2025-10-15",
+            "priority": 4
+          }
+        ],
+        [
+          {
+            "title": "User Data Warehouse",
+            "description": "Save the purchase history of buyers.",
+            "due_date": "2025-10-08",
+            "priority": 2
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "create_task",
+          "create_task",
+          "update_task"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "title": "Project Management Platform",
+            "description": "Create a platform to improve work efficiency with process division, task assignment, and progress management.",
+            "dueDate": "2025-10-08",
+            "priority": 3
+          },
+          {
+            "title": "User Data Warehouse",
+            "description": "Save the purchase history of buyers",
+            "dueDate": "2025-10-08",
+            "priority": 2
+          },
+          {
+            "task_id": "task_001",
+            "task_name": "Assign development team",
+            "content": "Assign developers to different modules of the platform.",
+            "dueDate": "2025-10-15",
+            "priority": 4
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_9",
+      "task_content": "Provide sound design for a play, including background music, ambiance sound effects, and emotional e...",
+      "expected_tools": [
+        [
+          "AudioEditor_process_cut_audio"
+        ],
+        [
+          "AudioEditor_process_cut_audio"
+        ],
+        [
+          "AudioEditor_apply_volume_adjustment"
+        ],
+        [
+          "AudioEditor_apply_fades"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "audio_file": "/mock/background_music.mp3",
+            "start_time": "0.0",
+            "end_time": "30.0"
+          }
+        ],
+        [
+          {
+            "audio_file": "/mock/background_music.mp3",
+            "start_time": "45.0",
+            "end_time": "90.0"
+          }
+        ],
+        [
+          {
+            "audio_file": "./outputs/audio_processed/background_music_from_0.00s.mp3",
+            "volume_adjustment": "-3.0"
+          }
+        ],
+        [
+          {
+            "audio_url": "./outputs/audio_processed/background_music_from_45.00s.mp3",
+            "fade_in": "2000",
+            "fade_out": "3000"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "AudioEditor_process_cut_audio",
+          "AudioEditor_process_cut_audio"
+        ],
+        [
+          "AudioEditor_apply_volume_adjustment"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "audio_file": "/mock/background_music.mp3",
+            "start_time": "0"
+          },
+          {
+            "audio_file": "/mock/background_music.mp3",
+            "start_time": "45"
+          }
+        ],
+        [
+          {
+            "audio_file": "./outputs/audio_processed/background_music_from_0.00s.mp3",
+            "volume_adjustment": "-3.0"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_10",
+      "task_content": "My colleagues and I are planning a cocktail-making competition. Can you provide us with a list of co...",
+      "expected_tools": [
+        [
+          "search_recipes"
+        ],
+        [
+          "get_teams"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "name": "cocktail recipes"
+          }
+        ],
+        [
+          {
+            "nameFilter": "NBA"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_recipes",
+          "get_teams"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "name": "cocktail recipes"
+          },
+          {
+            "nameFilter": "NBA"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_11",
+      "task_content": "What additional measures can be taken to establish a strong online presence, cultivate customer loya...",
+      "expected_tools": [
+        [
+          "search_news"
+        ],
+        [
+          "analyze_trends"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "e-commerce failures case studies",
+            "start_date": "2020-01-01",
+            "end_date": "2024-06-01",
+            "sort_by": "publishedAt",
+            "max_results": 5
+          }
+        ],
+        [
+          {
+            "topic": "e-commerce",
+            "timeframe": "last_month",
+            "scope": "global",
+            "source": "default"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_news",
+          "search_news"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "e-commerce strategies for online presence and customer loyalty",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-27",
+            "max_result": 5
+          },
+          {
+            "query": "failed e-commerce companies case studies",
+            "start_date": "2025-01-01",
+            "end_date": "2025-09-27",
+            "max_result": 5
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_12",
+      "task_content": "Develop a new sustainable agricultural model and analyze it in conjunction with the elevation data o...",
+      "expected_tools": [
+        [
+          "wolfram_query"
+        ],
+        [
+          "fetch_terrain_elevation"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "topographical data analysis for sustainable agriculture model in the Andean highlands, including land use, fertilizer application rates, and optimal crop selection under varying terrain conditions",
+            "format": "json",
+            "location": "Andean highlands, South America"
+          }
+        ],
+        [
+          {
+            "latitude": 39.7392,
+            "longitude": -104.9903,
+            "unit": "meters"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "fetch_terrain_elevation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "lat": 39.7392,
+            "lon": -104.9903,
+            "units": "meters"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_13",
+      "task_content": "Design a city planning scheme that considers various aspects such as architecture, transportation, a...",
+      "expected_tools": [
+        [
+          "wolfram_query"
+        ],
+        [
+          "fetch_terrain_elevation"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "Comprehensive city planning scheme considering architecture, transportation networks, and environmental protection strategies for a modern urban area",
+            "format": "json",
+            "location": "Datong, Shanxi Province, China"
+          }
+        ],
+        [
+          {
+            "latitude": 40.0975,
+            "longitude": 113.1494,
+            "unit": "meters"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "fetch_terrain_elevation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "lat": 40.0975,
+            "lon": 113.1494,
+            "units": "meters"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_14",
+      "task_content": "I am organizing a seminar on healthy eating habits and need nutritional information about various fo...",
+      "expected_tools": [
+        [
+          "check_nutrition"
+        ],
+        [
+          "get_health_recommendations"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "ingredient_list": [
+              "apple",
+              "banana",
+              "carrot",
+              "broccoli",
+              "oats"
+            ]
+          }
+        ],
+        [
+          {
+            "age": "18",
+            "sex": "female",
+            "pregnancyStatus": "not_pregnant"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "check_nutrition",
+          "get_health_recommendations"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "ingredient_list": [
+              "apple",
+              "banana",
+              "carrot",
+              "broccoli",
+              "oats"
+            ]
+          },
+          {
+            "age": "18",
+            "sex": "female",
+            "pregnancyStatus": "not_pregnant"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_15",
+      "task_content": "Please design and enforce a comprehensive security protocol for our small online advertising network...",
+      "expected_tools": [
+        [
+          "Semgrep_Code_SAST"
+        ],
+        [
+          "nmap_scan"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "target": "./src",
+            "category": "security",
+            "config": "./semgrep-security-config.yml",
+            "format": "json"
+          }
+        ],
+        [
+          {
+            "host": "adserver.example.com",
+            "ports": "80,443,3306",
+            "options": "-sV"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "Semgrep_Code_SAST",
+          "nmap_scan"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "path": "./src",
+            "ruleset": "security rule category",
+            "config_file": "./semgrep-security-config.yml",
+            "output_format": "json"
+          },
+          {
+            "host": "adserver.example.com",
+            "ports": "80,443,3306",
+            "arguments": "-sV"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_16",
+      "task_content": "I'm exploring different cities in Germany and I'm specifically interested in Berlin. Furthermore, I ...",
+      "expected_tools": [
+        [
+          "download_osm_data"
+        ],
+        [
+          "download_osm_data"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "Berlin",
+            "filename": "berlin.json",
+            "format": "json"
+          }
+        ],
+        [
+          {
+            "query": "Karlsruhe",
+            "filename": "karlsruhe.json",
+            "format": "json"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_17",
+      "task_content": "I am looking for a new laptop for my graphic design work. Can you help me find a laptop with high pe...",
+      "expected_tools": [
+        [
+          "recommend_electronics"
+        ],
+        [
+          "get_best_price"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "product_type": "laptop"
+          }
+        ],
+        [
+          {
+            "product_name": "iphone_16"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "recommend_electronics",
+          "get_best_price"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "product_type": "laptop"
+          },
+          {
+            "product_name": "iPhone 16"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_18",
+      "task_content": "I am a fourth-year PhD student with ideas about embodied intelligence entrepreneurship and would lik...",
+      "expected_tools": [
+        [
+          "search_news"
+        ],
+        [
+          "analyze_trends"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "OPENAI",
+            "start_date": "2019-01-01",
+            "end_date": "2024-12-31"
+          }
+        ],
+        [
+          {
+            "topic": "embodied intelligence",
+            "timeframe": "last_quarter"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "analyze_trends",
+          "octagon_companies_agent",
+          "search_news"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "topic": "embodied intelligence startups",
+            "timeframe": "last_quarter"
+          },
+          {
+            "seed_company": "OpenAI",
+            "limit": 5
+          },
+          {
+            "query": "OpenAI",
+            "start_date": "2019-01-01",
+            "end_date": "2024-12-31",
+            "max_result": 5
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_19",
+      "task_content": "I am currently trying to establish an online learning platform, which requires connecting to a datab...",
+      "expected_tools": [
+        [
+          "connect_database"
+        ],
+        [
+          "security_guidance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "database_name": "online_learning_db"
+          }
+        ],
+        [
+          {
+            "query": "online learning platform student information privacy and security best practices"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "connect_database",
+          "security_guidance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "database_name": "online_learning_db"
+          },
+          {
+            "query": "Provide security advice for protecting user privacy and securing data storage and access on an online learning platform"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "protask_parallel_tools_20",
+      "task_content": "I am currently studying the hereditary probabilities of genetic diseases and mental disorders. I wan...",
+      "expected_tools": [
+        [
+          "search_pubmed"
+        ],
+        [
+          "search_pubmed"
+        ],
+        [
+          "get_trait_associations"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "query": "hereditary genetic diseases"
+          }
+        ],
+        [
+          {
+            "query": "mental disorders"
+          }
+        ],
+        [
+          {
+            "trait_id": "EFO_0000270"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_pubmed",
+          "search_pubmed",
+          "get_trait_associations"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "hereditary probabilities of genetic diseases",
+            "maxResults": 5
+          },
+          {
+            "query": "hereditary probabilities of mental disorders",
+            "maxResults": 5
+          },
+          {
+            "efoId": "EFO_0000270"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    }
+  ]
+}

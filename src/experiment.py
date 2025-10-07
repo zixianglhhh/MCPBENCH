@@ -24,6 +24,26 @@ def get_experiment_config(tasks_type):
         log_path = f"logs/response_3_tools_{timestamp}.json"
         task_path = "data/tasks_with_3_tools.json"
         output_path = f"results/results_3_tools_{timestamp}.json"
+    
+    elif tasks_type == "pro_single":
+        log_path = f"logs/response_protasks_single_{timestamp}.json"
+        task_path = "data/protasks_single.json"
+        output_path = f"results/results_protasks_single_{timestamp}.json"
+
+    elif tasks_type == "pro_sequential":
+        log_path = f"logs/response_protasks_2_sequential_tools_{timestamp}.json"
+        task_path = "data/protasks_with_2_sequential_tools.json"
+        output_path = f"results/results_protasks_2_sequential_tools_{timestamp}.json"
+
+    elif tasks_type == "pro_parallel":
+        log_path = f"logs/response_protasks_2_parallel_tools_{timestamp}.json"
+        task_path = "data/protasks_with_lots_parallel_tools.json"
+        output_path = f"results/results_protasks_2_parallel_tools_{timestamp}.json"
+
+    elif tasks_type == "pro_more_tools":
+        log_path = f"logs/response_protasks_more_tools_{timestamp}.json"
+        task_path = "data/protasks_with_lots_sequential_tools.json"
+        output_path = f"results/results_protasks_3_tools_{timestamp}.json"
 
     return log_path, task_path, output_path
 
@@ -43,6 +63,11 @@ async def run_experiment(model, tasks_type):
     response_data = load_data(log_path)
     num_tasks = len(task_data)
     for i in range(num_tasks):
+        tools_used, inputs_used = [], []  # Initialize here
+        flattened_inputs_used = []  # Initialize here
+        score = 0  
+        expected_tools, expected_inputs = [], [] 
+        
         try:
             response = response_data[i]
             task = task_data[i]
@@ -52,6 +77,18 @@ async def run_experiment(model, tasks_type):
             expected_inputs = task.get('inputs', [])
 
             tools_used, inputs_used = extract_tools_and_inputs(response)
+            
+            # Handle different input structures for display
+            # Case 1: expected_inputs is List[Dict] (single tasks) - need to flatten inputs_used
+            # Case 2: expected_inputs is List[List[Dict]] (parallel tasks) - no flattening needed
+            if expected_inputs and isinstance(expected_inputs[0], dict):
+                # Single task case: flatten inputs_used from List[List[Dict]] to List[Dict]
+                flattened_inputs_used = []
+                for input_group in inputs_used:
+                    flattened_inputs_used.extend(input_group)
+            else:
+                # Parallel task case: inputs_used is already List[List[Dict]]
+                flattened_inputs_used = inputs_used
         
             # Evaluate performance
             score = evaluate_task_performance(response, expected_tools, expected_inputs)
@@ -59,8 +96,7 @@ async def run_experiment(model, tasks_type):
         except Exception as e:
             print(f"Error evaluating task {i+1}: {str(e)}")
             scores.append(0)  # Give 0 score for failed evaluations
-            tools_used, inputs_used = [], []
-
+            # tools_used and inputs_used remain as initialized empty lists
 
         # Store detailed results
         result = {
@@ -69,7 +105,7 @@ async def run_experiment(model, tasks_type):
             'expected_tools': expected_tools,
             'expected_inputs': expected_inputs,
             'tools_used': tools_used,
-            'inputs_used': inputs_used,
+            'inputs_used': flattened_inputs_used,
             'score': score,
             'match': score == 1
         }

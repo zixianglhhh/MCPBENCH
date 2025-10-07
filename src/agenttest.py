@@ -149,7 +149,7 @@ def get_all_functions_from_tools():
     return file_path_list
 
 
-async def generate_response(model, tasks_path, output_path):
+async def generate_response(model, tasks_path, output_path, num):
     llm = ModelRegistry("configs/config.json").get(model)
     client = llm["client"]
     print(llm["name"])
@@ -225,7 +225,7 @@ Now, please begin working based on the user’s request. Be sure to include the 
         tools=tools,
         system_message=system_message,
         reflect_on_tool_use=True,
-        max_tool_iterations=2, #the number of tools involved in your tasks
+        max_tool_iterations=num, #the number of tools involved in your tasks
     
     )
 
