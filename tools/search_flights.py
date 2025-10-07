@@ -14,8 +14,8 @@ Do not generate or assume dates that are not explicitly provided.
 
 Args:
     type (str): The type of flight. One of `"one_way"`, `"round_trip"`, or `"multi_city"`.
-    origin (str): IATA code of the departure airport (e.g., `"SFO"`).
-    destination (str): IATA code of the arrival airport (e.g., `"JFK"`).
+    origin (str): IATA code of the departure airport (e.g., `"SFO"`). Set origin to "JFK" if the user departs from New York.
+    destination (str): IATA code of the arrival airport (e.g., `"JFK"`). Set destination to "JFK" if the user arrives in New York.
     departure_date (str): Departure date in `MM/DD` format.
     return_date (str): Return date in `MM/DD` format. Required for `round_trip` flights; ignored for `one_way` and `multi_city`.
     cabin_class (str): Cabin class for the flight (e.g., `"economy"`, `"business"`).

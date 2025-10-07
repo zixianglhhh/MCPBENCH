@@ -19,9 +19,9 @@
     },
     {
         "id": "task_2_parallel_tools_4",
-        "content": "The user wants to book a round-trip Economy flight from Phoenix, AZ, to New York City, departing on the 7th of this month and returning on the 14th. They are also interested in seeing some attractions in New York City.",
+        "content": "The user wants to book a round-trip Economy flight from Phoenix, AZ, to New York City, departing on the 7th of March and returning on the 14th. They are also interested in seeing some attractions in New York City.",
         "tools": [["search_flights", "geocalc_mcp_get_points_of_interest"]],
-        "inputs": [[{"type": "round_trip", "origin": "PHX", "destination": "NYC", "departure_date": "03/07", "return_date": "03/14", "cabin_class": "economy"}, {"city": "New York", "category": "general"}]]
+        "inputs": [[{"type": "round_trip", "origin": "PHX", "destination": "JFK", "departure_date": "03/07", "return_date": "03/14", "cabin_class": "economy"}, {"city": "New York", "category": "general"}]]
     },
     {
         "id": "task_2_parallel_tools_5",
@@ -61,9 +61,9 @@
     },
     {
         "id": "task_2_parallel_tools_11",
-        "content": "The user is looking for interesting activities in Boston, particularly sports events like American football. They also inquired about their checking account balance.",
+        "content": "The user is looking for interesting activities in Boston, particularly sports events like football events. They also inquired about their checking account balance.",
         "tools": [["search_ticketmaster", "get_balance"]],
-        "inputs": [[{"type": "American Football Event", "city": "Boston"}, {"account_type": "checking"}]]
+        "inputs": [[{"type": "Football Event", "city": "Boston"}, {"account_type": "checking"}]]
     },
     {
         "id": "task_2_parallel_tools_12",
@@ -75,13 +75,13 @@
         "id": "task_2_parallel_tools_13",
         "content": "The user is looking for fun activities in Seattle, specifically a country show on April 10th, which they decide on. They also need a hotel room for a 4-day stay starting on April 8th.",
         "tools": [["search_ticketmaster", "booking_tool"]],
-        "inputs": [[{"type": "Country Show Event", "city": "Seattle"}, {"city": "Seattle", "checkinDate": "04/08", "checkoutDate": "04/12"}]]
+        "inputs": [[{"type": "Country Event", "city": "Seattle"}, {"city": "Seattle", "checkinDate": "04/08", "checkoutDate": "04/12"}]]
     },
     {
         "id": "task_2_parallel_tools_14",
         "content": "The user wants to find pop music events in London on May 9th. They also want to reserve a hotel room in London for two days starting May 7th and request the phone number and address of the hotel.",
         "tools": [["search_ticketmaster", "booking_tool"]],
-        "inputs": [[{"type": "Pop Music Event", "city": "London"}, {"city": "London", "checkinDate": "05/07", "checkoutDate": "05/09"}]]
+        "inputs": [[{"type": "Pop Event", "city": "London"}, {"city": "London", "checkinDate": "05/07", "checkoutDate": "05/09"}]]
     },
     {
         "id": "task_2_parallel_tools_15",
@@ -117,6 +117,6 @@
         "id": "task_2_parallel_tools_20",
         "content": "The user wants to know about rock concerts in New York, and also wants to check the balances in their checking account.",
         "tools": [["search_ticketmaster", "get_balance"]],
-        "inputs": [[{"type": "Rock Concert Event", "city": "New York"}, {"account_type": "checking"}]]
+        "inputs": [[{"type": "Rock Event", "city": "New York"}, {"account_type": "checking"}]]
     }
 ]

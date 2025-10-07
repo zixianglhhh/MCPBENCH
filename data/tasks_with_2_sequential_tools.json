@@ -1,7 +1,7 @@
 [
     {
         "id": "task_2_sequential_tools_1",
-        "content": "The user is looking for a good Ethiopian restaurant in Berkeley, preferably one with live music. They want to reserve a table at the found restaurant for the 2nd of this month at 17:30.",
+        "content": "The user is looking for a good Ethiopian restaurant in Berkeley. They want to reserve a table at the found restaurant for the 2nd of this month at 17:30.",
         "tools": [["search_restaurant"], ["make_reservation"]],
         "inputs": [[{"location": "Berkeley", "cuisineTypes": "Ethiopian"}], [{"restaurant_name": "Ethiopian Delight"}]]
     },
@@ -63,7 +63,7 @@
         "id": "task_2_sequential_tools_11",
         "content": "The user requests to check their balance, specifying the savings account. After that, they also want to transfer $170 from their savings account to Mr. Raghav's checking account and confirm the details are correct.",
         "tools": [["get_balance"], ["send_transaction"]],
-        "inputs": [[{"account_type": "savings"}], [{"target": "Mr. Raghav", "amount": 170}]]
+        "inputs": [[{"account_type": "savings"}], [{"target": "Raghav", "amount": 170}]]
     },
     {
         "id": "task_2_sequential_tools_12",
@@ -85,7 +85,7 @@
     },
     {
         "id": "task_2_sequential_tools_15",
-        "content": "The user is looking for a concert event in Washington, requesting information about the venue and start dates, and plan to attend on a specific date that is available. They also want to add the trip to their calendar under the name \"Concert.\"",
+        "content": "The user is looking for a concert event in Washington, requesting information about the venue and start dates, and plan to attend on a specific date that is available. They also want to add the trip to their calendar under the name \"Concert\".",
         "tools": [["search_ticketmaster"], ["create_event"]],
         "inputs": [[{"type": "Concert Event", "city": "Washington"}], [{"subject": "Concert", "startDate": "03/07", "endDate": "03/07", "location": "Washington"}]]
     },
@@ -93,13 +93,13 @@
         "id": "task_2_sequential_tools_16",
         "content": "The user is looking for an apartment to rent in Oakley with 3 bedrooms and 3 bathrooms. They want to check how to get to the found apartment from Oakland International Airport by car.",
         "tools": [["search_rental_properties"], ["maps_direction_driving_by_address"]],
-        "inputs": [[{"location": "Oakley", "property_type": "apartment"}], [{"origin_address": "Oakland International Airport", "destination_address": "Oakley"}]]
+        "inputs": [[{"location": "Oakley", "property_type": "apartment"}], [{"origin_address": "Oakland International Airport", "destination_address": "123 Oakley Ave"}]]
     },
     {
         "id": "task_2_sequential_tools_17",
         "content": "The user wants to rent a two-bedroom, one-bathroom apartment in Santa Rosa. They want to know how to drive to the found apartment by car from 888 Fourth Street.",
         "tools": [["search_rental_properties"], ["maps_direction_driving_by_address"]],
-        "inputs": [[{"location": "Santa Rosa", "property_type": "apartment"}], [{"origin_address": "888 Fourth Street", "destination_address": "Santa Rosa"}]]
+        "inputs": [[{"location": "Santa Rosa", "property_type": "apartment"}], [{"origin_address": "888 Fourth Street", "destination_address": "123 Santa Rosa Ave"}]]
     },
     {
         "id": "task_2_sequential_tools_18",
@@ -115,7 +115,7 @@
     },
     {
         "id": "task_2_sequential_tools_20",
-        "content": "The user is looking for a music attraction in New York on March 4th, including details about the start time and venue location, and inquires about the best way to drive there from Ridgewood.",
+        "content": "The user is looking for a music attraction in New York and inquires about the best way to drive there from Ridgewood.",
         "tools": [["geocalc_mcp_get_points_of_interest"], ["maps_direction_driving_by_address"]],
         "inputs": [[{"city":"New York", "category": "music"}], [{"origin_address": "Ridgewood", "destination_address": "Metropolitan Museum of Art"}]]
     }

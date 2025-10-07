@@ -65,6 +65,45 @@ def compare_inputs(actual_input, expected_input) -> bool:
     # Compare the normalized dictionaries
     return actual_input_set == expected_input_set
 
+def calculate_total_tokens(response_data: List[Dict[str, Any]]) -> tuple[int, int]:
+    """Calculate total prompt and completion tokens from all response data."""
+    total_prompt = 0
+    total_completion = 0
+    
+    def extract_tokens_recursive(obj):
+        nonlocal total_prompt, total_completion
+        
+        if isinstance(obj, dict):
+            # Check if this is a models_usage object
+            if 'models_usage' in obj:
+                usage = obj['models_usage']
+                if isinstance(usage, dict):
+                    # Extract prompt and completion tokens
+                    prompt_tokens = usage.get('prompt_tokens', '0')
+                    completion_tokens = usage.get('completion_tokens', '0')
+                    
+                    # Convert to int, handling string values
+                    try:
+                        total_prompt += int(prompt_tokens) if prompt_tokens != 'None' else 0
+                        total_completion += int(completion_tokens) if completion_tokens != 'None' else 0
+                    except (ValueError, TypeError):
+                        pass
+            
+            # Recursively search in all values
+            for value in obj.values():
+                extract_tokens_recursive(value)
+                
+        elif isinstance(obj, (list, tuple)):
+            # Recursively search in all items
+            for item in obj:
+                extract_tokens_recursive(item)
+    
+    # Process all responses
+    for response in response_data:
+        extract_tokens_recursive(response)
+    
+    return total_prompt, total_completion
+
 
 
 
