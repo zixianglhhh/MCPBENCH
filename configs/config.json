@@ -1,7 +1,19 @@
 [
     {
+        "model": "gpt-5-chat-latest",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "gpt-5",
+            "structured_output": true
+        },
+        "base_url": "https://jacob.api-store.store/v1/",
+        "api_key":
+    },
+    {
         "model": "gpt-4o",
-        "base_url": "https://openrouter.ai/api/v1",
-        "api_key": "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"
+        "base_url": "https://jacob.api-store.store/v1/",
+        "api_key":
     }
 ]
