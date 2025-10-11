@@ -26,7 +26,8 @@ SKIP_INPUT_TOOLS: Set[str] = {
     "strategy_guide",
     "create_ui",
     "dmagent_ask_narrative",
-    "dmagent_ask_rule"
+    "dmagent_ask_rule",
+    "diceRoll"
 }
 
 

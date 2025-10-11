@@ -9,11 +9,11 @@
             "structured_output": true
         },
         "base_url": "https://openrouter.ai/api/v1",
-        "api_key":"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"
+        "api_key":""
     },
     {
         "model": "gpt-4o",
         "base_url": "https://openrouter.ai/api/v1",
-        "api_key":"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"
+        "api_key":""
     }
 ]

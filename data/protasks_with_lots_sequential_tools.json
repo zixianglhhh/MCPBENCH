@@ -57,7 +57,7 @@
         "id": "protask_more_seq_tools_10",
         "content": "Build an AI model in Python that can predict Alphabet Inc future stock price based on its historical closing prices over the past month, name the python file predict_stock.py and save it under finance/Alphabet,  load the data you aquired and excute the code. The code should output a prediction result in the folder of finance/Alphabet/prediction.csv. I want the visualization of the prediction in line chart format to intuitively display both the historical trend and the prediction results, thereby assisting in investment decision-making. Save the visualization as prediction.jpg in the same folder.",
         "tools": [["search_stock_byname"], ["generate_code"], ["visualize_data"]],
-        "inputs": [[{"name": "Alphabet Inc"}], [{"prompt": "predict Alphabet Inc future stock price based on its historical closing prices over the past month", "language": "python", "output_name": "finance/Alphabet/predict_stock.py"}], [{"data_dir": "finance/Alphabet/prediction.csv", "visualize_type": "line_chart","output_dir": "finance/Alphabet/prediction","output_format": "jpg"}]]
+        "inputs": [[{"name": "Alphabet Inc"}], [{"prompt": "Predict Alphabet Inc future stock price based on its historical closing prices over the past month", "language": "python", "output_name": "finance/Alphabet/predict_stock.py"}], [{"data_dir": "finance/Alphabet/prediction.csv", "visualize_type": "line_chart","output_dir": "finance/Alphabet/prediction","output_format": "jpg"}]]
     },
     {
         "id": "protask_more_seq_tools_11",
