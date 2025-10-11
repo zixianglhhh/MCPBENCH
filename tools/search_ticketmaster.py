@@ -8,13 +8,13 @@ def search_ticketmaster(type, city) -> str:
 Search for events based on event type and city location.
 
 The `type` parameter must be formatted with each word capitalized and the word
-"Event" appended at the end, and only containing two words in total. For example: "Concert Event".
+"Event" appended at the end. For example: "Concert Event".
 The `city` parameter should contain only the city name without state or country
 information. For example: "Portland" is valid, but "Portland, OR" is not.
 
 Args:
-    type (str): The event type to search for, with each word capitalized and 
-        ending with "Event", containing and only containing two words in total (e.g., "Concert Event").
+    type (str): The event type to search for, with each word capitalized and
+        ending with "Event" (e.g., "Concert Event").
     city (str): The name of the city where the event is located, without state
         or country (e.g., "Seattle").
 
@@ -23,7 +23,7 @@ Returns:
     location, and date range.
 """
 ```'''
-    mock_db = [{'event type': 'Concert Event', 'event location': 'San Francisco', 'start date': '03/01', 'end date': '03/02'}, {'event type': 'Football Event', 'event location': 'Boston', 'start date': '04/06', 'end date': '04/06'}, {'event type': 'Concert Event', 'event location': 'Rohnert Park', 'start date': '03/11', 'end date': '03/11'}, {'event type': 'Country Event', 'event location': 'Seattle', 'start date': '04/10', 'end date': '04/10'}, {'event type': 'Pop Event', 'event location': 'London', 'start date': '05/09', 'end date': '05/09'}, {'event type': 'Basketball Event', 'event location': 'Atlanta', 'start date': '03/05', 'end date': '03/05'}, {'event type': 'Football Event', 'event location': 'Atlanta', 'start date': '03/13', 'end date': '03/13'}, {'event type': 'Rock Event', 'event location': 'New York', 'start date': '03/11', 'end date': '03/11'}, {'event type': 'Match Event', 'event location': 'Portland', 'start date': '03/06', 'end date': '03/06'}, {'event type': 'Baseball Event', 'event location': 'New York', 'start date': '03/13', 'end date': '03/13'}, {'event type': 'Concert Event', 'event location': 'Washington', 'start date': '03/07', 'end date': '03/07'}]
+    mock_db = [{'event type': 'Concert Event', 'event location': 'San Francisco', 'start date': '03/01', 'end date': '03/02'}, {'event type': 'American Football Event', 'event location': 'Boston', 'start date': '04/06', 'end date': '04/06'}, {'event type': 'Concert Event', 'event location': 'Rohnert Park', 'start date': '03/11', 'end date': '03/11'}, {'event type': 'Country Show Event', 'event location': 'Seattle', 'start date': '04/10', 'end date': '04/10'}, {'event type': 'Pop Music Event', 'event location': 'London', 'start date': '05/09', 'end date': '05/09'}, {'event type': 'Basketball Event', 'event location': 'Atlanta', 'start date': '03/05', 'end date': '03/05'}, {'event type': 'Football Event', 'event location': 'Atlanta', 'start date': '03/13', 'end date': '03/13'}, {'event type': 'Rock Concert Event', 'event location': 'New York', 'start date': '03/11', 'end date': '03/11'}, {'event type': 'Match Event', 'event location': 'Portland', 'start date': '03/06', 'end date': '03/06'}, {'event type': 'Baseball Game Event', 'event location': 'New York', 'start date': '03/13', 'end date': '03/13'}, {'event type': 'Concert Event', 'event location': 'Washington', 'start date': '03/07', 'end date': '03/07'},{'event type': 'American Football Event', 'event location': 'Boston', 'start date': '03/09', 'end date': '03/09'}, {'event type': 'Sports Event', 'event location': 'California', 'start date': '03/15', 'end date': '03/15'}, {'event type': 'Country Show Event', 'event location': 'Seattle', 'start date': '03/20', 'end date': '03/20'}, {'event type': 'Pop Music Event', 'event location': 'London', 'start date': '03/25', 'end date': '03/25'}, {'event type': 'Basketball Event', 'event location': 'Atlanta', 'start date': '03/30', 'end date': '03/30'}, {'event type': 'Football Event', 'event location': 'Atlanta', 'start date': '04/02', 'end date': '04/02'}, {'event type': 'Rock Concert Event', 'event location': 'New York', 'start date': '04/05', 'end date': '04/05'}, {'event type': 'Match Event', 'event location': 'Portland', 'start date': '04/08', 'end date': '04/08'}, {'event type': 'Baseball Game Event', 'event location': 'New York', 'start date': '04/12', 'end date': '04/12'}, {'event type': 'Concert Event', 'event location': 'Washington', 'start date': '04/15', 'end date': '04/15'}]
     results = [event for event in mock_db if type in event['event type'] and city.lower() == event['event location'].lower()]
     return 'Found the following events: ' + '\n'.join([event['event type'] + ' in ' + event['event location'] + ' on ' + event['start date'] + ' to ' + event['end date'] for event in results])
 if __name__ == '__main__':

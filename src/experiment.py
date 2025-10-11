@@ -25,6 +25,13 @@ def get_experiment_config(model, tasks_type):
         log_path = f"logs/{model}_response_3_tools_{timestamp}.json"
         task_path = "data/tasks_with_3_tools.json"
         output_path = f"results/{model}_results_3_tools_{timestamp}.json"
+    
+    elif tasks_type == "single":
+        log_path = f"logs/{model}_response_single_{timestamp}.json"
+        task_path = "data/tasks_with_1_tool.json"
+        output_path = f"results/{model}_results_single_{timestamp}.json"
+    else:
+        raise ValueError(f"Unknown tasks_type: {tasks_type}")
 
     return log_path, task_path, output_path
 

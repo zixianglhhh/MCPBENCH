@@ -1,6 +1,6 @@
 [
     {
-        "model": "gpt-5-chat-latest",
+        "model": "openai/gpt-5",
         "model_info": {
             "vision": true,
             "function_calling": true,
@@ -12,12 +12,19 @@
         "temperature": 0
     },
     {
-        "model": "gpt-4o",
+        "model": "openai/chatgpt-4o-latest",
         "base_url": "https://openrouter.ai/api/v1",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "chatgpt-4o",
+            "structured_output": true
+        },
         "temperature": 0
     },
     {
-        "model": "kimi-k2-0711-preview",
+        "model": "moonshotai/kimi-k2",
         "model_info": {
             "vision": true,
             "function_calling": true,
@@ -29,12 +36,19 @@
         "temperature": 0
     },
     {
-        "model": "o4-mini",
+        "model": "openai/gpt-4o-mini",
         "base_url": "https://openrouter.ai/api/v1",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "gpt-4o",
+            "structured_output": true
+        },
         "temperature": 0
     },
     {
-        "model": "gemini-2.5-pro",
+        "model": "google/gemini-2.5-pro",
         "model_info": {
             "vision": true,
             "function_calling": true,
@@ -46,7 +60,7 @@
         "temperature": 0
     },
     {
-        "model": "qwen3-235b-a22b",
+        "model": "qwen/qwen3-235b-a22b",
         "model_info": {
             "vision": true,
             "function_calling": true,
@@ -67,6 +81,7 @@
             "structured_output": true
         },
         "base_url": "https://openrouter.ai/api/v1",
+        "api_key": "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",
         "temperature": 0
     }
 ]

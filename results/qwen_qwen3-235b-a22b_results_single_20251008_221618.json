@@ -1,0 +1,758 @@
+{
+  "evaluation_summary": {
+    "total_tasks": 30,
+    "tasks_passed": 6,
+    "tasks_failed": 24,
+    "average_score": 0.2,
+    "success_rate_percentage": 20.0,
+    "total_prompt_tokens": 123956,
+    "total_completion_tokens": 22638,
+    "total_tokens": 146594,
+    "agent_construction_time_seconds": 0.0,
+    "task_processing_time_seconds": 5440.380228757858,
+    "total_execution_time_seconds": 5440.380228757858,
+    "average_time_per_task_seconds": 181.34600762526193
+  },
+  "detailed_results": [
+    {
+      "task_id": "task_1_tool_1",
+      "task_content": "The user wants to ask who directed the movie hellboy. The movie hellboy's imdb id is tt0167190.",
+      "expected_tools": [
+        [
+          "get_directors"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "imdb_id": "tt0167190"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_2",
+      "task_content": "The user wants the song \"Battle Cry\" to be played on the itunes.",
+      "expected_tools": [
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "song": "Battle Cry"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_3",
+      "task_content": "The user wants to find a rental car in San Francisco.",
+      "expected_tools": [
+        [
+          "search_rental_properties"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "San Francisco",
+            "property_type": "car"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_4",
+      "task_content": "The user wants to find a one-way flight in Economy from Atlanta, GA, to Phoenix, AZ, departing on Ma...",
+      "expected_tools": [
+        [
+          "search_flights"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "one_way",
+            "origin": "ATL",
+            "destination": "PHX",
+            "departure_date": "03/11",
+            "cabin_class": "economy"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_5",
+      "task_content": "The user wants to search for Sea food restaurants in San Bruno.",
+      "expected_tools": [
+        [
+          "search_restaurant"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "San Bruno",
+            "cuisineTypes": "Seafood"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_6",
+      "task_content": "The user wants to know whether the Lobster Shack in San Mateo has live music.",
+      "expected_tools": [
+        [
+          "get_restaurant_details"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "restaurant_name": "Lobster Shack"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_7",
+      "task_content": "The user wants to know the weather in Kuala Lumpur, Malaysia on March 6th, 2025.",
+      "expected_tools": [
+        [
+          "weather_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "Kuala Lumpur",
+            "date": "03/06"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_8",
+      "task_content": "The user wants to Check the calendar for events on 2025-09-06.",
+      "expected_tools": [
+        [
+          "list_events"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "date": "09/06"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "list_events"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "09/06"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_1_tool_9",
+      "task_content": "The user wants to transfer $270 to Pranav's account, the account is registered by email address pran...",
+      "expected_tools": [
+        [
+          "send_transaction"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "target": "pranav@outlook.com",
+            "amount": 270
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_10",
+      "task_content": "The user wants to check the balance of his checking account.",
+      "expected_tools": [
+        [
+          "get_balance"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_1_tool_11",
+      "task_content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook....",
+      "expected_tools": [
+        [
+          "create_event"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "subject": "Project Discussion",
+            "attendees": "pranav@outlook.com; alex@outlook.com",
+            "startDate": "03/10",
+            "startTime": "02:00 PM",
+            "endDate": "03/10",
+            "endTime": "03:00 PM",
+            "isMeeting": true
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "create_event"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "subject": "Project Discussion",
+            "startDate": "03/10",
+            "startTime": "02:00 PM",
+            "endDate": "03/10",
+            "endTime": "03:00 PM",
+            "isMeeting": "True",
+            "attendees": "pranav@outlook.com;alex@outlook.com",
+            "calendar": "default"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_12",
+      "task_content": "The user wants to search for Mozart's tracks on itunes.",
+      "expected_tools": [
+        [
+          "itunes_search"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "artist": "Mozart"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_13",
+      "task_content": "The user wants to plan a driving route from Beijing's Tsinghua University to National Worker's Gymna...",
+      "expected_tools": [
+        [
+          "maps_direction_driving_by_address"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "origin_address": "Tsinghua University",
+            "destination_address": "National Worker's Gymnasium"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_14",
+      "task_content": "The user wants to search for American football events in Boston and asks if he can watch the event o...",
+      "expected_tools": [
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "American Football Event",
+            "city": "Boston"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_15",
+      "task_content": "The user wants to find some free time slots in his calendar on September 7th, 2025.",
+      "expected_tools": [
+        [
+          "find_free_slots"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "date": "09/07"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_16",
+      "task_content": "The user wants to book a hotel in Beijing, China, for a 3-night stay from March 10th.",
+      "expected_tools": [
+        [
+          "booking_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "Beijing",
+            "checkinDate": "03/10",
+            "checkoutDate": "03/13"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_17",
+      "task_content": "The user wants to know if there exists an italian restaurant in Beijing, China.",
+      "expected_tools": [
+        [
+          "search_restaurant"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "Beijing",
+            "cuisineTypes": "Italian"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_18",
+      "task_content": "The user wants to find sports events in Tokyo, Japan.",
+      "expected_tools": [
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "type": "Sports Event",
+            "city": "Tokyo"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_19",
+      "task_content": "The user wants to ask the movie Hellboy's imdb id. ",
+      "expected_tools": [
+        [
+          "search_imdb"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "primary_title": "Hellboy"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_20",
+      "task_content": "The user wants to search the round trip flight in business from LAX to SFO, departing on March 3rd a...",
+      "expected_tools": [
+        [
+          "search_flights"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "origin": "LAX",
+            "destination": "SFO",
+            "departure_date": "03/03",
+            "return_date": "03/12",
+            "cabin_class": "business",
+            "type": "round_trip"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_flights"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "LAX",
+            "destination": "SFO",
+            "departure_date": "03/03",
+            "return_date": "03/12",
+            "cabin_class": "business"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_1_tool_21",
+      "task_content": "The user wants to know the humidity and wind speed in San Jose, CA on March 7th, 2025.",
+      "expected_tools": [
+        [
+          "weather_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "San Jose",
+            "date": "03/07"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "weather_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Jose",
+            "date": "03/07"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_1_tool_22",
+      "task_content": "The user wants to reserve a cosmetic dentist in San Jose on March 8th at 11:30 AM.",
+      "expected_tools": [
+        [
+          "book_dentist_appointment"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "San Jose",
+            "dentist_type": "cosmetic",
+            "date": "03/08",
+            "time": "11:30 AM"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_23",
+      "task_content": "The user wants to find attractions in Chicago on September 9th, 2025.",
+      "expected_tools": [
+        [
+          "search_attractions"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "Chicago",
+            "date": "09/09/2025"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_24",
+      "task_content": "The user wants to rent a 2-bedroom, 2-bathroom apartment in Walnut Creek so he asks for the landlord...",
+      "expected_tools": [
+        [
+          "get_rentalhouse_details"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "Walnut Creek",
+            "bedrooms": 2,
+            "bathrooms": 2
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_25",
+      "task_content": "The user has a property id LN877 in London and he wants to know the capacity of the property.",
+      "expected_tools": [
+        [
+          "get_rental_property_details"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "property_id": "LN877"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_26",
+      "task_content": "The user is invited to attend a contest titled \"Best Coding Practices\" on March 15th, 2025 starting ...",
+      "expected_tools": [
+        [
+          "create_event"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "subject": "Best Coding Practices",
+            "startDate": "03/15",
+            "startTime": "10:40 AM",
+            "calendar": "Vibe2Check"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_27",
+      "task_content": "The user wants to find a child-friendly around Portland, due to his son and limited time, he only wa...",
+      "expected_tools": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "Portland",
+            "radius_km": 5,
+            "categories": "child-friendly"
+          }
+        ]
+      ],
+      "tools_used": [],
+      "inputs_used": [],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_28",
+      "task_content": "The user wants to book a orthodontic dentist in San Francisco on March 9th at 2:00 PM.",
+      "expected_tools": [
+        [
+          "book_dentist_appointment"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "San Francisco",
+            "dentist_type": "orthodontic",
+            "date": "03/09",
+            "time": "02:00 PM"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "book_dentist_appointment"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Francisco",
+            "dentist_type": "orthodontic",
+            "date": "03/09",
+            "time": "2:00 PM"
+          }
+        ]
+      ],
+      "score": 0,
+      "match": false
+    },
+    {
+      "task_id": "task_1_tool_29",
+      "task_content": "The user wants to ask the whether in San Francisco, CA on March 10th, 2025.",
+      "expected_tools": [
+        [
+          "weather_tool"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "city": "San Francisco",
+            "date": "03/10"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "weather_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Francisco",
+            "date": "03/10"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    },
+    {
+      "task_id": "task_1_tool_30",
+      "task_content": "The user wants to know the French restaurants's name and price level in New York City.",
+      "expected_tools": [
+        [
+          "search_restaurant"
+        ]
+      ],
+      "expected_inputs": [
+        [
+          {
+            "location": "New York",
+            "cuisineTypes": "French"
+          }
+        ]
+      ],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "New York",
+            "cuisineTypes": "French"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true
+    }
+  ]
+}

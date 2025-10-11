@@ -16,7 +16,7 @@ Returns:
     str: A message containing the director's name if found, or an error message if the IMDb ID
     is invalid or the movie is not found.
 """'''
-    movie_directors_db = {'tt0098258': 'Cameron Crowe', 'tt0113243': 'Iain Softley', 'tt0057012': 'Stanley Kubrick', 'tt2274648': 'Neil Marshall'}
+    movie_directors_db = {'tt0098258': 'Cameron Crowe', 'tt0113243': 'Iain Softley', 'tt0057012': 'Stanley Kubrick', 'tt2274648': 'Neil Marshall', 'tt0167190': 'Sam Mendes'}
     if not isinstance(imdb_id, str) or not imdb_id.startswith('tt'):
         return 'Error: Invalid IMDb ID format. Please provide a valid IMDb ID.'
     director = movie_directors_db.get(imdb_id)

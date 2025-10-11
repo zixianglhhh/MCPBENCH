@@ -1,0 +1,182 @@
+[
+    {
+        "id": "task_1_tool_1",
+        "content": "The user wants to ask who directed the movie hellboy. The movie hellboy's imdb id is tt0167190.",
+        "tools": [["get_directors"]],
+        "inputs": [[{"imdb_id": "tt0167190"}]]
+    },
+    {
+        "id": "task_1_tool_2",
+        "content": "The user wants the song \"Battle Cry\" to be played on the itunes.",
+        "tools": [["itunes_play_song"]],
+        "inputs": [[{"song": "Battle Cry"}]]
+    },
+    {
+        "id": "task_1_tool_3",
+        "content": "The user wants to find a rental car in San Francisco.",
+        "tools": [["search_rental_properties"]],
+        "inputs": [[{"location": "San Francisco", "property_type": "car"}]]
+    },
+    {
+        "id": "task_1_tool_4",
+        "content": "The user wants to find a one-way flight in Economy from Atlanta, GA, to Phoenix, AZ, departing on March 11th.",
+        "tools": [["search_flights"]],
+        "inputs": [[{"type": "one_way", "origin": "ATL", "destination": "PHX", "departure_date": "03/11", "cabin_class": "economy"}]]
+    },
+    {
+        "id": "task_1_tool_5",
+        "content": "The user wants to search for Sea food restaurants in San Bruno.",
+        "tools": [["search_restaurant"]],
+        "inputs": [[{"location": "San Bruno", "cuisineTypes": "Seafood"}]]
+    },
+    {
+        "id": "task_1_tool_6",
+        "content": "The user wants to know whether the Lobster Shack in San Mateo has live music.",
+        "tools": [["get_restaurant_details"]],
+        "inputs": [[{"restaurant_name": "Lobster Shack"}]]
+    },
+    {
+        "id": "task_1_tool_7",
+        "content": "The user wants to know the weather in Kuala Lumpur, Malaysia on March 6th, 2025.",
+        "tools": [["weather_tool"]],
+        "inputs": [[{"city": "Kuala Lumpur", "date": "03/06"}]]
+    },
+    {
+        "id": "task_1_tool_8",
+        "content": "The user wants to Check the calendar for events on 2025-09-06.",
+        "tools": [["list_events"]],
+        "inputs": [[{"date": "09/06"}]]
+    },
+    {
+        "id": "task_1_tool_9",
+        "content": "The user wants to transfer $270 to Pranav's account, the account is registered by email address pranav@outlook.com from his checking account.",
+        "tools": [["send_transaction"]],
+        "inputs": [[{"target": "pranav@outlook.com", "amount": 270}]]
+    },
+    {
+        "id": "task_1_tool_10",
+        "content": "The user wants to check the balance of his checking account.",
+        "tools": [["get_balance"]],
+        "inputs": [[{"account_type": "checking"}]]
+    },
+    {
+        "id": "task_1_tool_11",
+        "content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook.com) on March 10th at 2:00 PM, in his calendar. The meeting's subject is 'Project Discussion' and it lasts for 1 hour.",
+        "tools": [["create_event"]],
+        "inputs": [[{"subject": "Project Discussion", "attendees": "pranav@outlook.com; alex@outlook.com", "startDate": "03/10", "startTime": "02:00 PM", "endDate": "03/10", "endTime": "03:00 PM", "isMeeting": true}]]
+    },
+    {
+        "id": "task_1_tool_12",
+        "content": "The user wants to search for Mozart's tracks on itunes.",
+        "tools": [["itunes_search"]],
+        "inputs": [[{"artist": "Mozart"}]]
+    },
+    {
+        "id": "task_1_tool_13",
+        "content": "The user wants to plan a driving route from Beijing's Tsinghua University to National Worker's Gymnasium.",
+        "tools": [["maps_direction_driving_by_address"]],
+        "inputs": [[{"origin_address": "Tsinghua University", "destination_address": "National Worker's Gymnasium"}]]
+    },
+    {
+        "id": "task_1_tool_14",
+        "content": "The user wants to search for American football events in Boston and asks if he can watch the event on 04/07",
+        "tools": [["search_ticketmaster"]],
+        "inputs": [[{"type": "American Football Event", "city": "Boston"}]]
+    },
+    {
+        "id": "task_1_tool_15",
+        "content": "The user wants to find some free time slots in his calendar on September 7th, 2025.",
+        "tools": [["find_free_slots"]],
+        "inputs": [[{"date": "09/07"}]]
+    },
+    {
+        "id": "task_1_tool_16",
+        "content": "The user wants to book a hotel in Beijing, China, for a 3-night stay from March 10th.",
+        "tools": [["booking_tool"]],
+        "inputs": [[{"city": "Beijing", "checkinDate": "03/10", "checkoutDate": "03/13"}]]
+    },
+    {
+        "id": "task_1_tool_17",
+        "content": "The user wants to know if there exists an italian restaurant in Beijing, China.",
+        "tools": [["search_restaurant"]],
+        "inputs": [[{"location": "Beijing", "cuisineTypes": "Italian"}]]
+    },
+    {
+        "id": "task_1_tool_18",
+        "content": "The user wants to find sports events in Tokyo, Japan.",
+        "tools": [["search_ticketmaster"]],
+        "inputs": [[{"type": "Sports Event", "city": "Tokyo"}]]
+    },
+    {
+        "id": "task_1_tool_19",
+        "content": "The user wants to ask the movie Hellboy's imdb id. ",
+        "tools": [["search_imdb"]],
+        "inputs": [[{"primary_title": "Hellboy"}]]
+    },
+    {
+        "id": "task_1_tool_20",
+        "content": "The user wants to search the round trip flight in business from LAX to SFO, departing on March 3rd and returning on March 12th.",
+        "tools": [["search_flights"]],
+        "inputs": [[{"origin": "LAX", "destination": "SFO", "departure_date": "03/03", "return_date": "03/12", "cabin_class": "business", "type": "round_trip"}]]
+    },
+    {
+        "id": "task_1_tool_21",
+        "content": "The user wants to know the humidity and wind speed in San Jose, CA on March 7th, 2025.",
+        "tools": [["weather_tool"]],
+        "inputs": [[{"city": "San Jose", "date": "03/07"}]]
+    },
+    {
+        "id": "task_1_tool_22",
+        "content": "The user wants to reserve a cosmetic dentist in San Jose on March 8th at 11:30 AM.",
+        "tools": [["book_dentist_appointment"]],
+        "inputs": [[{"location": "San Jose", "dentist_type": "cosmetic", "date": "03/08", "time": "11:30 AM"}]]
+    },
+    {
+        "id": "task_1_tool_23",
+        "content": "The user wants to find attractions in Chicago on September 9th, 2025.",
+        "tools": [["search_attractions"]],
+        "inputs": [[{"location": "Chicago", "date": "09/09/2025"}]]
+    },
+    {
+        "id": "task_1_tool_24",
+        "content": "The user wants to rent a 2-bedroom, 2-bathroom apartment in Walnut Creek so he asks for the landlord's phone number.",
+        "tools": [["get_rentalhouse_details"]],
+        "inputs": [[{"location": "Walnut Creek", "bedrooms": 2, "bathrooms": 2}]]
+    },
+    {
+        "id": "task_1_tool_25",
+        "content": "The user has a property id LN877 in London and he wants to know the capacity of the property.",
+        "tools": [["get_rental_property_details"]],
+        "inputs": [[{"property_id": "LN877"}]]
+    },
+    {
+        "id": "task_1_tool_26",
+        "content": "The user is invited to attend a contest titled \"Best Coding Practices\" on March 15th, 2025 starting at 10:40 AM. He wants to add this event to his calendar named \"Vibe2Check\".",
+        "tools": [["create_event"]],
+        "inputs": [[{"subject": "Best Coding Practices", "startDate": "03/15", "startTime": "10:40 AM", "calendar": "Vibe2Check"}]]
+    },
+    {
+        "id": "task_1_tool_27",
+        "content": "The user wants to find a child-friendly around Portland, due to his son and limited time, he only wants to find a place within 5 km.",
+        "tools": [["geocalc_mcp_get_points_of_interest"]],
+        "inputs": [[{"city": "Portland", "radius_km": 5, "categories": "child-friendly"}]]
+    },
+    {
+        "id": "task_1_tool_28",
+        "content": "The user wants to book a orthodontic dentist in San Francisco on March 9th at 2:00 PM.",
+        "tools": [["book_dentist_appointment"]],
+        "inputs": [[{"location": "San Francisco", "dentist_type": "orthodontic", "date": "03/09", "time": "02:00 PM"}]]
+    },
+    {
+        "id": "task_1_tool_29",
+        "content": "The user wants to ask the whether in San Francisco, CA on March 10th, 2025.",
+        "tools": [["weather_tool"]],
+        "inputs": [[{"city": "San Francisco", "date": "03/10"}]]
+    },
+    {
+        "id": "task_1_tool_30",
+        "content": "The user wants to know the French restaurants's name and price level in New York City.",
+        "tools": [["search_restaurant"]],
+        "inputs": [[{"location": "New York", "cuisineTypes": "French"}]]
+    }
+]

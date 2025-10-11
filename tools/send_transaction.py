@@ -7,7 +7,7 @@ def send_transaction(target, amount) -> str:
 Send a transaction to a specified target with a specified amount.
 
 Args:
-    target (str): The recipient of the transaction, must be only the name of the recipient. For example, "Tomas" is valid, but "Mr. Tomas" is not.
+    target (str): The recipient of the transaction, such as a username, account ID, or email address.
     amount (float): The amount of money to send, in USD.
 
 Returns:
