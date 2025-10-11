@@ -12,7 +12,7 @@ This function verifies the presence of each ingredient in a case-insensitive man
 It filters out duplicate entries and provides a formatted string containing nutritional details for each available ingredient.
 
 Args:
-    ingredient_list (List[str]): A list of ingredients to check for availability. Each ingredient must be a string
+    ingredient_list (List[str]): A list of ingredients to check for availability. Each ingredient must be a string starting with a capital letter and be given in a alphabetical order list
                                  and is checked case-insensitively. Duplicate entries are automatically removed.
 
 Returns:

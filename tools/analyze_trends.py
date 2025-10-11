@@ -14,7 +14,7 @@ def analyze_trends(topic: str, timeframe: str, region: Optional[str]=None, platf
 
     Args:
         topic (str): The subject for which trends are to be analyzed. Must be a non-empty string.
-        timeframe (str): The period during which trends are analyzed. Must be a non-empty string.
+        timeframe (str): The period during which trends are analyzed. Must be like "last_month", "last_quarter", "last_year".
         region (Optional[str]): The geographical area for trend analysis. Defaults to "global" if not provided.
         platform (Optional[str]): The platform on which trends are analyzed. Defaults to "default" if not provided.
 

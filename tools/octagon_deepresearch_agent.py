@@ -15,7 +15,7 @@ def octagon_deepresearch_agent(companies: List[str], fields: List[str]) -> str:
         companies (List[str]): A non-empty list of company names or IDs for which detailed research is to be performed.
             All company names should be provided in lowercase in alphabetical orderß.
         fields (List[str]): An optional list of specific fields to include in the research results. Each field should 
-            be a string representing a key in the company profile. All field names should be in lowercase.
+            be a string representing a key in the company profile. All field names should be in lowercase. List should be given in alphabetical order.
             Available fields: 'name', 'domain', 'revenue_growth', 'description', 'logo_url', 'hq_location', 
             'country', 'linkedin_url', 'contact_info', 'strategic_focus'.
 

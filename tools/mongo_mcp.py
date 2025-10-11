@@ -8,7 +8,7 @@ def mongo_mcp(mongoUri: str, collection_name: str) -> str:
     A tool that enables querying of a MongoDB database using natural language via MCP.
 
     Args:
-        mongoUri (str): A non-empty string representing the MongoDB connection URI.
+        mongoUri (str): A non-empty string representing the MongoDB connection URI, should be as detail as possible.
         collection_name (str): A non-empty string specifying the name of the collection to query.
 
     Returns:

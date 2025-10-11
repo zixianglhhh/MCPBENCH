@@ -8,7 +8,8 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 # 加载环境变量
 load_dotenv()
 
-api_key = os.getenv("API_KEY")
+# 尝试从环境变量读取API密钥，如果没有则使用默认值
+api_key = os.getenv("API_KEY") or "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"
 
 class ModelRegistry:
     """

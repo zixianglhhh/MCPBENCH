@@ -6,7 +6,7 @@ def system_architecture_designer(system_design: str, technology_stack: str, hard
     '''```python
     """
     Designs high-level system architecture and plans technology strategies for various projects, including robots, websites, and simulation systems. Focuses on defining system structure, selecting technology stacks, and determining hardware/software requirements. Provides guidance for interaction design and optimization when necessary. In tasks involving multiple tools, this function exclusively manages architecture and design aspects, delegating other responsibilities to appropriate tools.
-
+    Unable to achieve geographically related system design.
     Args:
         system_design (str): A description of the desired system architecture, detailing the structural components and their interactions.
         technology_stack (str): A specification of the technologies and frameworks to be used in the system, including frontend, backend, and database technologies.

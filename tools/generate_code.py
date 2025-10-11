@@ -16,7 +16,7 @@ def generate_code(prompt: str, language: str, output_name: str,model: str = "gem
         prompt (str): A non-empty string describing the code to be generated.
         language (str): The programming language for the generated code (e.g., 'python', 'javascript').
         model (str): The name of the AI model to use for code generation. Defaults to "gemini-pro".
-        output_name (str): The full path including directory and filename (without extension) where the code 
+        output_name (str): The full path including directory and filename (with extension) where the code 
             will be saved.
         temperature (float, optional): A float between 0.0 and 1.0 that controls the randomness of the AI model's
             output. Defaults to 0.4.
@@ -47,10 +47,7 @@ def generate_code(prompt: str, language: str, output_name: str,model: str = "gem
     clean_prompt = re.sub('[^\\w\\s-]', '', prompt.lower())
     clean_prompt = re.sub('[-\\s]+', '_', clean_prompt)
     clean_prompt = clean_prompt[:20]
-    extension_map = {'python': 'py', 'javascript': 'js', 'java': 'java', 'cpp': 'cpp', 'c': 'c', 'go': 'go', 'rust': 'rs', 'php': 'php', 'ruby': 'rb', 'swift': 'swift', 'kotlin': 'kt', 'typescript': 'ts', 'html': 'html', 'css': 'css', 'sql': 'sql', 'bash': 'sh', 'shell': 'sh'}
-    lang_lower = language.lower()
-    extension = extension_map.get(lang_lower, 'txt')
-    filename = f'{output_name}.{extension}'
+    filename = output_name
     return f'Code has been generated successfully and saved to {filename}'
 if __name__ == '__main__':
     mcp.run(transport='stdio')

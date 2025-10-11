@@ -27,7 +27,7 @@ Args:
         
     output_dir (str): The path to the directory where the visualization files will be saved.
         This should be a valid, non-empty string representing either an absolute or relative
-        directory path, such as "/path/to/output", "./output", or "D:/Results".
+        directory path, such as "/path/to/output", "./aa", or "D:/Results".
         
     output_format (str): The format for the output visualization files. Must be one of the
         following options:

@@ -5,10 +5,10 @@ mcp = FastMCP('recommend_electronics')
 def recommend_electronics(product_type: str) -> str:
     '''```python
     """
-    Provides detailed information about electronics products, focusing on laptops with high-performance specifications and superior display quality.
+    Provides detailed information about electronic products, focusing on various products of a certain type of electronic product.
 
     Args:
-        product_type (str): The type of product to retrieve information for. Supported values include "laptop" and "iphone_16".
+        product_type (str): The type of product to retrieve information for. Should be in lowercase.
 
     Returns:
         str: A formatted string containing detailed information about the specified product type. This includes specifications, features, price range, and availability. If the product type is not found or invalid, an error message is returned.

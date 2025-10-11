@@ -17,10 +17,9 @@ def create_post_cross_media(instruction_dir: str, platforms: List[str], postImme
     Args:
         instruction_dir (str): The directory path containing all the requirements 
             and content specifications for the post. Must be a non-empty string 
-            representing a valid directory path, such as "/content/posts/charity_race" 
-            or "./post_requirements".
+            representing a valid directory path, such as "outputs/posts"  or "./post_requirements".
         platforms (List[str]): A list of target social media platforms where 
-            the content should be posted. Each platform must be a string.
+            the content should be posted. Each platform must be a string all in lowercase.
         postImmediately (bool): A boolean flag indicating whether the post 
             should be published immediately (True) or scheduled for later 
             (False).

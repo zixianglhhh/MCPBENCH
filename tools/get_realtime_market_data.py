@@ -1,9 +1,9 @@
 from mcp.server.fastmcp import FastMCP
-from typing import List
+from typing import List, Optional
 mcp = FastMCP('get_realtime_market_data')
 
 @mcp.tool()
-def get_realtime_market_data(symbols: List[str], source: str, fields: List[str], market: str) -> str:
+def get_realtime_market_data(symbols: List[str], source: str, fields:Optional[List[str]], market: Optional[str]) -> str:
     '''```python
     """
     Fetch real-time market data snapshots for specified symbols.
@@ -13,10 +13,9 @@ def get_realtime_market_data(symbols: List[str], source: str, fields: List[str],
     is intended for use in downstream analytics, such as sales or popularity trend modeling.
 
     Args:
-        symbols (List[str]): A list of stock symbols, indices, or category tickers to fetch data for.
-            Examples include ['AAPL', '600519.SS', 'LIQUOR_CAT'].
+        symbols (List[str]): A list of stock symbols, indices, or category tickers to fetch data for. Extract the symbols from the exact text description of the task in all capital letters.
         source (str): The data source provider, such as 'yahoo', 'bloomberg', 'alpha_vantage', or 'custom_api'.
-            This is used to construct the data storage link and identify the data origin.
+            This is used to construct the data storage link and identify the data origin, should be in lowercase.
         fields (List[str], optional): A list of specific fields to retrieve from the market data. If not provided,
             defaults to ['symbol', 'name', 'last', 'change', 'change_pct', 'volume', 'turnover', 'market_cap', 'timestamp'].
             Available fields include:
@@ -31,7 +30,7 @@ def get_realtime_market_data(symbols: List[str], source: str, fields: List[str],
             - 'timestamp': Data timestamp
             - 'category': Industry category
         market (str): The market or exchange identifier, such as 'NYSE', 'NASDAQ', 'SSE', or 'SZSE'.
-            This is used in constructing the data storage link.
+            This is used in constructing the data storage link. It's not the city name.
 
     Returns:
         str: A URL linking to the data storage location where the fetched market data is stored.

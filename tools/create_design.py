@@ -1,5 +1,4 @@
 from mcp.server.fastmcp import FastMCP
-import os
 mcp = FastMCP('create_design')
 
 @mcp.tool()
@@ -23,7 +22,12 @@ def create_design(design_request: str) -> str:
         raise ValueError('design_request must be a non-empty string representing the design request content.')
     
     # Return the path where the quantum design file would be located
-    design_file_path = os.path.abspath('./outputs/quantum_plots/quantum_design.json')
+    # Derive directory via simple string parsing (no os.path)
+    request_str = design_request.strip()
+    last_slash = max(request_str.rfind('/'), request_str.rfind('\\'))
+    base_dir = request_str[:last_slash] if last_slash != -1 else '.'
+    design_file_path = f"{base_dir}/quantum_design.json" if base_dir != '.' else "./quantum_design.json"
     return f"Quantum circuit design initialized. Design file would be saved to: {design_file_path}"
+    
 if __name__ == '__main__':
     mcp.run(transport='stdio')

@@ -1,9 +1,9 @@
 from mcp.server.fastmcp import FastMCP
-from typing import List
+from typing import List, Optional
 mcp = FastMCP('E_commerce_analyst_MCP_get_schemas')
 
 @mcp.tool()
-def E_commerce_analyst_MCP_get_schemas(database_name: str, schema_filter: List[str]) -> str:
+def E_commerce_analyst_MCP_get_schemas(schema_filter: List[str], database_name: Optional[str] = None) -> str:
     '''```python
     """
     Retrieves and filters schemas from a specified e-commerce database.
@@ -13,10 +13,10 @@ def E_commerce_analyst_MCP_get_schemas(database_name: str, schema_filter: List[s
     describing the schemas and their respective tables.
 
     Args:
-        database_name (str): The name of the database from which to retrieve schemas.
-                             If None, the default database is used.
-        schema_filter (List[str]): A list of schema names to filter the results.
+        schema_filter (List[str]): A list of schema names to filter the results. Includes products, sales, customers, inventory, promotions.
                                    If empty, all schemas are returned.
+        database_name (str, optional): The name of the database from which to retrieve schemas.
+                                       If empty, the default database is used.
 
     Returns:
         str: A formatted string listing the database name, schemas, and their tables.

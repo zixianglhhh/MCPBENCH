@@ -49,9 +49,9 @@
     },
     {
         "id": "protask_single_tool_9",
-        "content": "In MongoDB, there is storage for customer information and their corresponding postal codes in the database named 'customers_db' The username is Admin and the password is Admin123. Can you help me retrieve the customer information for the customer named Ocean and his corresponding postal code?",
+        "content": "In MongoDB, there is storage for customer information and their corresponding postal codes in the database named 'customers_db' The username is Admin and the password is Admin123. Can you help me retrieve the customer information from 'customers' for the customer named Ocean and his corresponding postal code?",
         "tools": [["mongo_mcp"]],
-        "inputs": [[{"mongoUri": "mongodb://Admin:Admin123@localhost:27017/customers_db","collection_name":"customers_db"}]]
+        "inputs": [[{"mongoUri": "mongodb://Admin:Admin123@localhost:27017/customers_db","collection_name":"customers"}]]
     },
     {
         "id": "protask_single_tool_10",
@@ -69,19 +69,19 @@
         "id": "protask_single_tool_12",
         "content": "Design a new interaction interface for the chating robot.",
         "tools": [["UIUX_Expert"]],
-        "inputs": [[{"target_users": "Young adults (18-35) who frequently use messaging apps, prefer quick and intuitive UI, comfortable with emojis and GIFs.", "interaction_methods": "Voice commands, text chat, gesture recognition.", "design_requirements": "Minimalist design, high contrast for readability, responsive layout, accessibility compliance (WCAG 2.1).", "tools": "Figma, Adobe XD, InVision.", "testing_approach": "A/B testing with 50 users, heuristic evaluation, think-aloud protocol.", "deliverables": "Interactive prototype, persona documentation, usability test report."}]]
+        "inputs": [[{"user_personas": "Young adults (18-35) who frequently use messaging apps, prefer quick and intuitive UI, comfortable with emojis and GIFs.", "interaction_modes": "Voice commands, text chat, gesture recognition.", "design_principles": "Minimalist design, high contrast for readability, responsive layout, accessibility compliance (WCAG 2.1).", "prototyping_tools": "Figma, Adobe XD, InVision.", "usability_testing": "A/B testing with 50 users, heuristic evaluation, think-aloud protocol.", "output_artifacts": "Interactive prototype, persona documentation, usability test report."}]]
     },
     {
         "id": "protask_single_tool_13",
-        "content": "Based on the product and sales data in the default e-commerce database, analyze the current marketing strategies of the e-commerce store and provide five optimization suggestions.",
+        "content": "Based on the products and sales data in the default e-commerce database, analyze the current marketing strategies of the e-commerce store and provide five optimization suggestions.",
         "tools": [["E_commerce_analyst_MCP_get_schemas"]],
-        "inputs": [[{"database_name": "default_ecommerce_db", "tables": ["products", "sales"]}]]
+        "inputs": [[{"schema_filter": ["products", "sales"]}]]
     },
     {
         "id": "protask_single_tool_14",
         "content": "Please provide a website development proposal, including website architecture, database design, and user experience optimization.",
         "tools": [["system_architecture_designer"]],
-        "inputs": [[{"architecture_description": "A three-tier website architecture with a presentation layer (React.js frontend), an application layer (Node.js/Express backend), and a data layer (PostgreSQL). Incorporates CDN and load balancer for scalability and performance, along with secure API endpoints and modular components for maintainability.", "technology_stack": "Frontend: React.js, Backend: Node.js with Express, Database: PostgreSQL, Hosting: AWS EC2 & S3, CDN: CloudFront, Version Control: GitHub", "infrastructure_requirements": "Cloud-based hosting with minimum 2 vCPUs, 8GB RAM for app servers, AWS RDS for database, and 50GB SSD storage; scalable load balancer configuration for peak loads.", "user_experience_goals": "Responsive web interface with mobile-first design, intuitive navigation, accessibility compliance (WCAG 2.1), and optimized load times; includes interactive UI elements and seamless database-driven content updates.", "testing_strategy": "Automated unit and integration testing using Jest and Cypress, load testing with Apache JMeter, continuous performance monitoring via New Relic, and iterative A/B testing for UI/UX refinement."}]]
+        "inputs": [[{"system_design": "A three-tier website architecture with a presentation layer (React.js frontend), an application layer (Node.js/Express backend), and a data layer (PostgreSQL). Incorporates CDN and load balancer for scalability and performance, along with secure API endpoints and modular components for maintainability.", "technology_stack": "Frontend: React.js, Backend: Node.js with Express, Database: PostgreSQL, Hosting: AWS EC2 & S3, CDN: CloudFront, Version Control: GitHub", "hardware_requirements": "Cloud-based hosting with minimum 2 vCPUs, 8GB RAM for app servers, AWS RDS for database, and 50GB SSD storage; scalable load balancer configuration for peak loads.", "interaction_interface": "Responsive web interface with mobile-first design, intuitive navigation, accessibility compliance (WCAG 2.1), and optimized load times; includes interactive UI elements and seamless database-driven content updates.", "test_optimization_plan": "Automated unit and integration testing using Jest and Cypress, load testing with Apache JMeter, continuous performance monitoring via New Relic, and iterative A/B testing for UI/UX refinement."}]]
     },
     {
         "id": "protask_single_tool_15",

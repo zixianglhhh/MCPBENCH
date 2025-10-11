@@ -34,7 +34,7 @@ def searchApis(keyword: str) -> str:
         for api in apis:
             api_to_labels.setdefault(api, set()).add(label)
     exact_hits = []
-    for label in db.keys():
+    for label in mock_api_db.keys():
         if q == label.lower():
             exact_hits.append(label)
     if exact_hits:
@@ -60,8 +60,9 @@ def searchApis(keyword: str) -> str:
             seen.add(lbl)
             ordered_candidates.append(lbl)
     if ordered_candidates:
-        lines = [f"{lbl}: {', '.join(db[lbl])}" for lbl in ordered_candidates]
+        lines = [f"{lbl}: {', '.join(mock_api_db[lbl])}" for lbl in ordered_candidates]
         return '\n'.join(lines)
     return f"No APIs found for keyword '{keyword.strip()}'."
+
 if __name__ == '__main__':
     mcp.run(transport='stdio')

@@ -26,5 +26,6 @@ def patch_file(path: str, changes_path: str) -> str:
     if not isinstance(changes_path, str) or not changes_path.strip():
         raise ValueError("Invalid 'changes_path' parameter. Must be a non-empty string.")
     return f'Modifications completed and saved in file: {path}'
+
 if __name__ == '__main__':
     mcp.run(transport='stdio')
