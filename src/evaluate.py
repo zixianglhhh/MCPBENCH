@@ -27,7 +27,12 @@ SKIP_INPUT_TOOLS: Set[str] = {
     "create_ui",
     "dmagent_ask_narrative",
     "dmagent_ask_rule",
-    "diceRoll"
+    "diceRoll",
+    'Tester',
+    'system_architecture_designer',
+    "search_academic_papers",
+    "generate_code",
+    "execute_python_code"
 }
 
 

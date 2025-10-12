@@ -16,6 +16,8 @@ def request_api_schema(ApiName: Union[str, List[str]]) -> str:
     Args:
         ApiName (Union[str, List[str]]): A single API name as a string or a list of
             API names. Each name should be a non-empty string.
+            Each word in the API name should be capitalized.
+            For Example, 'Image Object Detection API'
 
     Returns:
         str: A formatted string containing the API schema(s). If no schema is found
@@ -97,6 +99,16 @@ def request_api_schema(ApiName: Union[str, List[str]]) -> str:
                 'text': 'string (the text content to proofread)',
                 'language': "string (ISO language code, e.g., 'en', 'fr')",
                 'return_suggestions': 'boolean (optional, default true, include correction suggestions)'
+            }
+        },
+        'Ecommerce API': {
+            'description': 'API for managing e-commerce operations including products, orders, and customers.',
+            'endpoint': 'https://api.ecommerce.com/v1/',
+            'request_schema': {
+                'product_id': 'string (ID of the product)',
+                'order_id': 'string (ID of the order)',
+                'customer_id': 'string (ID of the customer)',
+                'action': "string (action to perform, e.g., 'create', 'update', 'delete')"
             }
         }
     }
