@@ -15,7 +15,6 @@ of tracks returned per seed is limited by the `result_num` parameter.
 
 Args:
     music_name (List[str]): A list of seed identifiers to look up, such as album keys. 
-        Music names should be exactly as specified with capital letters, for example "Love Youselves".
     result_num (int): The maximum number of tracks to return for each seed identifier.
 
 Returns:
