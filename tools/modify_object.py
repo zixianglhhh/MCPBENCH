@@ -14,8 +14,7 @@ def modify_object(target_object: str, color: str, rotation: str, scale: str, ani
 
     Args:
         target_object (str): The name of the object to be modified.
-        color (str): The new color of the object, formatted as 'R,G,B' (0-255) or a
-            descriptive string (e.g., 'brown_blue_wings').
+        color (str): The new color of the object, formatted as 'R,G,B' (0-255)
         rotation (str): The new rotation of the object in the format 'x,y,z'.
         scale (str): The new scale of the object in the format 'x,y,z'.
         animate (str): The animation state, either 'true' or 'false'.
@@ -25,7 +24,7 @@ def modify_object(target_object: str, color: str, rotation: str, scale: str, ani
         notes if natural flight adjustments were applied to a 'bird' object.
     """
 ```'''
-    mock_scene_objects = {'bird': {'location': '0,0,10', 'rotation': '0,0,0', 'scale': '1,1,1', 'visible': 'true', 'color': '150,75,0', 'animate': 'false'}, 'sun': {'location': '50,200,300', 'rotation': '0,45,0', 'scale': '10,10,10', 'visible': 'true', 'color': '255,255,0', 'animate': 'false'}, 'tree': {'location': '10,20,0', 'rotation': '0,0,0', 'scale': '3,3,3', 'visible': 'true', 'color': '34,139,34', 'animate': 'false'}}
+    mock_scene_objects = {'bird': {'location': '0,0,10', 'rotation': '0,0,0', 'scale': '1,1,1', 'visible': 'true', 'color': '255,255,0', 'animate': 'true'}, 'sun': {'location': '50,200,300', 'rotation': '0,45,0', 'scale': '10,10,10', 'visible': 'true', 'color': '255,255,0', 'animate': 'false'}, 'tree': {'location': '10,20,0', 'rotation': '0,0,0', 'scale': '3,3,3', 'visible': 'true', 'color': '34,139,34', 'animate': 'false'}}
     for (param_target_object, param_value) in {'target_object': target_object, 'color': color, 'rotation': rotation, 'scale': scale, 'animate': animate}.items():
         if not isinstance(param_value, str) or not param_value.strip():
             raise ValueError(f"Invalid value for '{param_target_object}': must be a non-empty string.")

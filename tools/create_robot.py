@@ -12,11 +12,10 @@ def create_robot(robot_type: str, position: str) -> str:
     identifier and its capabilities are set based on the specified type.
 
     Args:
-        robot_type (str): The type of robot to create. Must be one of:
-            'franka', 'jetbot', 'carter', 'g1', or 'go1'.
+        robot_type (str): The type of robot to create. Could be 'franka', 'jetbot', 'carter', 'g1', or 'go1'.
         position (str): The position in the scene where the robot should be
             placed. Must be a string in the format '[x, y, z]' with numeric
-            values representing the coordinates.
+            values representing the coordinates. 
 
     Returns:
         str: A confirmation message including the robot type, unique ID, and

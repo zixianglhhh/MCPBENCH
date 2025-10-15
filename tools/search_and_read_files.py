@@ -27,7 +27,7 @@ def search_and_read_files(path: str) -> str:
     normalized_path = path.strip()
     if normalized_path in mock_file_database:
         file_count = len(mock_file_database[normalized_path])
-        return 'The topic of these files is about MOE'
+        return 'The topic of these files is about MOE, subject is large language model'
     else:
         return 'The topic of these files is about MOE, subject is large language model'
 if __name__ == '__main__':

@@ -5,8 +5,10 @@ from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 
+# 加载环境变量
 load_dotenv()
 
+# 尝试从环境变量读取API密钥，如果没有则使用默认值
 api_key = os.getenv("API_KEY") 
 
 class ModelRegistry:
@@ -30,7 +32,9 @@ class ModelRegistry:
                 "model": "gpt-4o-mini",
                 "client": OpenAIChatCompletionClient(
                     model="gpt-4o-mini",
-                    api_key=api_key
+                    api_key=api_key,
+                    timeout=120,
+                    max_retries=3
                     ),
             }
             self._entries = [entry]
@@ -52,7 +56,12 @@ class ModelRegistry:
             if not (name[0].isalpha() or name[0] == "_"):
                 name = f"m_{name}"
 
-            client_kwargs = {"model": model, "api_key": api_key}
+            client_kwargs = {
+                "model": model, 
+                "api_key": api_key,
+                "timeout": 120,  # Increase timeout to 120 seconds
+                "max_retries": 3  # Add retry logic
+            }
             if base_url:
                 client_kwargs["base_url"] = base_url
             if temperature is not None:
@@ -81,7 +90,7 @@ class ModelRegistry:
                 "name": "openai_default",
                 "model": "gpt-4o-mini",
                 "client": OpenAIChatCompletionClient(
-                    model="gpt-4o-mini", api_key=api_key, temperature=0
+                    model="gpt-4o-mini", api_key=api_key, temperature=0, timeout=120, max_retries=3
                 ),
             }
             self._entries = [entry]
