@@ -14,6 +14,7 @@ def get_target_details(target_ids: list) -> str:
     Args:
         target_ids (list of str): A non-empty list of target IDs for which 
             details are to be retrieved. Each target ID must be a non-empty string.
+            only accept Ensembl gene ID
 
     Returns:
         str: A formatted string containing detailed information for each target ID 

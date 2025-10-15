@@ -27,7 +27,7 @@ Args:
         
     output_dir (str): The path to the saved file.
         This should be a valid, non-empty string representing either an absolute or relative
-        directory path, such as "/path/to/output.json", or "/path/to/output.csv" or "/path/to/output.png".
+        directory path, such as "/path/to/output", should not include the extension.
         
     output_format (str): The format for the output visualization files. Must be one of the
         following options:

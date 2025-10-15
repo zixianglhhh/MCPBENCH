@@ -1,7 +1,7 @@
 [
     {
         "id": "protask_more_seq_tools_1",
-        "content": "I would like to enhance the existing demand for robotics business by incorporating reinforcement learning so that the algorithm can dynamically adapt to the fluctuating market conditions and changes in customer behavior. A multi-step approach is needed, which involves first obtaining relevant data about 'demand for robotics business', save the analysis to the folder of 'outputs/market_analysis/analysis.json' and then run the existing reinforcement learning code saving in the folder of 'outputs/market_analysis/rl.py'. The result data after running the code will be saved in the folder of 'outputs/market_analysis/result.csv'. I hope you can visualize the results in line chart format to reveal insights into the constantly changing market trends and consumer preferences, save it as result.jpg in the same folder.",
+        "content": "I would like to enhance the existing demand for robotics business by incorporating reinforcement learning so that the algorithm can dynamically adapt to the fluctuating market conditions and changes in customer behavior. A multi-step approach is needed, which involves first obtaining relevant data about 'demand for robotics business', save the analysis to the folder of 'outputs/market_analysis/analysis.json' and upload the data to the existing reinforcement learning code saving in the folder of 'outputs/market_analysis/rl.py' and run it. The result data after running the code will be saved in the folder of 'outputs/market_analysis/result.csv'. I hope you can visualize the results in line chart format to reveal insights into the constantly changing market trends and consumer preferences, save it as result.jpg in the same folder.",
         "tools": [["obtain_business_analysis"], ["execute_python_code"], ["visualize_data"]],
             "inputs": [[{"topic": "demand for robotics business", "output_dir": "outputs/market_analysis/analysis.json"}], [{"code_dir":"outputs/market_analysis/rl.py"}], [{"data_dir": "outputs/market_analysis/result.csv", "visualize_type": "line_chart","output_dir": "outputs/market_analysis/result","output_format": "jpg"}]]
         },
@@ -13,7 +13,7 @@
     },
     {
         "id": "protask_more_seq_tools_3",
-        "content": "I want to retrieve the purchase history of customer David and Sam between 2024-01-01 and 2024-12-31, and join it with the product_detail database save in MongoDB. Based on the list of products purchased by this customer, I will manually calculate the sales amount trend of these products from 2023 to 2025 save in the folder of 'outputs/sales_trend/analysis.csv' and plot a line chart to visualize the changes, save it as analysis.jpg in the same folder.",
+        "content": "I want to retrieve the purchase history of customer David and Sam between 2024-01-01 and 2024-12-31, and join it with the product_detail database save in MongoDB. Based on the list of products purchased by this customer, I will manually calculate the sales amount trend of these products from 2023 to 2025 save in the folder of 'outputs/sales_trend/analysis.csv' and need you to plot a line chart to visualize the changes, save it as analysis.jpg in the same folder.",
         "tools": [["user_purchase_history"], ["mongo_mcp"], ["visualize_data"]],
         "inputs": [[{"customer_ids": ["David", "Sam"], "start_date": "2024-01-01", "end_date": "2024-12-31"}], [{"mongoUri": "mongodb://localhost:27017/product_detail","collection_name":"products"}], [{"data_dir": "outputs/sales_trend/analysis.csv", "visualize_type": "line_chart","output_dir": "outputs/sales_trend/analysis","output_format": "jpg"}]]
     },
@@ -25,7 +25,7 @@
     },
     {
         "id": "protask_more_seq_tools_5",
-        "content": "How can we, for a particular medical condition which the id is 'EFO_0000305', retrieve prioritized disease-associated targets, obtain detailed biological and druggability information on candidate targets, and calculate the ADME/RO5/QED pharmacological properties of candidate compounds from SMILES strings which the symbol is BRCA1, and then integrate these results to design drugs that selectively target specific enzymes or receptors with improved efficacy and reduced toxicity?",
+        "content": "How can we, for a particular medical condition which the disease id is 'EFO_0000305', retrieve prioritized disease-associated targets, obtain detailed biological and druggability information on candidate targets, and calculate the ADME/RO5/QED pharmacological properties of candidate compounds from SMILES strings which the symbol is BRCA1, and then integrate these results to design drugs that selectively target specific enzymes or receptors with improved efficacy and reduced toxicity?",
         "tools": [["get_disease_targets_summary"], ["get_target_details"], ["CafChem_ADME_calc_adme"]],
         "inputs": [[{"diseaseId": "EFO_0000305"}], [{"target_ids": ["ENSG00000012048","ENSG00000139618","ENSG00000141510","ENSG00000121879"]}], [{"smile": "O=C(NC1=CC=CC=C1)C2=NC=NC=N2"}]]
         },
@@ -37,7 +37,7 @@
     },
     {
         "id": "protask_more_seq_tools_7",
-        "content": "Can the example Blender code be enhanced by integrating an interactive outdoor environment that reflects natural dynamics and adding a bird? The bird is called 'SkyBird' given the location [0, 50, 100] with the size 1.5. This bird should exhibit realistic behavior, flying across the skyView with a natural random flight pattern. Its appearance should be natural, with a yellow body. Its flight pattern should be interdependent with the position of the sun in the sky, which is facing toward the northeast direction — 45 degrees to the right of its original forward direction. Please created all was mentioned above.",
+        "content": "Can the example Blender code be enhanced by integrating an interactive outdoor environment that reflects natural dynamics and adding a bird? Which means, I want to create a some object to interact with the existing scene with 'SkyView'. Create a bird with the name 'SkyBird' given the location [0, 50, 100] with the size 1.5. This bird should exhibit realistic behavior, flying across the skyView with a natural random flight pattern. Its appearance should be natural, with a yellow body. Its flight pattern should be interdependent with the position of the sun in the sky, which is facing toward the northeast direction — 45 degrees to the right of its original forward direction. Please created all was mentioned above.",
         "tools": [["get_scene_info"], ["create_object"], ["modify_object"]],
         "inputs": [[{"scene_name": "SkyView"}], [{"object_type": "bird", "name": "SkyBird", "location": [0, 50, 100], "size": 1.5}], [{"target_object": "bird", "color": "255,255,0", "rotation": "0,45,0", "scale": "1,1,1", "animate": "true"}]]
     },
