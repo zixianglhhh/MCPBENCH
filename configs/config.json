@@ -9,64 +9,11 @@
             "structured_output": true
         },
         "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
+        "api_key":""
     },
     {
         "model": "gpt-4o",
         "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
-    },
-    {
-        "model": "kimi-k2-0711-preview",
-        "model_info": {
-            "vision": true,
-            "function_calling": true,
-            "json_output": true,
-            "family": "kimi-k2",
-            "structured_output": true
-        },
-        "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
-    },
-    {
-        "model": "o4-mini",
-        "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
-    },
-    {
-        "model": "gemini-2.5-pro",
-        "model_info": {
-            "vision": true,
-            "function_calling": true,
-            "json_output": true,
-            "family": "gemini-2.5",
-            "structured_output": true
-        },
-        "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
-    },
-    {
-        "model": "qwen3-235b-a22b",
-        "model_info": {
-            "vision": true,
-            "function_calling": true,
-            "json_output": true,
-            "family": "qwen3",
-            "structured_output": true
-        },
-        "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
-    },
-    {
-        "model": "z-ai/glm-4.5",
-        "model_info": {
-            "vision": true,
-            "function_calling": true,
-            "json_output": true,
-            "family": "glm-4.5",
-            "structured_output": true
-        },
-        "base_url": "https://openrouter.ai/api/v1",
-        "temperature": 0
+        "api_key":""
     }
 ]
