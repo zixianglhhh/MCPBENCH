@@ -1,0 +1,208 @@
+[
+    {
+        "id": "protask_last15_single_16",
+        "content": "Create a program that optimizes the CPU usage of a given program?",
+        "tools": [
+            "generate_code"
+        ],
+        "input1": [
+            "Create a program that optimizes the CPU usage of a given program.",
+            "python",
+            "optimize_cpu_usage.py",
+            "gemini-pro",
+            0.4,
+            1500,
+            ""
+        ]
+    },
+    {
+        "id": "protask_last15_single_17",
+        "content": "Please write a paper discussing the applications of AI technology in medicine, the data source is https://nature.com/articles/s41598-024-03418-1.",
+        "tools": [
+            "generate_summary_report"
+        ],
+        "input1": [
+            "https://nature.com/articles/s41598-024-03418-1"
+        ]
+    },
+    {
+        "id": "protask_last15_single_18",
+        "content": "Provide a structured summary of product details for Saikongqing, an ophthalmic preparation containing Brimonidine (5ml) — include brand manufacturer, recommended use, and important handling precautions.",
+        "tools": [
+            "indian_branded_drug_search"
+        ],
+        "input1": [
+            "Saikongqing",
+            "Brimonidine",
+            "Ophthalmic Solution",
+            "5ml"
+        ]
+    },
+    {
+        "id": "protask_last15_single_19",
+        "content": "How to conduct a market survey for caregiver robots in USA in recent 10 years with data source from https://www.google.com/search?q=caregiver+robots+market+survey and obtain useful information and insights from the survey which is saved as a pdf file.",
+        "tools": [
+            "Business_Analyst"
+        ],
+        "input1": [
+            "caregiver robots",
+            "domestic",
+            "qualitative + quantitative",
+            "gov reports, market surveys",
+            "market report",
+            "pdf",
+            "10 years"
+        ]
+    },
+    {
+        "id": "protask_last15_single_20",
+        "content": "Write high-quality investment recommendation reports for clients",
+        "tools": [
+            "octagon_deepresearch_agent"
+        ],
+        "input1": [
+            [
+                "accenture",
+                "google",
+                "ibm",
+                "microsoft",
+                "oracle",
+                "sap"
+            ],
+            [
+                "description",
+                "revenue_growth",
+                "strategic_focus"
+            ]
+        ]
+    },
+    {
+        "id": "protask_last15_single_21",
+        "content": "Retrieve all the earthquakes that occurred in Tokyo within the last 30 days",
+        "tools": [
+            "find_earthquakes"
+        ],
+        "input1": [
+            "2023-09-29T23:59:59",
+            "2023-08-30T00:00:00",
+            "35.8",
+            "35.5",
+            "139.8",
+            "139.6",
+            "0"
+        ]
+    },
+    {
+        "id": "protask_last15_single_22",
+        "content": "I am a developer working on a personal project and I need a tool to generate PDF documents. Can you suggest a list of APIs that allows me to create renders, retrieve the rendered PDFs, and get information about the rendering status?",
+        "tools": [
+            "searchApis"
+        ],
+        "input1": [
+            "pdf rendering"
+        ]
+    },
+    {
+        "id": "protask_last15_single_23",
+        "content": "I want to analyze the nutrition data of a recipe I found online. Can you provide me with the nutritional analysis for the ingredients? The ingredients include chicken, broccoli, and rice.",
+        "tools": [
+            "check_nutrition"
+        ],
+        "input1": [
+            [
+                "Broccoli",
+                "Chicken",
+                "Rice"
+            ]
+        ]
+    },
+    {
+        "id": "protask_last15_single_24",
+        "content": "I'm a basketball coach looking for new strategies and plays. Can you recommend the top NBA teams known for their innovative tactics, provide player statistics for the key players?",
+        "tools": [
+            "get_players"
+        ],
+        "input1": [
+            [
+                "LeBron James",
+                "Stephen Curry",
+                "Anthony Davis"
+            ]
+        ]
+    },
+    {
+        "id": "protask_last15_single_25",
+        "content": "I'm a data scientist working on an AI project and I need to gather information about recent AI advancements. Please fetch news articles about ArtificialIntelligence from 'gizmodo' and provide me with all the news about AI from different sources.",
+        "tools": [
+            "search_news"
+        ],
+        "input1": [
+            "Artificial Intelligence",
+            "2023-01-01",
+            "2023-12-31",
+            10
+        ]
+    },
+    {
+        "id": "protask_last15_single_26",
+        "content": "I am working on a content moderation system for a social media platform. Can you suggest an API that checks if a text contains profanity or inappropriate language? ",
+        "tools": [
+            "searchApis"
+        ],
+        "input1": [
+            "profanity detection"
+        ]
+    },
+    {
+        "id": "protask_last15_single_27",
+        "content": "I'm a music producer and I'm looking for inspiration for my next project. Can you provide me with the details of 'song1.mp3', including its duration and genre?",
+        "tools": [
+            "analyze_sound"
+        ],
+        "input1": [
+            "song1.mp3"
+        ]
+    },
+    {
+        "id": "protask_last15_single_28",
+        "content": "I want to know the current time in Berlin, Germany",
+        "tools": [
+            "get_time"
+        ],
+        "input1": [
+            [
+                "Europe/Berlin"
+            ]
+        ]
+    },
+    {
+        "id": "protask_last15_single_29",
+        "content": "I'm organizing a team-building activity for my colleagues and I need some ideas. Can you recommend some U.S. National Parks?",
+        "tools": [
+            "findParks"
+        ],
+        "input1": [
+            "CA,AZ,WA,WY,UT",
+            "National Park",
+            "5",
+            "0",
+            "hiking,camping"
+        ]
+    },
+    {
+        "id": "protask_last15_single_30",
+        "content": "My company is conducting market research on trending stocks. Can you provide me with a list of stocks that are currently trending?.",
+        "tools": [
+            "get_market_summary"
+        ],
+        "input1": [
+            [
+                "popular",
+                "most_visited"
+            ],
+            "5",
+            "2025-09-01",
+            "2025-09-30"
+        ]
+    }
+]
