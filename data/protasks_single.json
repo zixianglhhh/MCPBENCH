@@ -88,5 +88,153 @@
         "content": "Research on the application of virtual reality technology in architecture, statistics on technology adoption in the global construction industry, and its impact on efficiency, costs, and customer experience. Output the result in the format of json.",
         "tools": [["wolfram_query"]],
         "inputs": [[{"query": "Statistics on adoption of virtual reality technology in architecture and global construction industry, including impact on efficiency, costs, and customer experience","format": "json","location": "global"}]]
+    },
+    {
+        "id": "protask_last15_single_16",
+        "content": "Create a program that optimizes the CPU usage of a given program?",
+        "tools": [[
+            "generate_code"
+        ]],
+        "inputs": [[{"prompt":"Create a program that optimizes the CPU usage of a given program.", "language":"python", "output_name":"optimize_cpu_usage.py", "model":"gemini-pro", "temperature":0.4, "max_tokens":1500, "existing_file_path":""}]]
+    },
+    {
+        "id": "protask_last15_single_17",
+        "content": "Please write a paper discussing the applications of AI technology in medicine, the data source is https://nature.com/articles/s41598-024-03418-1.",
+        "tools": [[
+            "generate_summary_report"
+        ]],
+        "inputs": [[
+            {"data_link":"https://nature.com/articles/s41598-024-03418-1"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_18",
+        "content": "Provide a structured summary of product details for Saikongqing, an ophthalmic preparation containing Brimonidine (5ml) — include brand manufacturer, recommended use, and important handling precautions.",
+        "tools": [[
+            "indian_branded_drug_search"
+        ]],
+        "inputs": [[
+            {"drug_name":"Saikongqing", "generic_composition":"Brimonidine", "drug_form":"Ophthalmic Solution", "volume":"5ml"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_19",
+        "content": "How to conduct a market survey for caregiver robots in USA in recent 10 years with data source from https://asb.market/caregiver-robots-market-survey including information about the quality and the quantity of the caregiver robots and obtain useful information and insights from the survey which is saved as a pdf file.",
+        "tools": [[
+            "Business_Analyst"
+        ]],
+        "inputs": [[
+            {"industry_focus":"caregiver robots", "market_scope":"domestic", "analysis_methods":"qualitative + quantitative", "data_sources":"market surveys", "output_types":"market report", "report_format":"pdf", "time_horizon":"10 years"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_20",
+        "content": "Write high-quality investment recommendation reports regarding the companies in the list (accenture, google) based on description and revenue growth for clients",
+        "tools": [[
+            "octagon_deepresearch_agent"
+        ]],
+        "inputs": [[
+            {"companies":["accenture", "google"], "fields":["description", "revenue_growth"]}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_21",
+        "content": "Retrieve all the earthquakes that occurred in Tokyo within the last 30 days. Today is 2023-09-29T23:59:59",
+        "tools": [[
+            "find_earthquakes"
+        ]],
+        "inputs": [[
+            {"endTime":"2023-09-29T23:59:59", "startTime":"2023-08-30T23:59:59", "location":"Tokyo, Japan"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_22",
+        "content": "I am a developer working on a personal project and I need a tool to generate PDF documents. Can you suggest a list of APIs that allows me to create renders, retrieve the rendered PDFs, and get information about the rendering status?",
+        "tools": [[
+            "searchApis"
+        ]],
+        "inputs": [[
+            {"keyword":"pdf rendering"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_23",
+        "content": "I want to analyze the nutrition data of a recipe I found online. Can you provide me with the nutritional analysis for the ingredients? The ingredients include chicken, broccoli, and rice.",
+        "tools": [[
+            "check_nutrition"
+        ]],
+        "inputs": [[
+            {"ingredient_list":["Broccoli", "Chicken", "Rice"]}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_24",
+        "content": "I'm a basketball coach looking for new strategies and plays. Can you recommend the top NBA teams known for their innovative tactics, provide player statistics for the key players?",
+        "tools": [[
+            "get_teams"
+        ]],
+        "inputs": [[
+            {"nameFilter":"NBA"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_25",
+        "content": "I'm a data scientist working on an AI project and I need to gather information about recent AI advancements. Please fetch news articles about ArtificialIntelligence from 'gizmodo' and provide me with all the news about AI from different sources.",
+        "tools": [[
+            "search_news"
+        ]],
+        "inputs": [[
+            {"search_query":"Artificial Intelligence", "start_date":"2023-01-01", "end_date":"2023-12-31", "max_results":10}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_26",
+        "content": "I am working on a content moderation system for a social media platform. Can you suggest an API that checks if a text contains profanity or inappropriate language? ",
+        "tools": [[
+            "searchApis"
+        ]],
+        "inputs": [[
+            {"search_query":"profanity detection"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_27",
+        "content": "I'm a music producer and I'm looking for inspiration for my next project. Can you provide me with the details of 'song1.mp3', including its duration and genre?",
+        "tools": [[
+            "analyze_sound"
+        ]],
+        "inputs": [[
+            {"filepath":"song1.mp3"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_28",
+        "content": "I want to know the current time in Berlin, Germany",
+        "tools": [[
+            "get_time"
+        ]],
+        "inputs": [[
+            {"timezone":["Europe/Berlin"]}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_29",
+        "content": "I'm organizing a hiking activity for my colleagues and I need some ideas. Can you recommend some U.S. National Parks in California, Arizona, Washington, Wyoming, and Utah? Find two for each state.",
+        "tools": [[
+            "findParks"
+        ]],
+        "inputs": [[
+            {"stateCode":["CA", "AZ", "WA", "WY", "UT"], "park_type":"national park", "limit":"2",  "activities":"hiking"}
+        ]]
+    },
+    {
+        "id": "protask_last15_single_30",
+        "content": "My company is conducting market research on trending stocks. Can you provide me with a list of stocks that are currently trending?.",
+        "tools": [[
+            "get_market_summary"
+        ]],
+        "inputs": [[
+            {"filter_type":["popular", "most_visited"], "filter_count":"5", "start_date":"2025-09-01", "end_date":"2025-09-30"}
+        ]]
     }
 ]    

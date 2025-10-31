@@ -19,7 +19,7 @@ def searchApis(keyword: str) -> str:
       - If no matches are found: "No APIs found for keyword '<keyword>'."
 
     Args:
-        keyword (str): The label keyword to search for. Must be a non-empty string, should be one of [object detection, image recognition, earthquake, translation, language correction].
+        keyword (str): The label keyword to search for. Must be a non-empty string, should be one of [object detection, image recognition, earthquake, translation, language correction, pdf rendering, document rendering, content moderation, profanity detection].
 
     Returns:
         str: A formatted string of matched APIs or an error message if no matches are found.
@@ -28,7 +28,7 @@ def searchApis(keyword: str) -> str:
     if not isinstance(keyword, str) or not keyword.strip():
         return "Error: 'keyword' must be a non-empty string."
     q = keyword.strip().lower()
-    mock_api_db = {'object detection': ['Image Object Detection API'], 'image recognition': ['Image Object Detection API', 'Vision Detect Pro API', 'OCR Text Extract API'], 'earthquake': ['City Earthquake Data API', 'USGS Earthquake Feed API (Mock)'], 'translation': ['Microsoft Translator Text API', 'Simple & Elegant Translation Service API'], 'language correction': ['LanguageTool API', 'Grammarify Proofread API (Mock)']}
+    mock_api_db = {'object detection': ['Image Object Detection API'], 'image recognition': ['Image Object Detection API', 'Vision Detect Pro API', 'OCR Text Extract API'], 'earthquake': ['City Earthquake Data API', 'USGS Earthquake Feed API (Mock)'], 'translation': ['Microsoft Translator Text API', 'Simple & Elegant Translation Service API'], 'language correction': ['LanguageTool API', 'Grammarify Proofread API (Mock)'], 'pdf rendering': ['RenderFlow PDF API', 'PDF Render Job API', 'PDF Render Status API'], 'document rendering': ['RenderFlow PDF API', 'PDF Render Job API', 'PDF Render Status API'], 'content moderation': ['Content Moderation Check API', 'Profanity Filter API', 'Toxicity Detection API'], 'profanity detection': ['Profanity Filter API', 'Content Moderation Check API']}
     api_to_labels = {}
     for (label, apis) in mock_api_db.items():
         for api in apis:
