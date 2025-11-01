@@ -12,7 +12,7 @@ For example, "Portland" is valid, but "Portland, OR" is not; "New York" is valid
 The `cuisineTypes` parameter must be a string where each word is capitalized (e.g., "Italian", "Seafood", "Freshwater Fish").
 
 Args:
-    location (str): The name of the city to search in. Must not include state, country, or other qualifiers.
+    location (str): The name of the city to search in. Must not include state, country, or other qualifiers, delimited by spaces.
     cuisineTypes (str): The cuisine type to search for, with each word capitalized.
 
 Returns:

@@ -13,19 +13,19 @@
     },
     {
         "id": "task_1_tool_3",
-        "content": "The user wants to find a rental car in San Francisco.",
+        "content": "The user wants to find a rental house in San Francisco with a minimum rating of 4.6",
         "tools": [["search_rental_properties"]],
-        "inputs": [[{"location": "San Francisco", "property_type": "car"}]]
+        "inputs": [[{"location": "San Francisco", "property_type": "house", "rating": 4.6}]]
     },
     {
         "id": "task_1_tool_4",
-        "content": "The user wants to find a one-way flight in Economy from Atlanta, GA, to Phoenix, AZ, departing on March 11th.",
+        "content": "The user wants to find a one-way flight in Economy from ATL airport to PHX airport, departing on March 11th.",
         "tools": [["search_flights"]],
         "inputs": [[{"type": "one_way", "origin": "ATL", "destination": "PHX", "departure_date": "03/11", "cabin_class": "economy"}]]
     },
     {
         "id": "task_1_tool_5",
-        "content": "The user wants to search for Sea food restaurants in San Bruno.",
+        "content": "The user wants to search for Seafood cuisine restaurants in San Bruno.",
         "tools": [["search_restaurant"]],
         "inputs": [[{"location": "San Bruno", "cuisineTypes": "Seafood"}]]
     },
@@ -61,9 +61,9 @@
     },
     {
         "id": "task_1_tool_11",
-        "content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook.com) on March 10th at 2:00 PM, in his calendar. The meeting's subject is 'Project Discussion' and it lasts for 1 hour.",
+        "content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook.com) on March 10th at 2:00 PM in New York, in his calendar. The meeting's subject is 'Project Discussion' and it lasts for 1 hour.",
         "tools": [["create_event"]],
-        "inputs": [[{"subject": "Project Discussion", "attendees": "pranav@outlook.com; alex@outlook.com", "startDate": "03/10", "startTime": "02:00 PM", "endDate": "03/10", "endTime": "03:00 PM", "isMeeting": true}]]
+        "inputs": [[{"subject": "Project Discussion", "attendees": "pranav@outlook.com; alex@outlook.com", "startDate": "03/10", "startTime": "02:00 PM", "endDate": "03/10", "endTime": "03:00 PM", "isMeeting": true, "location": "New York"}]]
     },
     {
         "id": "task_1_tool_12",
@@ -91,92 +91,92 @@
     },
     {
         "id": "task_1_tool_16",
-        "content": "The user wants to book a hotel in Beijing, China, for a 3-night stay from March 10th.",
-        "tools": [["booking_tool"]],
-        "inputs": [[{"city": "Beijing", "checkinDate": "03/10", "checkoutDate": "03/13"}]]
+        "content": "The user wants to pay the $84.71 balance on Seattle Power account A10293 using auto debit.",
+        "tools": [["pay_utility_bill"]],
+        "inputs": [[{"account_number": "A10293", "provider": "Seattle Power", "amount": 84.71, "method": "auto_debit"}]]
     },
     {
         "id": "task_1_tool_17",
-        "content": "The user wants to know if there exists an italian restaurant in Beijing, China.",
-        "tools": [["search_restaurant"]],
-        "inputs": [[{"location": "Beijing", "cuisineTypes": "Italian"}]]
+        "content": "The user wants to check if the book 'Atomic Habits' is available at the Central (CEN) and North Beacon (NBE) library branches.",
+        "tools": [["public_library_book_lookup"]],
+        "inputs": [[{"title": "Atomic Habits", "branches": ["CEN", "NBE"]}]]
     },
     {
         "id": "task_1_tool_18",
-        "content": "The user wants to find sports events in Tokyo, Japan.",
-        "tools": [["search_ticketmaster"]],
-        "inputs": [[{"type": "Sports Event", "city": "Tokyo"}]]
+        "content": "The user wants to know the latest status of USPS package 9400111899223951135987.",
+        "tools": [["package_delivery_tracker"]],
+        "inputs": [[{"tracking_number": "9400111899223951135987"}]]
     },
     {
         "id": "task_1_tool_19",
-        "content": "The user wants to ask the movie Hellboy's imdb id. ",
-        "tools": [["search_imdb"]],
-        "inputs": [[{"primary_title": "Hellboy"}]]
+        "content": "The user wants to submit a refill request for prescription RX-204811, confirming the birth date 1987-05-19 and picking up at the DOWNTOWN branch.",
+        "tools": [["pharmacy_refill_request"]],
+        "inputs": [[{"prescription_id": "RX-204811", "patient_dob": "1987-05-19", "pharmacy_branch": "DOWNTOWN"}]]
     },
     {
         "id": "task_1_tool_20",
-        "content": "The user wants to search the round trip flight in business from LAX to SFO, departing on March 3rd and returning on March 12th.",
-        "tools": [["search_flights"]],
-        "inputs": [[{"origin": "LAX", "destination": "SFO", "departure_date": "03/03", "return_date": "03/12", "cabin_class": "business", "type": "round_trip"}]]
+        "content": "The user wants to confirm the next compost pickup for 742 Evergreen Terrace.",
+        "tools": [["trash_collection_schedule"]],
+        "inputs": [[{"service_address": "742 Evergreen Terrace", "waste_type": "compost"}]]
     },
     {
         "id": "task_1_tool_21",
-        "content": "The user wants to know the humidity and wind speed in San Jose, CA on March 7th, 2025.",
-        "tools": [["weather_tool"]],
-        "inputs": [[{"city": "San Jose", "date": "03/07"}]]
+        "content": "The user wants to see which curbside grocery pickup slots are still open at store SEA01 on 2025-11-01.",
+        "tools": [["grocery_pickup_slots"]],
+        "inputs": [[{"store_code": "SEA01", "pickup_date": "2025-11-01"}]]
     },
     {
         "id": "task_1_tool_22",
-        "content": "The user wants to reserve a cosmetic dentist in San Jose on March 8th at 11:30 AM.",
-        "tools": [["book_dentist_appointment"]],
-        "inputs": [[{"location": "San Jose", "dentist_type": "cosmetic", "date": "03/08", "time": "11:30 AM"}]]
+        "content": "The user wants to review Bailey's (pet ID DOG-1122) vaccination status and upcoming due dates.",
+        "tools": [["pet_vaccination_schedule"]],
+        "inputs": [[{"pet_id": "DOG-1122"}]]
     },
     {
         "id": "task_1_tool_23",
-        "content": "The user wants to find attractions in Chicago on September 9th, 2025.",
-        "tools": [["search_attractions"]],
-        "inputs": [[{"location": "Chicago", "date": "09/09/2025"}]]
+        "content": "The user wants to schedule a wash-and-fold laundry pickup for customer CUST-5566 on 2025-11-03.",
+        "tools": [["laundry_service_request"]],
+        "inputs": [[{"customer_id": "CUST-5566", "pickup_date": "2025-11-03", "service_type": "wash_fold"}]]
     },
     {
         "id": "task_1_tool_24",
-        "content": "The user wants to rent a 2-bedroom, 2-bathroom apartment in Walnut Creek so he asks for the landlord's phone number.",
-        "tools": [["get_rentalhouse_details"]],
-        "inputs": [[{"location": "Walnut Creek", "bedrooms": 2, "bathrooms": 2}]]
+        "content": "The user wants to know the cafeteria lunch menu for school LMS on 2025-11-04.",
+        "tools": [["school_lunch_menu_lookup"]],
+        "inputs": [[{"school_code": "LMS", "menu_date": "2025-11-04"}]]
     },
     {
         "id": "task_1_tool_25",
-        "content": "The user has a property id LN877 in London and he wants to know the capacity of the property.",
-        "tools": [["get_rental_property_details"]],
-        "inputs": [[{"property_id": "LN877"}]]
+        "content": "The user wants an energy usage report for smart meter MTR-2211 covering the 2025-10 billing cycle.",
+        "tools": [["home_energy_usage_report"]],
+        "inputs": [[{"meter_id": "MTR-2211", "billing_cycle": "2025-10"}]]
     },
     {
         "id": "task_1_tool_26",
-        "content": "The user is invited to attend a contest titled \"Best Coding Practices\" on March 15th, 2025 starting at 10:40 AM. He wants to add this event to his calendar named \"Vibe2Check\".",
-        "tools": [["create_event"]],
-        "inputs": [[{"subject": "Best Coding Practices", "startDate": "03/15", "startTime": "10:40 AM", "calendar": "Vibe2Check"}]]
+        "content": "The user wants to review the homework assigned to student STU-204 for the week starting 2025-11-03.",
+        "tools": [["child_homework_tracker"]],
+        "inputs": [[{"student_id": "STU-204", "week_start": "2025-11-03"}]]
     },
     {
         "id": "task_1_tool_27",
-        "content": "The user wants to find a child-friendly around Portland, due to his son and limited time, he only wants to find a place within 5 km.",
-        "tools": [["geocalc_mcp_get_points_of_interest"]],
-        "inputs": [[{"city": "Portland", "radius_km": 5, "categories": "child-friendly"}]]
+        "content": "The user wants to renew community pool pass PASS-4488 for another 6 months.",
+        "tools": [["community_pool_pass_renewal"]],
+        "inputs": [[{"member_id": "PASS-4488", "renewal_term": 6}]]
     },
     {
         "id": "task_1_tool_28",
-        "content": "The user wants to book a orthodontic dentist in San Francisco on March 9th at 2:00 PM.",
-        "tools": [["book_dentist_appointment"]],
-        "inputs": [[{"location": "San Francisco", "dentist_type": "orthodontic", "date": "03/09", "time": "02:00 PM"}]]
+        "content": "The user wants to verify the warranty details for appliance serial DWS-772310.",
+        "tools": [["home_appliance_warranty_lookup"]],
+        "inputs": [[{"serial_number": "DWS-772310"}]]
     },
     {
         "id": "task_1_tool_29",
-        "content": "The user wants to ask the whether in San Francisco, CA on March 10th, 2025.",
-        "tools": [["weather_tool"]],
-        "inputs": [[{"city": "San Francisco", "date": "03/10"}]]
+        "content": "The user wants to add $15.00 to public transit card ORCA-551122 and ensure the card stays within the balance limits.",
+        "tools": [["public_transport_card_recharge"]],
+        "inputs": [[{"card_number": "ORCA-551122", "amount": 15.0}]]
     },
     {
         "id": "task_1_tool_30",
-        "content": "The user wants to know the French restaurants's name and price level in New York City.",
-        "tools": [["search_restaurant"]],
-        "inputs": [[{"location": "New York", "cuisineTypes": "French"}]]
+        "content": "The user wants the most recent alerts for zone NW-3, but only those marked with caution severity.",
+        "tools": [["neighborhood_watch_alerts"]],
+        "inputs": [[{"zone": "NW-3", "severity": "caution"}]]
     }
 ]
