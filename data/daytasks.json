@@ -1,0 +1,2087 @@
+[
+  {
+    "id": "daytask_1_tool_18",
+    "content": "The user wants to know the latest status of USPS package 9400111899223951135987.",
+    "tools": [
+      [
+        "package_delivery_tracker"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "tracking_number": "9400111899223951135987"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_6",
+    "content": "The user wants to book a hotel in London from March 6th to March 11th, and inquires about the weather in London on March 11th.",
+    "tools": [
+      [
+        "booking_tool",
+        "weather_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "London",
+          "checkinDate": "03/06",
+          "checkoutDate": "03/11"
+        },
+        {
+          "city": "London",
+          "date": "03/11"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_15",
+    "content": "The user wants to check their calendar for events on the 6th of May. They also want to know their availability and if there are any other available times on that day.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "05/06"
+        },
+        {
+          "date": "05/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_20",
+    "content": "The user wants to know about rock concerts in New York, and also wants to check the balances in their checking account.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Rock Event",
+          "city": "New York"
+        },
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_10",
+    "content": "The user inquires about the balances of their checking account, and then wants to transfer $270 to Pranav from their checking account.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "checking"
+        }
+      ],
+      [
+        {
+          "target": "Pranav",
+          "amount": 270
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_10",
+    "content": "The user wants to check the balance of his checking account.",
+    "tools": [
+      [
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_10",
+    "content": "The user wants to find a garden to visit in San Francisco. They are also interested in the fantasy movie \"Alice in Wonderland\" by Tim Burton and want to play the song \"Dumbo\" now.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest",
+        "search_imdb",
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Francisco",
+          "category": "garden"
+        },
+        {
+          "primary_title": "Alice in Wonderland"
+        },
+        {
+          "song": "Dumbo"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_8",
+    "content": "The user is looking for a house in San Francisco for 5 people with a rating of 4.3 or higher, available on March 2nd. They also want to know if there is laundry service included.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "property_type": "house",
+          "rating": 4.3
+        }
+      ],
+      [
+        {
+          "property_id": "SF789"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_11",
+    "content": "The user wants to visit a free museum in San Francisco. They also want to watch the movie \"Hackers\" online with subtitles, which is a drama, and are curious about the director.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest",
+        "search_imdb"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Francisco",
+          "category": "museum"
+        },
+        {
+          "primary_title": "Hackers"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt0113243"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_10",
+    "content": "The user is looking for interesting activities to do, particularly concert events in San Francisco, and also inquires about their checking account balances.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Concert Event",
+          "city": "San Francisco"
+        },
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_16",
+    "content": "The user wants to find an Izakaya restaurant in San Francisco and make a reservation for two people at 5:45 PM on the 5th of May at 2g Japanese Brasserie. They also request to add this reservation to their calendar with the event title \"Restaurant reservation for 2 at 2g Japanese Brasserie.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "cuisineTypes": "Izakaya"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "2g Japanese Brasserie"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant reservation for 2 at 2g Japanese Brasserie",
+          "startDate": "05/05",
+          "startTime": "17:45",
+          "endDate": "05/05",
+          "location": "2g Japanese Brasserie"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_20",
+    "content": "The user is looking for a good, bargain-priced Chinese restaurant in San Francisco. They want to book a table for six people at Mei-Don Chinese Cuisine at 7 PM on the 18th of June, and add the reservation to their calendar with the event title \"Restaurant Reservation.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "cuisineTypes": "Chinese"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Mei-Don Chinese Cuisine"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant Reservation",
+          "startDate": "06/18",
+          "startTime": "19:00",
+          "endDate": "06/18",
+          "location": "Mei-Don Chinese Cuisine"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_28",
+    "content": "The user wants to verify the warranty details for appliance serial DWS-772310.",
+    "tools": [
+      [
+        "home_appliance_warranty_lookup"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "serial_number": "DWS-772310"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_4",
+    "content": "The user wants to find a one-way flight in Economy from ATL airport to PHX airport, departing on March 11th.",
+    "tools": [
+      [
+        "search_flights"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "one_way",
+          "origin": "ATL",
+          "destination": "PHX",
+          "departure_date": "03/11",
+          "cabin_class": "economy"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_1",
+    "content": "The user is in a good mood and wants to watch the suspense movie \"Hotel Mumbai\" directed by Anthony Maras, with subtitles due to a language issue. They also plan to eat out and request a reservation at the restaurant Marche Aux Fleurs in Ross for 2 PM.",
+    "tools": [
+      [
+        "search_imdb",
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "Hotel Mumbai"
+        },
+        {
+          "restaurant_name": "Marche Aux Fleurs"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_13",
+    "content": "The user is looking for match events in Portland, OR, interested in exploring options on different dates, and added the match on the 6th of March to their calendar using title \"Match\".",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Match Event",
+          "city": "Portland"
+        }
+      ],
+      [
+        {
+          "subject": "Match",
+          "startDate": "03/06",
+          "endDate": "03/06",
+          "location": "Portland"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_15",
+    "content": "The user is looking for adventure movies directed by Ronald Neame, specifically mentioning \"The Poseidon Adventure\" as a good choice. They also want to inquire about the restaurant Union located in Santa Rosa, asking if the restaurant serves liquor and pasta, and book seats for three people on the 4th of the month at 6:30 PM.",
+    "tools": [
+      [
+        "search_imdb",
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "The Poseidon Adventure"
+        },
+        {
+          "restaurant_name": "Union"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Union"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_6",
+    "content": "The user wants to know whether the Lobster Shack in San Mateo has live music.",
+    "tools": [
+      [
+        "get_restaurant_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "restaurant_name": "Lobster Shack"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_2",
+    "content": "The user is looking for round-trip economy flights for three people from San Francisco to Toronto, leaving on October 1st and returning on the 5th of October. They also asked for recommendations for attractions in Toronto.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "SFO",
+          "destination": "YYZ",
+          "departure_date": "10/01",
+          "return_date": "10/05",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "Toronto",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_16",
+    "content": "The user is looking for an apartment to rent in Oakley with 3 bedrooms and 3 bathrooms. They want to check how to get to the found apartment from Oakland International Airport by car.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Oakley",
+          "property_type": "apartment"
+        }
+      ],
+      [
+        {
+          "origin_address": "Oakland International Airport",
+          "destination_address": "123 Oakley Ave"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_13",
+    "content": "The user wants to watch the drama movie \"The Dogman\" online. They also want to inquire about the pricing and liquor options at Aato, San Francisco and then decide to make a reservation for four people at 5:30 pm.",
+    "tools": [
+      [
+        "search_imdb",
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "The Dogman"
+        },
+        {
+          "restaurant_name": "Aato"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Aato"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_14",
+    "content": "The user wants to search for football events in Boston and asks if he can watch the event on 04/07",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Football Event",
+          "city": "Boston"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_9",
+    "content": "The user asks for the current balances in their savings accounts, then requesting assistance in transferring $590 from their savings account to Amir's savings account.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "savings"
+        }
+      ],
+      [
+        {
+          "target": "Amir",
+          "amount": 590
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_5",
+    "content": "The user inquires about the weather, humidity, and wind levels there on March 1st in Chicago. They want to find hotels in Chicago, making a reservation for 2 rooms, checking in on the 1st and checking out on the 4th of the month.",
+    "tools": [
+      [
+        "weather_tool",
+        "booking_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Chicago",
+          "date": "03/01"
+        },
+        {
+          "city": "Chicago",
+          "checkinDate": "03/01",
+          "checkoutDate": "03/04"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_7",
+    "content": "The user wants to book a hotel room in or near New York City for a family stay, checking in on March 11th and checking out on March 14th. They also inquire about the weather conditions in New York City on March 12th.",
+    "tools": [
+      [
+        "booking_tool",
+        "weather_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "New York",
+          "checkinDate": "03/11",
+          "checkoutDate": "03/14"
+        },
+        {
+          "city": "New York",
+          "date": "03/12"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_21",
+    "content": "The user wants to see which curbside grocery pickup slots are still open at store SEA01 on 2025-11-01.",
+    "tools": [
+      [
+        "grocery_pickup_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "store_code": "SEA01",
+          "pickup_date": "2025-11-01"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_4",
+    "content": "The user wants to book a round-trip Economy flight from Phoenix, AZ, to New York City, departing on the 7th of March and returning on the 14th. They are also interested in seeing some attractions in New York City.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "PHX",
+          "destination": "JFK",
+          "departure_date": "03/07",
+          "return_date": "03/14",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "New York",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_8",
+    "content": "The user is looking for a round-trip economy flight for three people traveling from Seattle to San Diego, departing on March 4th and returning on March 6th. They also requested information about attractions in San Diego.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "SEA",
+          "destination": "SAN",
+          "departure_date": "03/04",
+          "return_date": "03/06",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "San Diego",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_9",
+    "content": "The user requested help booking a round-trip flight from LA to SF, departing on March 3rd and returning on March 12th in economy class. They also inquired about finding attractions in SF.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "LAX",
+          "destination": "SFO",
+          "departure_date": "03/03",
+          "return_date": "03/12",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "San Francisco",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_11",
+    "content": "The user is looking for interesting activities in Boston, particularly sports events like football events. They also inquired about their checking account balance.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Football Event",
+          "city": "Boston"
+        },
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_14",
+    "content": "The user wants to find pop music events in London on May 9th. They also want to reserve a hotel room in London for two days starting May 7th and request the phone number and address of the hotel.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "booking_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Pop Event",
+          "city": "London"
+        },
+        {
+          "city": "London",
+          "checkinDate": "05/07",
+          "checkoutDate": "05/09"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_16",
+    "content": "The user is inquiring about their calendar schedule for March 13th, and when their schedule is clear.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "03/13"
+        },
+        {
+          "date": "03/13"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_19",
+    "content": "The user wants to submit a refill request for prescription RX-204811, confirming the birth date 1987-05-19 and picking up at the DOWNTOWN branch.",
+    "tools": [
+      [
+        "pharmacy_refill_request"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prescription_id": "RX-204811",
+          "patient_dob": "1987-05-19",
+          "pharmacy_branch": "DOWNTOWN"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_2",
+    "content": "The user is looking for a restaurant in Palo Alto that serves freshwater fish dishes. They want a reservation for one at 6:30 PM.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Palo Alto",
+          "cuisineTypes": "Freshwater Fish"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Freshwater Fishery"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_17",
+    "content": "The user wants to rent a two-bedroom, one-bathroom apartment in Santa Rosa. They want to know how to drive to the found apartment by car from 888 Fourth Street.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Santa Rosa",
+          "property_type": "apartment"
+        }
+      ],
+      [
+        {
+          "origin_address": "888 Fourth Street",
+          "destination_address": "123 Santa Rosa Ave"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_16",
+    "content": "The user wants to pay the $84.71 balance on Seattle Power account A10293 using auto debit.",
+    "tools": [
+      [
+        "pay_utility_bill"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_number": "A10293",
+          "provider": "Seattle Power",
+          "amount": 84.71,
+          "method": "auto_debit"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_18",
+    "content": "The user is looking for attractions to visit in Philadelphia, specifically a museum, and inquires about the best way to drive there from Wilmington.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Philadelphia",
+          "category": "museum"
+        }
+      ],
+      [
+        {
+          "origin_address": "Wilmington",
+          "destination_address": "Philadelphia Museum of Art"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_19",
+    "content": "The user is looking for events in Atlanta, including basketball events on March 5th, and football events on the 13th of the same month.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "search_ticketmaster"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Basketball Event",
+          "city": "Atlanta"
+        },
+        {
+          "type": "Football Event",
+          "city": "Atlanta"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_14",
+    "content": "The user expresses interest in attending a baseball event in New York, asks for available dates, and decides on a specific date that works for them. They finally add the match on the 13th of March to their calendar using title \"Baseball\".",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Baseball Event",
+          "city": "New York"
+        }
+      ],
+      [
+        {
+          "subject": "Baseball",
+          "startDate": "03/13",
+          "endDate": "03/13",
+          "location": "New York"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_5",
+    "content": "The user requested to play \"Let Me Love You\" by Ariana Grande, and wanted to transfer $970 from their savings account to Tom. They also expressed interest in watching non-fiction movies, mentioning a liking for JT Leroy.",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Let Me Love You"
+        },
+        {
+          "target": "Tom",
+          "amount": 970
+        },
+        {
+          "primary_title": "JT Leroy"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_22",
+    "content": "The user wants to review Bailey's (pet ID DOG-1122) vaccination status and upcoming due dates.",
+    "tools": [
+      [
+        "pet_vaccination_schedule"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "pet_id": "DOG-1122"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_9",
+    "content": "The user is looking for attractions to visit in San Francisco, specifically a museum. They are also interested in finding a romance movie to watch online, mentioning \"Say Anything\" and asking about its director.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest",
+        "search_imdb"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Francisco",
+          "category": "museum"
+        },
+        {
+          "primary_title": "Say Anything"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt0098258"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_3",
+    "content": "The user wants to find a rental house in San Francisco with a minimum rating of 4.0",
+    "tools": [
+      [
+        "search_rental_properties"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "property_type": "house",
+          "rating": 4.0
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_15",
+    "content": "The user wants to find some free time slots in his calendar on September 7th, 2025.",
+    "tools": [
+      [
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "09/07"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_20",
+    "content": "The user wants to confirm the next compost pickup for 742 Evergreen Terrace.",
+    "tools": [
+      [
+        "trash_collection_schedule"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "service_address": "742 Evergreen Terrace",
+          "waste_type": "compost"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_6",
+    "content": "The user wants to play Nick Murphy's song \"No Diggity\". They also want to transfer $1030 to Jerry using their savings account. Additionally, they are looking to stream an adventure movie directed by Anna Boden and express interest in watching \"Captain Marvel.\"",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "No Diggity"
+        },
+        {
+          "target": "Jerry",
+          "amount": 1030
+        },
+        {
+          "primary_title": "Captain Marvel"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_13",
+    "content": "The user wants to plan a driving route from Beijing's Tsinghua University to National Worker Gymnasium.",
+    "tools": [
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "origin_address": "Tsinghua University",
+          "destination_address": "National Worker Gymnasium"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_12",
+    "content": "The user requested help finding comic movies online, expressed interest in \"Dr. Strangelove\". They also inquired about the movie's director. Meanwhile, they asked to make a reservation at Taste of India in Fremont for 11 AM.",
+    "tools": [
+      [
+        "search_imdb",
+        "make_reservation"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "Dr. Strangelove"
+        },
+        {
+          "restaurant_name": "Taste of India"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt0057012"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_19",
+    "content": "The user is looking for an Indian restaurant in Livermore to dine with friends. They want to book a table for four people on March 3rd at 6:45 PM. They also want to add the reservation to their calendar under the name \"Food.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Livermore",
+          "cuisineTypes": "Indian"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Spice of India"
+        }
+      ],
+      [
+        {
+          "subject": "Food",
+          "startDate": "03/03",
+          "startTime": "18:45",
+          "endDate": "03/03",
+          "location": "Spice of India"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_9",
+    "content": "The user wants to transfer $270 to Pranav's account, the account is registered by email address pranav@outlook.com from his checking account.",
+    "tools": [
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "target": "Pranav",
+          "amount": 270
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_14",
+    "content": "The user is looking for the fantasy movie \"Hellboy\" and asks for the director's name. They also want to make a reservation at The Cantina in Mill Valley for 11:30.",
+    "tools": [
+      [
+        "search_imdb",
+        "make_reservation"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "Hellboy"
+        },
+        {
+          "restaurant_name": "The Cantina"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt2274648"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_18",
+    "content": "The user is looking for a Parisian restaurant in Ross. They requested to book a table for two at 11:30 AM and asked to add the reservation to their calendar on the 6th of March at 11:15 AM, naming the event \"Restaurant reservation for 5 at Marche Aux Fleurs.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Ross",
+          "cuisineTypes": "Parisian"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Marche Aux Fleurs"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant reservation for 5 at Marche Aux Fleurs",
+          "startDate": "03/06",
+          "startTime": "11:15",
+          "endDate": "03/06",
+          "location": "Marche Aux Fleurs"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_4",
+    "content": "The user is looking for Frank Ocean songs, inquiring about the genre, and then requesting to play them.",
+    "tools": [
+      [
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "Frank Ocean"
+        }
+      ],
+      [
+        {
+          "song": "Nikes"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_2",
+    "content": "The user is looking for a place to eat in San Mateo, specifically for seafood, and inquires about phone numbers, live music, and liquor availability. They ask for additional suggestions and decide to make a reservation at 5:30 PM on March 14th.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Mateo",
+          "cuisineTypes": "Seafood"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Lobster Shack"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Lobster Shack"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_8",
+    "content": "The user wants to listen to the song \"Stitches\" in their bedroom. They also request a transfer of $980 from their savings account to Abhinav. Additionally, they want to watch the movie \"Dogman\" and ask about its genre.",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Stitches"
+        },
+        {
+          "target": "Abhinav",
+          "amount": 980
+        },
+        {
+          "primary_title": "Dogman"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_17",
+    "content": "The user requested help finding a seafood restaurant in San Francisco, and inquired about making a reservation for 11:30 AM on the 3rd of September. They confirmed the restaurant Akiko's Sushi Bar. They also requested adding the reservation to their calendar with the event title \"Restaurant reservation at Akiko's Sushi Bar.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "cuisineTypes": "Seafood"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Akiko's Sushi Bar"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant reservation at Akiko's Sushi Bar",
+          "startDate": "09/03",
+          "startTime": "11:30",
+          "endDate": "09/03",
+          "location": "Akiko's Sushi Bar"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_4",
+    "content": "The user inquired about the weather in London on May 1st, including humidity and wind conditions. They also requested help finding a house for one person, arriving on the 1st and checking out on the 4th. They also asked if there is air conditioning in the house.",
+    "tools": [
+      [
+        "weather_tool",
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "London",
+          "date": "05/01"
+        },
+        {
+          "location": "London",
+          "property_type": "house"
+        }
+      ],
+      [
+        {
+          "property_id": "LN987"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_13",
+    "content": "The user is looking for fun activities in Seattle, specifically a country show on April 10th, which they decide on. They also need a hotel room for a 4-day stay starting on April 8th.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "booking_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Country Event",
+          "city": "Seattle"
+        },
+        {
+          "city": "Seattle",
+          "checkinDate": "04/08",
+          "checkoutDate": "04/12"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_7",
+    "content": "The user wants to know the weather in Kuala Lumpur, Malaysia on March 6th, 2025.",
+    "tools": [
+      [
+        "weather_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Kuala Lumpur",
+          "date": "03/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_23",
+    "content": "The user wants to schedule a wash-and-fold laundry pickup for customer CUST-5566 on 2025-11-03.",
+    "tools": [
+      [
+        "laundry_service_request"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "customer_id": "CUST-5566",
+          "pickup_date": "2025-11-03",
+          "service_type": "wash_fold"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_17",
+    "content": "The user wants to check if the book 'Atomic Habits' is available at the Central (CEN) and North Beacon (NBE) library branches.",
+    "tools": [
+      [
+        "public_library_book_lookup"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "title": "Atomic Habits",
+          "branches": [
+            "CEN",
+            "NBE"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_1",
+    "content": "The user is looking for an American-style restaurant in San Jose and then requests the address and contact information. After checking, they want to make a booking for 11:30 am on the 4th of the month for this restaurant.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Jose",
+          "cuisineTypes": "American"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "American Bistro"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "American Bistro"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_8",
+    "content": "The user wants to Check the calendar for events on 2025-05-06.",
+    "tools": [
+      [
+        "list_events"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "05/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_3",
+    "content": "The user is looking for a round trip flight from Seattle to Phoenix, departing on March 5th and returning on March 7th, with three economy tickets. They are also interested in finding child-friendly activities in Phoenix.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "SEA",
+          "destination": "PHX",
+          "departure_date": "03/05",
+          "return_date": "03/07",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "Phoenix",
+          "category": "child-friendly"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_11",
+    "content": "The user requests to check their balance, specifying the savings account. After that, they also want to transfer $170 from their savings account to Mr. Raghav's checking account and confirm the details are correct.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "savings"
+        }
+      ],
+      [
+        {
+          "target": "Raghav",
+          "amount": 170
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_12",
+    "content": "The user wants to search for Mozart's tracks on itunes.",
+    "tools": [
+      [
+        "itunes_search"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "Wolfgang Amadeus Mozart"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_15",
+    "content": "The user is looking for a concert event in Washington, requesting information about the venue and start dates, and plan to attend on a specific date that is available. They also want to add the trip to their calendar under the name \"Concert\".",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Concert Event",
+          "city": "Washington"
+        }
+      ],
+      [
+        {
+          "subject": "Concert",
+          "startDate": "03/07",
+          "endDate": "03/07",
+          "location": "Washington"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_7",
+    "content": "The user wants to cast the song \"Music Never Sleeps\" by Jason Chen on iTunes. They also want to transfer $1150 from their savings account to Pranav. Additionally, they are interested in a fantasy movie online, particularly one directed by George Miller, and decide on \"Mad Max.\"",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Music Never Sleeps"
+        },
+        {
+          "target": "Pranav",
+          "amount": 1150
+        },
+        {
+          "primary_title": "Mad Max"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_17",
+    "content": "The user wants to check their calendar for upcoming events, specifically for 04/01, and also wants to know their availability for the day.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "04/01"
+        },
+        {
+          "date": "04/01"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_12",
+    "content": "The user requests their checking account balance and then wants to transfer $440 to Maria using their checking account.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "checking"
+        }
+      ],
+      [
+        {
+          "target": "Maria",
+          "amount": 440
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_27",
+    "content": "The user wants to renew community pool pass PASS-4488 for another 6 months.",
+    "tools": [
+      [
+        "community_pool_pass_renewal"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "member_id": "PASS-4488",
+          "renewal_term": 6
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_2",
+    "content": "The user wants the song \"Battle Cry\" to be played on the itunes.",
+    "tools": [
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Battle Cry"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_3",
+    "content": "The user requested the weather for San Jose on March 7th and asked for rock songs similar to Brunettes Shoot Blondes in the Bittersweet album, with a preference to play them on iTunes.",
+    "tools": [
+      [
+        "weather_tool",
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Jose",
+          "date": "03/07"
+        },
+        {
+          "artist": "Brunettes Shoot Blondes"
+        }
+      ],
+      [
+        {
+          "song": "Every Monday"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_5",
+    "content": "The user is looking for song suggestions, particularly by Karolina Protsenko, and is a fan of pop songs, especially those on the album \"Fly.\" They also requested to play a selected song in the album using iTunes.",
+    "tools": [
+      [
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "Karolina Protsenko"
+        }
+      ],
+      [
+        {
+          "song": "Closer"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_24",
+    "content": "The user wants to know the cafeteria lunch menu for school LMS on 2025-11-04.",
+    "tools": [
+      [
+        "school_lunch_menu_lookup"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "school_code": "LMS",
+          "menu_date": "2025-11-04"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_6",
+    "content": "Find a house in New York with laundry service for 2 people, check in on Monday the 4th and check out on Saturday the 9th, and provide the total price and a contact number.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "New York",
+          "property_type": "house"
+        }
+      ],
+      [
+        {
+          "property_id": "NY123"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_29",
+    "content": "The user wants to add $15.00 to public transit card ORCA-551122 and ensure the card stays within the balance limits.",
+    "tools": [
+      [
+        "public_transport_card_recharge"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "card_number": "ORCA-551122",
+          "amount": 15.0
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_30",
+    "content": "The user wants the most recent alerts for zone NW-3, but only those marked with caution severity.",
+    "tools": [
+      [
+        "neighborhood_watch_alerts"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "zone": "NW-3",
+          "severity": "caution"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_25",
+    "content": "The user wants an energy usage report for smart meter MTR-2211 covering the 2025-10 billing cycle.",
+    "tools": [
+      [
+        "home_energy_usage_report"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "meter_id": "MTR-2211",
+          "billing_cycle": "2025-10"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_19",
+    "content": "The user is looking for music attractions in New York, and needs help planning a driving route from Avalon Clinton to the selected attraction.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "New York",
+          "category": "music"
+        }
+      ],
+      [
+        {
+          "origin_address": "Avalon Clinton",
+          "destination_address": "Metropolitan Museum of Art"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_1",
+    "content": "The user is looking for a good Ethiopian restaurant in Berkeley. They want to reserve a table at the found restaurant for the 2nd of this month at 17:30.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Berkeley",
+          "cuisineTypes": "Ethiopian"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Ethiopian Delight"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_3",
+    "content": "The user wants to listen to music, specifically enjoys El Alfa.",
+    "tools": [
+      [
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "El Alfa"
+        }
+      ],
+      [
+        {
+          "song": "La Romana"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_7",
+    "content": "The user is interested in renting a house in Paris for themselves, arriving on the 1st and checking out on the 11th. They want to reserve the property and would like to know the total price.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Paris",
+          "property_type": "house"
+        }
+      ],
+      [
+        {
+          "property_id": "PAR456"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_11",
+    "content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook.com) on March 10th at 2:00 PM in New York, in his calendar. The meeting's subject is 'Project Discussion' and it lasts for 1 hour.",
+    "tools": [
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "subject": "Project Discussion",
+          "attendees": "pranav@outlook.com; alex@outlook.com",
+          "startDate": "03/10",
+          "startTime": "02:00 PM",
+          "endDate": "03/10",
+          "endTime": "03:00 PM",
+          "isMeeting": true,
+          "location": "New York"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_20",
+    "content": "The user is looking for a music attraction in New York and inquires about the best way to drive there from Ridgewood.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "New York",
+          "category": "music"
+        }
+      ],
+      [
+        {
+          "origin_address": "Ridgewood",
+          "destination_address": "Metropolitan Museum of Art"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_5",
+    "content": "The user wants to search for Seafood cuisine restaurants in San Bruno.",
+    "tools": [
+      [
+        "search_restaurant"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Bruno",
+          "cuisineTypes": "Seafood"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_1",
+    "content": "The user wants to ask who directed the movie hellboy. The movie hellboy's imdb id is tt0167190.",
+    "tools": [
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "imdb_id": "tt0167190"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_26",
+    "content": "The user wants to review the homework assigned to student STU-204 for the week starting 2025-11-03.",
+    "tools": [
+      [
+        "child_homework_tracker"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "student_id": "STU-204",
+          "week_start": "2025-11-03"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_18",
+    "content": "The user wants to check their calendar for events on Thursday next week, which is 04/06/2023, and know their availability.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "04/06"
+        },
+        {
+          "date": "04/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_12",
+    "content": "The user is looking for a concert in Rohnert Park and wants to know their savings account balances.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Concert Event",
+          "city": "Rohnert Park"
+        },
+        {
+          "account_type": "savings"
+        }
+      ]
+    ]
+  }
+]

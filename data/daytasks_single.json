@@ -1,0 +1,182 @@
+[
+    {
+        "id": "daytask_1_tool_1",
+        "content": "The user wants to ask who directed the movie hellboy. The movie hellboy's imdb id is tt0167190.",
+        "tools": [["get_directors"]],
+        "inputs": [[{"imdb_id": "tt0167190"}]]
+    },
+    {
+        "id": "daytask_1_tool_2",
+        "content": "The user wants the song \"Battle Cry\" to be played on the itunes.",
+        "tools": [["itunes_play_song"]],
+        "inputs": [[{"song": "Battle Cry"}]]
+    },
+    {
+        "id": "daytask_1_tool_3",
+        "content": "The user wants to find a rental house in San Francisco with a minimum rating of 4.0",
+        "tools": [["search_rental_properties"]],
+        "inputs": [[{"location": "San Francisco", "property_type": "house", "rating": 4.0}]]
+    },
+    {
+        "id": "daytask_1_tool_4",
+        "content": "The user wants to find a one-way flight in Economy from ATL airport to PHX airport, departing on March 11th.",
+        "tools": [["search_flights"]],
+        "inputs": [[{"type": "one_way", "origin": "ATL", "destination": "PHX", "departure_date": "03/11", "cabin_class": "economy"}]]
+    },
+    {
+        "id": "daytask_1_tool_5",
+        "content": "The user wants to search for Seafood cuisine restaurants in San Bruno.",
+        "tools": [["search_restaurant"]],
+        "inputs": [[{"location": "San Bruno", "cuisineTypes": "Seafood"}]]
+    },
+    {
+        "id": "daytask_1_tool_6",
+        "content": "The user wants to know whether the Lobster Shack in San Mateo has live music.",
+        "tools": [["get_restaurant_details"]],
+        "inputs": [[{"restaurant_name": "Lobster Shack"}]]
+    },
+    {
+        "id": "daytask_1_tool_7",
+        "content": "The user wants to know the weather in Kuala Lumpur, Malaysia on March 6th, 2025.",
+        "tools": [["weather_tool"]],
+        "inputs": [[{"city": "Kuala Lumpur", "date": "03/06"}]]
+    },
+    {
+        "id": "daytask_1_tool_8",
+        "content": "The user wants to Check the calendar for events on 2025-05-06.",
+        "tools": [["list_events"]],
+        "inputs": [[{"date": "05/06"}]]
+    },
+    {
+        "id": "daytask_1_tool_9",
+        "content": "The user wants to transfer $270 to Pranav's account, the account is registered by email address pranav@outlook.com from his checking account.",
+        "tools": [["send_transaction"]],
+        "inputs": [[{"target": "Pranav", "amount": 270}]]
+    },
+    {
+        "id": "daytask_1_tool_10",
+        "content": "The user wants to check the balance of his checking account.",
+        "tools": [["get_balance"]],
+        "inputs": [[{"account_type": "checking"}]]
+    },
+    {
+        "id": "daytask_1_tool_11",
+        "content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook.com) on March 10th at 2:00 PM in New York, in his calendar. The meeting's subject is 'Project Discussion' and it lasts for 1 hour.",
+        "tools": [["create_event"]],
+        "inputs": [[{"subject": "Project Discussion", "attendees": "pranav@outlook.com; alex@outlook.com", "startDate": "03/10", "startTime": "02:00 PM", "endDate": "03/10", "endTime": "03:00 PM", "isMeeting": true, "location": "New York"}]]
+    },
+    {
+        "id": "daytask_1_tool_12",
+        "content": "The user wants to search for Mozart's tracks on itunes.",
+        "tools": [["itunes_search"]],
+        "inputs": [[{"artist": "Wolfgang Amadeus Mozart"}]]
+    },
+    {
+        "id": "daytask_1_tool_13",
+        "content": "The user wants to plan a driving route from Beijing's Tsinghua University to National Worker Gymnasium.",
+        "tools": [["maps_direction_driving_by_address"]],
+        "inputs": [[{"origin_address": "Tsinghua University", "destination_address": "National Worker Gymnasium"}]]
+    },
+    {
+        "id": "daytask_1_tool_14",
+        "content": "The user wants to search for football events in Boston and asks if he can watch the event on 04/07",
+        "tools": [["search_ticketmaster"]],
+        "inputs": [[{"type": "Football Event", "city": "Boston"}]]
+    },
+    {
+        "id": "daytask_1_tool_15",
+        "content": "The user wants to find some free time slots in his calendar on September 7th, 2025.",
+        "tools": [["find_free_slots"]],
+        "inputs": [[{"date": "09/07"}]]
+    },
+    {
+        "id": "daytask_1_tool_16",
+        "content": "The user wants to pay the $84.71 balance on Seattle Power account A10293 using auto debit.",
+        "tools": [["pay_utility_bill"]],
+        "inputs": [[{"account_number": "A10293", "provider": "Seattle Power", "amount": 84.71, "method": "auto_debit"}]]
+    },
+    {
+        "id": "daytask_1_tool_17",
+        "content": "The user wants to check if the book 'Atomic Habits' is available at the Central (CEN) and North Beacon (NBE) library branches.",
+        "tools": [["public_library_book_lookup"]],
+        "inputs": [[{"title": "Atomic Habits", "branches": ["CEN", "NBE"]}]]
+    },
+    {
+        "id": "daytask_1_tool_18",
+        "content": "The user wants to know the latest status of USPS package 9400111899223951135987.",
+        "tools": [["package_delivery_tracker"]],
+        "inputs": [[{"tracking_number": "9400111899223951135987"}]]
+    },
+    {
+        "id": "daytask_1_tool_19",
+        "content": "The user wants to submit a refill request for prescription RX-204811, confirming the birth date 1987-05-19 and picking up at the DOWNTOWN branch.",
+        "tools": [["pharmacy_refill_request"]],
+        "inputs": [[{"prescription_id": "RX-204811", "patient_dob": "1987-05-19", "pharmacy_branch": "DOWNTOWN"}]]
+    },
+    {
+        "id": "daytask_1_tool_20",
+        "content": "The user wants to confirm the next compost pickup for 742 Evergreen Terrace.",
+        "tools": [["trash_collection_schedule"]],
+        "inputs": [[{"service_address": "742 Evergreen Terrace", "waste_type": "compost"}]]
+    },
+    {
+        "id": "daytask_1_tool_21",
+        "content": "The user wants to see which curbside grocery pickup slots are still open at store SEA01 on 2025-11-01.",
+        "tools": [["grocery_pickup_slots"]],
+        "inputs": [[{"store_code": "SEA01", "pickup_date": "2025-11-01"}]]
+    },
+    {
+        "id": "daytask_1_tool_22",
+        "content": "The user wants to review Bailey's (pet ID DOG-1122) vaccination status and upcoming due dates.",
+        "tools": [["pet_vaccination_schedule"]],
+        "inputs": [[{"pet_id": "DOG-1122"}]]
+    },
+    {
+        "id": "daytask_1_tool_23",
+        "content": "The user wants to schedule a wash-and-fold laundry pickup for customer CUST-5566 on 2025-11-03.",
+        "tools": [["laundry_service_request"]],
+        "inputs": [[{"customer_id": "CUST-5566", "pickup_date": "2025-11-03", "service_type": "wash_fold"}]]
+    },
+    {
+        "id": "daytask_1_tool_24",
+        "content": "The user wants to know the cafeteria lunch menu for school LMS on 2025-11-04.",
+        "tools": [["school_lunch_menu_lookup"]],
+        "inputs": [[{"school_code": "LMS", "menu_date": "2025-11-04"}]]
+    },
+    {
+        "id": "daytask_1_tool_25",
+        "content": "The user wants an energy usage report for smart meter MTR-2211 covering the 2025-10 billing cycle.",
+        "tools": [["home_energy_usage_report"]],
+        "inputs": [[{"meter_id": "MTR-2211", "billing_cycle": "2025-10"}]]
+    },
+    {
+        "id": "daytask_1_tool_26",
+        "content": "The user wants to review the homework assigned to student STU-204 for the week starting 2025-11-03.",
+        "tools": [["child_homework_tracker"]],
+        "inputs": [[{"student_id": "STU-204", "week_start": "2025-11-03"}]]
+    },
+    {
+        "id": "daytask_1_tool_27",
+        "content": "The user wants to renew community pool pass PASS-4488 for another 6 months.",
+        "tools": [["community_pool_pass_renewal"]],
+        "inputs": [[{"member_id": "PASS-4488", "renewal_term": 6}]]
+    },
+    {
+        "id": "daytask_1_tool_28",
+        "content": "The user wants to verify the warranty details for appliance serial DWS-772310.",
+        "tools": [["home_appliance_warranty_lookup"]],
+        "inputs": [[{"serial_number": "DWS-772310"}]]
+    },
+    {
+        "id": "daytask_1_tool_29",
+        "content": "The user wants to add $15.00 to public transit card ORCA-551122 and ensure the card stays within the balance limits.",
+        "tools": [["public_transport_card_recharge"]],
+        "inputs": [[{"card_number": "ORCA-551122", "amount": 15.0}]]
+    },
+    {
+        "id": "daytask_1_tool_30",
+        "content": "The user wants the most recent alerts for zone NW-3, but only those marked with caution severity.",
+        "tools": [["neighborhood_watch_alerts"]],
+        "inputs": [[{"zone": "NW-3", "severity": "caution"}]]
+    }
+]

@@ -1,24 +1,23 @@
 import json
 import os
 from typing import Any, Dict, List, Optional
-
 from dotenv import load_dotenv
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 
-# 加载环境变量
+# load environment variables
 load_dotenv()
 
 api_key = os.getenv("API_KEY")
 
 class ModelRegistry:
     """
-    管理多个模型客户端：
-    - 从 llm_config_list.json 读取 {model, api_key, api_base/base_url, name}
-    - 若未提供 api_key，则回退到环境变量 OPENAI_API_KEY
-    - 暴露按名称/模型获取客户端的方法
+    Manage multiple model clients:
+    - Read {model, api_key, api_base/base_url, name} from configs/config.json
+    - If api_key is not provided, fall back to environment variable OPENAI_API_KEY
+    - Expose a method to get a client by name/model
     """
 
-    def __init__(self, config_path: str = "llm_config_list.json") -> None:
+    def __init__(self, config_path: str = "configs/config.json") -> None:
         self._entries: List[Dict[str, Any]] = []
         self._name_to_entry: Dict[str, Dict[str, Any]] = {}
         self._model_to_entries: Dict[str, List[Dict[str, Any]]] = {}
@@ -48,15 +47,17 @@ class ModelRegistry:
             name_raw = cfg.get("name") or f"client_{idx}_{model}"
             model_info = cfg.get("model_info")
             temperature = cfg.get("temperature")
-            # 确保可作为 Python identifier 的名称
+            # ensure the name is a valid Python identifier
             name = name_raw.replace("-", "_").replace(" ", "_")
             if not (name[0].isalpha() or name[0] == "_"):
                 name = f"m_{name}"
 
             client_kwargs = {"model": model, "api_key": api_key}
+            
             if base_url:
                 client_kwargs["base_url"] = base_url
-            if temperature is not None:
+
+            if temperature:
                 client_kwargs["temperature"] = temperature
             
             # Always provide model_info for non-standard models

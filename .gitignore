@@ -55,3 +55,9 @@ dmypy.json
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# logs
+# logs/
+
+# results
+# results/

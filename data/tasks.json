@@ -1,0 +1,4481 @@
+[
+  {
+    "id": "daytask_1_tool_18",
+    "content": "The user wants to know the latest status of USPS package 9400111899223951135987.",
+    "tools": [
+      [
+        "package_delivery_tracker"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "tracking_number": "9400111899223951135987"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_14",
+    "content": "Please provide a website development proposal, including website architecture, database design, and user experience optimization.",
+    "tools": [
+      [
+        "system_architecture_designer"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "system_design": "A three-tier website architecture with a presentation layer (React.js frontend), an application layer (Node.js/Express backend), and a data layer (PostgreSQL). Incorporates CDN and load balancer for scalability and performance, along with secure API endpoints and modular components for maintainability.",
+          "technology_stack": "Frontend: React.js, Backend: Node.js with Express, Database: PostgreSQL, Hosting: AWS EC2 & S3, CDN: CloudFront, Version Control: GitHub",
+          "hardware_requirements": "Cloud-based hosting with minimum 2 vCPUs, 8GB RAM for app servers, AWS RDS for database, and 50GB SSD storage; scalable load balancer configuration for peak loads.",
+          "interaction_interface": "Responsive web interface with mobile-first design, intuitive navigation, accessibility compliance (WCAG 2.1), and optimized load times; includes interactive UI elements and seamless database-driven content updates.",
+          "test_optimization_plan": "Automated unit and integration testing using Jest and Cypress, load testing with Apache JMeter, continuous performance monitoring via New Relic, and iterative A/B testing for UI/UX refinement."
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_9",
+    "content": "The user wants to transfer $270 to Pranav's account, the account is registered by email address pranav@outlook.com from his checking account.",
+    "tools": [
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "target": "Pranav",
+          "amount": 270
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_10",
+    "content": "My company is organizing a charity basketball tournament and we need to invite some NBA players. The tournament organizer wants to plan a surprise activity, so I need to choose two players whose last names start with 'D' from two different teams. Please provide me with their position, contact information, career achievements and a fun fact about each player's career.",
+    "tools": [
+      [
+        "get_teams"
+      ],
+      [
+        "get_players"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "nameFilter": "NBA"
+        }
+      ],
+      [
+        {
+          "target_players": [
+            "Anthony Davis",
+            "Donte DiVincenzo"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_19",
+    "content": "I'm thinking about starting a halal food business in Canada and want to check recipes to make sure the ingredients and preparation methods fit halal guidelines while also looking at the nutritional information of the ingredients.",
+    "tools": [
+      [
+        "search_recipes"
+      ],
+      [
+        "check_nutrition"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "name": "halal recipes"
+        }
+      ],
+      [
+        {
+          "ingredient_list": [
+            "Basmati rice",
+            "Cucumber",
+            "Fresh coriander",
+            "Garlic sauce",
+            "Ginger-garlic paste",
+            "Halal beef",
+            "Halal chicken",
+            "Lettuce",
+            "Onions",
+            "Pita bread",
+            "Spices",
+            "Tomatoes",
+            "Yogurt"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_3",
+    "content": "The user wants to listen to music, specifically enjoys El Alfa.",
+    "tools": [
+      [
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "El Alfa"
+        }
+      ],
+      [
+        {
+          "song": "La Romana"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_19",
+    "content": "The user is looking for music attractions in New York, and needs help planning a driving route from Avalon Clinton to the selected attraction.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "New York",
+          "category": "music"
+        }
+      ],
+      [
+        {
+          "origin_address": "Avalon Clinton",
+          "destination_address": "Metropolitan Museum of Art"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_10",
+    "content": "I am doing a reseach in the field of Sociology, and I need to collect relevant papers on the phenomenon of university students reserving seats. Please find me the most relevant papers.",
+    "tools": [
+      [
+        "search_academic_papers"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "phenomenon of university students reserving seats",
+          "subject": "sociology",
+          "max_results": 5
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_20",
+    "content": "Conduct a comprehensive analysis of the companies Accenture, Google, IBM, Microsoft, Oracle, and SAP and provide a report on their revenue growth and strategic focus.",
+    "tools": [
+      [
+        "octagon_deepresearch_agent"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "companies": [
+            "accenture",
+            "google",
+            "ibm",
+            "microsoft",
+            "oracle",
+            "sap"
+          ],
+          "fields": [
+            "revenue_growth",
+            "strategic_focus"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_8",
+    "content": "The user is looking for a round-trip economy flight for three people traveling from Seattle to San Diego, departing on March 4th and returning on March 6th. They also requested information about attractions in San Diego.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "SEA",
+          "destination": "SAN",
+          "departure_date": "03/04",
+          "return_date": "03/06",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "San Diego",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_11",
+    "content": "Given a complex dataset saved in the file complex.csv, there is a problem that needs to be solved, generate a program algorithm that can automatically respond or solve the problem. The output file should be saved in the folder code/complex_dataset_analysis.",
+    "tools": [
+      [
+        "generate_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prompt": "complex dataset analysis to automatically respond to detected issues",
+          "language": "Python",
+          "model": "gemini-pro",
+          "output_name": "code/complex_dataset_analysis",
+          "existing_file_path": "complex.csv"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_30",
+    "content": "My company is conducting a cryptocurrency market research on trending stocks. Can you provide me with a list of five stocks that are currently most popular between 09/01/2025 and 09/30/2025?.",
+    "tools": [
+      [
+        "get_market_summary"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "filter_type": [
+            "popular"
+          ],
+          "filter_count": "5",
+          "start_date": "2025-09-01",
+          "end_date": "2025-09-30"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_seq_tools_19",
+    "content": "Study the global climate change trends over the past 10 years from the perspective of Earth sciences: First, search for relevant academic papers to obtain authoritative data and research conclusions, then combine this data to analyze and model using Python to predict future climate change trends.You should use gemini-2.5-pro to generate python code and execute the code to predict the future climate change trends.",
+    "tools": [
+      [
+        "search_academic_papers"
+      ],
+      [
+        "generate_code"
+      ],
+      [
+        "execute_python_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "global climate change trends past decade earth sciences",
+          "subject": "earth sciences",
+          "max_results": "3"
+        }
+      ],
+      [
+        {
+          "prompt": "Analyze climate change trends over the past decade using Python to model and predict future changes",
+          "language": "Python",
+          "temperature": 0.5,
+          "max_tokens": 500,
+          "model": "gemini-2.5-pro"
+        }
+      ],
+      [
+        {
+          "code": "import pandas as pd\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\nimport matplotlib.pyplot as plt\n\n# Load climate change dataset (placeholder)\ndata = pd.read_csv('climate_change_data.csv')\n\n# Prepare features and target\nX = np.array(data['Year']).reshape(-1, 1)\ny = data['AverageTemperature']\n\n# Train linear regression model\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Predict future trends\nfuture_years = np.array(range(2024, 2036)).reshape(-1, 1)\npredictions = model.predict(future_years)\n\n# Plot results\nplt.plot(data['Year'], y, label='Historical Data')\nplt.plot(future_years, predictions, label='Predicted Trend', linestyle='--')\nplt.xlabel('Year')\nplt.ylabel('Global Average Temperature (°C)')\nplt.legend()\nplt.savefig('climate_change_projection.png')\nprint('Climate change model executed successfully. Projection complete.')",
+          "packages": "pandas, numpy, scikit-learn, matplotlib"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_19",
+    "content": "The user is looking for events in Atlanta, including basketball events on March 5th, and football events on the 13th of the same month.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "search_ticketmaster"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Basketball Event",
+          "city": "Atlanta"
+        },
+        {
+          "type": "Football Event",
+          "city": "Atlanta"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_20",
+    "content": "The user wants to confirm the next compost pickup for 742 Evergreen Terrace.",
+    "tools": [
+      [
+        "trash_collection_schedule"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "service_address": "742 Evergreen Terrace",
+          "waste_type": "compost"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_13",
+    "content": "The user is looking for match events in Portland, OR, interested in exploring options on different dates, and added the match on the 6th of March to their calendar using title \"Match\".",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Match Event",
+          "city": "Portland"
+        }
+      ],
+      [
+        {
+          "subject": "Match",
+          "startDate": "03/06",
+          "endDate": "03/06",
+          "location": "Portland"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_9",
+    "content": "The user is looking for attractions to visit in San Francisco, specifically a museum. They are also interested in finding a romance movie to watch online, mentioning \"Say Anything\" and asking about its director.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest",
+        "search_imdb"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Francisco",
+          "category": "museum"
+        },
+        {
+          "primary_title": "Say Anything"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt0098258"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_12",
+    "content": "The user is looking for a concert in Rohnert Park and wants to know their savings account balances.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Concert Event",
+          "city": "Rohnert Park"
+        },
+        {
+          "account_type": "savings"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_21",
+    "content": "Retrieve all the earthquakes that occurred between 08/30/2023 and 09/29/2023 with latitude between 35.5 and 35.8 and longitude between 139.6 and 139.8 and magnitude greater than 0",
+    "tools": [
+      [
+        "find_earthquakes"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "endTime": "2023-09-29T23:59:59",
+          "startTime": "2023-08-30T00:00:00",
+          "minLatitude": "35.5",
+          "maxLatitude": "35.8",
+          "minLongitude": "139.6",
+          "maxLongitude": "139.8",
+          "minmagnitude": "0"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_17",
+    "content": "I am working on a CUDA project where a struct containing pointers needs to be computed on a device. The problem is when I allocate memory for the struct and then copy it to the device, it only copies the struct and not the content of the pointer. I am currently working around this by allocating the pointer first, and then setting the host struct to use that new pointer which resides on the GPU. Is this the correct approach to take? Considering more complex scenarios with multiple pointers or structs with pointers, the code for allocation and copying will become quite extensive and confusing.The code is already given under the folder of C:/Users/user/Desktop/MyProject/src/device_struct.cu, please give me the modification suggestions and fix the code.",
+    "tools": [
+      [
+        "analyze_code"
+      ],
+      [
+        "patch_file"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "language": "cuda",
+          "path": "C:/Users/user/Desktop/MyProject/src/device_struct.cu"
+        }
+      ],
+      [
+        {
+          "path": "C:/Users/user/Desktop/MyProject/src/device_struct.cu",
+          "changes_path": "C:/Users/user/Desktop/MyProject/src/device_struct_analysis_report.txt"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_2",
+    "content": "Get the diagnosis fot Steve and also write a medical report of treatment recommendations for patients kathy_001.",
+    "tools": [
+      [
+        "get_patient_conditions",
+        "get_patient_medications"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "patientId": "steve"
+        },
+        {
+          "patient_id": "kathy_001"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_4",
+    "content": "The user wants to find a one-way flight in Economy from ATL airport to PHX airport, departing on March 11th.",
+    "tools": [
+      [
+        "search_flights"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "one_way",
+          "origin": "ATL",
+          "destination": "PHX",
+          "departure_date": "03/11",
+          "cabin_class": "economy"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_17",
+    "content": "I'm a music producer looking for inspiration for my next project save under url/to/demo_song.mp3. Could you analyze my demo song by giving me its duration and speed it up by 1.2x and then transcribing its lyrics or audio content so I can understand the genre more clearly? Based on the analyzed content, I would like to try some variations on this song. After that, please suggest some tracks with a music name of guts, no more than 5 results.",
+    "tools": [
+      [
+        "AudioEditor_apply_speed_adjustment"
+      ],
+      [
+        "AudioEditor_transcribe_audio_sync"
+      ],
+      [
+        "recommend_musictracks"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "audio_file": "url/to/demo_song.mp3",
+          "speed_factor": "1.2"
+        }
+      ],
+      [
+        {
+          "audio_file": "url/to/demo_song.mp3"
+        }
+      ],
+      [
+        {
+          "music_name": [
+            "guts"
+          ],
+          "result_num": 5
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_6",
+    "content": "The user wants to play Nick Murphy's song \"No Diggity\". They also want to transfer $1030 to Jerry using their savings account. Additionally, they are looking to stream an adventure movie directed by Anna Boden and express interest in watching \"Captain Marvel.\"",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "No Diggity"
+        },
+        {
+          "target": "Jerry",
+          "amount": 1030
+        },
+        {
+          "primary_title": "Captain Marvel"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_17",
+    "content": "The user wants to check if the book 'Atomic Habits' is available at the Central (CEN) and North Beacon (NBE) library branches.",
+    "tools": [
+      [
+        "public_library_book_lookup"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "title": "Atomic Habits",
+          "branches": [
+            "CEN",
+            "NBE"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_24",
+    "content": "I'm a basketball coach looking for new strategies and plays. Can you provide player statistics for the key players LeBron James, Stephen Curry, and Anthony Davis?",
+    "tools": [
+      [
+        "get_players"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "target_players": [
+            "LeBron James",
+            "Stephen Curry",
+            "Anthony Davis"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_7",
+    "content": "Can the example Blender code be enhanced by integrating an interactive outdoor environment that reflects natural dynamics and adding a bird? Which means, I want to create a some object to interact with the existing scene with 'SkyView'. Create a bird with the name 'SkyBird' given the location [0, 50, 100] with the size 1.5. This bird should exhibit realistic behavior, flying across the skyView with a natural random flight pattern. Its appearance should be natural, with a yellow body. Its flight pattern should be interdependent with the position of the sun in the sky, which is facing toward the northeast direction — 45 degrees to the right of its original forward direction. Please created all was mentioned above.",
+    "tools": [
+      [
+        "get_scene_info"
+      ],
+      [
+        "create_object"
+      ],
+      [
+        "modify_object"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "scene_name": "SkyView"
+        }
+      ],
+      [
+        {
+          "object_type": "bird",
+          "name": "SkyBird",
+          "location": [
+            0,
+            50,
+            100
+          ],
+          "size": 1.5
+        }
+      ],
+      [
+        {
+          "target_object": "bird",
+          "color": "255,255,0",
+          "rotation": "0,45,0",
+          "scale": "1,1,1",
+          "animate": "true"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_22",
+    "content": "The user wants to review Bailey's (pet ID DOG-1122) vaccination status and upcoming due dates.",
+    "tools": [
+      [
+        "pet_vaccination_schedule"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "pet_id": "DOG-1122"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_12",
+    "content": "Add a front-end interface for an e-commerce website that can connect to given database API Ecommerce API. At the same time, visualize the data save under 'outputs/ecommerce_sales.csv' as a bar chart. Save the visualization under folder of 'outputs/visualizations', name it as 'ecommerce_sales.png'. I want to show ecommerce_sales.png on the home page of the website.",
+    "tools": [
+      [
+        "request_api_schema",
+        "visualize_data"
+      ],
+      [
+        "create_ui"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "ApiName": "Ecommerce API"
+        },
+        {
+          "data_dir": "outputs/ecommerce_sales.csv",
+          "visualize_type": "bar_chart",
+          "output_dir": "/outputs/visualizations/ecommerce_sales",
+          "output_format": "png"
+        }
+      ],
+      [
+        {
+          "description": "ecommerce"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_24",
+    "content": "The user wants to know the cafeteria lunch menu for school LMS on 2025-11-04.",
+    "tools": [
+      [
+        "school_lunch_menu_lookup"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "school_code": "LMS",
+          "menu_date": "2025-11-04"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_3",
+    "content": "I want to retrieve the purchase history of customer David and Sam between 2024-01-01 and 2024-12-31, and join it with the product_detail database save in MongoDB. Based on the list of products purchased by this customer, I will manually calculate the sales amount trend of these products from 2023 to 2025 save in the folder of 'outputs/sales_trend/analysis.csv' and need you to plot a line chart to visualize the changes, save it as analysis.jpg in the same folder.",
+    "tools": [
+      [
+        "user_purchase_history"
+      ],
+      [
+        "mongo_mcp"
+      ],
+      [
+        "visualize_data"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "customer_ids": [
+            "David",
+            "Sam"
+          ],
+          "start_date": "2024-01-01",
+          "end_date": "2024-12-31"
+        }
+      ],
+      [
+        {
+          "mongoUri": "mongodb://localhost:27017/product_detail",
+          "collection_name": "products"
+        }
+      ],
+      [
+        {
+          "data_dir": "outputs/sales_trend/analysis.csv",
+          "visualize_type": "line_chart",
+          "output_dir": "outputs/sales_trend/analysis",
+          "output_format": "jpg"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_19",
+    "content": "The user is looking for an Indian restaurant in Livermore to dine with friends. They want to book a table for four people on March 3rd at 6:45 PM. They also want to add the reservation to their calendar under the name \"Food.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Livermore",
+          "cuisineTypes": "Indian"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Spice of India"
+        }
+      ],
+      [
+        {
+          "subject": "Food",
+          "startDate": "03/03",
+          "startTime": "18:45",
+          "endDate": "03/03",
+          "location": "Spice of India"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_15",
+    "content": "The user wants to find some free time slots in his calendar on September 7th, 2025.",
+    "tools": [
+      [
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "09/07"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_16",
+    "content": "I am currently studying the hereditary probabilities of genetic diseases and mental disorders. I want to find relevant literature on these two topics separately and explore the association between genetic variations and health status which the id is EFO_0000270.",
+    "tools": [
+      [
+        "search_pubmed",
+        "search_pubmed",
+        "get_trait_associations"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "hereditary genetic diseases"
+        },
+        {
+          "query": "mental disorders"
+        },
+        {
+          "efoId": "EFO_0000270"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_14",
+    "content": "The user is looking for the fantasy movie \"Hellboy\" and asks for the director's name. They also want to make a reservation at The Cantina in Mill Valley for 11:30.",
+    "tools": [
+      [
+        "search_imdb",
+        "make_reservation"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "Hellboy"
+        },
+        {
+          "restaurant_name": "The Cantina"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt2274648"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_20",
+    "content": "I need you to design an automated data pipeline that collects business data from Zoho Invoice and Pipedrive, cleans and integrates it through a workflow, and finally stores it in Google BigQuery for centralized financial and sales analysis. Before designing the pipeline, I have to fetch the business_data_summary from BigQuery, my project_id is my-company-analytics. ",
+    "tools": [
+      [
+        "execute_bigquery"
+      ],
+      [
+        "orchestrator_plan_task"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "SELECT * FROM business_data_summary",
+          "project_id": "my-gcp-project"
+        }
+      ],
+      [
+        {
+          "topic": "Zoho & Pipedrive to BigQuery pipeline",
+          "description": "Design and execute an automated pipeline to clean, integrate Zoho Invoice and Pipedrive data, and store in BigQuery for financial and sales analysis. Run existing SQL queries and verify results."
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_12",
+    "content": "I am organizing a seminar on healthy eating habits and need nutritional information about various foods. Can you provide nutritional analysis for ingredients such as fruits like apple, banana, vegetables like carrot, broccoli, and whole grains like oats? Additionally, I would like to gather guidelines on vaccinations and some health tips for a 18-year-old female.",
+    "tools": [
+      [
+        "check_nutrition",
+        "get_health_recommendations"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "ingredient_list": [
+            "Apple",
+            "Banana",
+            "Broccoli",
+            "Carrot",
+            "Oats"
+          ]
+        },
+        {
+          "age": "18",
+          "sex": "female",
+          "pregnancyStatus": "not_pregnant"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_2",
+    "content": "The user wants the song \"Battle Cry\" to be played on the itunes.",
+    "tools": [
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Battle Cry"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_9",
+    "content": "The user asks for the current balances in their savings accounts, then requesting assistance in transferring $590 from their savings account to Amir's savings account.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "savings"
+        }
+      ],
+      [
+        {
+          "target": "Amir",
+          "amount": 590
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_11",
+    "content": "The user wants to add a meeting with Pranav(email: pranav@outlook.com) and Alex(email: alex@outlook.com) on March 10th at 2:00 PM in New York, in his calendar. The meeting's subject is 'Project Discussion' and it lasts for 1 hour.",
+    "tools": [
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "subject": "Project Discussion",
+          "attendees": "pranav@outlook.com; alex@outlook.com",
+          "startDate": "03/10",
+          "startTime": "02:00 PM",
+          "endDate": "03/10",
+          "endTime": "03:00 PM",
+          "isMeeting": true,
+          "location": "New York"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_9",
+    "content": "The user requested help booking a round-trip flight from LA to SF, departing on March 3rd and returning on March 12th in economy class. They also inquired about finding attractions in SF.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "LAX",
+          "destination": "SFO",
+          "departure_date": "03/03",
+          "return_date": "03/12",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "San Francisco",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_13",
+    "content": "The user wants to plan a driving route from Beijing's Tsinghua University to National Worker Gymnasium.",
+    "tools": [
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "origin_address": "Tsinghua University",
+          "destination_address": "National Worker Gymnasium"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_28",
+    "content": "I want to know the current time in Berlin.",
+    "tools": [
+      [
+        "get_time"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "timezone": [
+            "Europe/Berlin"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_21",
+    "content": "The user wants to see which curbside grocery pickup slots are still open at store SEA01 on 2025-11-01.",
+    "tools": [
+      [
+        "grocery_pickup_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "store_code": "SEA01",
+          "pickup_date": "2025-11-01"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_12",
+    "content": "The user requests their checking account balance and then wants to transfer $440 to Maria using their checking account.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "checking"
+        }
+      ],
+      [
+        {
+          "target": "Maria",
+          "amount": 440
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_3",
+    "content": "I already have a vocabulary memorization app design named UI123VOCABAPP. The design includes NODE_HEADER, NODE_CARD, and NODE_TIMER, which implement the title, the word card, and the countdown functions respectively. Now I would like to take a look at the specific code for the countdown, and based on the given design parameters, insert a real working countdown.",
+    "tools": [
+      [
+        "figma_export_code"
+      ],
+      [
+        "CountDown_StartAndEndDate"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "fileKey": "UI123VOCABAPP",
+          "nodeId": "NODE_TIMER"
+        }
+      ],
+      [
+        {
+          "Ele": "vocab_timer_user001",
+          "StartDate": "2025-07-15T09:00:00",
+          "EndDate": "2025-08-15T09:30:00"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_13",
+    "content": "I am organizing a conference and would like to invite companies similar to 'IBM'. Can you retrieve the list of 5 similar companies along with their names, revenue growth, description, logo image URL, HQ location, country, and Linkedin URL? Including the logo of each company would be highly appreciated. I also need the exact contact information for each company.",
+    "tools": [
+      [
+        "octagon_companies_agent"
+      ],
+      [
+        "octagon_deepresearch_agent"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "seed_company": "IBM",
+          "limit": 5
+        }
+      ],
+      [
+        {
+          "companies": [
+            "accenture",
+            "google",
+            "microsoft",
+            "oracle",
+            "sap"
+          ],
+          "fields": [
+            "contact_info",
+            "country",
+            "description",
+            "hq_location",
+            "linkedin_url",
+            "logo_url",
+            "name",
+            "revenue_growth"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_7",
+    "content": "Hello, I'm working on a language learning app and I need to integrate translation and language correction features. Find me a list of APIs that can be used for translation. Additionally, I would like to know the languages supported by the Microsoft Translator Text API for grammar and spelling checks.",
+    "tools": [
+      [
+        "searchApis",
+        "request_api_schema"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "keyword": "translation"
+        },
+        {
+          "ApiName": "Microsoft Translator Text API"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_5",
+    "content": "Today is 03/15/2024, Find a set of data (the weather of London from 03/01 to 03/15 in the past 5 years) to train a neural network in weather_prediction.py to predict the weather for the same date next year. I want you to give me the prediction result.",
+    "tools": [
+      [
+        "weather_data_retriever"
+      ],
+      [
+        "execute_python_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "start_date": "03/01",
+          "end_date": "03/15",
+          "range": "2019-2023",
+          "location": "London"
+        }
+      ],
+      [
+        {
+          "code_dir": "weather_prediction.py"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_16",
+    "content": "The user is inquiring about their calendar schedule for March 13th, and when their schedule is clear.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "03/13"
+        },
+        {
+          "date": "03/13"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_8",
+    "content": "Patient No.101 has presented with soreness in the lower back and knees, fear of cold, frequent urination at night, and mental fatigue. I would like to retrieve the diagnostic report from 2024-09-18 in order to decide what herbal prescription to give this patient.",
+    "tools": [
+      [
+        "Traditional_Chinese_medicine_consultation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "2024-09-18",
+          "patient_id": "101"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_13",
+    "content": "Based on the products and sales data in the default e-commerce database, analyze the current marketing strategies of the e-commerce store and provide five optimization suggestions.",
+    "tools": [
+      [
+        "E_commerce_analyst_MCP_get_schemas"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "schema_filter": [
+            "products",
+            "sales"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_1",
+    "content": "The user is looking for a good Ethiopian restaurant in Berkeley. They want to reserve a table at the found restaurant for the 2nd of this month at 17:30.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Berkeley",
+          "cuisineTypes": "Ethiopian"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Ethiopian Delight"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_15",
+    "content": "The user is looking for adventure movies directed by Ronald Neame, specifically mentioning \"The Poseidon Adventure\" as a good choice. They also want to inquire about the restaurant Union located in Santa Rosa, asking if the restaurant serves liquor and pasta, and book seats for three people on the 4th of the month at 6:30 PM.",
+    "tools": [
+      [
+        "search_imdb",
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "The Poseidon Adventure"
+        },
+        {
+          "restaurant_name": "Union"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Union"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_6",
+    "content": "Find a house in New York with laundry service for 2 people, check in on Monday the 4th and check out on Saturday the 9th, and provide the total price and a contact number.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "New York",
+          "property_type": "house"
+        }
+      ],
+      [
+        {
+          "property_id": "NY123"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_27",
+    "content": "I want to know the current time in London.",
+    "tools": [
+      [
+        "get_time"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "timezone": [
+            "Europe/London"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_13",
+    "content": "The user is looking for fun activities in Seattle, specifically a country show on April 10th, which they decide on. They also need a hotel room for a 4-day stay starting on April 8th.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "booking_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Country Event",
+          "city": "Seattle"
+        },
+        {
+          "city": "Seattle",
+          "checkinDate": "04/08",
+          "checkoutDate": "04/12"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_14",
+    "content": "You are a game development expert and I want to know how to build a video game with a battle royal style using Unreal Engine 5. In this process, I need to first generate 10 3D environment assets suitable for battle scenes and use them for scene construction, and then combine these environments to conduct strategic analysis and design of battle mechanisms and gameplay.",
+    "tools": [
+      [
+        "generate_3d_assets"
+      ],
+      [
+        "strategy_guide"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "player_bio": "battle royal style",
+          "num_assets": "10"
+        }
+      ],
+      [
+        {
+          "situation": "combine the 3D environment assets to conduct strategic analysis and design of battle mechanisms and gameplay"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_5",
+    "content": "How can we, for a particular medical condition which the disease id is 'EFO_0000305', retrieve prioritized disease-associated targets, obtain detailed biological and druggability information on candidate targets, and calculate the ADME/RO5/QED pharmacological properties of candidate compounds from SMILES strings which the symbol is BRCA1, and then integrate these results to design drugs that selectively target specific enzymes or receptors with improved efficacy and reduced toxicity?",
+    "tools": [
+      [
+        "get_disease_targets_summary"
+      ],
+      [
+        "get_target_details"
+      ],
+      [
+        "CafChem_ADME_calc_adme"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "diseaseId": "EFO_0000305"
+        }
+      ],
+      [
+        {
+          "target_ids": [
+            "ENSG00000012048",
+            "ENSG00000139618",
+            "ENSG00000141510",
+            "ENSG00000121879"
+          ]
+        }
+      ],
+      [
+        {
+          "smile": "O=C(NC1=CC=CC=C1)C2=NC=NC=N2"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_16",
+    "content": "The user wants to find an Izakaya restaurant in San Francisco and make a reservation for two people at 5:45 PM on the 5th of May at 2g Japanese Brasserie. They also request to add this reservation to their calendar with the event title \"Restaurant reservation for 2 at 2g Japanese Brasserie.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "cuisineTypes": "Izakaya"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "2g Japanese Brasserie"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant reservation for 2 at 2g Japanese Brasserie",
+          "startDate": "05/05",
+          "startTime": "17:45",
+          "endDate": "05/05",
+          "location": "2g Japanese Brasserie"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_12",
+    "content": "The user requested help finding comic movies online, expressed interest in \"Dr. Strangelove\". They also inquired about the movie's director. Meanwhile, they asked to make a reservation at Taste of India in Fremont for 11 AM.",
+    "tools": [
+      [
+        "search_imdb",
+        "make_reservation"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "Dr. Strangelove"
+        },
+        {
+          "restaurant_name": "Taste of India"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt0057012"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_11",
+    "content": "It's 2024, I'm a music producer looking for inspiration for my next project. Can you find the news about the top Billboard 200 albums from last year? Additionally, suggest 4 tracks on Deezer that has a similar style to the top album.",
+    "tools": [
+      [
+        "search_news"
+      ],
+      [
+        "recommend_musictracks"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "Billboard 200 top albums 2023",
+          "start_date": "2023-01-01",
+          "end_date": "2023-12-31"
+        }
+      ],
+      [
+        {
+          "music_name": [
+            "Guts"
+          ],
+          "result_num": 4
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_10",
+    "content": "Build an AI model in Python that can predict Alphabet Inc future stock price based on its historical closing prices over the past month, name the python file predict_stock.py and save it under finance/Alphabet,  load the data you aquired and excute the code. The code should output a prediction result in the folder of finance/Alphabet/prediction.csv. I want the visualization of the prediction in line chart format to intuitively display both the historical trend and the prediction results, thereby assisting in investment decision-making. Save the visualization as prediction.jpg in the same folder.",
+    "tools": [
+      [
+        "search_stock_byname"
+      ],
+      [
+        "generate_code"
+      ],
+      [
+        "visualize_data"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "name": "Alphabet Inc"
+        }
+      ],
+      [
+        {
+          "prompt": "Predict Alphabet Inc future stock price based on its historical closing prices over the past month",
+          "language": "python",
+          "output_name": "finance/Alphabet/predict_stock.py"
+        }
+      ],
+      [
+        {
+          "data_dir": "finance/Alphabet/prediction.csv",
+          "visualize_type": "line_chart",
+          "output_dir": "finance/Alphabet/prediction",
+          "output_format": "jpg"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_6",
+    "content": "How can a company protect its data from cyberattacks?",
+    "tools": [
+      [
+        "security_guidance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "How can a company protect its data from cyberattacks?"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_17",
+    "content": "The user wants to rent a two-bedroom, one-bathroom apartment in Santa Rosa. They want to know how to drive to the found apartment by car from 888 Fourth Street.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Santa Rosa",
+          "property_type": "apartment"
+        }
+      ],
+      [
+        {
+          "origin_address": "888 Fourth Street",
+          "destination_address": "123 Santa Rosa Ave"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_8",
+    "content": "Extract housing data of U.S. cities from a BigQuery database from which the table name is 'housing_data' and the project id is 'us-housing-project', load the data into the program /housing/house.py and execute it to implement stochastic gradient descent with Elastic Net regularization, and plot learning curves by adjusting the learning rate and l1_ratio. Store the model parameters, convergence speed, and final error metrics of each run in a vector database, and use vector search to retrieve similar experimental results to compare the performance of different hyperparameter combinations.",
+    "tools": [
+      [
+        "execute_bigquery"
+      ],
+      [
+        "execute_python_code"
+      ],
+      [
+        "vector_search"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "SELECT * FROM housing_data",
+          "project_id": "us-housing-project"
+        }
+      ],
+      [
+        {
+          "code_dir": "housing/house.py"
+        }
+      ],
+      [
+        {
+          "query": "SGDRegressor ElasticNet learning_rate=0.01 l1_ratio=0.3 housing US cities",
+          "limit": "3"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_20",
+    "content": "Download the latest OpenStreetMap dataset for the city of Berlin and save it using a compact binary format in the appropriate output directory. Meanwhile, gather the most recent financial news headlines and summaries related to the Shanghai Stock Exchange Composite Index to better understand current market sentiment. After completing both actions, summarize the stored geographic data and the retrieved financial insights.",
+    "tools": [
+      [
+        "download_osm_data",
+        "get_stock_news"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Berlin",
+          "output_path": "/Berlin",
+          "format": "pbf"
+        },
+        {
+          "ticker": "SSEC",
+          "max_result": 5
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_3",
+    "content": "The user is looking for a round trip flight from Seattle to Phoenix, departing on March 5th and returning on March 7th, with three economy tickets. They are also interested in finding child-friendly activities in Phoenix.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "SEA",
+          "destination": "PHX",
+          "departure_date": "03/05",
+          "return_date": "03/07",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "Phoenix",
+          "category": "child-friendly"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_4",
+    "content": "I want to find and call an existing public API that retrieves all earthquakes in a specific city within the last 30 days. Make sure to make the call and use the api",
+    "tools": [
+      [
+        "searchApis"
+      ],
+      [
+        "request_api_schema"
+      ],
+      [
+        "make_api_request"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "keyword": "earthquake"
+        }
+      ],
+      [
+        {
+          "ApiName": "City Earthquake Data API"
+        }
+      ],
+      [
+        {
+          "apiName": "city_earthquake_data_api",
+          "url": "https://api.earthquake.example.com/earthquakes",
+          "endpoint": "/earthquakes"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_14",
+    "content": "Build an online music review platform call musicreviews.com in PHP that features music reviews and recommendations. Today is 2024-06-15. Create a post with id post_001 in the platform with the title 'Building an Online Music Review Platform in PHP' and the content 'This article explores how to build an online music review platform in PHP, featuring music reviews and recommendations to help users discover new music.'  categorize in 'Development'  with tags 'PHP, music, review, recommendations' for testing. Add comment to this post with the content 'This is a great idea.'.",
+    "tools": [
+      [
+        "add_site"
+      ],
+      [
+        "create_post_inside"
+      ],
+      [
+        "create_comment"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "domains": [
+            "musicreviews.com"
+          ]
+        }
+      ],
+      [
+        {
+          "id": "post_001",
+          "title": "Building an Online Music Review Platform in PHP",
+          "content": "This article explores how to build an online music review platform in PHP, featuring music reviews and recommendations to help users discover new music.",
+          "status": "published",
+          "category": "Development",
+          "tags": [
+            "PHP",
+            "music",
+            "review",
+            "recommendations"
+          ],
+          "date": "2024-06-15"
+        }
+      ],
+      [
+        {
+          "id": "post_001",
+          "comment": "This is a great idea."
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_6",
+    "content": "The user wants to know whether the Lobster Shack in San Mateo has live music.",
+    "tools": [
+      [
+        "get_restaurant_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "restaurant_name": "Lobster Shack"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_25",
+    "content": "I'm a data scientist working on an AI project and I need to gather information about recent AI advancements. Please fetch news articles about ArtificialIntelligence from 'gizmodo' and provide me with all the news about AI from different sources.",
+    "tools": [
+      [
+        "search_news"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "Artificial Intelligence",
+          "start_date": "2023-01-01",
+          "end_date": "2023-12-31",
+          "max_results": 10
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_5",
+    "content": "Design a program that can automatically identify scam text messages and mark them as junk. Use python as the programming language, set the temperature to 0.5, and limit the response to 1500 tokens. The model to be used is gemini-pro.",
+    "tools": [
+      [
+        "generate_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prompt": "Design a program that can automatically identify scam text messages and mark them as junk",
+          "language": "python",
+          "temperature": 0.5,
+          "max_tokens": 1500,
+          "model": "gemini-pro"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_29",
+    "content": "The user wants to add $15.00 to public transit card ORCA-551122 and ensure the card stays within the balance limits.",
+    "tools": [
+      [
+        "public_transport_card_recharge"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "card_number": "ORCA-551122",
+          "amount": 15.0
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_11",
+    "content": "The user is looking for interesting activities in Boston, particularly sports events like football events. They also inquired about their checking account balance.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Football Event",
+          "city": "Boston"
+        },
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_8",
+    "content": "I have uploaded an image named street_scene_people.jpg extracted from a video which is about a street scene containing multiple people , first detect all the person targets in the scene, and then perform human pose estimation on these person areas to analyze the actions of each individual.",
+    "tools": [
+      [
+        "detect_objects"
+      ],
+      [
+        "estimate_pose"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "image_path": "street_scene_people.jpg"
+        }
+      ],
+      [
+        {
+          "object_regions": [
+            {
+              "x": 50,
+              "y": 80,
+              "width": 130,
+              "height": 320
+            },
+            {
+              "x": 220,
+              "y": 60,
+              "width": 130,
+              "height": 330
+            },
+            {
+              "x": 400,
+              "y": 100,
+              "width": 120,
+              "height": 320
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_7",
+    "content": "The user wants to know the weather in Kuala Lumpur, Malaysia on March 6th, 2025.",
+    "tools": [
+      [
+        "weather_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Kuala Lumpur",
+          "date": "03/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_11",
+    "content": "The user wants to visit a free museum in San Francisco. They also want to watch the movie \"Hackers\" online with subtitles, which is a drama, and are curious about the director.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest",
+        "search_imdb"
+      ],
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Francisco",
+          "category": "museum"
+        },
+        {
+          "primary_title": "Hackers"
+        }
+      ],
+      [
+        {
+          "imdb_id": "tt0113243"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_4",
+    "content": "The user wants to book a round-trip Economy flight from Phoenix, AZ, to New York City, departing on the 7th of March and returning on the 14th. They are also interested in seeing some attractions in New York City.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "PHX",
+          "destination": "JFK",
+          "departure_date": "03/07",
+          "return_date": "03/14",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "New York",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_4",
+    "content": "Please retrieve and organize the available schema and table information for sales and inventory from our website's default e-commerce database. There are already lists of popular products for various categories saved in /business/analytics/ecommerce_sales.csv, which will be distributed to generate visual charts like bar chart to assist in formulating plans to optimize product ranking, expand the range of products, and develop marketing strategies. Save the visualizations in visualizations/ecommerce_sales.png under the same folder as ecommerce_sales.csv",
+    "tools": [
+      [
+        "E_commerce_analyst_MCP_get_schemas",
+        "visualize_data"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "schema_filter": [
+            "sales",
+            "inventory"
+          ]
+        },
+        {
+          "data_dir": "/business/analytics/ecommerce_sales.csv",
+          "visualize_type": "bar_chart",
+          "output_dir": "/business/analytics/visualizations",
+          "output_format": "png"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_17",
+    "content": "The user wants to check their calendar for upcoming events, specifically for 04/01, and also wants to know their availability for the day.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "04/01"
+        },
+        {
+          "date": "04/01"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_9",
+    "content": "What additional measures can be taken to establish a strong online presence, cultivate customer loyalty, and achieve long-term success when starting and expanding an e-commerce business, find 5 pieces of news and from 2020 to 2024. Meanwhile, I also hope you can analyze the develop trend of Webvan last year so that i can learn from its failure and avoid the same mistakes.",
+    "tools": [
+      [
+        "search_news",
+        "analyze_trends"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "e-commerce failures case studies",
+          "start_date": "2020-01-01",
+          "end_date": "2024-12-31",
+          "max_results": 5
+        },
+        {
+          "topic": "Webvan",
+          "timeframe": "last_year"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_16",
+    "content": "Based on PubMed literature and GWAS Catalog trait associations, identify potential biomarkers that may predict the risk of GVHD in recipients after bone marrow transplantation.",
+    "tools": [
+      [
+        "search_pubmed"
+      ],
+      [
+        "get_trait_associations"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "GVHD biomarkers bone marrow transplantation GWAS"
+        }
+      ],
+      [
+        {
+          "efoId": "EFO_0000305"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_1",
+    "content": "The user is in a good mood and wants to watch the suspense movie \"Hotel Mumbai\" directed by Anthony Maras, with subtitles due to a language issue. They also plan to eat out and request a reservation at the restaurant Marche Aux Fleurs in Ross for 2 PM.",
+    "tools": [
+      [
+        "search_imdb",
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "Hotel Mumbai"
+        },
+        {
+          "restaurant_name": "Marche Aux Fleurs"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_19",
+    "content": "The user wants to submit a refill request for prescription RX-204811, confirming the birth date 1987-05-19 and picking up at the DOWNTOWN branch.",
+    "tools": [
+      [
+        "pharmacy_refill_request"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prescription_id": "RX-204811",
+          "patient_dob": "1987-05-19",
+          "pharmacy_branch": "DOWNTOWN"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_1",
+    "content": "I would like to enhance the existing demand for robotics business by incorporating reinforcement learning so that the algorithm can dynamically adapt to the fluctuating market conditions and changes in customer behavior. A multi-step approach is needed, which involves first obtaining relevant data about 'demand for robotics business', save the analysis to the folder of 'outputs/market_analysis/analysis.json' and upload the data to the existing reinforcement learning code saving in the folder of 'outputs/market_analysis/rl.py' and run it. The result data after running the code will be saved in the folder of 'outputs/market_analysis/result.csv'. I hope you can visualize the results in line chart format to reveal insights into the constantly changing market trends and consumer preferences, save it as result.jpg in the same folder.",
+    "tools": [
+      [
+        "obtain_business_analysis"
+      ],
+      [
+        "execute_python_code"
+      ],
+      [
+        "visualize_data"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "topic": "demand for robotics business",
+          "output_dir": "outputs/market_analysis/analysis.json"
+        }
+      ],
+      [
+        {
+          "code_dir": "outputs/market_analysis/rl.py"
+        }
+      ],
+      [
+        {
+          "data_dir": "outputs/market_analysis/result.csv",
+          "visualize_type": "line_chart",
+          "output_dir": "outputs/market_analysis/result",
+          "output_format": "jpg"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_5",
+    "content": "The user requested to play \"Let Me Love You\" by Ariana Grande, and wanted to transfer $970 from their savings account to Tom. They also expressed interest in watching non-fiction movies, mentioning a liking for JT Leroy.",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Let Me Love You"
+        },
+        {
+          "target": "Tom",
+          "amount": 970
+        },
+        {
+          "primary_title": "JT Leroy"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_30",
+    "content": "The user wants the most recent alerts for zone NW-3, but only those marked with caution severity.",
+    "tools": [
+      [
+        "neighborhood_watch_alerts"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "zone": "NW-3",
+          "severity": "caution"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_18",
+    "content": "The user wants to check their calendar for events on Thursday next week, which is 04/06/2023, and know their availability.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "04/06"
+        },
+        {
+          "date": "04/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_seq_tools_20",
+    "content": "You should connect to a SQL Server using the connection string 2, then execute a BigQuery to retrieve data from the table business_data_summary in the project us-housing-project. At the same time, access a secret named rds_sqlserver_credentials and unmask it after confirmation.",
+    "tools": [
+      [
+        "Connect_SQL_Server",
+        "get_secret"
+      ],
+      [
+        "execute_bigquery"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "connectionString": 2
+        },
+        {
+          "secret_name": "rds_sqlserver_credentials",
+          "mask_sensitive": true,
+          "confirm_unmask": ""
+        }
+      ],
+      [
+        {
+          "query": "SELECT * FROM business_data_summary",
+          "project_id": "us-housing-project"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_1",
+    "content": "The user wants to ask who directed the movie hellboy. The movie hellboy's imdb id is tt0167190.",
+    "tools": [
+      [
+        "get_directors"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "imdb_id": "tt0167190"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_20",
+    "content": "The user is looking for a music attraction in New York and inquires about the best way to drive there from Ridgewood.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "New York",
+          "category": "music"
+        }
+      ],
+      [
+        {
+          "origin_address": "Ridgewood",
+          "destination_address": "Metropolitan Museum of Art"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_5",
+    "content": "The user is looking for song suggestions, particularly by Karolina Protsenko, and is a fan of pop songs, especially those on the album \"Fly.\" They also requested to play a selected song in the album using iTunes.",
+    "tools": [
+      [
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "Karolina Protsenko"
+        }
+      ],
+      [
+        {
+          "song": "Closer"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_10",
+    "content": "The user inquires about the balances of their checking account, and then wants to transfer $270 to Pranav from their checking account.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "checking"
+        }
+      ],
+      [
+        {
+          "target": "Pranav",
+          "amount": 270
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_18",
+    "content": "How can I establish a secure connection to BigQuery database for a large-scale movie review website, the project id is 'movie-reviews-db', and at the same time obtain security guidance to ensure safe data storage and access? The database is called 'movie_reviews_db', please connect to the database and give me the data and provide best practices for security.",
+    "tools": [
+      [
+        "connect_database",
+        "security_guidance"
+      ],
+      [
+        "execute_bigquery"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "database_name": "movie_reviews_db"
+        },
+        {
+          "query": "secure mysql connection for large-scale movie review website"
+        }
+      ],
+      [
+        {
+          "query": "SELECT * FROM movie_reviews",
+          "project_id": "movie-reviews-db"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_5",
+    "content": "The user inquires about the weather, humidity, and wind levels there on March 1st in Chicago. They want to find hotels in Chicago, making a reservation for 2 rooms, checking in on the 1st and checking out on the 4th of the month.",
+    "tools": [
+      [
+        "weather_tool",
+        "booking_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Chicago",
+          "date": "03/01"
+        },
+        {
+          "city": "Chicago",
+          "checkinDate": "03/01",
+          "checkoutDate": "03/04"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_18",
+    "content": "You are tasked with creating a quantum circuit design for a given set of qubits and calculating the corresponding probability distribution of the quantum state, the request is give in the uploaded file outputs/quantum_design_request.txt. The program should first use circuit initialization to model the system and then apply a professional visualization tool to generate 3D and contour-style plots that illustrate the probability distribution.Output the result in jpg format under the folder of outputs/quantum_plots.",
+    "tools": [
+      [
+        "create_design"
+      ],
+      [
+        "visualize_data"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "design_request": "outputs/quantum_design_request.txt"
+        }
+      ],
+      [
+        {
+          "data_dir": "outputs/quantum_design.json",
+          "visualize_type": "3D_plot",
+          "output_dir": "outputs/quantum_plots",
+          "output_format": "jpg"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_15",
+    "content": "The user wants to check their calendar for events on the 6th of May. They also want to know their availability and if there are any other available times on that day.",
+    "tools": [
+      [
+        "list_events",
+        "find_free_slots"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "05/06"
+        },
+        {
+          "date": "05/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_13",
+    "content": "The user wants to watch the drama movie \"The Dogman\" online. They also want to inquire about the pricing and liquor options at Aato, San Francisco and then decide to make a reservation for four people at 5:30 pm.",
+    "tools": [
+      [
+        "search_imdb",
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "primary_title": "The Dogman"
+        },
+        {
+          "restaurant_name": "Aato"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Aato"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_1",
+    "content": "I'm developing a mobile app that requires object detection functionality. Is there an API available that can take an image URL as input and return a modified image with bounding boxes around the detected objects? It would be great if the API can also provide the JSON data of the detected objects. Look into the details of the APIs before deciding",
+    "tools": [
+      [
+        "searchApis"
+      ],
+      [
+        "request_api_schema"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "keyword": "object detection"
+        }
+      ],
+      [
+        {
+          "ApiName": [
+            "Image Object Detection API",
+            "Vision Detect Pro API"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_16",
+    "content": "I am a fourth-year PhD student with ideas about embodied intelligence entrepreneurship and would like to understand the current development situation in the industry and conduct industry research focused on leading companies. Therefore, I want to know the trends of embodied intelligence startups for the last quarter and leading companies. Also I am interested in the history and development of the company OPENAI, please find me the news and analysis about the company from 2019 to 2024.",
+    "tools": [
+      [
+        "search_news",
+        "analyze_trends"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "OPENAI",
+          "start_date": "2019-01-01",
+          "end_date": "2024-12-31",
+          "max_result": 5
+        },
+        {
+          "topic": "embodied intelligence",
+          "timeframe": "last_quarter"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_12",
+    "content": "Based on the survey results from 'survey_china_drones_2024.csv', the survey is in Chinese, analyze the attitudes and needs of Chinese consumers regarding the use of drones, summarize the results, and publish a report.",
+    "tools": [
+      [
+        "export_survey_responses"
+      ],
+      [
+        "generate_summary_report"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "surveyId": "survey_china_drones_2024",
+          "documentType": "csv",
+          "language": "zh"
+        }
+      ],
+      [
+        {
+          "data_link": "https://data.example.com/exports/survey_china_drones_2024_zh_records.pdf"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_12",
+    "content": "Design a new interaction interface for the chating robot.",
+    "tools": [
+      [
+        "UIUX_Expert"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "user_personas": "Young adults (18-35) who frequently use messaging apps, prefer quick and intuitive UI, comfortable with emojis and GIFs.",
+          "interaction_modes": "Voice commands, text chat, gesture recognition.",
+          "design_principles": "Minimalist design, high contrast for readability, responsive layout, accessibility compliance (WCAG 2.1).",
+          "prototyping_tools": "Figma, Adobe XD, InVision.",
+          "usability_testing": "A/B testing with 50 users, heuristic evaluation, think-aloud protocol.",
+          "output_artifacts": "Interactive prototype, persona documentation, usability test report."
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_6",
+    "content": "My company is conducting market research on popular cryptocurrencies. Can you provide me with a list of all the markets supported by the Upbit exchange along with their currency codes? At the same time, please identify the current top 10 of the following: popular cryptocurrencies, the most visited coins, and indicate the newly listed coins this month. Today is Sep 27, 2025.",
+    "tools": [
+      [
+        "get_markets",
+        "get_market_summary"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "exchange": "Upbit"
+        },
+        {
+          "filter_type": [
+            "popular",
+            "most_visited",
+            "new_listing"
+          ],
+          "filter_count": "10",
+          "start_date": "2025-09-01",
+          "end_date": "2025-09-27"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_16",
+    "content": "Create a program that optimizes the CPU usage of a given program?",
+    "tools": [
+      [
+        "generate_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prompt": "Create a program that optimizes the CPU usage of a given program.",
+          "language": "python",
+          "output_name": "optimize_cpu_usage.py",
+          "model": "gemini-pro",
+          "temperature": 0.4,
+          "max_tokens": 1500,
+          "existing_file_path": ""
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_23",
+    "content": "The user wants to schedule a wash-and-fold laundry pickup for customer CUST-5566 on 2025-11-03.",
+    "tools": [
+      [
+        "laundry_service_request"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "customer_id": "CUST-5566",
+          "pickup_date": "2025-11-03",
+          "service_type": "wash_fold"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_16",
+    "content": "The user is looking for an apartment to rent in Oakley with 3 bedrooms and 3 bathrooms. They want to check how to get to the found apartment from Oakland International Airport by car.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Oakley",
+          "property_type": "apartment"
+        }
+      ],
+      [
+        {
+          "origin_address": "Oakland International Airport",
+          "destination_address": "123 Oakley Ave"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_13",
+    "content": "Please design and enforce a comprehensive security protocol for our small online advertising network that strengthens defenses against threats such as SQL injection, cross-site scripting, and other cyber attacks. The policy should naturally incorporate the use of static application security testing with Semgrep on the ./src directory, applying the security rule category, loading the configuration from ./semgrep-security-config.yml, and outputting results in json format, while also ensuring that the network layer is protected by running Nmap scans on adserver.example.com limited to ports 80,443,3306 with the -sV option to identify service versions. Alongside these automated checks, the protocol should emphasize incident response steps for detecting, containing, and mitigating breaches, and should integrate strong identity safeguards such as multi-factor authentication, role-based access controls, and periodic vulnerability scanning to maintain an optimal security posture.",
+    "tools": [
+      [
+        "Semgrep_Code_SAST",
+        "nmap_scan"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "path": "./src",
+          "ruleset": "security",
+          "config_file": "./semgrep-security-config.yml",
+          "output_format": "json"
+        },
+        {
+          "host": "adserver.example.com",
+          "ports": "80,443,3306",
+          "arguments": "-sV"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_5",
+    "content": "The user wants to search for Seafood cuisine restaurants in San Bruno.",
+    "tools": [
+      [
+        "search_restaurant"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Bruno",
+          "cuisineTypes": "Seafood"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_4",
+    "content": "Please interpret the recent trends of major indices in the Chinese stock market (Shanghai Composite Index , Shenzhen Component Index, STAR Market 50, CSI 300, CSI 500), and then analyze the reasons behind these trends in conjunction with the latest two financial news articles about the one with the highest percentage change",
+    "tools": [
+      [
+        "get_market_index"
+      ],
+      [
+        "get_stock_news"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "indices": [
+            "SHCOMP",
+            "SZCOMP",
+            "STAR50",
+            "CSI300",
+            "CSI500"
+          ]
+        }
+      ],
+      [
+        {
+          "ticker": "STAR50",
+          "max_result": 2
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_10",
+    "content": "The user wants to check the balance of his checking account.",
+    "tools": [
+      [
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_19",
+    "content": "Convert all PDF documents stored in the reports directory into Markdown format to enable easier editing and text extraction. Meanwhile, establish a secure connection to the production SQL Server using connection profile ID 2.",
+    "tools": [
+      [
+        "convert_pdf_to_markdown",
+        "Connect_SQL_Server"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "pdf_dir": "./data/reports"
+        },
+        {
+          "connectionString": 2
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_11",
+    "content": "The user requests to check their balance, specifying the savings account. After that, they also want to transfer $170 from their savings account to Mr. Raghav's checking account and confirm the details are correct.",
+    "tools": [
+      [
+        "get_balance"
+      ],
+      [
+        "send_transaction"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_type": "savings"
+        }
+      ],
+      [
+        {
+          "target": "Raghav",
+          "amount": 170
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_18",
+    "content": "Process an interview recording so that it begins with a smooth fade-in lasting about one and a half seconds and ends with a gentle fade-out of roughly two seconds, then save the enhanced version in the usual output location. Meanwhile, prepare a comprehensive global market report about caregiver robots, combining both qualitative and quantitative research methods and drawing on official government data and recent market surveys. The report should be presented in a professional format suitable for publication and cover expected trends over the next five years.",
+    "tools": [
+      [
+        "AudioEditor_apply_fades",
+        "Business_Analyst"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "audio_file": "./inputs/interview_record.mp3",
+          "fade_in_ms": "1500",
+          "fade_out_ms": "2000"
+        },
+        {
+          "industry_focus": "caregiver robots",
+          "market_scope": "global",
+          "analysis_methods": "qualitative + quantitative",
+          "data_sources": "gov reports, market surveys",
+          "output_types": "market report",
+          "report_format": "pdf",
+          "time_horizon": "5 years"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_2",
+    "content": "I want to create a DJ version of a song to go along with my dance, please help me add various tempo changes to this audio. Audio file url is url/to/audio.mp3, and I want to increase the speed by 1.25 times.",
+    "tools": [
+      [
+        "AudioEditor_apply_speed_adjustment"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "audio_file": "url/to/audio.mp3",
+          "speed_factor": 1.25
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_2",
+    "content": "I am writing a research paper and the relevant details files are saved under folder '/research/document' Read all these files and analyze 5 relevant papers on arxiv and convert these multiple documents from PDF format to HTML format.",
+    "tools": [
+      [
+        "search_and_read_files"
+      ],
+      [
+        "search_academic_papers"
+      ],
+      [
+        "convert_pdf_to_markdown"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "path": "/research/document"
+        }
+      ],
+      [
+        {
+          "query": "MOE",
+          "subject": "large language model",
+          "max_results": 5
+        }
+      ],
+      [
+        {
+          "pdf_dir": "/research/document/results/"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_7",
+    "content": "The user wants to book a hotel room in or near New York City for a family stay, checking in on March 11th and checking out on March 14th. They also inquire about the weather conditions in New York City on March 12th.",
+    "tools": [
+      [
+        "booking_tool",
+        "weather_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "New York",
+          "checkinDate": "03/11",
+          "checkoutDate": "03/14"
+        },
+        {
+          "city": "New York",
+          "date": "03/12"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_6",
+    "content": "Please interpret the recent trends of stocks of Alibaba Group Holding Limited, identify the ticker and search for its real time data from yahoo in SSE market. Save the data in the folder of 'outputs/market_data/alibaba_group_holding_limited.json' and make a comprehensive analysis of the stock base on the data. ",
+    "tools": [
+      [
+        "search_stock_byname"
+      ],
+      [
+        "get_realtime_market_data"
+      ],
+      [
+        "get_comprehensive_analysis"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "name": "Alibaba Group Holding Limited"
+        }
+      ],
+      [
+        {
+          "symbols": [
+            "BABA"
+          ],
+          "source": "yahoo",
+          "market": "SSE"
+        }
+      ],
+      [
+        {
+          "file_path": "outputs/market_data/alibaba_group_holding_limited.json"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_14",
+    "content": "The user wants to search for football events in Boston and asks if he can watch the event on 04/07",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Football Event",
+          "city": "Boston"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_29",
+    "content": "Please provide a comprehensive analysis of the file 'data.csv' which is saved in the current directory.",
+    "tools": [
+      [
+        "get_comprehensive_analysis"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "file_path": "data.csv"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_3",
+    "content": "Hello! I am a food merchant, and I need to prepare a presentation for the guests tonight, which requires understanding the ingredients. Can you provide information about the food based on the product barcode (4902102079290, 0737628064502, 8410076471305)? Additionally, I would like to gather 4 related product data for a specific brand called 'Salalad.'",
+    "tools": [
+      [
+        "get_product_by_barcode",
+        "spu_list"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "barcode": [
+            "4902102079290",
+            "0737628064502",
+            "8410076471305"
+          ]
+        },
+        {
+          "brand": "salalad"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_3",
+    "content": "The user wants to find a rental house in San Francisco with a minimum rating of 4.0",
+    "tools": [
+      [
+        "search_rental_properties"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "property_type": "house",
+          "rating": 4.0
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_2",
+    "content": "The user is looking for a place to eat in San Mateo, specifically for seafood, and inquires about phone numbers, live music, and liquor availability. They ask for additional suggestions and decide to make a reservation at 5:30 PM on March 14th.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Mateo",
+          "cuisineTypes": "Seafood"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Lobster Shack"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Lobster Shack"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_4",
+    "content": "The user inquired about the weather in London on May 1st, including humidity and wind conditions. They also requested help finding a house for one person, arriving on the 1st and checking out on the 4th. They also asked if there is air conditioning in the house.",
+    "tools": [
+      [
+        "weather_tool",
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "London",
+          "date": "05/01"
+        },
+        {
+          "location": "London",
+          "property_type": "house"
+        }
+      ],
+      [
+        {
+          "property_id": "LN987"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_8",
+    "content": "The user wants to Check the calendar for events on 2025-05-06.",
+    "tools": [
+      [
+        "list_events"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "date": "05/06"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_26",
+    "content": "The user wants to review the homework assigned to student STU-204 for the week starting 2025-11-03.",
+    "tools": [
+      [
+        "child_homework_tracker"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "student_id": "STU-204",
+          "week_start": "2025-11-03"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_4",
+    "content": "The user is looking for Frank Ocean songs, inquiring about the genre, and then requesting to play them.",
+    "tools": [
+      [
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "Frank Ocean"
+        }
+      ],
+      [
+        {
+          "song": "Nikes"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_18",
+    "content": "Provide a structured summary of product details for Saikongqing, an ophthalmic preparation containing Brimonidine (5ml) — include brand manufacturer, recommended use, and important handling precautions.",
+    "tools": [
+      [
+        "indian_branded_drug_search"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "drug_name": "Saikongqing",
+          "generic_composition": "Brimonidine",
+          "drug_form": "Ophthalmic Solution",
+          "volume": "5ml"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_18",
+    "content": "The user is looking for attractions to visit in Philadelphia, specifically a museum, and inquires about the best way to drive there from Wilmington.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest"
+      ],
+      [
+        "maps_direction_driving_by_address"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Philadelphia",
+          "category": "museum"
+        }
+      ],
+      [
+        {
+          "origin_address": "Wilmington",
+          "destination_address": "Philadelphia Museum of Art"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_3",
+    "content": "I am writing an academic report and required a list of books of the given id numbers. Please find the corresponding information based on the given id (from id 1 to 5).",
+    "tools": [
+      [
+        "get_book_details_by_id"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "id": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_1",
+    "content": "How can I establish a secure connection to a database for a large-scale movie review website, the project id is 'movie-reviews-db', and at the same time obtain security guidance to ensure safe data storage and access? The database is called 'movie_reviews_db', please connect to the database and give me the data and provide best practices for security.",
+    "tools": [
+      [
+        "connect_database",
+        "security_guidance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "database_name": "movie_reviews_db"
+        },
+        {
+          "query": "secure mysql connection for large-scale movie review website"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_25",
+    "content": "The user wants an energy usage report for smart meter MTR-2211 covering the 2025-10 billing cycle.",
+    "tools": [
+      [
+        "home_energy_usage_report"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "meter_id": "MTR-2211",
+          "billing_cycle": "2025-10"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_14",
+    "content": "The user expresses interest in attending a baseball event in New York, asks for available dates, and decides on a specific date that works for them. They finally add the match on the 13th of March to their calendar using title \"Baseball\".",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Baseball Event",
+          "city": "New York"
+        }
+      ],
+      [
+        {
+          "subject": "Baseball",
+          "startDate": "03/13",
+          "endDate": "03/13",
+          "location": "New York"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_2",
+    "content": "The user is looking for a restaurant in Palo Alto that serves freshwater fish dishes. They want a reservation for one at 6:30 PM.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Palo Alto",
+          "cuisineTypes": "Freshwater Fish"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Freshwater Fishery"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_9",
+    "content": "How can I implement advanced obstacle avoidance techniques for robots in complex environments using MATLAB? Please explain how to program in MATLAB to detect and recognize objects using computer vision. At the same time, can you guide me through using Java simulation software with a realistic physics engine to simulate complex robot behaviors, such as autonomous decision-making? Setting up the scene and robot for me and run the simulation environment. The environment should include a robot at (0, 0, 0), an obstacle1 at (2, 0, 1), an obstacle2 at (-1, 0, 3), and a target at (5, 0, 5) with the name 'Robot_Environment'. After creating and running the scene with only one robot, add another carter robot at (0, 6, 0) to examine the influence of the second robot on the first robot's obstacle avoidance behavior.",
+    "tools": [
+      [
+        "system_architecture_designer",
+        "create_physics_scene"
+      ],
+      [
+        "create_robot"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "system_design": "A modular robotics simulation system integrating MATLAB's Computer Vision Toolbox for object detection and a Java-based simulation engine for realistic physics interactions, supporting plugin-based autonomous decision-making modules.",
+          "technology_stack": "MATLAB for computer vision algorithms, Java with jMonkeyEngine for simulation, TCP/IP for inter-process communication, JSON for data exchange.",
+          "hardware_requirements": "Development workstation with multi-core CPU, dedicated NVIDIA RTX 3060 GPU, 16GB RAM, and large SSD for simulation asset storage.",
+          "interaction_interface": "Java Swing-based simulation control panel with real-time 3D visualization and logging console.",
+          "test_optimization_plan": "Benchmark simulation frame rates, validate MATLAB object detection accuracy against datasets, and iteratively tune physics parameters for optimal realism."
+        },
+        {
+          "objects": [
+            {
+              "type": "robot",
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "type": "obstacle1",
+              "position": [
+                2,
+                0,
+                1
+              ]
+            },
+            {
+              "type": "obstacle2",
+              "position": [
+                -1,
+                0,
+                3
+              ]
+            },
+            {
+              "type": "target",
+              "position": [
+                5,
+                0,
+                5
+              ]
+            }
+          ],
+          "floor": true,
+          "gravity": "[0, -9.81, 0]",
+          "scene_name": "Robot_Environment"
+        }
+      ],
+      [
+        {
+          "robot_type": "carter",
+          "position": "[0, 6, 0]"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_23",
+    "content": "I want to analyze the nutrition data of a recipe I found online. Can you provide me with the nutritional analysis for the ingredients? The ingredients include chicken, broccoli, and rice.",
+    "tools": [
+      [
+        "check_nutrition"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "ingredient_list": [
+            "Broccoli",
+            "Chicken",
+            "Rice"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_16",
+    "content": "The user wants to pay the $84.71 balance on Seattle Power account A10293 using auto debit.",
+    "tools": [
+      [
+        "pay_utility_bill"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "account_number": "A10293",
+          "provider": "Seattle Power",
+          "amount": 84.71,
+          "method": "auto_debit"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_1",
+    "content": "I'm working on a computer vision project and need to detect objects in an image. Can you choose from a given list the API (Image Object Detection API, OCR Text Extract API, Vision Detect 3D API)that takes an image URL as input and returns an updated image with bounding boxes around the detected objects? Look for the details of these api before deciding ",
+    "tools": [
+      [
+        "request_api_schema"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "ApiName": [
+            "Image Object Detection API",
+            "OCR Text Extract API",
+            "Vision Detect 3D API"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_27",
+    "content": "The user wants to renew community pool pass PASS-4488 for another 6 months.",
+    "tools": [
+      [
+        "community_pool_pass_renewal"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "member_id": "PASS-4488",
+          "renewal_term": 6
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_20",
+    "content": "The user wants to know about rock concerts in New York, and also wants to check the balances in their checking account.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Rock Event",
+          "city": "New York"
+        },
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_1",
+    "content": "The user is looking for an American-style restaurant in San Jose and then requests the address and contact information. After checking, they want to make a booking for 11:30 am on the 4th of the month for this restaurant.",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "get_restaurant_details"
+      ],
+      [
+        "make_reservation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Jose",
+          "cuisineTypes": "American"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "American Bistro"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "American Bistro"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_14",
+    "content": "The user wants to find pop music events in London on May 9th. They also want to reserve a hotel room in London for two days starting May 7th and request the phone number and address of the hotel.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "booking_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Pop Event",
+          "city": "London"
+        },
+        {
+          "city": "London",
+          "checkinDate": "05/07",
+          "checkoutDate": "05/09"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_26",
+    "content": "I am working on a content moderation system for a social media platform. Can you suggest an API that checks if a text contains profanity or inappropriate language? ",
+    "tools": [
+      [
+        "searchApis"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "keyword": "profanity detection"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_11",
+    "content": "Design a city planning scheme that considers various aspects such as architecture, transportation, and environmental protection. In details, the city is Datong, Shanxi Province, China. At the same time, I want to know the elevation of the city which is estimated to be 40.0975° N, 113.1494° W.",
+    "tools": [
+      [
+        "wolfram_query",
+        "fetch_terrain_elevation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "Comprehensive city planning scheme considering architecture, transportation networks, and environmental protection strategies for a modern urban area",
+          "format": "json",
+          "location": "Datong, Shanxi Province, China"
+        },
+        {
+          "latitude": 40.0975,
+          "longitude": 113.1494,
+          "unit": "meters"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_28",
+    "content": "The user wants to verify the warranty details for appliance serial DWS-772310.",
+    "tools": [
+      [
+        "home_appliance_warranty_lookup"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "serial_number": "DWS-772310"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_15",
+    "content": "You are required to implement and validate a model training and testing configuration for a 3D object detection system using the provided code snippet under the folder of C:/Users/user/Desktop/MyProject/configs/kitti_config.py as a reference. The task involves updating the necessary configuration files (covering optimizer, learning policy, checkpoint, evaluation, log, runtime settings, and workflow) all save in the same folder in changes.txt and running the training and testing in a Python environment based on these configurations, ensuring that the system works properly with the KittiDataset and the specified class names and input modality to produce the expected results.",
+    "tools": [
+      [
+        "patch_file"
+      ],
+      [
+        "execute_python_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "path": "C:/Users/user/Desktop/MyProject/configs/kitti_config.py",
+          "changes_path": "C:/Users/user/Desktop/MyProject/configs/changes.txt"
+        }
+      ],
+      [
+        {
+          "code_dir": "C:/Users/user/Desktop/MyProject/configs/kitti_config.py"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_17",
+    "content": "The user requested help finding a seafood restaurant in San Francisco, and inquired about making a reservation for 11:30 AM on the 3rd of September. They confirmed the restaurant Akiko's Sushi Bar. They also requested adding the reservation to their calendar with the event title \"Restaurant reservation at Akiko's Sushi Bar.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "cuisineTypes": "Seafood"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Akiko's Sushi Bar"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant reservation at Akiko's Sushi Bar",
+          "startDate": "09/03",
+          "startTime": "11:30",
+          "endDate": "09/03",
+          "location": "Akiko's Sushi Bar"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_7",
+    "content": "Can you provide an optimized solution for the python file named 'heavy_numeric_computations.py' using techniques like vectorization and parallel programming, use model gpt-4o-mini for code optimization, and save it to the path 'code/new_heavy_numeric_computations.py'",
+    "tools": [
+      [
+        "generate_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prompt": "Given an existing Python script that performs heavy numeric computations in loops, produce an optimized version using NumPy vectorization and, where beneficial, multiprocessing (or concurrent.futures) for CPU-bound work. Include clear function docstrings, type hints, and brief inline comments explaining the vectorized transformations. Also provide a small benchmark snippet comparing the original loop implementation vs. the optimized version on synthetic data. Avoid unnecessary dependencies beyond numpy.",
+          "language": "python",
+          "model": "gpt-4o-mini",
+          "output_name": "new_heavy_numeric_computations",
+          "existing_file_path": "heavy_numeric_computations.py"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_7",
+    "content": "The user wants to cast the song \"Music Never Sleeps\" by Jason Chen on iTunes. They also want to transfer $1150 from their savings account to Pranav. Additionally, they are interested in a fantasy movie online, particularly one directed by George Miller, and decide on \"Mad Max.\"",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Music Never Sleeps"
+        },
+        {
+          "target": "Pranav",
+          "amount": 1150
+        },
+        {
+          "primary_title": "Mad Max"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_10",
+    "content": "The user is looking for interesting activities to do, particularly concert events in San Francisco, and also inquires about their checking account balances.",
+    "tools": [
+      [
+        "search_ticketmaster",
+        "get_balance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Concert Event",
+          "city": "San Francisco"
+        },
+        {
+          "account_type": "checking"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_19",
+    "content": "How to conduct a market survey for caregiver robots in USA in recent 10 years with data source from https://www.google.com/search?q=caregiver+robots+market+survey and obtain qualitative and quantitative insights from the survey which is saved as a pdf file.",
+    "tools": [
+      [
+        "Business_Analyst"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "industry_focus": "caregiver robots",
+          "market_scope": "domestic",
+          "analysis_methods": "qualitative + quantitative",
+          "data_sources": "gov reports, market surveys",
+          "output_types": "market report",
+          "report_format": "pdf",
+          "time_horizon": "10 years"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_2",
+    "content": "I'm a project manager and I need to coordinate tasks with my team across different time zones. Can you give me the current time for a specific IP address 203.0.113.25 and the current time based on my public IP 198.51.100.42?",
+    "tools": [
+      [
+        "get_ip_details"
+      ],
+      [
+        "get_time"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "ip_address": [
+            "203.0.113.25",
+            "198.51.100.42"
+          ]
+        }
+      ],
+      [
+        {
+          "timezone": [
+            "America/New_York",
+            "Europe/London"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_3",
+    "content": "The user requested the weather for San Jose on March 7th and asked for rock songs similar to Brunettes Shoot Blondes in the Bittersweet album, with a preference to play them on iTunes.",
+    "tools": [
+      [
+        "weather_tool",
+        "itunes_search"
+      ],
+      [
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Jose",
+          "date": "03/07"
+        },
+        {
+          "artist": "Brunettes Shoot Blondes"
+        }
+      ],
+      [
+        {
+          "song": "Every Monday"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_15",
+    "content": "Research on the application of virtual reality technology in architecture, statistics on technology adoption in the global construction industry, and its impact on efficiency, costs, and customer experience. Output the result in the format of json.",
+    "tools": [
+      [
+        "wolfram_query"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "Statistics on adoption of virtual reality technology in architecture and global construction industry, including impact on efficiency, costs, and customer experience",
+          "format": "json",
+          "location": "global"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_11",
+    "content": "Ask the Dungeon Master agent the question 'What overall theme should the one-shot have?' with a tone of 'serious' and a focus on 'boss design'. After receiving the narrative response, inquire about the challenge rating (CR) suitable for a boss designed for a level 5 party, Make the question as 'What CR should the boss be for a level 5 party?' referencing the 5e rules with the rule category as 'monsters' and a standard complexity level. Finally, roll a 20-sided die to determine the complexity of the puzzle that the boss will present to the players. The roll should be a single roll of a 20-sided die (1d20) with no modifiers, and the roll type should be 'puzzle solve'.",
+    "tools": [
+      [
+        "dmagent_ask_narrative"
+      ],
+      [
+        "dmagent_ask_rule"
+      ],
+      [
+        "diceRoll"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "question": "What overall theme should the one-shot have?",
+          "theme_hint": "",
+          "tone": "serious",
+          "focus_element": "boss design"
+        }
+      ],
+      [
+        {
+          "question": "What CR should the boss be for a level 5 party?",
+          "rule_category": "monsters",
+          "complexity_level": "standard",
+          "edition": "5e"
+        }
+      ],
+      [
+        {
+          "sides": 20,
+          "count": 1,
+          "modifier": 0,
+          "roll_type": "puzzle solve"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_8",
+    "content": "The user is looking for a house in San Francisco for 5 people with a rating of 4.3 or higher, available on March 2nd. They also want to know if there is laundry service included.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "property_type": "house",
+          "rating": 4.3
+        }
+      ],
+      [
+        {
+          "property_id": "SF789"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_17",
+    "content": "Please write a report summarizing the applications of AI technology in medicine, the data source is https://nature.com/articles/s41598-024-03418-1.",
+    "tools": [
+      [
+        "generate_summary_report"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "data_link": "https://nature.com/articles/s41598-024-03418-1"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_6",
+    "content": "You are given a quantum computing problem to calculate the probability of a certain amplitude for a given set of qubits. Write a program using the large language model Grok-3 to define the amplitude, probability, and then find the maximum probability using simulated annealing method for a specific set of constraints. Output the code as quantum_computing.py. Finally, I want you to give me the result.",
+    "tools": [
+      [
+        "generate_code"
+      ],
+      [
+        "execute_python_code"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "prompt": "quantum computing problem to calculate amplitude, probability, optimize with simulated annealing, and visualize results",
+          "language": "python",
+          "model": "grok-3",
+          "output_name": "quantum_computing.py"
+        }
+      ],
+      [
+        {
+          "code_dir": "quantum_computing.py"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_14",
+    "content": "I'm exploring different cities in Germany and I'want to download the OSM data in Berlin. Furthermore, I want to know the boundaries of the city named Karlsruhe. Please provide me with the postal codes, state, city, total area, and area unit for both cities. Both of them should be in json format with the city name being the name of the file in lowercase. Thank you!",
+    "tools": [
+      [
+        "download_osm_data",
+        "download_osm_data"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "Berlin",
+          "output_path": "/berlin",
+          "format": "json"
+        },
+        {
+          "city": "Karlsruhe",
+          "output_path": "/karlsruhe",
+          "format": "json"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_13",
+    "content": "This is the summary of my department meeting, and I need help completing the assigned tasks. There are two tasks: the first is Project Management Platform（Create a platform to improve work efficiency with process division, task assignment, and progress management.）; the second is User Data Warehouse（Save the purchase history of buyers）. Both of these tasks must be completed before October 8, 2025, with the first task being the most important. In addition, task_001 Assign development team（Assign developers to different modules of the platform.） needs to be updated: priority is now level 4, the original due date was October 8, 2025, and it should now be postponed by one additional week.",
+    "tools": [
+      [
+        "create_task",
+        "update_task",
+        "create_task"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "title": "Project Management Platform",
+          "description": "Create a platform to improve work efficiency with process division, task assignment, and progress management.",
+          "due_date": "2025-10-08",
+          "priority": 1
+        },
+        {
+          "task_id": "task_001",
+          "task_name": "Assign development team",
+          "content": "Assign developers to different modules of the platform.",
+          "due_date": "2025-10-15",
+          "priority": 4
+        },
+        {
+          "title": "User Data Warehouse",
+          "description": "Save the purchase history of buyers.",
+          "due_date": "2025-10-08",
+          "priority": 2
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_2",
+    "content": "The user is looking for round-trip economy flights for three people from San Francisco to Toronto, leaving on October 1st and returning on the 5th of October. They also asked for recommendations for attractions in Toronto.",
+    "tools": [
+      [
+        "search_flights",
+        "geocalc_mcp_get_points_of_interest"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "round_trip",
+          "origin": "SFO",
+          "destination": "YYZ",
+          "departure_date": "10/01",
+          "return_date": "10/05",
+          "cabin_class": "economy"
+        },
+        {
+          "city": "Toronto",
+          "category": "general"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_5",
+    "content": "I'm working on a research project and I require soil data for a specific region. Today is Sep 27, 2025. Please provide me with today's soil data for the coordinates 51.5074° N, 0.1278° W. Additionally, I need the historical soil data for the coordinates 60.5074° N, 1.1278° W the same location from 2025-09-01 till today（include today）.",
+    "tools": [
+      [
+        "get_data_products",
+        "get_data_products"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "coordinates": [
+            51.5074,
+            -0.1278
+          ],
+          "data_type": "soil",
+          "start_date": "2025-09-27",
+          "end_date": "2025-09-27"
+        },
+        {
+          "coordinates": [
+            60.5074,
+            -1.1278
+          ],
+          "data_type": "soil",
+          "start_date": "2025-09-01",
+          "end_date": "2025-09-27"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_8",
+    "content": "The user wants to listen to the song \"Stitches\" in their bedroom. They also request a transfer of $980 from their savings account to Abhinav. Additionally, they want to watch the movie \"Dogman\" and ask about its genre.",
+    "tools": [
+      [
+        "itunes_play_song",
+        "send_transaction",
+        "search_imdb"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "song": "Stitches"
+        },
+        {
+          "target": "Abhinav",
+          "amount": 980
+        },
+        {
+          "primary_title": "Dogman"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_3_tools_15",
+    "content": "Create an web search tool to search for nearby restaurants. The app should show a list of restaurants based on current location and user preferences, this app should use Google search engine and return up to 20 results with content extracted. To test, you should navigate and act on the search results page by clicking the search button.",
+    "tools": [
+      [
+        "WebSearchConfig"
+      ],
+      [
+        "stagehand_navigate"
+      ],
+      [
+        "stagehand_act"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "name": "Nearby Restaurants Search",
+          "description": "Search for restaurants near the current location based on user preferences.",
+          "search_engine": "Google",
+          "max_results": "20",
+          "extract_content": "true"
+        }
+      ],
+      [
+        {
+          "url": "https://maps.google.com/search/restaurants"
+        }
+      ],
+      [
+        {
+          "action": "Click the search button",
+          "variables": {
+            "element": "search_button"
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_9",
+    "content": "I'm working on a project about product categories and their performance in the market. I want to analyze sales trends for specific categories such as Liquor and Bank in the Shanghai market. I’d like to check the real-time data from Xueqiu to see the most up-to-date numbers, and then use that information to run an analysis of sales trends across categories to better understand popularity.",
+    "tools": [
+      [
+        "get_realtime_market_data"
+      ],
+      [
+        "analyze_sales"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "symbols": [
+            "LIQUOR",
+            "BANK"
+          ],
+          "source": "xueqiu",
+          "fields": [
+            "symbol",
+            "name",
+            "last",
+            "change",
+            "change_pct",
+            "volume",
+            "turnover",
+            "market_cap",
+            "timestamp"
+          ],
+          "market": "SSE"
+        }
+      ],
+      [
+        {
+          "input_data_link": "https://xueqiu.marketdata.local/SSE_latest_snapshot.json"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_17",
+    "content": "I am currently trying to establish an online learning platform, which requires connecting to a database online_learning_db to obtain student information. However, I also need to protect user privacy and security. Please provide security advice regarding data storage and access.",
+    "tools": [
+      [
+        "connect_database",
+        "security_guidance"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "database_name": "online_learning_db"
+        },
+        {
+          "query": "online learning platform student information privacy and security best practices"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_8",
+    "content": "My colleagues and I are planning a cocktail-making competition. Can you provide us with a list of cocktails and their recipes? Also, we would like to know the details of NBA teams for incorporating their theme into the competition since it is the NBA season.",
+    "tools": [
+      [
+        "search_recipes",
+        "get_teams"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "name": "cocktail recipes"
+        },
+        {
+          "nameFilter": "NBA"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_sequential_tools_7",
+    "content": "Retrieve the trending topics and hashtags from social media platforms about charity race last month. Based on these trends, design promotional posts for the upcoming charity race and publish them on Facebook, Twitter, and Instagram to maximize visibility and attract potential participants immediately. The requirements of the post are all saved in the folder of content/posts/charity_race",
+    "tools": [
+      [
+        "analyze_trends"
+      ],
+      [
+        "create_post_cross_media"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "topic": "charity race",
+          "timeframe": "last_month"
+        }
+      ],
+      [
+        {
+          "instruction_dir": "content/posts/charity_race",
+          "platforms": [
+            "facebook",
+            "twitter",
+            "instagram"
+          ],
+          "postImmediately": true
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_parallel_tools_6",
+    "content": "The user wants to book a hotel in London from March 6th to March 11th, and inquires about the weather in London on March 11th.",
+    "tools": [
+      [
+        "booking_tool",
+        "weather_tool"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "London",
+          "checkinDate": "03/06",
+          "checkoutDate": "03/11"
+        },
+        {
+          "city": "London",
+          "date": "03/11"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_9",
+    "content": "In MongoDB, there is storage for customer information and their corresponding postal codes in the database named 'customers_db' The username is Admin and the password is Admin123. Can you help me retrieve the customer information from 'customers' for the customer named Ocean and his corresponding postal code?",
+    "tools": [
+      [
+        "mongo_mcp"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "mongoUri": "mongodb://Admin:Admin123@localhost:27017/customers_db",
+          "collection_name": "customers"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_4",
+    "content": "I'm planning to purchase a car from toyota, and I need information about the available models. Can you provide me with a list of the car models? ",
+    "tools": [
+      [
+        "spu_list"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "brand": "toyota"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_10",
+    "content": "The user wants to find a garden to visit in San Francisco. They are also interested in the fantasy movie \"Alice in Wonderland\" by Tim Burton and want to play the song \"Dumbo\" now.",
+    "tools": [
+      [
+        "geocalc_mcp_get_points_of_interest",
+        "search_imdb",
+        "itunes_play_song"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "city": "San Francisco",
+          "category": "garden"
+        },
+        {
+          "primary_title": "Alice in Wonderland"
+        },
+        {
+          "song": "Dumbo"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_1_tool_12",
+    "content": "The user wants to search for Mozart's tracks on itunes.",
+    "tools": [
+      [
+        "itunes_search"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "artist": "Mozart"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_18",
+    "content": "The user is looking for a Parisian restaurant in Ross. They requested to book a table for two at 11:30 AM and asked to add the reservation to their calendar on the 6th of March at 11:15 AM, naming the event \"Restaurant reservation for 5 at Marche Aux Fleurs.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Ross",
+          "cuisineTypes": "Parisian"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Marche Aux Fleurs"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant reservation for 5 at Marche Aux Fleurs",
+          "startDate": "03/06",
+          "startTime": "11:15",
+          "endDate": "03/06",
+          "location": "Marche Aux Fleurs"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_10",
+    "content": "Develop a new sustainable agricultural model and analyze it in conjunction with the elevation data of coordinates 39.7392° N, 104.9903° W and the topographical data of Andean highlands, South America, including considerations of land use, fertilizer use, and crop selection, to ensure the model's applicability and feasibility under different terrain conditions.",
+    "tools": [
+      [
+        "wolfram_query",
+        "fetch_terrain_elevation"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "query": "topographical data analysis for sustainable agriculture model in the Andean highlands, including land use, fertilizer application rates, and optimal crop selection under varying terrain conditions",
+          "format": "json",
+          "location": "Andean highlands, South America"
+        },
+        {
+          "latitude": 39.7392,
+          "longitude": -104.9903,
+          "unit": "meters"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_2_parallel_tools_15",
+    "content": "I am looking for a new laptop for my graphic design work. Can you help me find a laptop with high performance specifications and good display quality? Additionally, I also need to buy an iPhone 16, please help me find the best price and purchasing channels for this phone.",
+    "tools": [
+      [
+        "recommend_electronics",
+        "get_best_price"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "product_type": "laptop"
+        },
+        {
+          "product_name": "iphone_16"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_7",
+    "content": "The user is interested in renting a house in Paris for themselves, arriving on the 1st and checking out on the 11th. They want to reserve the property and would like to know the total price.",
+    "tools": [
+      [
+        "search_rental_properties"
+      ],
+      [
+        "get_rental_property_details"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "Paris",
+          "property_type": "house"
+        }
+      ],
+      [
+        {
+          "property_id": "PAR456"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_2_sequential_tools_15",
+    "content": "The user is looking for a concert event in Washington, requesting information about the venue and start dates, and plan to attend on a specific date that is available. They also want to add the trip to their calendar under the name \"Concert\".",
+    "tools": [
+      [
+        "search_ticketmaster"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "type": "Concert Event",
+          "city": "Washington"
+        }
+      ],
+      [
+        {
+          "subject": "Concert",
+          "startDate": "03/07",
+          "endDate": "03/07",
+          "location": "Washington"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "daytask_3_tools_20",
+    "content": "The user is looking for a good, bargain-priced Chinese restaurant in San Francisco. They want to book a table for six people at Mei-Don Chinese Cuisine at 7 PM on the 18th of June, and add the reservation to their calendar with the event title \"Restaurant Reservation.\"",
+    "tools": [
+      [
+        "search_restaurant"
+      ],
+      [
+        "make_reservation"
+      ],
+      [
+        "create_event"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "location": "San Francisco",
+          "cuisineTypes": "Chinese"
+        }
+      ],
+      [
+        {
+          "restaurant_name": "Mei-Don Chinese Cuisine"
+        }
+      ],
+      [
+        {
+          "subject": "Restaurant Reservation",
+          "startDate": "06/18",
+          "startTime": "19:00",
+          "endDate": "06/18",
+          "location": "Mei-Don Chinese Cuisine"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "protask_1_tool_22",
+    "content": "I am a developer working on a personal project and I need a tool to generate PDF documents. Can you suggest a list of APIs that allows me to create renders, retrieve the rendered PDFs, and get information about the rendering status?",
+    "tools": [
+      [
+        "searchApis"
+      ]
+    ],
+    "inputs": [
+      [
+        {
+          "keyword": "pdf rendering"
+        }
+      ]
+    ]
+  }
+]

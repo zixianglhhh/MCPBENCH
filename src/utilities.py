@@ -1,16 +1,73 @@
 import json
 from typing import List, Dict, Any, Set
+from datetime import datetime
+
 
 def load_data(file_path: str) -> List[Dict[str, Any]]:
     """Load data from JSON file."""
     with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+
 def save_data(file_path: str, data) -> None:
     """Save data to JSON file."""
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         print (f"Data saved to {file_path}!")
+
+
+def serialize_response(response):
+    """Serialize the response object to a JSON-serializable format"""
+    def convert_to_serializable(obj, depth=0):
+        # Prevent infinite recursion
+        if depth > 50:
+            return str(obj)
+            
+        try:
+            if hasattr(obj, '__dict__'):
+                # Convert objects with __dict__ to dictionaries
+                result = {}
+                for key, value in obj.__dict__.items():
+                    if not key.startswith('_'):  # Skip private attributes
+                        try:
+                            result[key] = convert_to_serializable(value, depth + 1)
+                        except Exception as e:
+                            result[key] = f"<Error serializing: {str(e)}>"
+                return result
+            elif isinstance(obj, (list, tuple)):
+                return [convert_to_serializable(item, depth + 1) for item in obj]
+            elif isinstance(obj, dict):
+                result = {}
+                for key, value in obj.items():
+                    try:
+                        result[key] = convert_to_serializable(value, depth + 1)
+                    except Exception as e:
+                        result[key] = f"<Error serializing: {str(e)}>"
+                return result
+            elif isinstance(obj, datetime):
+                return obj.isoformat()
+            elif hasattr(obj, 'isoformat'):  # Handle other datetime-like objects
+                return obj.isoformat()
+            elif isinstance(obj, (str, int, float, bool, type(None))):
+                return obj
+            elif hasattr(obj, '__str__'):
+                return str(obj)
+            else:
+                return str(obj)
+        except Exception as e:
+            return f"<Serialization error: {str(e)}>"
+    
+    return convert_to_serializable(response)
+
+
+def flatten(lst):
+    """Flatten a nested list."""
+    for item in lst:
+        if isinstance(item, list):
+            yield from flatten(item)
+        else:
+            yield item
+
 
 def extract_tools_and_inputs(response_data: Dict[str, Any]) -> tuple[List[List[str]], List[List[Dict[str, Any]]]]:
     """
@@ -34,9 +91,17 @@ def extract_tools_and_inputs(response_data: Dict[str, Any]) -> tuple[List[List[s
                             # Extract arguments
                             if 'arguments' in tool_call:
                                 try:
-                                    args = json.loads(tool_call['arguments'])
-                                    inputs_in_one_call.append(args)
-                                except json.JSONDecodeError:
+                                    # Check if arguments is empty or whitespace before parsing
+                                    args_str = tool_call['arguments']
+                                    if args_str and isinstance(args_str, str) and args_str.strip():
+                                        args = json.loads(args_str)
+                                        inputs_in_one_call.append(args)
+                                    else:
+                                        # Empty or whitespace arguments
+                                        inputs_in_one_call.append({})
+                                except Exception as e:
+                                    print(f"Warning: Failed to parse arguments for tool {tool_call.get('name', 'unknown')}: {str(e)}")
+                                    print(f"  Arguments value: {repr(tool_call['arguments'])}")
                                     inputs_in_one_call.append({})
                             else:
                                 inputs_in_one_call.append({})
@@ -46,9 +111,10 @@ def extract_tools_and_inputs(response_data: Dict[str, Any]) -> tuple[List[List[s
     
     return tools, inputs
 
+
 def compare_inputs(actual_input, expected_input) -> bool:
     """
-    Compare actual input with expected input.
+    Compare actual inputs with expected inputs.
     Returns True if they match, False otherwise.
     Parameter order within each input set does not matter.
     """
@@ -100,10 +166,16 @@ def calculate_total_tokens(response_data: List[Dict[str, Any]]) -> tuple[int, in
     
     # Process all responses
     for response in response_data:
-        extract_tokens_recursive(response)
+        if  isinstance(response['inner_messages'], list) and response['inner_messages']:
+            extract_tokens_recursive(response)
     
     return total_prompt, total_completion
 
 
-
-
+def calculate_total_time(response_data: List[Dict[str, Any]]) -> float:
+    """Calculate total time from all response data."""
+    total_time = 0
+    for response in response_data:
+        if  isinstance(response['inner_messages'], list) and response['inner_messages']:
+            total_time += response.get('task_time', 0)
+    return total_time
