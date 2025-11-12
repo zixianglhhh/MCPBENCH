@@ -2,11 +2,16 @@ from src import *
 
 
 async def main():
-    # You can also customize the concurrency level and the number of servers for each agent by
-    # specifying the corresponding parameters in the run_experiment function. 
-    # For example, you can specify the concurrency level as 5 and the number of servers as 20 by calling the run_experiment function as follows:
-    # await run_experiment("your_model_name", "general_test", concurrency=5, num_servers=20)
-    await run_experiment("qwen/qwen3-32b", "general_test")
+    # Configuration is now loaded from configs/config.json
+    # You can modify configs/config.json to change:
+    # - model: The model to test
+    # - tasks_type: Type of tasks (day, pro, or general_test)
+    # - concurrency: Number of concurrent requests
+    # - num_servers: Number of servers for agent construction
+    # 
+    # You can also override config values by passing parameters:
+    # await run_experiment(model="your_model", concurrency=5, num_servers=20)
+    await run_experiment()
 
 if __name__ == "__main__":
     asyncio.run(main())

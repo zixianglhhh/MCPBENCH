@@ -12,12 +12,12 @@ api_key = os.getenv("API_KEY")
 class ModelRegistry:
     """
     Manage multiple model clients:
-    - Read {model, api_key, api_base/base_url, name} from configs/config.json
+    - Read {model, api_key, api_base/base_url, name} from configs/llm_config.json
     - If api_key is not provided, fall back to environment variable OPENAI_API_KEY
     - Expose a method to get a client by name/model
     """
 
-    def __init__(self, config_path: str = "configs/config.json") -> None:
+    def __init__(self, config_path: str = "configs/llm_config.json") -> None:
         self._entries: List[Dict[str, Any]] = []
         self._name_to_entry: Dict[str, Dict[str, Any]] = {}
         self._model_to_entries: Dict[str, List[Dict[str, Any]]] = {}
