@@ -62,3 +62,4 @@ Thumbs.db
 # results
 # results/
 set_api_key.sh
+src/__pycache__
