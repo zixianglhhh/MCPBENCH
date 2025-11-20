@@ -141,29 +141,34 @@ def is_efficiently_finished_task(expected_tools: List[List[str]], expected_input
         # Create mapping from tool name to input for this step
         expected_tool_input_map = {}
         for j, tool_name in enumerate(expected_step_tools):
+            if tool_name in skip_input_tools:
+                continue
             if j < len(expected_step_inputs):
                 expected_tool_input_map[tool_name] = expected_step_inputs[j]
         
         actual_tool_input_map = {}
         for j, tool_name in enumerate(actual_step_tools):
+            if tool_name in skip_input_tools:
+                continue
             if j < len(actual_step_inputs):
                 actual_tool_input_map[tool_name] = actual_step_inputs[j]
         
         # Compare inputs for tools not in skip list
         for tool_name in expected_step_tools:
-            if tool_name not in skip_input_tools:
-                expected_input = expected_tool_input_map.get(tool_name, {})
-                actual_input = actual_tool_input_map.get(tool_name, {})
-                
-                # Normalize for comparison
-                def normalize_dict(d):
-                    return {k: str(v) for k, v in d.items()}
-                
-                expected_normalized = normalize_dict(expected_input)
-                actual_normalized = normalize_dict(actual_input)
-                
-                if expected_normalized != actual_normalized:
-                    return False
+            if tool_name in skip_input_tools:
+                continue
+            expected_input = expected_tool_input_map.get(tool_name, {})
+            actual_input = actual_tool_input_map.get(tool_name, {})
+            
+            # Normalize for comparison
+            def normalize_dict(d):
+                return {k: str(v) for k, v in d.items()}
+            
+            expected_normalized = normalize_dict(expected_input)
+            actual_normalized = normalize_dict(actual_input)
+            
+            if expected_normalized != actual_normalized:
+                return False
     
     return True
 
