@@ -1,7 +1,5 @@
 {
-    "model": "gemini-2.5-flash",
-    "tasks_type": "general_test",
-    "concurrency": 10,
-    "num_servers": 10
+    "concurrency": 5,
+    "num_servers": 20
 }
 
