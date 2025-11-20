@@ -1,29 +1,29 @@
 {
   "evaluation_summary": {
     "total_tasks": 180,
-    "tasks_passed": 0,
-    "tasks_failed": 180,
-    "model_score": 0.0,
-    "ignore_parallel_score": 0.0,
-    "ignore_parallel_tasks_passed": 0,
-    "total_completion_tokens": 0,
-    "total_prompt_tokens": 0,
-    "total_tokens": 0,
-    "average_tokens": 0,
-    "total_test_time": 7648.490472793579,
-    "average_time": 0,
+    "tasks_passed": 84,
+    "tasks_failed": 96,
+    "model_score": 33.82,
+    "ignore_parallel_score": 52.65,
+    "ignore_parallel_tasks_passed": 114,
+    "total_completion_tokens": 409155,
+    "total_prompt_tokens": 3582701,
+    "total_tokens": 3991856,
+    "average_tokens": 22176.977777777778,
+    "total_test_time": 9915.311979055405,
+    "average_time": 55.0850665503078,
     "category_scores": {
       "daytask_1_tool": {
         "label": "Daytask 1 Tool",
-        "passed": 0,
+        "passed": 29,
         "total": 30,
-        "accuracy": 0.0
+        "accuracy": 96.67
       },
       "daytask_2_sequential": {
         "label": "Daytask 2 Sequential",
-        "passed": 0,
+        "passed": 13,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 65.0
       },
       "daytask_2_parallel": {
         "label": "Daytask 2 Parallel",
@@ -33,21 +33,21 @@
       },
       "daytask_3_tools": {
         "label": "Daytask 3 Tools",
-        "passed": 0,
+        "passed": 1,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 5.0
       },
       "protask_1_tool": {
         "label": "Protask 1 Tool",
-        "passed": 0,
+        "passed": 28,
         "total": 30,
-        "accuracy": 0.0
+        "accuracy": 93.33
       },
       "protask_2_sequential": {
         "label": "Protask 2 Sequential",
-        "passed": 0,
+        "passed": 10,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 50.0
       },
       "protask_2_parallel": {
         "label": "Protask 2 Parallel",
@@ -57,59 +57,59 @@
       },
       "protask_3_tools": {
         "label": "Protask 3 Tools",
-        "passed": 0,
+        "passed": 3,
         "total": 18,
-        "accuracy": 0.0
+        "accuracy": 16.67
       }
     },
     "category_scores_ignore_parallel": {
       "daytask_1_tool": {
         "label": "Daytask 1 Tool",
-        "passed": 0,
+        "passed": 29,
         "total": 30,
-        "accuracy": 0.0
+        "accuracy": 96.67
       },
       "daytask_2_sequential": {
         "label": "Daytask 2 Sequential",
-        "passed": 0,
+        "passed": 13,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 65.0
       },
       "daytask_2_parallel": {
         "label": "Daytask 2 Parallel",
-        "passed": 0,
+        "passed": 13,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 65.0
       },
       "daytask_3_tools": {
         "label": "Daytask 3 Tools",
-        "passed": 0,
+        "passed": 5,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 25.0
       },
       "protask_1_tool": {
         "label": "Protask 1 Tool",
-        "passed": 0,
+        "passed": 28,
         "total": 30,
-        "accuracy": 0.0
+        "accuracy": 93.33
       },
       "protask_2_sequential": {
         "label": "Protask 2 Sequential",
-        "passed": 0,
+        "passed": 10,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 50.0
       },
       "protask_2_parallel": {
         "label": "Protask 2 Parallel",
-        "passed": 0,
+        "passed": 13,
         "total": 20,
-        "accuracy": 0.0
+        "accuracy": 65.0
       },
       "protask_3_tools": {
         "label": "Protask 3 Tools",
-        "passed": 0,
+        "passed": 3,
         "total": 18,
-        "accuracy": 0.0
+        "accuracy": 16.67
       }
     }
   },
@@ -129,10 +129,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "package_delivery_tracker"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "tracking_number": "9400111899223951135987"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 1
     },
     {
@@ -154,10 +164,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "system_architecture_designer"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "system_design": "Design a scalable, modular website employing a three-tier architecture:\n1. Presentation Layer: Single-page application (SPA) with React/Next.js served via a CDN.  \n2. Application Layer: RESTful (or GraphQL) API via Node.js/Express (or Django) microservices behind a load balancer.  \n3. Data Layer: PostgreSQL primary database with Redis for caching and a search service (Elasticsearch) for advanced querying.  \nComponents interact over secure HTTPS; services containerized with Docker and orchestrated via Kubernetes for auto-scaling.\n",
+            "technology_stack": "Frontend: React with Next.js for SSR/SSG, Tailwind CSS for styling, Apollo Client (if using GraphQL).\nBackend: Node.js with Express (or Python Django/DRF), GraphQL or REST API, Redis for caching, Elasticsearch for search.  \nDatabase: PostgreSQL (primary), Redis (cache), Elasticsearch (search index).  \nDevOps: Docker, Kubernetes/EKS, Terraform for IaC, GitHub Actions for CI/CD, Nginx as ingress, AWS S3 for asset storage, CloudFront CDN.  \nMonitoring: Prometheus/Grafana, New Relic or Datadog, Sentry for error tracking.",
+            "hardware_requirements": "Cloud-based deployment on AWS/GCP/Azure:\n• Web/API servers: t3.medium (2 vCPU, 4 GB RAM) × 2 (auto-scale to 5).  \n• Database: db.m5.large (2 vCPU, 8 GB RAM) with Multi-AZ.  \n• Redis: cache.t3.small (1 vCPU, 1.7 GB RAM).  \n• Load balancer: AWS ALB.  \n• Storage: 100 GB SSD (EBS) for DB, S3 for static assets.  \n• Logging/monitoring: separate instance (t3.small) or managed service.",
+            "interaction_interface": "Mobile-first, responsive design using a component library.  \nClear navigation bar with breadcrumb trail; card-based layouts for content.  \nAccessibility: WCAG 2.1 AA compliance (ARIA roles, contrast, keyboard navigation).  \nInteractive elements: lazy-loaded images, smooth transitions, optimized for touch. \nPersonalization: user dashboards, contextual tooltips, guided onboarding.",
+            "test_optimization_plan": "Testing pipeline:\n• Unit tests: Jest for frontend, Mocha/pytest for backend.  \n• Integration/e2e: Cypress or Playwright.  \n• Performance: Lighthouse CI, WebPageTest, New Relic APM.  \n• Load testing: k6 or JMeter.  \n• CI/CD: run tests on PR then deploy to staging.  \nOptimization: automated bundle analysis, image optimization, code-splitting.  \nUser feedback: Hotjar heatmaps, session recordings, surveys.  \nA/B testing: Optimizely or homemade experiments; continuous iteration based on metrics."
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 2
     },
     {
@@ -176,10 +200,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "send_transaction"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "target": "Pranav",
+            "amount": "270"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 3
     },
     {
@@ -208,8 +243,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_players"
+        ],
+        [
+          "get_players"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "target_players": [
+              "Kevin Durant"
+            ]
+          }
+        ],
+        [
+          {
+            "target_players": [
+              "Anthony Davis"
+            ]
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 4
@@ -251,10 +308,42 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_recipes"
+        ],
+        [
+          "check_nutrition"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "name": "halal recipes"
+          }
+        ],
+        [
+          {
+            "ingredient_list": [
+              "Basmati rice",
+              "Cucumber",
+              "Fresh coriander",
+              "Garlic sauce",
+              "Ginger-garlic paste",
+              "Halal beef",
+              "Halal chicken",
+              "Lettuce",
+              "Onions",
+              "Pita bread",
+              "Spices",
+              "Tomatoes",
+              "Yogurt"
+            ]
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 5
     },
     {
@@ -280,8 +369,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "itunes_search"
+        ],
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "artist": "El Alfa"
+          }
+        ],
+        [
+          {
+            "song": "El Alfa - La Romana (El Hombre, Latin)"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 6
@@ -311,10 +418,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "maps_direction_driving_by_address"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "New York",
+            "category": "music"
+          }
+        ],
+        [
+          {
+            "origin_address": "Avalon Clinton",
+            "destination_address": "Metropolitan Museum of Art"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 7
     },
     {
@@ -334,10 +461,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_academic_papers"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "university students reserving seats",
+            "subject": "Sociology",
+            "max_results": 10
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 8
     },
     {
@@ -366,10 +505,31 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "octagon_deepresearch_agent"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "companies": [
+              "accenture",
+              "google",
+              "ibm",
+              "microsoft",
+              "oracle",
+              "sap"
+            ],
+            "fields": [
+              "revenue_growth",
+              "strategic_focus"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 9
     },
     {
@@ -397,8 +557,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_flights"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SEA",
+            "destination": "SAN",
+            "departure_date": "03/04",
+            "return_date": "03/06",
+            "cabin_class": "economy"
+          }
+        ],
+        [
+          {
+            "city": "San Diego",
+            "category": "general"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 10
@@ -422,10 +606,25 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_code"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prompt": "Write a Python script named `complex_dataset_solver.py` that will be saved under `code/complex_dataset_analysis/`. The script should:\n\n1. Load `complex.csv` from the current working directory using pandas.\n2. Perform basic data cleaning: handle missing values by imputation or removal, and output summary of missing data.\n3. Provide an exploratory data analysis section: compute and print descriptive statistics and visualize data distribution (e.g., histograms) using matplotlib or seaborn.\n4. Define a placeholder function `solve_problem(df)` where users can implement specific solution logic for their complex dataset problem. This function should take the cleaned DataFrame and return a results DataFrame or dictionary.\n5. After calling `solve_problem`, write the results to `code/complex_dataset_analysis/solution_output.csv` (create the directory if it does not exist).\n6. Include a `main()` entry point and command-line argument parsing to allow specifying input and output paths.\n7. Add clear comments throughout the code to guide further customization.",
+            "language": "python",
+            "output_name": "code/complex_dataset_analysis/complex_dataset_solver.py",
+            "model": "gemini-pro",
+            "temperature": 0.4,
+            "max_tokens": 1500
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 11
     },
     {
@@ -448,10 +647,25 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_market_summary"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "filter_type": [
+              "popular"
+            ],
+            "filter_count": "5",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-30"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 12
     },
     {
@@ -492,8 +706,40 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_academic_papers"
+        ],
+        [
+          "search_academic_papers"
+        ],
+        [
+          "search_academic_papers"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "global climate change trends",
+            "subject": "Earth sciences",
+            "max_results": 5
+          }
+        ],
+        [
+          {
+            "query": "global warming trends",
+            "subject": "Earth sciences",
+            "max_results": 5
+          }
+        ],
+        [
+          {
+            "query": "climate change trends",
+            "subject": "Earth sciences",
+            "max_results": 10
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 13
@@ -519,8 +765,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Basketball Event",
+            "city": "Atlanta"
+          }
+        ],
+        [
+          {
+            "type": "Football Event",
+            "city": "Atlanta"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 14
@@ -541,10 +807,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "trash_collection_schedule"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "service_address": "742 Evergreen Terrace",
+            "waste_type": "compost"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 15
     },
     {
@@ -574,8 +851,31 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "create_event"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Match Event",
+            "city": "Portland"
+          }
+        ],
+        [
+          {
+            "subject": "Match",
+            "startDate": "03/06",
+            "endDate": "03/06",
+            "location": "Portland",
+            "isMeeting": "false"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 16
@@ -608,8 +908,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "search_imdb"
+        ],
+        [
+          "get_directors"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Francisco",
+            "category": "museum",
+            "radius_km": null
+          }
+        ],
+        [
+          {
+            "primary_title": "Say Anything"
+          }
+        ],
+        [
+          {
+            "imdb_id": "tt0098258"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 17
@@ -634,8 +962,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Concert Event",
+            "city": "Rohnert Park"
+          }
+        ],
+        [
+          {
+            "type": "Concert Event",
+            "city": "Rohnert Park"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 18
@@ -661,10 +1009,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "find_earthquakes"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "endTime": "2023-09-29T23:59:59",
+            "startTime": "2023-08-30T00:00:00",
+            "minLatitude": "35.5",
+            "maxLatitude": "35.8",
+            "minLongitude": "139.6",
+            "maxLongitude": "139.8",
+            "minmagnitude": "0"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 19
     },
     {
@@ -692,8 +1056,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "analyze_code"
+        ],
+        [
+          "patch_file"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "path": "C:/Users/user/Desktop/MyProject/src/device_struct.cu",
+            "language": "cuda"
+          }
+        ],
+        [
+          {
+            "path": "C:/Users/user/Desktop/MyProject/src/device_struct.cu",
+            "changes_path": "C:/Users/user/Desktop/MyProject/src/device_struct_changes.patch"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 20
@@ -717,8 +1101,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_patient_conditions"
+        ],
+        [
+          "get_patient_conditions"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "patientName": "Steve"
+          }
+        ],
+        [
+          {
+            "patientName": "kathy_001"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 21
@@ -742,10 +1144,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_flights"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "one_way",
+            "origin": "ATL",
+            "destination": "PHX",
+            "departure_date": "03/11",
+            "cabin_class": "economy"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 22
     },
     {
@@ -783,8 +1199,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "AudioEditor_transcribe_audio_sync"
+        ],
+        [
+          "AudioEditor_apply_speed_adjustment"
+        ],
+        [
+          "AudioEditor_apply_speed_adjustment"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "audio_file": "url/to/demo_song.mp3"
+          }
+        ],
+        [
+          {
+            "audio_file": "url/to/demo_song.mp3",
+            "speed_factor": "1.2"
+          }
+        ],
+        [
+          {
+            "audio_file": "url/to/demo_song.mp3",
+            "speed_factor": "1.2"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 23
@@ -813,8 +1257,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "itunes_play_song"
+        ],
+        [
+          "send_transaction"
+        ],
+        [
+          "search_imdb"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "song": "No Diggity"
+          }
+        ],
+        [
+          {
+            "target": "Jerry",
+            "amount": "1030.0"
+          }
+        ],
+        [
+          {
+            "primary_title": "Captain Marvel"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 24
@@ -838,10 +1309,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "public_library_book_lookup"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "title": "Atomic Habits",
+            "branches": [
+              "CEN",
+              "NBE"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 25
     },
     {
@@ -863,10 +1348,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_players"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "target_players": [
+              "LeBron James",
+              "Stephen Curry",
+              "Anthony Davis"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 26
     },
     {
@@ -911,8 +1410,52 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_scene_info"
+        ],
+        [
+          "create_object"
+        ],
+        [
+          "create_object"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "scene_name": "SkyView"
+          }
+        ],
+        [
+          {
+            "object_type": "bird",
+            "name": "SkyBird",
+            "location": [
+              "0",
+              "50",
+              "100"
+            ],
+            "size": [
+              "1.5"
+            ]
+          }
+        ],
+        [
+          {
+            "object_type": "bird",
+            "name": "SkyBird",
+            "location": [
+              0,
+              50,
+              100
+            ],
+            "size": [
+              1.5
+            ]
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 27
@@ -932,10 +1475,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "pet_vaccination_schedule"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "pet_id": "DOG-1122"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 28
     },
     {
@@ -968,8 +1521,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "request_api_schema"
+        ],
+        [
+          "request_api_schema"
+        ],
+        [
+          "request_api_schema"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "ApiName": "Ecommerce API"
+          }
+        ],
+        [
+          {
+            "ApiName": "Ecommerce API"
+          }
+        ],
+        [
+          {
+            "ApiName": "Ecommerce API"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 29
@@ -990,10 +1569,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "school_lunch_menu_lookup"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "school_code": "LMS",
+            "menu_date": "2025-11-04"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 30
     },
     {
@@ -1036,8 +1626,43 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "user_purchase_history"
+        ],
+        [
+          "mongo_mcp"
+        ],
+        [
+          "visualize_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "customer_ids": [
+              "David",
+              "Sam"
+            ],
+            "start_date": "2024-01-01",
+            "end_date": "2024-12-31"
+          }
+        ],
+        [
+          {
+            "mongoUri": "mongodb://localhost:27017",
+            "collection_name": "product_detail"
+          }
+        ],
+        [
+          {
+            "data_dir": "outputs/sales_trend/analysis.csv",
+            "visualize_type": "line_chart",
+            "output_dir": "outputs/sales_trend",
+            "output_format": "jpg"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 31
@@ -1078,8 +1703,37 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "search_restaurant"
+        ],
+        [
+          "search_restaurant"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Livermore",
+            "cuisineTypes": "Indian"
+          }
+        ],
+        [
+          {
+            "location": "Livermore",
+            "cuisineTypes": "Indian"
+          }
+        ],
+        [
+          {
+            "location": "Livermore",
+            "cuisineTypes": "Indian"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 32
@@ -1099,10 +1753,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "09/07"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 33
     },
     {
@@ -1128,8 +1792,37 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_pubmed"
+        ],
+        [
+          "search_pubmed"
+        ],
+        [
+          "search_pubmed"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "hereditary probabilities genetic diseases",
+            "maxResults": 5
+          }
+        ],
+        [
+          {
+            "query": "hereditary probabilities genetic diseases",
+            "maxResults": 3
+          }
+        ],
+        [
+          {
+            "query": "hereditary probabilities genetic diseases",
+            "maxResults": 3
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 34
@@ -1161,8 +1854,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_imdb"
+        ],
+        [
+          "search_imdb"
+        ],
+        [
+          "search_imdb"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "primary_title": "Hellboy"
+          }
+        ],
+        [
+          {
+            "primary_title": "Hellboy"
+          }
+        ],
+        [
+          {
+            "primary_title": "Hellboy"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 35
@@ -1192,10 +1911,42 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "execute_bigquery"
+        ],
+        [
+          "orchestrator_plan_task"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "SELECT * FROM business_data_summary",
+            "project_id": "my-company-analytics"
+          }
+        ],
+        [
+          {
+            "topic": "Business Data Integration Pipeline",
+            "scope": "Collect and integrate financial data from Zoho Invoice and sales data from Pipedrive, apply data cleaning, transformation, and validation, then load into Google BigQuery for unified analysis and reporting.",
+            "schedule": "0 2 * * *",
+            "constraints": [
+              "Ensure strict data validation and quality checks",
+              "Respect API rate limits and handle retries",
+              "Encrypt data in transit and at rest"
+            ],
+            "dependencies": [
+              "Zoho Invoice API availability",
+              "Pipedrive API availability",
+              "Google Cloud BigQuery quotas",
+              "ETL script repository"
+            ]
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 36
     },
     {
@@ -1225,8 +1976,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "check_nutrition"
+        ],
+        [
+          "get_health_recommendations"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "ingredient_list": [
+              "Apple",
+              "Banana",
+              "Broccoli",
+              "Carrot",
+              "Oats"
+            ]
+          }
+        ],
+        [
+          {
+            "age": "18",
+            "sex": "female",
+            "pregnancyStatus": "not_pregnant"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 37
@@ -1246,10 +2023,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "song": "Battle Cry"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 38
     },
     {
@@ -1276,10 +2063,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_balance"
+        ],
+        [
+          "send_transaction"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "savings"
+          }
+        ],
+        [
+          {
+            "target": "Amir",
+            "amount": "590"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 39
     },
     {
@@ -1304,8 +2110,25 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "create_event"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "subject": "Project Discussion",
+            "startDate": "03/10",
+            "startTime": "14:00",
+            "endDate": "03/10",
+            "endTime": "15:00",
+            "location": "New York",
+            "isMeeting": "true",
+            "attendees": "pranav@outlook.com;alex@outlook.com"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 40
@@ -1335,8 +2158,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_flights"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "LAX",
+            "destination": "SFO",
+            "departure_date": "03/03",
+            "cabin_class": "economy",
+            "return_date": "03/12"
+          }
+        ],
+        [
+          {
+            "city": "San Francisco",
+            "category": "attractions"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 41
@@ -1357,10 +2204,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "maps_direction_driving_by_address"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "origin_address": "Tsinghua University",
+            "destination_address": "National Worker Gymnasium"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 42
     },
     {
@@ -1380,10 +2238,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_time"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "timezone": [
+              "Europe/Berlin"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 43
     },
     {
@@ -1402,10 +2272,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "grocery_pickup_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "store_code": "SEA01",
+            "pickup_date": "2025-11-01"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 44
     },
     {
@@ -1432,10 +2313,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_balance"
+        ],
+        [
+          "send_transaction"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "checking"
+          }
+        ],
+        [
+          {
+            "target": "Maria",
+            "amount": "440"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 45
     },
     {
@@ -1464,10 +2364,31 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "figma_export_code"
+        ],
+        [
+          "CountDown_StartAndEndDate"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "fileKey": "UI123VOCABAPP",
+            "nodeId": "NODE_TIMER"
+          }
+        ],
+        [
+          {
+            "Ele": "vocab_timer_user001",
+            "StartDate": "2025-07-15T09:00:00",
+            "EndDate": "2025-08-15T09:30:00"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 46
     },
     {
@@ -1510,10 +2431,45 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "octagon_companies_agent"
+        ],
+        [
+          "octagon_deepresearch_agent"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "seed_company": "IBM",
+            "limit": 5
+          }
+        ],
+        [
+          {
+            "companies": [
+              "accenture",
+              "google",
+              "microsoft",
+              "oracle",
+              "sap"
+            ],
+            "fields": [
+              "contact_info",
+              "country",
+              "description",
+              "hq_location",
+              "linkedin_url",
+              "logo_url",
+              "name",
+              "revenue_growth"
+            ]
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 47
     },
     {
@@ -1535,8 +2491,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "searchApis"
+        ],
+        [
+          "request_api_schema"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "keyword": "translation"
+          }
+        ],
+        [
+          {
+            "ApiName": "Microsoft Translator Text API"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 48
@@ -1567,8 +2541,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "weather_data_retriever"
+        ],
+        [
+          "weather_data_retriever"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "start_date": "03/01",
+            "end_date": "03/15",
+            "range": "2019-2023",
+            "location": "London"
+          }
+        ],
+        [
+          {
+            "start_date": "03/01",
+            "end_date": "03/15",
+            "range": "2019-2023",
+            "location": "London"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 49
@@ -1592,8 +2590,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "list_events"
+        ],
+        [
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "03/13"
+          }
+        ],
+        [
+          {
+            "date": "03/13"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 50
@@ -1614,10 +2630,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "Traditional_Chinese_medicine_consultation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "patient_id": "101",
+            "date": "2024-09-18"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 51
     },
     {
@@ -1638,8 +2665,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "E_commerce_analyst_MCP_get_schemas"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "schema_filter": [
+              "products",
+              "sales"
+            ],
+            "database_name": null
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 52
@@ -1668,10 +2709,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Berkeley",
+            "cuisineTypes": "Ethiopian"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Ethiopian Delight"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 53
     },
     {
@@ -1701,8 +2761,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_imdb"
+        ],
+        [
+          "search_imdb"
+        ],
+        [
+          "search_imdb"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "primary_title": "The Poseidon Adventure"
+          }
+        ],
+        [
+          {
+            "primary_title": "The Poseidon Adventure"
+          }
+        ],
+        [
+          {
+            "primary_title": "The Poseidon Adventure"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 54
@@ -1731,8 +2817,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_rental_properties"
+        ],
+        [
+          "get_rental_property_details"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "New York",
+            "property_type": "house",
+            "rating": null
+          }
+        ],
+        [
+          {
+            "property_id": "NY123"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 55
@@ -1754,10 +2860,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_time"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "timezone": [
+              "Europe/London"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 56
     },
     {
@@ -1782,8 +2900,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "booking_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Country Event",
+            "city": "Seattle"
+          }
+        ],
+        [
+          {
+            "city": "Seattle",
+            "checkinDate": "04/08",
+            "checkoutDate": "04/12"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 57
@@ -1812,10 +2951,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_3d_assets"
+        ],
+        [
+          "strategy_guide"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "player_bio": "battle royale environment style",
+            "num_assets": "10"
+          }
+        ],
+        [
+          {
+            "situation": "With the 10 generated battle royale environment assets (open fields, urban combat zones, forests, hills, buildings, riversides), develop strategic analysis and design including environment utilization, player flow, resource distribution, safe zone dynamics, gameplay balance, engagement strategy, and technical optimization for a battle royale style game in Unreal Engine 5."
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 58
     },
     {
@@ -1854,10 +3012,41 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_disease_targets_summary"
+        ],
+        [
+          "get_target_details"
+        ],
+        [
+          "CafChem_ADME_calc_adme"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "diseaseId": "EFO_0000305"
+          }
+        ],
+        [
+          {
+            "target_ids": [
+              "ENSG00000012048",
+              "ENSG00000139618",
+              "ENSG00000141510",
+              "ENSG00000121879"
+            ]
+          }
+        ],
+        [
+          {
+            "smile": "O=C(NC1=CC=CC=C1)C2=NC=NC=N2"
+          }
+        ]
+      ],
+      "score": 3,
+      "match": true,
       "index": 59
     },
     {
@@ -1896,8 +3085,42 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "make_reservation"
+        ],
+        [
+          "create_event"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Francisco",
+            "cuisineTypes": "Izakaya"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "2g Japanese Brasserie"
+          }
+        ],
+        [
+          {
+            "subject": "Restaurant reservation for 2 at 2g Japanese Brasserie",
+            "startDate": "05/05",
+            "startTime": "17:45",
+            "endDate": "05/05",
+            "endTime": "19:00",
+            "location": "2g Japanese Brasserie, San Francisco",
+            "isMeeting": "false",
+            "attendees": null
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 60
@@ -1929,8 +3152,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_imdb"
+        ],
+        [
+          "get_directors"
+        ],
+        [
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "primary_title": "Dr. Strangelove"
+          }
+        ],
+        [
+          {
+            "imdb_id": "tt0057012"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Taste of India in Fremont"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 61
@@ -1963,10 +3212,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_news"
+        ],
+        [
+          "recommend_musictracks"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "top Billboard 200 albums 2023",
+            "start_date": "2023-01-01",
+            "end_date": "2023-12-31",
+            "max_result": 5
+          }
+        ],
+        [
+          {
+            "music_name": [
+              "Guts"
+            ],
+            "result_num": 4
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 62
     },
     {
@@ -2005,8 +3278,38 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_stock_byname"
+        ],
+        [
+          "wolfram_query"
+        ],
+        [
+          "generate_code"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "name": "Alphabet Inc"
+          }
+        ],
+        [
+          {
+            "query": "Historical closing prices for GOOGL over the past month",
+            "format": "json",
+            "location": "US"
+          }
+        ],
+        [
+          {
+            "prompt": "Write a Python script named predict_stock.py under finance/Alphabet directory that uses yfinance to download GOOGL historical closing prices over the past month, applies a simple linear regression model to predict the next 5 days' closing prices, saves the predictions to finance/Alphabet/prediction.csv, and ensures the script is executable. The script should import necessary libraries, fetch data, prepare features, train the model, generate future date predictions, and save results.",
+            "language": "python",
+            "output_name": "finance/Alphabet/predict_stock.py"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 63
@@ -2026,10 +3329,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "security_guidance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "How can a company protect its data from cyberattacks?"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 64
     },
     {
@@ -2057,10 +3370,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_rental_properties"
+        ],
+        [
+          "maps_direction_driving_by_address"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Santa Rosa",
+            "property_type": "apartment"
+          }
+        ],
+        [
+          {
+            "origin_address": "888 Fourth Street",
+            "destination_address": "123 Santa Rosa Ave"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 65
     },
     {
@@ -2096,10 +3429,38 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "execute_bigquery"
+        ],
+        [
+          "execute_python_code"
+        ],
+        [
+          "vector_search"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "SELECT * FROM housing_data",
+            "project_id": "us-housing-project"
+          }
+        ],
+        [
+          {
+            "code_dir": "/housing/house.py"
+          }
+        ],
+        [
+          {
+            "query": "Elastic Net SGD learning rate=0.01 l1_ratio=0.5",
+            "limit": 5
+          }
+        ]
+      ],
+      "score": 3,
+      "match": true,
       "index": 66
     },
     {
@@ -2124,8 +3485,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "download_osm_data"
+        ],
+        [
+          "get_stock_news"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Berlin",
+            "output_path": "/berlin.osm.pbf",
+            "format": "pbf"
+          }
+        ],
+        [
+          {
+            "ticker": "SSEC",
+            "max_result": 5
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 67
@@ -2155,8 +3537,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_flights"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SEA",
+            "destination": "PHX",
+            "departure_date": "03/05",
+            "cabin_class": "economy",
+            "return_date": "03/07"
+          }
+        ],
+        [
+          {
+            "city": "Phoenix",
+            "category": "child-friendly"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 68
@@ -2194,8 +3600,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "searchApis"
+        ],
+        [
+          "request_api_schema"
+        ],
+        [
+          "make_api_request"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "keyword": "earthquake"
+          }
+        ],
+        [
+          {
+            "ApiName": "City Earthquake Data API"
+          }
+        ],
+        [
+          {
+            "apiName": "city_earthquake_data_api",
+            "url": "https://api.example.com",
+            "endpoint": "/v1/earthquakes?city=San Francisco&days=30"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 69
@@ -2245,10 +3679,50 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "add_site"
+        ],
+        [
+          "create_post_inside"
+        ],
+        [
+          "create_comment"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "domains": [
+              "musicreviews.com"
+            ]
+          }
+        ],
+        [
+          {
+            "id": "post_001",
+            "title": "Building an Online Music Review Platform in PHP",
+            "content": "This article explores how to build an online music review platform in PHP, featuring music reviews and recommendations to help users discover new music.",
+            "status": "published",
+            "category": "Development",
+            "tags": [
+              "PHP",
+              "music",
+              "review",
+              "recommendations"
+            ],
+            "date": "2024-06-15"
+          }
+        ],
+        [
+          {
+            "id": "post_001",
+            "comment": "This is a great idea."
+          }
+        ]
+      ],
+      "score": 3,
+      "match": true,
       "index": 70
     },
     {
@@ -2266,10 +3740,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_restaurant_details"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "restaurant_name": "Lobster Shack"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 71
     },
     {
@@ -2290,10 +3774,23 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_news"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "Artificial Intelligence",
+            "start_date": "2025-10-20",
+            "end_date": "2025-11-20",
+            "max_result": 10
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 72
     },
     {
@@ -2315,10 +3812,25 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_code"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prompt": "Write a Python program that automatically identifies scam text messages and marks them as junk. The program should:\n\n1. Load and preprocess an example dataset of SMS messages labeled as 'scam' or 'ham'.\n2. Use standard NLP techniques: tokenization, TF-IDF feature extraction.\n3. Train a machine learning classifier (e.g., Logistic Regression).\n4. Evaluate the classifier's performance.\n5. Provide an `is_scam(message: str) -> bool` function that returns True if the message is detected as scam.\n6. Include code to demonstrate classifying new messages and marking them as junk (printing 'JUNK' or 'OK').\n\nUse Python and scikit-learn. Ensure code is clear and commented.",
+            "language": "python",
+            "output_name": "scam_detector.py",
+            "model": "gemini-pro",
+            "temperature": 0.5,
+            "max_tokens": 1500
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 73
     },
     {
@@ -2337,10 +3849,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "public_transport_card_recharge"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "card_number": "ORCA-551122",
+            "amount": 15.0
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 74
     },
     {
@@ -2363,8 +3886,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Football Event",
+            "city": "Boston"
+          }
+        ],
+        [
+          {
+            "type": "Football Event",
+            "city": "Boston"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 75
@@ -2411,10 +3954,47 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "detect_objects"
+        ],
+        [
+          "estimate_pose"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "image_path": "street_scene_people.jpg"
+          }
+        ],
+        [
+          {
+            "object_regions": [
+              {
+                "x": 50,
+                "y": 80,
+                "width": 130,
+                "height": 320
+              },
+              {
+                "x": 220,
+                "y": 60,
+                "width": 130,
+                "height": 330
+              },
+              {
+                "x": 400,
+                "y": 100,
+                "width": 120,
+                "height": 320
+              }
+            ]
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 76
     },
     {
@@ -2433,10 +4013,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "weather_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Kuala Lumpur",
+            "date": "03/06"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 77
     },
     {
@@ -2467,8 +4058,40 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Francisco",
+            "category": "museum",
+            "radius_km": "5"
+          }
+        ],
+        [
+          {
+            "city": "San Francisco",
+            "category": "museum",
+            "radius_km": 5
+          }
+        ],
+        [
+          {
+            "city": "San Francisco",
+            "category": "museum",
+            "radius_km": "5"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 78
@@ -2498,8 +4121,33 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_flights"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "PHX",
+            "destination": "JFK",
+            "departure_date": "03/07",
+            "return_date": "03/14",
+            "cabin_class": "economy"
+          }
+        ],
+        [
+          {
+            "city": "New York",
+            "category": "general",
+            "radius_km": "10"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 79
@@ -2529,8 +4177,33 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "E_commerce_analyst_MCP_get_schemas"
+        ],
+        [
+          "visualize_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "schema_filter": [
+              "sales",
+              "inventory"
+            ],
+            "database_name": null
+          }
+        ],
+        [
+          {
+            "data_dir": "/business/analytics/ecommerce_sales.csv",
+            "visualize_type": "bar_chart",
+            "output_dir": "/business/analytics/visualizations/ecommerce_sales",
+            "output_format": "png"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 80
@@ -2554,8 +4227,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "list_events"
+        ],
+        [
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "04/01"
+          }
+        ],
+        [
+          {
+            "date": "04/01"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 81
@@ -2583,8 +4274,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_news"
+        ],
+        [
+          "search_news"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "e-commerce online presence customer loyalty long-term success",
+            "start_date": "2020-01-01",
+            "end_date": "2024-12-31",
+            "max_result": 5
+          }
+        ],
+        [
+          {
+            "query": "e-commerce online presence customer loyalty strategies",
+            "start_date": "2020-01-01",
+            "end_date": "2024-12-31",
+            "max_result": 5
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 82
@@ -2612,10 +4327,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_pubmed"
+        ],
+        [
+          "get_trait_associations"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "graft-versus-host disease bone marrow transplantation biomarkers",
+            "maxResults": 3
+          }
+        ],
+        [
+          {
+            "efoId": "EFO_0000305"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 83
     },
     {
@@ -2637,8 +4371,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_imdb"
+        ],
+        [
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "primary_title": "Hotel Mumbai"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Marche Aux Fleurs in Ross at 2 PM"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 84
@@ -2660,10 +4412,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "pharmacy_refill_request"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prescription_id": "RX-204811",
+            "patient_dob": "1987-05-19",
+            "pharmacy_branch": "DOWNTOWN"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 85
     },
     {
@@ -2701,8 +4465,38 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "obtain_business_analysis"
+        ],
+        [
+          "execute_python_code"
+        ],
+        [
+          "visualize_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "topic": "demand for robotics business",
+            "output_dir": "outputs/market_analysis"
+          }
+        ],
+        [
+          {
+            "code_dir": "outputs/market_analysis/rl.py"
+          }
+        ],
+        [
+          {
+            "data_dir": "outputs/market_analysis/result.csv",
+            "visualize_type": "line_chart",
+            "output_dir": "outputs/market_analysis",
+            "output_format": "jpg"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 86
@@ -2731,8 +4525,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "itunes_play_song"
+        ],
+        [
+          "send_transaction"
+        ],
+        [
+          "search_imdb"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "song": "Let Me Love You"
+          }
+        ],
+        [
+          {
+            "target": "Tom",
+            "amount": "970"
+          }
+        ],
+        [
+          {
+            "primary_title": "Author: The JT LeRoy Story"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 87
@@ -2753,10 +4574,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "neighborhood_watch_alerts"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "zone": "NW-3",
+            "severity": "caution"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 88
     },
     {
@@ -2778,8 +4610,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "list_events"
+        ],
+        [
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "04/06"
+          }
+        ],
+        [
+          {
+            "date": "04/06"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 89
@@ -2814,8 +4664,37 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "Connect_SQL_Server"
+        ],
+        [
+          "execute_bigquery"
+        ],
+        [
+          "get_secret"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "connectionString": 2
+          }
+        ],
+        [
+          {
+            "query": "SELECT * FROM business_data_summary",
+            "project_id": "us-housing-project"
+          }
+        ],
+        [
+          {
+            "secret_name": "rds_sqlserver_credentials",
+            "mask_sensitive": false,
+            "confirm_unmask": "yes, I understand"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 90
@@ -2835,10 +4714,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_directors"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "imdb_id": "tt0167190"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 91
     },
     {
@@ -2866,8 +4755,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "New York",
+            "category": "music"
+          }
+        ],
+        [
+          {
+            "city": "New York",
+            "category": "music"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 92
@@ -2895,8 +4804,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "itunes_search"
+        ],
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "artist": "Karolina Protsenko"
+          }
+        ],
+        [
+          {
+            "song": "Karolina Protsenko - Closer"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 93
@@ -2925,10 +4852,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_balance"
+        ],
+        [
+          "send_transaction"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "checking"
+          }
+        ],
+        [
+          {
+            "target": "Pranav",
+            "amount": "270"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 94
     },
     {
@@ -2959,8 +4905,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "connect_database"
+        ],
+        [
+          "execute_bigquery"
+        ],
+        [
+          "connect_database"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "database_name": "movie_reviews_db"
+          }
+        ],
+        [
+          {
+            "query": "SELECT * FROM reviews",
+            "project_id": "movie-reviews-db"
+          }
+        ],
+        [
+          {
+            "database_name": "movie_reviews_db"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 95
@@ -2987,8 +4960,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "weather_tool"
+        ],
+        [
+          "booking_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Chicago",
+            "date": "03/01"
+          }
+        ],
+        [
+          {
+            "city": "Chicago",
+            "checkinDate": "03/01",
+            "checkoutDate": "03/04"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 96
@@ -3019,8 +5013,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "create_design"
+        ],
+        [
+          "visualize_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "design_request": "Please read the quantum circuit design specification from outputs/quantum_design_request.txt and initialize the corresponding qubit registers, apply gates as requested, and compute the resulting state vector and probability distribution."
+          }
+        ],
+        [
+          {
+            "data_dir": "outputs/quantum_design.json",
+            "visualize_type": "3D_plot",
+            "output_dir": "outputs/quantum_plots",
+            "output_format": "jpg"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 97
@@ -3044,8 +5059,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "list_events"
+        ],
+        [
+          "find_free_slots"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "05/06"
+          }
+        ],
+        [
+          {
+            "date": "05/06"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 98
@@ -3077,8 +5110,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_imdb"
+        ],
+        [
+          "search_imdb"
+        ],
+        [
+          "search_imdb"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "primary_title": "The Dogman"
+          }
+        ],
+        [
+          {
+            "primary_title": "The Dogman"
+          }
+        ],
+        [
+          {
+            "primary_title": "The Dogman"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 99
@@ -3109,8 +5168,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "searchApis"
+        ],
+        [
+          "request_api_schema"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "keyword": "object detection"
+          }
+        ],
+        [
+          {
+            "ApiName": "Image Object Detection API"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 100
@@ -3138,8 +5215,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_news"
+        ],
+        [
+          "analyze_trends"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "embodied intelligence startups trends and leading companies",
+            "start_date": "2025-07-01",
+            "end_date": "2025-09-30",
+            "max_result": 5
+          }
+        ],
+        [
+          {
+            "topic": "embodied intelligence startups",
+            "timeframe": "last_quarter",
+            "region": "global",
+            "platform": "default"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 101
@@ -3169,8 +5270,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "generate_summary_report"
+        ],
+        [
+          "generate_summary_report"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "data_link": "survey_china_drones_2024.csv"
+          }
+        ],
+        [
+          {
+            "data_link": "survey_china_drones_2024.csv"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 102
@@ -3195,10 +5314,25 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "UIUX_Expert"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "user_personas": "General adult users aged 18-65, including tech-savvy novices and power users who need intuitive, efficient chat interactions for information seeking, daily tasks, and creative assistance.",
+            "interaction_modes": "Text chat with rich message formatting, voice input/output, quick-reply buttons, context-aware suggestions, slash commands for advanced actions.",
+            "design_principles": "Consistency, accessibility (WCAG AA compliance), minimal cognitive load, clear visual hierarchy, responsive design for web and mobile, friendly conversational tone.",
+            "prototyping_tools": "Figma for high-fidelity wireframes and interactive prototypes, Adobe XD for clickable demos.",
+            "usability_testing": "Remote unmoderated user testing (UserTesting), A/B testing of key interface elements, heuristic evaluation by UX experts, accessibility audits.",
+            "output_artifacts": "Interactive Figma prototype, detailed UI specification document, usability test report, component style guide"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 103
     },
     {
@@ -3227,8 +5361,33 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_markets"
+        ],
+        [
+          "get_market_summary"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "exchange": "Upbit"
+          }
+        ],
+        [
+          {
+            "filter_type": [
+              "popular",
+              "most_visited",
+              "new_listing"
+            ],
+            "filter_count": "10",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-27"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 104
@@ -3254,10 +5413,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_code"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prompt": "Write a Python script that monitors a given program's CPU usage and optimizes it by adjusting the process priority (niceness) and CPU affinity. The script should accept command-line arguments for the process ID or process name and a CPU usage threshold. It should use the psutil library to:\n\n1. Identify the target process by PID or name\n2. Periodically (e.g., every 5 seconds) check its CPU usage percentage\n3. If CPU usage exceeds the threshold, increase the process niceness (lower priority) and optionally reduce its CPU affinity to limit the number of cores it can use\n4. If CPU usage falls below the threshold, restore original niceness and affinity settings\n\nInclude clear logging of any adjustments made and error handling for missing processes or insufficient permissions. Provide usage instructions in the script docstring.",
+            "language": "python",
+            "output_name": "./cpu_optimizer.py",
+            "temperature": 0.4,
+            "max_tokens": 1500
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 105
     },
     {
@@ -3277,10 +5450,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "laundry_service_request"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "customer_id": "CUST-5566",
+            "pickup_date": "2025-11-03",
+            "service_type": "wash_fold"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 106
     },
     {
@@ -3308,10 +5493,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_rental_properties"
+        ],
+        [
+          "maps_direction_driving_by_address"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Oakley",
+            "property_type": "apartment"
+          }
+        ],
+        [
+          {
+            "origin_address": "Oakland International Airport",
+            "destination_address": "123 Oakley Ave"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 107
     },
     {
@@ -3338,8 +5543,31 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "Semgrep_Code_SAST"
+        ],
+        [
+          "nmap_scan"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "path": "./src",
+            "ruleset": "security",
+            "config_file": "./semgrep-security-config.yml",
+            "output_format": "json"
+          }
+        ],
+        [
+          {
+            "host": "adserver.example.com",
+            "ports": "80,443,3306",
+            "arguments": "-sV"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 108
@@ -3360,10 +5588,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_restaurant"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Bruno",
+            "cuisineTypes": "Seafood"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 109
     },
     {
@@ -3396,8 +5635,33 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_market_index"
+        ],
+        [
+          "get_stock_news"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "indices": [
+              "SHCOMP",
+              "SZCOMP",
+              "STAR50",
+              "CSI300",
+              "CSI500"
+            ]
+          }
+        ],
+        [
+          {
+            "ticker": "SZCOMP",
+            "max_result": 2
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 110
@@ -3417,10 +5681,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 111
     },
     {
@@ -3442,8 +5716,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "convert_pdf_to_markdown"
+        ],
+        [
+          "Connect_SQL_Server"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "pdf_dir": "reports"
+          }
+        ],
+        [
+          {
+            "connectionString": 2
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 112
@@ -3472,10 +5764,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_balance"
+        ],
+        [
+          "send_transaction"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "savings"
+          }
+        ],
+        [
+          {
+            "target": "Raghav",
+            "amount": "170"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 113
     },
     {
@@ -3505,8 +5816,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "AudioEditor_apply_fades"
+        ],
+        [
+          "Business_Analyst"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "audio_file": "./inputs/interview_recording.mp3",
+            "fade_in_ms": "1500",
+            "fade_out_ms": "2000"
+          }
+        ],
+        [
+          {
+            "industry_focus": "caregiver robots",
+            "market_scope": "global",
+            "analysis_methods": "qualitative + quantitative",
+            "data_sources": "gov reports, market surveys",
+            "output_types": "market report",
+            "report_format": "pdf",
+            "time_horizon": "5 years"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 114
@@ -3527,10 +5864,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "AudioEditor_apply_speed_adjustment"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "audio_file": "url/to/audio.mp3",
+            "speed_factor": "1.25"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 115
     },
     {
@@ -3566,8 +5914,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_and_read_files"
+        ],
+        [
+          "search_academic_papers"
+        ],
+        [
+          "search_and_read_files"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "path": "/research/document"
+          }
+        ],
+        [
+          {
+            "query": "mixture of experts large language model",
+            "subject": "computer science",
+            "max_results": 5
+          }
+        ],
+        [
+          {
+            "path": "/research/document"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 116
@@ -3594,8 +5970,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "weather_tool"
+        ],
+        [
+          "booking_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "New York",
+            "date": "03/12"
+          }
+        ],
+        [
+          {
+            "city": "New York",
+            "checkinDate": "03/11",
+            "checkoutDate": "03/14"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 117
@@ -3635,8 +6032,44 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_stock_byname"
+        ],
+        [
+          "get_realtime_market_data"
+        ],
+        [
+          "get_realtime_market_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "name": "Alibaba Group Holding Limited"
+          }
+        ],
+        [
+          {
+            "symbols": [
+              "BABA"
+            ],
+            "source": "yahoo",
+            "fields": null,
+            "market": "SSE"
+          }
+        ],
+        [
+          {
+            "symbols": [
+              "BABA"
+            ],
+            "source": "yahoo",
+            "fields": null,
+            "market": "SSE"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 118
@@ -3657,10 +6090,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Football Event",
+            "city": "Boston"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 119
     },
     {
@@ -3678,10 +6122,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_comprehensive_analysis"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "file_path": "data.csv"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 120
     },
     {
@@ -3707,8 +6161,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_product_by_barcode"
+        ],
+        [
+          "spu_list"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "barcode": [
+              "4902102079290",
+              "0737628064502",
+              "8410076471305"
+            ]
+          }
+        ],
+        [
+          {
+            "brand": "salalad"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 121
@@ -3730,10 +6206,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_rental_properties"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Francisco",
+            "property_type": "house",
+            "rating": "4.0"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 122
     },
     {
@@ -3768,10 +6256,37 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "get_restaurant_details"
+        ],
+        [
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Mateo",
+            "cuisineTypes": "Seafood"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Lobster Shack"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Lobster Shack"
+          }
+        ]
+      ],
+      "score": 3,
+      "match": true,
       "index": 123
     },
     {
@@ -3803,8 +6318,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "weather_tool"
+        ],
+        [
+          "search_rental_properties"
+        ],
+        [
+          "get_rental_property_details"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "London",
+            "date": "05/01"
+          }
+        ],
+        [
+          {
+            "location": "London",
+            "property_type": "house"
+          }
+        ],
+        [
+          {
+            "property_id": "LN987"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 124
@@ -3824,10 +6367,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "list_events"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "date": "05/06"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 125
     },
     {
@@ -3846,10 +6399,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "child_homework_tracker"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "student_id": "STU-204",
+            "week_start": "2025-11-03"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 126
     },
     {
@@ -3875,10 +6439,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "itunes_search"
+        ],
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "artist": "Frank Ocean"
+          }
+        ],
+        [
+          {
+            "song": "Nikes"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 127
     },
     {
@@ -3899,10 +6481,23 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "indian_branded_drug_search"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "drug_name": "Saikongqing",
+            "generic_composition": "Brimonidine",
+            "drug_form": "Ophthalmic Solution",
+            "volume": "5ml"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 128
     },
     {
@@ -3930,10 +6525,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "maps_direction_driving_by_address"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Philadelphia",
+            "category": "museum"
+          }
+        ],
+        [
+          {
+            "origin_address": "Wilmington",
+            "destination_address": "Philadelphia Museum of Art"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 129
     },
     {
@@ -3957,10 +6572,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_book_details_by_id"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "id": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 130
     },
     {
@@ -3982,8 +6613,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "connect_database"
+        ],
+        [
+          "security_guidance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "database_name": "movie_reviews_db"
+          }
+        ],
+        [
+          {
+            "query": "Best practices for secure connection to database for a large-scale movie review website, safe data storage and access."
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 131
@@ -4004,10 +6653,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "home_energy_usage_report"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "meter_id": "MTR-2211",
+            "billing_cycle": "2025-10"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 132
     },
     {
@@ -4037,8 +6697,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Concert Event",
+            "city": "New York"
+          }
+        ],
+        [
+          {
+            "type": "Baseball Event",
+            "city": "New York"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 133
@@ -4067,10 +6747,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Palo Alto",
+            "cuisineTypes": "Freshwater Fish"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Freshwater Fishery"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 134
     },
     {
@@ -4141,8 +6840,126 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "create_physics_scene"
+        ],
+        [
+          "create_physics_scene"
+        ],
+        [
+          "create_physics_scene"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "objects": [
+              {
+                "type": "obstacle1",
+                "position": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "type": "obstacle2",
+                "position": [
+                  -1,
+                  0,
+                  3
+                ]
+              },
+              {
+                "type": "target",
+                "position": [
+                  5,
+                  0,
+                  5
+                ]
+              }
+            ],
+            "floor": true,
+            "gravity": "[0, -9.81, 0]",
+            "scene_name": "Robot_Environment"
+          }
+        ],
+        [
+          {
+            "objects": [
+              {
+                "type": "robot",
+                "position": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "type": "obstacle1",
+                "position": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "type": "obstacle2",
+                "position": [
+                  -1,
+                  0,
+                  3
+                ]
+              },
+              {
+                "type": "target",
+                "position": [
+                  5,
+                  0,
+                  5
+                ]
+              }
+            ],
+            "floor": true,
+            "gravity": "[0, -9.81, 0]",
+            "scene_name": "Robot_Environment"
+          }
+        ],
+        [
+          {
+            "objects": [
+              {
+                "type": "obstacle1",
+                "position": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "type": "obstacle2",
+                "position": [
+                  -1,
+                  0,
+                  3
+                ]
+              },
+              {
+                "type": "target",
+                "position": [
+                  5,
+                  0,
+                  5
+                ]
+              }
+            ],
+            "floor": true,
+            "gravity": "[0, -9.81, 0]",
+            "scene_name": "Robot_Environment"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 135
@@ -4166,10 +6983,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "check_nutrition"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "ingredient_list": [
+              "Broccoli",
+              "Chicken",
+              "Rice"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 136
     },
     {
@@ -4190,10 +7021,23 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "pay_utility_bill"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_number": "A10293",
+            "provider": "Seattle Power",
+            "amount": 84.71,
+            "method": "auto_debit"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 137
     },
     {
@@ -4215,10 +7059,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "request_api_schema"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "ApiName": [
+              "Image Object Detection API",
+              "OCR Text Extract API",
+              "Vision Detect 3D API"
+            ]
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 138
     },
     {
@@ -4237,10 +7095,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "community_pool_pass_renewal"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "member_id": "PASS-4488",
+            "renewal_term": 6
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 139
     },
     {
@@ -4263,8 +7132,27 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "get_balance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Rock Event",
+            "city": "New York"
+          }
+        ],
+        [
+          {
+            "account_type": "checking"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 140
@@ -4301,8 +7189,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "get_restaurant_details"
+        ],
+        [
+          "search_restaurant"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Jose",
+            "cuisineTypes": "American"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "American Bistro"
+          }
+        ],
+        [
+          {
+            "location": "San Jose",
+            "cuisineTypes": "American"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 141
@@ -4329,8 +7245,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Pop Event",
+            "city": "London"
+          }
+        ],
+        [
+          {
+            "type": "Pop Event",
+            "city": "London"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 142
@@ -4350,10 +7286,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "searchApis"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "keyword": "profanity detection"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 143
     },
     {
@@ -4379,8 +7325,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "fetch_terrain_elevation"
+        ],
+        [
+          "download_osm_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "latitude": 40.0975,
+            "longitude": 113.1494,
+            "unit": "meters"
+          }
+        ],
+        [
+          {
+            "city": "Datong",
+            "output_path": "/Datong",
+            "format": "xml"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 144
@@ -4400,10 +7368,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "home_appliance_warranty_lookup"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "serial_number": "DWS-772310"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 145
     },
     {
@@ -4430,8 +7408,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "generate_code"
+        ],
+        [
+          "patch_file"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prompt": "Write a Python script that loads the KITTI 3D object detection configuration from 'C:/Users/user/Desktop/MyProject/configs/kitti_config.py' using mmcv's Config class. The script should update the following config fields:\n\n- optimizer: set to Adam with learning rate 0.001 and weight decay 0.0001\n- lr_config: use a step policy at epochs [8, 11]\n- checkpoint_config: save checkpoints every epoch\n- evaluation: evaluate every 1 epoch, set metric to 'mAP'\n- log_config: use an interval of 50 iterations, with both TextLoggerHook and TensorboardLoggerHook\n- total_epochs: 12\n- workflow: use [('train', 1), ('val', 1)]\n\nAfter updating the config, save the modified config to 'C:/Users/user/Desktop/MyProject/configs/kitti_config_updated.py'. Then run training and testing using mmdet3d.apis.train_detector and mmdet3d.apis.single_gpu_test: train on the updated config, and then test the resulting model checkpoint using the model and the validation dataloader. The script should print out the evaluation results. Save this script as 'C:/Users/user/Desktop/MyProject/run_training_testing.py'.",
+            "language": "python",
+            "output_name": "C:/Users/user/Desktop/MyProject/run_training_testing.py"
+          }
+        ],
+        [
+          {
+            "path": "C:/Users/user/Desktop/MyProject/configs/kitti_config.py",
+            "changes_path": "C:/Users/user/Desktop/MyProject/configs/changes.txt"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 146
@@ -4472,8 +7471,37 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "search_restaurant"
+        ],
+        [
+          "search_restaurant"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Francisco",
+            "cuisineTypes": "Seafood"
+          }
+        ],
+        [
+          {
+            "location": "San Francisco",
+            "cuisineTypes": "Seafood"
+          }
+        ],
+        [
+          {
+            "location": "San Francisco",
+            "cuisineTypes": "Seafood"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 147
@@ -4497,10 +7525,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_code"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prompt": "Optimize the Python code in 'heavy_numeric_computations.py' by applying vectorization (using numpy), parallel programming techniques (e.g., multiprocessing or concurrent.futures), and any other performance best practices. Ensure functionality is preserved, maintain readability, and add comments explaining optimizations.",
+            "language": "python",
+            "model": "gpt-4o-mini",
+            "output_name": "code/new_heavy_numeric_computations.py",
+            "existing_file_path": "heavy_numeric_computations.py"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 148
     },
     {
@@ -4527,8 +7569,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "itunes_play_song"
+        ],
+        [
+          "send_transaction"
+        ],
+        [
+          "search_imdb"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "song": "Music Never Sleeps"
+          }
+        ],
+        [
+          {
+            "target": "Pranav",
+            "amount": "1150"
+          }
+        ],
+        [
+          {
+            "primary_title": "Mad Max"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 149
@@ -4553,8 +7622,27 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_balance"
+        ],
+        [
+          "search_ticketmaster"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "account_type": "checking"
+          }
+        ],
+        [
+          {
+            "type": "Concert Event",
+            "city": "San Francisco"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 150
@@ -4580,8 +7668,24 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "Business_Analyst"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "industry_focus": "caregiver robots",
+            "market_scope": "domestic",
+            "analysis_methods": "qualitative + quantitative",
+            "data_sources": "https://www.google.com/search?q=caregiver+robots+market+survey",
+            "output_types": "market report",
+            "report_format": "pdf",
+            "time_horizon": "10 years"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 151
@@ -4615,10 +7719,34 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "get_ip_details"
+        ],
+        [
+          "get_time"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "ip_address": [
+              "203.0.113.25",
+              "198.51.100.42"
+            ]
+          }
+        ],
+        [
+          {
+            "timezone": [
+              "America/New_York",
+              "Europe/London"
+            ]
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 152
     },
     {
@@ -4649,8 +7777,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "weather_tool"
+        ],
+        [
+          "itunes_search"
+        ],
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Jose",
+            "date": "03/07"
+          }
+        ],
+        [
+          {
+            "artist": "Brunettes Shoot Blondes"
+          }
+        ],
+        [
+          {
+            "song": "Every Monday"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 153
@@ -4672,10 +7827,22 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "wolfram_query"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "query": "Statistics on adoption of virtual reality technology in architecture and global construction industry and its impact on efficiency, costs, and customer experience",
+            "format": "json",
+            "location": "global"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 154
     },
     {
@@ -4718,8 +7885,43 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "diceRoll"
+        ],
+        [
+          "diceRoll"
+        ],
+        [
+          "diceRoll"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "sides": 20,
+            "count": 1,
+            "modifier": 0,
+            "roll_type": "puzzle solve"
+          }
+        ],
+        [
+          {
+            "sides": 20,
+            "count": 1,
+            "modifier": 0,
+            "roll_type": "puzzle solve"
+          }
+        ],
+        [
+          {
+            "sides": 20,
+            "count": 1,
+            "modifier": 0,
+            "roll_type": "puzzle solve"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 155
@@ -4749,10 +7951,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_rental_properties"
+        ],
+        [
+          "get_rental_property_details"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Francisco",
+            "property_type": "house",
+            "rating": "4.3"
+          }
+        ],
+        [
+          {
+            "property_id": "SF789"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 156
     },
     {
@@ -4770,10 +7992,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_summary_report"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "data_link": "https://nature.com/articles/s41598-024-03418-1"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 157
     },
     {
@@ -4802,10 +8034,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "generate_code"
+        ],
+        [
+          "execute_python_code"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "prompt": "\"\"\"\nWrite a Python program named quantum_computing.py that:\n1. Defines an amplitude function for a set of qubit rotation angles (e.g., a list of angles). Use a sample formula, for instance: amplitude(params) = product over i of (cos(params[i]/2) + i*sin(params[i]/2)).\n2. Defines a probability function as the squared modulus of the amplitude.\n3. Implements a simulated annealing algorithm to find the rotation angles in [0, π] that maximize the probability.\n4. Prints the best-found probability and the corresponding angles.\n\nThe program should be self-contained and runnable. It should output the maximum probability and angles when executed.",
+            "language": "python",
+            "output_name": "quantum_computing.py"
+          }
+        ],
+        [
+          {
+            "code_dir": "quantum_computing.py"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 158
     },
     {
@@ -4831,8 +8083,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "download_osm_data"
+        ],
+        [
+          "download_osm_data"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "Berlin",
+            "output_path": "/berlin",
+            "format": "json"
+          }
+        ],
+        [
+          {
+            "city": "Karlsruhe",
+            "output_path": "/karlsruhe",
+            "format": "json"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 159
@@ -4870,8 +8144,70 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "orchestrator_plan_task"
+        ],
+        [
+          "orchestrator_plan_task"
+        ],
+        [
+          "orchestrator_plan_task"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "topic": "Project Management Platform",
+            "scope": "Create a platform to improve work efficiency with process division, task assignment, and progress management.",
+            "schedule": "0 9 * * MON",
+            "constraints": [
+              "Complete before 2025-10-08",
+              "Resource availability",
+              "Budget constraints"
+            ],
+            "dependencies": [
+              "Requirements Document",
+              "UI Wireframes",
+              "Backend Prototype"
+            ]
+          }
+        ],
+        [
+          {
+            "topic": "Project Management Platform",
+            "scope": "Create a platform to improve work efficiency with process division, task assignment, and progress management.",
+            "schedule": "0 9 * * MON",
+            "constraints": [
+              "Complete before 2025-10-08",
+              "Resource availability",
+              "Budget constraints"
+            ],
+            "dependencies": [
+              "Requirements Document",
+              "UI Wireframes",
+              "Backend Prototype"
+            ]
+          }
+        ],
+        [
+          {
+            "topic": "Project Management Platform",
+            "scope": "Create a platform to improve work efficiency with process division, task assignment, and progress management.",
+            "schedule": "0 9 * * MON",
+            "constraints": [
+              "Complete before 2025-10-08",
+              "Resource availability",
+              "Budget constraints"
+            ],
+            "dependencies": [
+              "Requirements Document",
+              "UI Wireframes",
+              "Backend Prototype"
+            ]
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 160
@@ -4901,8 +8237,33 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_flights"
+        ],
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "round_trip",
+            "origin": "SFO",
+            "destination": "YYZ",
+            "departure_date": "10/01",
+            "return_date": "10/05",
+            "cabin_class": "economy"
+          }
+        ],
+        [
+          {
+            "city": "Toronto",
+            "category": "attractions",
+            "radius_km": 10
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 161
@@ -4938,8 +8299,38 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_data_products"
+        ],
+        [
+          "get_data_products"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "coordinates": [
+              51.5074,
+              -0.1278
+            ],
+            "data_type": "soil",
+            "start_date": "2025-09-27",
+            "end_date": "2025-09-27"
+          }
+        ],
+        [
+          {
+            "coordinates": [
+              60.5074,
+              -1.1278
+            ],
+            "data_type": "soil",
+            "start_date": "2025-09-01",
+            "end_date": "2025-09-27"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 162
@@ -4968,8 +8359,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "itunes_play_song"
+        ],
+        [
+          "send_transaction"
+        ],
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "song": "Stitches"
+          }
+        ],
+        [
+          {
+            "target": "Abhinav",
+            "amount": "980.00"
+          }
+        ],
+        [
+          {
+            "song": "Stitches"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 163
@@ -5012,8 +8430,42 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "WebSearchConfig"
+        ],
+        [
+          "stagehand_navigate"
+        ],
+        [
+          "stagehand_act"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "name": "Nearby Restaurants Search",
+            "description": "Search for nearby restaurants based on current location and user preferences",
+            "search_engine": "Google",
+            "max_results": "20",
+            "extract_content": "true"
+          }
+        ],
+        [
+          {
+            "url": "https://maps.google.com/search/restaurants"
+          }
+        ],
+        [
+          {
+            "action": "Type 'restaurants near me' into the search input",
+            "variables": {
+              "element": "search_input",
+              "text": "restaurants near me"
+            }
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 164
@@ -5057,8 +8509,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "get_realtime_market_data"
+        ],
+        [
+          "analyze_sales"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "symbols": [
+              "LIQUOR",
+              "BANK"
+            ],
+            "source": "custom_api",
+            "fields": null,
+            "market": "SSE"
+          }
+        ],
+        [
+          {
+            "input_data_link": "https://custom_api.marketdata.local/SSE_latest_snapshot.json"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 165
@@ -5082,8 +8558,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "connect_database"
+        ],
+        [
+          "security_guidance"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "database_name": "online_learning_db"
+          }
+        ],
+        [
+          {
+            "query": "Security best practices for data storage and access in an online learning platform, including student privacy and compliance."
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 166
@@ -5107,8 +8601,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_recipes"
+        ],
+        [
+          "get_teams"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "name": "cocktail recipes"
+          }
+        ],
+        [
+          {
+            "nameFilter": "NBA"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 167
@@ -5143,8 +8655,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "analyze_trends"
+        ],
+        [
+          "analyze_trends"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "topic": "charity race",
+            "timeframe": "last_month",
+            "region": null,
+            "platform": null
+          }
+        ],
+        [
+          {
+            "topic": "charity race",
+            "timeframe": "last_month",
+            "region": "global",
+            "platform": "twitter"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 168
@@ -5171,8 +8707,29 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "booking_tool"
+        ],
+        [
+          "weather_tool"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "London",
+            "checkinDate": "03/06",
+            "checkoutDate": "03/11"
+          }
+        ],
+        [
+          {
+            "city": "London",
+            "date": "03/11"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 169
@@ -5193,10 +8750,21 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "mongo_mcp"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "mongoUri": "mongodb://Admin:Admin123@localhost:27017/customers_db",
+            "collection_name": "customers"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 170
     },
     {
@@ -5214,10 +8782,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "spu_list"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "brand": "toyota"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 171
     },
     {
@@ -5244,8 +8822,35 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "geocalc_mcp_get_points_of_interest"
+        ],
+        [
+          "search_imdb"
+        ],
+        [
+          "itunes_play_song"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "city": "San Francisco",
+            "category": "garden"
+          }
+        ],
+        [
+          {
+            "primary_title": "Alice in Wonderland"
+          }
+        ],
+        [
+          {
+            "song": "Dumbo"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 172
@@ -5265,10 +8870,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "itunes_search"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "artist": "Mozart"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 173
     },
     {
@@ -5307,8 +8922,40 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "make_reservation"
+        ],
+        [
+          "create_event"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Ross",
+            "cuisineTypes": "Parisian"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Marche Aux Fleurs"
+          }
+        ],
+        [
+          {
+            "subject": "Restaurant reservation for 5 at Marche Aux Fleurs",
+            "startDate": "03/06",
+            "startTime": "11:15",
+            "endDate": "03/06",
+            "location": "Marche Aux Fleurs",
+            "isMeeting": "false"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 174
@@ -5336,8 +8983,30 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "fetch_terrain_elevation"
+        ],
+        [
+          "wolfram_query"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "latitude": 39.7392,
+            "longitude": -104.9903,
+            "unit": "meters"
+          }
+        ],
+        [
+          {
+            "query": "topographical characteristics of Andean highlands in South America: elevation range, slope, terrain variability",
+            "format": "text",
+            "location": "South America"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 175
@@ -5361,8 +9030,26 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "recommend_electronics"
+        ],
+        [
+          "get_best_price"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "product_type": "laptop"
+          }
+        ],
+        [
+          {
+            "product_name": "iphone_16"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 176
@@ -5391,8 +9078,28 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_rental_properties"
+        ],
+        [
+          "get_rental_property_details"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "Paris",
+            "property_type": "house",
+            "rating": null
+          }
+        ],
+        [
+          {
+            "property_id": "PAR456"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 177
@@ -5424,10 +9131,32 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "search_ticketmaster"
+        ],
+        [
+          "create_event"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "type": "Concert Event",
+            "city": "Washington"
+          }
+        ],
+        [
+          {
+            "subject": "Concert",
+            "startDate": "03/07",
+            "endDate": "03/07",
+            "location": "Washington"
+          }
+        ]
+      ],
+      "score": 2,
+      "match": true,
       "index": 178
     },
     {
@@ -5466,8 +9195,36 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
+      "tools_used": [
+        [
+          "search_restaurant"
+        ],
+        [
+          "search_restaurant"
+        ],
+        [
+          "make_reservation"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "location": "San Francisco",
+            "cuisineTypes": "Chinese"
+          }
+        ],
+        [
+          {
+            "location": "San Francisco",
+            "cuisineTypes": "Chinese"
+          }
+        ],
+        [
+          {
+            "restaurant_name": "Mei-Don Chinese Cuisine"
+          }
+        ]
+      ],
       "score": 0,
       "match": false,
       "index": 179
@@ -5487,10 +9244,20 @@
           }
         ]
       ],
-      "tools_used": [],
-      "inputs_used": [],
-      "score": 0,
-      "match": false,
+      "tools_used": [
+        [
+          "searchApis"
+        ]
+      ],
+      "inputs_used": [
+        [
+          {
+            "keyword": "pdf rendering"
+          }
+        ]
+      ],
+      "score": 1,
+      "match": true,
       "index": 180
     }
   ]
