@@ -207,10 +207,10 @@ def plot_token_efficiency(results_dir: str = "results", output_path: str = "toke
                    ha='center', va='bottom', fontsize=12, fontweight='bold')
     
     # Customize chart
-    ax.set_ylabel('Token Efficiency', fontsize=14)
-    ax.set_xlabel('Model', fontsize=14)
+    ax.set_ylabel('Token Efficiency', fontsize=16)
+    # ax.set_xlabel('Model', fontsize=14)
     ax.set_xticks(x)
-    ax.set_xticklabels(model_names, rotation=45, ha='right', fontsize=12)
+    ax.set_xticklabels(model_names, rotation=45, ha='right', fontsize=18)
     ax.tick_params(axis='both', labelsize=12)
     max_score = max(scores) if scores else 1
     ax.set_ylim(0, max_score * 1.3)
