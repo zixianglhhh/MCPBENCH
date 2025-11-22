@@ -225,5 +225,101 @@
         },
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "api_key_env_name": "QWEN_API_KEY"
+    },
+    {
+        "model": "qwen/qwen3-32b",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen3",
+            "structured_output": true
+        },
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env_name": "ROUTER_API_KEY"
+    },
+    {
+        "model": "qwen/qwen3-14b",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen3",
+            "structured_output": true
+        },
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env_name": "ROUTER_API_KEY"
+    },
+    {
+        "model": "qwen/qwen3-8b",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen3",
+            "structured_output": true
+        },
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env_name": "ROUTER_API_KEY"
+    },
+    {
+        "model": "qwen/qwen3-1.7b",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen3",
+            "structured_output": true
+        },
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env_name": "ROUTER_API_KEY"
+    },
+    {
+        "model": "qwen2.5-72b-instruct",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen2.5",
+            "structured_output": true
+        },
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "api_key_env_name": "QWEN_API_KEY"
+    },
+    {
+        "model": "qwen2.5-32b-instruct",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen2.5",
+            "structured_output": true
+        },
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "api_key_env_name": "QWEN_API_KEY"
+    },
+    {
+        "model": "qwen2.5-14b-instruct",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen2.5",
+            "structured_output": true
+        },
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "api_key_env_name": "QWEN_API_KEY"
+    },
+    {
+        "model": "qwen2.5-7b-instruct",
+        "model_info": {
+            "vision": true,
+            "function_calling": true,
+            "json_output": true,
+            "family": "qwen2.5",
+            "structured_output": true
+        },
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "api_key_env_name": "QWEN_API_KEY"
     }
 ]
