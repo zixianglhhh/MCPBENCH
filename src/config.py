@@ -63,6 +63,7 @@ class ModelRegistry:
             if base_url:
                 client_kwargs["base_url"] = base_url
             
+            
             # Try to create client without model_info first
             try:
                 entry = {
